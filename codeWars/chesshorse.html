@@ -18,10 +18,15 @@
             flex-wrap: wrap;
         }
         .box{
-            background: #fff;
             width: 4rem;
             height: 4rem;
             border: 1px solid #000;
+        }
+        .white {
+            background: white;
+        }
+        .black {
+            background : black;
         }
     </style>
 </head>
@@ -30,26 +35,35 @@
 
     <script>
         let container = document.querySelector(".container");
-        let boxes = " ";
+        let box = " ";
+        let count = 0;
+
         let chess = [
-            [0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0],
-            [0,0,0,0,0,0,0,0]
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0]
         ];
-        console.log(chess);
         for(let i = 0; i < chess.length; i++){
             let arr = chess[i];
             for(let x = 0; x < arr.length; x++){
-                boxes = "<div class='box'></div>";
-                console.log(boxes);
+                if(count % 2){
+                    box += "<div class='box white'></div>";
+                    count++;
+                }
+                else {
+                    box += "<div class='box black'></div>";
+                    count++;
+                }
             }
-                container.innerHTML = boxes;
+            count++;
+            container.innerHTML = box;
         }
+
     </script>
 </body>
 </html>
