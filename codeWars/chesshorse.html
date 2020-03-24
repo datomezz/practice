@@ -11,15 +11,15 @@
             padding: 0;
         }
         .container{
-            width : 32rem;
-            height : 32rem;
+            width : 16rem;
+            height : 16rem;
             background : yellow;
             display: flex;
             flex-wrap: wrap;
         }
         .box{
-            width: 4rem;
-            height: 4rem;
+            width: 2rem;
+            height: 2rem;
             border: 1px solid #000;
         }
         .white {
@@ -48,22 +48,71 @@
             [0, 0, 0, 0, 0, 0, 0, 0],
             [0, 0, 0, 0, 0, 0, 0, 0]
         ];
-        for(let i = 0; i < chess.length; i++){
-            let arr = chess[i];
-            for(let x = 0; x < arr.length; x++){
-                if(count % 2){
-                    box += "<div class='box white'></div>";
-                    count++;
+        function map(){
+
+            for(let x = 0; x < chess.length; x++){
+                let arr = chess[x];
+                for(let y = 0; y < arr.length; y++){
+                    if(count % 2){
+                        box += `<div class='box white' data-x="${y}" data-y="${x}"></div>`;
+                        count++;
+                    }
+                    else {
+                        box += `<div class='box black' data-x="${y}" data-y="${x}"></div>`;
+                        count++;
+                    }
                 }
-                else {
-                    box += "<div class='box black'></div>";
-                    count++;
-                }
+                count++;
+                container.innerHTML = box;
             }
-            count++;
-            container.innerHTML = box;
+            let boxPoint = document.querySelectorAll(".box");
+            console.log(boxPoint);
+
+            boxPoint.forEach(point => point.addEventListener("click", horse));
         }
 
+        map();
+
+        function horse(){
+            let boxPoint = document.querySelectorAll(".box");
+            boxPoint.forEach(function(item){
+                item.style.background = "";
+                console.log('yleo');
+            });
+            let x = this.dataset.x;
+            let y = this.dataset.y;
+            x = Number(x);
+            y = Number(y);
+            console.log(x , y, this);
+            if(x+2 < 8 && y+1 < 8){
+                this.style.background = "red";
+                document.querySelector(`div[data-x="${x+2}"][data-y="${y+1}"]`).style.background = "green";
+
+            }
+            if(x+2 < 8 && y-1 >= 0){
+                document.querySelector(`div[data-x="${x+2}"][data-y="${y-1}"]`).style.background = "green";
+            }
+            if(y+2 < 8 && x+1 >= 0){
+                document.querySelector(`div[data-x="${x+1}"][data-y="${y+2}"]`).style.background = "green";
+            }
+            if(y+2 < 8 && x-1 >= 0){
+                document.querySelector(`div[data-x="${x-1}"][data-y="${y+2}"]`).style.background = "green";
+            }
+            if(x-2 < 8 && y+1 >= 0){
+                document.querySelector(`div[data-x="${x-2}"][data-y="${y+1}"]`).style.background = "green";
+            }
+            if(x-2 < 8 && y-1 >= 0){
+                document.querySelector(`div[data-x="${x-2}"][data-y="${y-1}"]`).style.background = "green";
+            }
+            if(y-2 < 8 && x-1 >= 0){
+                document.querySelector(`div[data-x="${x+1}"][data-y="${y-2}"]`).style.background = "green";
+            }
+            if(y-2 < 8 && x+1 >= 0){
+                document.querySelector(`div[data-x="${x-1}"][data-y="${y-2}"]`).style.background = "green";
+            }
+         
+            
+        }
     </script>
 </body>
 </html>
