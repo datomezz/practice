@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fractals</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+        }
+        .div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .line{
+            width: 100%;
+            margin: .5rem 0;
+            display: inline-block;
+            height: 3px;
+            background : red;
+        }
+        .line:first-child{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div">
+            <div class="line"></div>
+        </div>
+    </div>
+<script>
+    let line = document.querySelector(".line");
+    let container = document.querySelector(".container");
+    let div = document.querySelectorAll(".div");
+    let allLine = document.querySelectorAll("line");
+
+    let len = "90";
+    let allDiv = div.length;
+
+    function fractal(){
+        allDiv *= 2;
+        len /= 2;
+        let newDiv = document.createElement("div");
+        newDiv.className = "div";
+        container.appendChild(newDiv);
+
+        for(let i = 0; i < allDiv; i++){
+            let newLine = document.createElement("div");
+            newLine.className = "line";
+            newDiv.appendChild(newLine);
+            newLine.style.width = `${len}%`;
+        }
+        if(allDiv >= 256){
+            clearInterval(interv);
+        }
+        console.log(allDiv);
+    }
+
+    let interv = setInterval(fractal, 500)
+    console.log(len);
+
+</script>
+</body>
+</html>
