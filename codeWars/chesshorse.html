@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Horse</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width : 32rem;
+            height : 32rem;
+            background : yellow;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .box{
+            background: #fff;
+            width: 4rem;
+            height: 4rem;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+
+    <script>
+        let container = document.querySelector(".container");
+        let boxes = " ";
+        let chess = [
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0],
+            [0,0,0,0,0,0,0,0]
+        ];
+        console.log(chess);
+        for(let i = 0; i < chess.length; i++){
+            let arr = chess[i];
+            for(let x = 0; x < arr.length; x++){
+                boxes = "<div class='box'></div>";
+                console.log(boxes);
+            }
+                container.innerHTML = boxes;
+        }
+    </script>
+</body>
+</html>
