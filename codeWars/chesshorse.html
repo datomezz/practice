@@ -74,10 +74,10 @@
         map();
 
         function horse(){
+            
             let boxPoint = document.querySelectorAll(".box");
             boxPoint.forEach(function(item){
                 item.style.background = "";
-                console.log('yleo');
             });
             let x = this.dataset.x;
             let y = this.dataset.y;
@@ -85,32 +85,56 @@
             y = Number(y);
             console.log(x , y, this);
             if(x+2 < 8 && y+1 < 8){
-                this.style.background = "red";
-                document.querySelector(`div[data-x="${x+2}"][data-y="${y+1}"]`).style.background = "green";
+                let doc = document.querySelector(`div[data-x="${x+2}"][data-y="${y+1}"]`);
+                if(doc != null){
+                    doc.style.background = "green";
+                }
 
             }
             if(x+2 < 8 && y-1 >= 0){
-                document.querySelector(`div[data-x="${x+2}"][data-y="${y-1}"]`).style.background = "green";
+                let doc = document.querySelector(`div[data-x="${x+2}"][data-y="${y-1}"]`)   ;
+                if(doc != null){
+                    doc.style.background = "green";
+                }
             }
             if(y+2 < 8 && x+1 >= 0){
-                document.querySelector(`div[data-x="${x+1}"][data-y="${y+2}"]`).style.background = "green";
+                let doc = document.querySelector(`div[data-x="${x+1}"][data-y="${y+2}"]`)   ;
+                if(doc != null){
+                    doc.style.background = "green";
+                }
             }
             if(y+2 < 8 && x-1 >= 0){
-                document.querySelector(`div[data-x="${x-1}"][data-y="${y+2}"]`).style.background = "green";
+                let doc = document.querySelector(`div[data-x="${x-1}"][data-y="${y+2}"]`);
+                if(doc != null){
+                    doc.style.background = "green";
+                }
+
             }
             if(x-2 < 8 && y+1 >= 0){
-                document.querySelector(`div[data-x="${x-2}"][data-y="${y+1}"]`).style.background = "green";
+                let doc = document.querySelector(`div[data-x="${x-2}"][data-y="${y+1}"]`);
+                if(doc != null){
+                    doc.style.background = "green";
+                }
             }
             if(x-2 < 8 && y-1 >= 0){
-                document.querySelector(`div[data-x="${x-2}"][data-y="${y-1}"]`).style.background = "green";
+                let doc = document.querySelector(`div[data-x="${x-2}"][data-y="${y-1}"]`);
+                if(doc != null){
+                    doc.style.background = "green";
+                }
             }
             if(y-2 < 8 && x-1 >= 0){
-                document.querySelector(`div[data-x="${x+1}"][data-y="${y-2}"]`).style.background = "green";
+                let doc = document.querySelector(`div[data-x="${x-1}"][data-y="${y-2}"]`);
+                if(doc != null){
+                    doc.style.background = "green";
+                }
             }
             if(y-2 < 8 && x+1 >= 0){
-                document.querySelector(`div[data-x="${x-1}"][data-y="${y-2}"]`).style.background = "green";
+                let doc = document.querySelector(`div[data-x="${x+1}"][data-y="${y-2}"]`);
+                if(doc != null){
+                    doc.style.background = "green";
+                }
             }
-         
+            this.style.background = "red";
             
         }
     </script>
