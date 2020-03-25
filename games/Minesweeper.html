@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MineSwaeeper</title>
+    <style>
+        *{
+            margin : 0;
+            padding : 0;
+            box-sizing : border-box;
+        }
+        .container{
+            width : 16rem;
+            height : 16rem;
+            background : yellow;
+            display : flex;
+            flex-wrap : wrap;    
+        }
+        .box{
+            width : 2rem;
+            height : 2rem;
+            border : 1px solid #000;
+            display : flex;
+            justify-content : center;
+            align-items : center;
+        }
+        .bomb{
+            background : red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+
+    <script>
+        let container = document.querySelector(".container");
+        let field = [
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0],
+            [0, 0, 0, 0, 0, 0, 0, 0]
+        ];
+
+        let put = " ";
+
+        for(let i = 0; i < field.length; i++){
+            let arr = field[i];
+            for(let x = 0; x < arr.length; x++){
+                put += `<div class="box" data-x="${i}" data-y="${x}"></div>`;
+            }
+            container.innerHTML = put;
+        }
+
+        let boxes = document.querySelectorAll(".box");
+
+        for(let i = 0; i < 8; i++){
+            let rand = Math.floor(Math.random() * 64);
+            boxes[rand].classList.add("bomb");
+        }
+
+        boxes.forEach(function(element){
+            element.addEventListener("click", function(){
+                this.style.background = "#fff";
+                let x = Number(this.dataset.x);
+                let y = Number(this.dataset.y);
+
+                let count = 0;
+                
+
+                console.log(x,y, this);
+                if(document.querySelector(`.box[data-x="${x-1}"][data-y="${y}"]`).classList == "box bomb"){
+                    count++;
+                    console.log(x-1, y);
+                }
+                if(document.querySelector(`.box[data-x="${x+1}"][data-y="${y}"]`).classList == "box bomb"){
+                    count++;
+                    console.log(x+1, y);
+                }
+                if(document.querySelector(`.box[data-x="${x}"][data-y="${y+1}"]`).classList == "box bomb"){
+                    count++;
+                    console.log(x+1, y);
+                }
+                if(document.querySelector(`.box[data-x="${x}"][data-y="${y-1}"]`).classList == "box bomb"){
+                    count++;
+                    console.log(x+1, y);
+                }
+                if(document.querySelector(`.box[data-x="${x-1}"][data-y="${y-1}"]`).classList == "box bomb"){
+                    count++;
+                    console.log(x-1, y);
+                }
+                if(document.querySelector(`.box[data-x="${x+1}"][data-y="${y-1}"]`).classList == "box bomb"){
+                    count++;
+                    console.log(x+1, y);
+                }
+                if(document.querySelector(`.box[data-x="${x+1}"][data-y="${y+1}"]`).classList == "box bomb"){
+                    count++;
+                    console.log(x+1, y);
+                }
+                if(document.querySelector(`.box[data-x="${x-1}"][data-y="${y+1}"]`).classList == "box bomb"){
+                    count++;
+                    console.log(x+1, y);
+                }
+                if(count == 0){
+                    this.innerText = "";
+                }
+                else {
+                    this.innerText = count;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
