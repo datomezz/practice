@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajax Practice</title>
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .box{
+            min-width: 10rem;
+            height: 10rem;
+            background: yellow;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: .5rem 0;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container"></div>
+    <button>Clcik</button>
+
+    <script>
+        let xhttp = new XMLHttpRequest();
+        let container = document.querySelector(".container");
+        let button = document.querySelector("button");
+
+        button.addEventListener("click", ajax);
+
+        function ajax(){
+            xhttp.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    let parse = JSON.parse(this.response);
+                    parse = parse.users;
+                    
+                    parse.forEach(element => {
+                        let newDiv = document.createElement("div");
+                        newDiv.classList.add("box");
+                        newDiv.innerHTML += `
+                            <div class="info">Name : ${element.name}</div>
+                            <div class="info">Surname : ${element.lastName}</div>
+                        `;
+                        container.appendChild(newDiv);
+                    });
+                }
+            }
+            xhttp.open("GET", "ajax.json");
+            xhttp.send();
+        }
+
+    </script>
+</body>
+</html>
