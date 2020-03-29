@@ -26,18 +26,22 @@
 </head>
 <body>
     <div class="container"></div>
+    <br>
     <button>Clcik</button>
 
     <script>
         let colorArr = new Array();
-        let xhttp = new XMLHttpRequest();
         let container = document.querySelector(".container");
         let button = document.querySelector("button");
 
-        button.addEventListener("click", ajax);
+        button.onclick = function(){
+            ajax("request", "ajax.json");
+        }
 
-        function ajax(){
-            xhttp.onreadystatechange = function(){
+        function ajax(req, url){
+            req = new XMLHttpRequest();
+
+            req.onreadystatechange = function(){
                 if(this.readyState == 4 && this.status == 200){
                     let parse = JSON.parse(this.response);
                     parse = parse.users;
@@ -60,6 +64,7 @@
                         newDiv.style.background = `rgb(${colorArr[0]}, ${colorArr[1]}, ${colorArr[2]}`
                         container.appendChild(newDiv);
 
+                        
                         //style
                         while(colorArr.length > 0) {
                             colorArr.pop();
@@ -69,8 +74,9 @@
                     });
                 }
             }
-            xhttp.open("GET", "ajax.json");
-            xhttp.send();
+            req.open("GET", url, true);
+            req.send();
+            console.log(req);
         }
 
     </script>
