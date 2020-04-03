@@ -61,6 +61,10 @@ for(let i = 0; i < carts.length; i++){
 
 
     carts[i].addEventListener("click", function(){
+        //Disapear chosen cart
+        carts[i].style.display = "none";
+
+        //sort carts for new
         let x = Number(carts[i].innerText);
         opponentsArr = opponentsArr.sort(function(a, b){return b - a}).reverse();
 
@@ -88,6 +92,13 @@ for(let i = 0; i < carts.length; i++){
         }
 
         let y = sameKindBiggerCart[0];
+
+        for(let num in opponentsArr){
+            if(carts[num].innerText == sameKindBiggerCart[0]){
+                carts[num].style.display = "none";
+            }
+
+        }
 
         ground.innerHTML = `
             <div class="cart box" style="background: lightblue">${carts[i].innerText}</div>
