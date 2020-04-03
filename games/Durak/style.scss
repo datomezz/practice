@@ -10,6 +10,14 @@ $border : 1px solid black;
 *{
     box-sizing : border-box;
 }
+a{
+    text-decoration : none;
+    color : #000;
+    transition : .2s ease;
+    &:hover{
+        filter: brightness(40%);
+    }
+}
 .container{
     margin: 0 auto;
     width: 60rem;

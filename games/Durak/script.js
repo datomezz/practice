@@ -5,6 +5,9 @@ let origin = [
     '31','32','33','34','35','36','37','38','39',
     '41','42','43','44','45','46','47','48','49'
 ]
+let playersArr = new Array();
+let opponentsArr = new Array();
+
 
 function setKoziri(){
     let koziri = document.querySelector(".koziri");
@@ -41,8 +44,31 @@ for(let i = 0; i < carts.length; i++){
         case 4 : carts[i].style.background = "lightblue";
         break;
     }
+
+    //Define Player's and Oponnent's Array
+    if(opponentsArr.length != 6){
+        opponentsArr.push(Number(origin[rand]));
+        console.log(opponentsArr);
+    } else {
+        playersArr.push(Number(origin[rand]));
+        console.log(playersArr);
+    }
+
     origin.splice(rand, 1);
 
-    console.log(origin);
 
+
+    carts[i].addEventListener("click", function(){
+        let x = Number(carts[i].innerText);
+        opponentsArr = opponentsArr.sort(function(a, b){return b - a}).reverse();
+        let rightChoice = new Array();
+        for(let y of opponentsArr){
+            if(y - x >= 0){
+                rightChoice.push(y);
+            }
+            console.log(rightChoice);
+        }
+        
+    });
 }
+

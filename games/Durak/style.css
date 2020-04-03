@@ -3,6 +3,18 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+a:hover {
+  -webkit-filter: brightness(40%);
+          filter: brightness(40%);
+}
+
 .container {
   margin: 0 auto;
   width: 60rem;
