@@ -1,6 +1,9 @@
 let carts = document.querySelectorAll(".cart");
 let ground = document.querySelector(".ground");
 
+let player = document.querySelector(".player");
+let opponent = document.querySelector(".opponent");
+
 let origin = [
     '11','12','13','14','15','16','17','18','19',
     '21','22','23','24','25','26','27','28','29',
@@ -61,8 +64,10 @@ for(let i = 0; i < carts.length; i++){
 
 
     carts[i].addEventListener("click", function(){
-        //Disapear chosen cart
+        //Disapear chosen cart on display and on array
         carts[i].style.display = "none";
+        playersArr.splice(i-6, 1);
+        console.log(opponentsArr);
 
         //sort carts for new
         let x = Number(carts[i].innerText);
@@ -77,33 +82,46 @@ for(let i = 0; i < carts.length; i++){
             }
         }
 
-        for(let y in kindOfCartSort){
-            let x_value = carts[i].innerText.charAt(0);
-            let y_value = kindOfCartSort[y].toString().charAt(0);
-            let z = x_value === y_value;
-            console.log(Boolean(z));
+        if(kindOfCartSort[0] == undefined){
+            let out = new String();
 
-            if(Number(x_value) === Number(y_value)){
-                sameKindBiggerCart.push(kindOfCartSort[y]);
-            } else {
-                kindOfCartSort.splice(y, 1);
-                console.log(kindOfCartSort.splice(y, 1));
+            console.log("yleo");
+        } else {
+
+            
+            for(let y in kindOfCartSort){
+                let x_value = carts[i].innerText.charAt(0);
+                let y_value = kindOfCartSort[y].toString().charAt(0);
+                let z = x_value === y_value;
+    
+    
+                if(Number(x_value) === Number(y_value)){
+                    sameKindBiggerCart.push(kindOfCartSort[y]);
+                } else {
+                    kindOfCartSort.splice(y, 1);
+                    console.log(kindOfCartSort.splice(y, 1));
+                }
             }
+    
+            let y = sameKindBiggerCart[0];
+    
+            for(let num in opponentsArr){
+                if(carts[num].innerText == sameKindBiggerCart[0]){
+                    carts[num].style.display = "none";
+                }
+                if(opponentsArr[num] == sameKindBiggerCart[0]){
+                    opponentsArr.splice(num, 1);
+                }
+            }
+            
+            console.log(opponentsArr);
+            ground.innerHTML = `
+                <div class="cart box" style="background: lightblue">${carts[i].innerText}</div>
+                <div class="cart box" style="background: pink">${y}</div>
+            `;
+
         }
 
-        let y = sameKindBiggerCart[0];
-
-        for(let num in opponentsArr){
-            if(carts[num].innerText == sameKindBiggerCart[0]){
-                carts[num].style.display = "none";
-            }
-
-        }
-
-        ground.innerHTML = `
-            <div class="cart box" style="background: lightblue">${carts[i].innerText}</div>
-            <div class="cart box" style="background: pink">${y}</div>
-        `;
 
     });
 }

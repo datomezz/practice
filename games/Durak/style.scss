@@ -74,6 +74,13 @@ a{
     @include flex(row, flex-start, flex-start);
     padding : .5rem;
 }
+.opponent{
+    border : $border;
+    width : 30rem;
+    height: 8rem;
+    @include flex(row, flex-start, flex-start);
+    padding : .5rem;
+}
 
 .cart{
     width : 5rem;
