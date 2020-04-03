@@ -96,15 +96,14 @@
                 strText = strText.split("").reverse().join("");
                 strText = strText.slice(strText.length - sum);
                 strText = strText.split("").reverse().join("");
+                str.innerText = strText + "...";
             } 
             
-            str.innerText = strText + "...";
             
         }
         window.addEventListener("load", function(){
             for(let i = 0; i < text.length; i++){
                 threeDot(text[i]);
-
             }
         });
 
