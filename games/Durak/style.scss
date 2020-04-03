@@ -18,10 +18,16 @@ $border : 1px solid black;
     @include flex(row, space-between, flex-start);
     padding: 1rem;
 }
-.container__carts{
+.container__koziri{
     border: $border;
     width: 10rem;
     height: 100%;
+    @include flex(row, center,center);
+    .koziri{
+        width: 5rem;
+        height: 8rem;
+        border : $border;
+    }
 }
 
 .container__battleground{
