@@ -6,6 +6,24 @@ let origin = [
     '41','42','43','44','45','46','47','48','49'
 ]
 
+function setKoziri(){
+    let koziri = document.querySelector(".koziri");
+    let rand = Math.floor(Math.random() * 4) + 1;
+    console.log(rand);
+    switch(rand){
+        case 1 : for(let i = 0; i <= 8; i++){origin[i] += "0"} koziri.style.background = "pink";
+        break;
+        case 2 : for(let i = 9; i <= 17; i++){origin[i] += "0"} koziri.style.background = "tomato";
+        break;
+        case 3 : for(let i = 18; i <= 26; i++){origin[i] += "0"} koziri.style.background = "lightgreen";
+        break;
+        case 4 : for(let i = 27; i <= 35; i++){origin[i] += "0"} koziri.style.background = "lightblue";
+        break;
+    }
+}
+
+setKoziri();
+
 for(let i = 0; i < carts.length; i++){
     let rand = Math.floor(Math.random() * origin.length);
     carts[i].innerText = origin[rand];
