@@ -1,4 +1,6 @@
 let carts = document.querySelectorAll(".cart");
+let ground = document.querySelector(".ground");
+
 let origin = [
     '11','12','13','14','15','16','17','18','19',
     '21','22','23','24','25','26','27','28','29',
@@ -12,7 +14,7 @@ let opponentsArr = new Array();
 function setKoziri(){
     let koziri = document.querySelector(".koziri");
     let rand = Math.floor(Math.random() * 4) + 1;
-    console.log(rand);
+
     switch(rand){
         case 1 : for(let i = 0; i <= 8; i++){origin[i] += "0"} koziri.style.background = "pink";
         break;
@@ -48,10 +50,10 @@ for(let i = 0; i < carts.length; i++){
     //Define Player's and Oponnent's Array
     if(opponentsArr.length != 6){
         opponentsArr.push(Number(origin[rand]));
-        console.log(opponentsArr);
+
     } else {
         playersArr.push(Number(origin[rand]));
-        console.log(playersArr);
+
     }
 
     origin.splice(rand, 1);
@@ -61,14 +63,37 @@ for(let i = 0; i < carts.length; i++){
     carts[i].addEventListener("click", function(){
         let x = Number(carts[i].innerText);
         opponentsArr = opponentsArr.sort(function(a, b){return b - a}).reverse();
-        let rightChoice = new Array();
+
+        let kindOfCartSort = new Array();
+        let sameKindBiggerCart = new Array();
+
         for(let y of opponentsArr){
             if(y - x >= 0){
-                rightChoice.push(y);
+                kindOfCartSort.push(y);
             }
-            console.log(rightChoice);
         }
-        
+
+        for(let y in kindOfCartSort){
+            let x_value = carts[i].innerText.charAt(0);
+            let y_value = kindOfCartSort[y].toString().charAt(0);
+            let z = x_value === y_value;
+            console.log(Boolean(z));
+
+            if(Number(x_value) === Number(y_value)){
+                sameKindBiggerCart.push(kindOfCartSort[y]);
+            } else {
+                kindOfCartSort.splice(y, 1);
+                console.log(kindOfCartSort.splice(y, 1));
+            }
+        }
+
+        let y = sameKindBiggerCart[0];
+
+        ground.innerHTML = `
+            <div class="cart box" style="background: lightblue">${carts[i].innerText}</div>
+            <div class="cart box" style="background: pink">${y}</div>
+        `;
+
     });
 }
 

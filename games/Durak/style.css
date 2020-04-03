@@ -90,6 +90,17 @@ a:hover {
   border: 1px solid black;
   width: 10rem;
   height: 8rem;
+  position: relative;
+}
+
+.ground .box {
+  border: 1px solid black !important;
+}
+
+.ground .box:last-child {
+  position: absolute;
+  top: -3.5rem;
+  left: 3.5rem;
 }
 
 .player {

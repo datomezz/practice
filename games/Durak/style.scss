@@ -56,6 +56,15 @@ a{
     border : $border;
     width : 10rem;
     height : 8rem;
+    position : relative;
+    .box{
+        border : $border !important;
+        &:last-child{
+            position : absolute;
+            top : -3.5rem;
+            left : 3.5rem;
+        }
+    }
 }
 
 .player{
