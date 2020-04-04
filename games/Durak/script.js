@@ -67,7 +67,7 @@ for(let i = 0; i < carts.length; i++){
         //Disapear chosen cart on display and on array
         carts[i].style.display = "none";
         playersArr.splice(i-6, 1);
-        console.log(opponentsArr);
+
 
         //sort carts for new
         let x = Number(carts[i].innerText);
@@ -84,8 +84,8 @@ for(let i = 0; i < carts.length; i++){
 
         if(kindOfCartSort[0] == undefined){
             let out = new String();
+            //aq unda iyos undenfined-is dros reaqcia realizebuli
 
-            console.log("yleo");
         } else {
 
             
@@ -99,7 +99,7 @@ for(let i = 0; i < carts.length; i++){
                     sameKindBiggerCart.push(kindOfCartSort[y]);
                 } else {
                     kindOfCartSort.splice(y, 1);
-                    console.log(kindOfCartSort.splice(y, 1));
+     
                 }
             }
     
@@ -114,11 +114,13 @@ for(let i = 0; i < carts.length; i++){
                 }
             }
             
-            console.log(opponentsArr);
+  
+            //add elements to battleground
             ground.innerHTML = `
                 <div class="cart box">${carts[i].innerText}</div>
                 <div class="cart box">${y}</div>
             `;
+            //defines style of this new elements
             let cartBox = document.querySelectorAll(".box");
 
             for(let x = 0; x < cartBox.length; x++){
@@ -133,6 +135,25 @@ for(let i = 0; i < carts.length; i++){
                     break;
                 }
             }
+            
+            //let player move the same value cart or not
+            let sameValueCart = (cartBox[0].innerText.charAt(1));
+
+            for(let i = 0; i < playersArr.length; i++){
+                if(Number(playersArr[i].toString().charAt(1)) != sameValueCart){
+                    for(let x in carts){
+                        if(Number(carts[x].innerText) == playersArr[i]){
+
+                            carts[x].style.background = "red";
+                            carts[x].style.pointerEvents = "none";
+                        }
+                    }
+
+                }
+            }
+
+            console.log(playersArr);
+            console.log(playersArr, "player");
             
         }
 
