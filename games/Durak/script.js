@@ -116,10 +116,24 @@ for(let i = 0; i < carts.length; i++){
             
             console.log(opponentsArr);
             ground.innerHTML = `
-                <div class="cart box" style="background: lightblue">${carts[i].innerText}</div>
-                <div class="cart box" style="background: pink">${y}</div>
+                <div class="cart box">${carts[i].innerText}</div>
+                <div class="cart box">${y}</div>
             `;
+            let cartBox = document.querySelectorAll(".box");
 
+            for(let x = 0; x < cartBox.length; x++){
+                switch(Number(cartBox[x].innerText.charAt(0))){
+                    case 1 : cartBox[x].style.background  = "pink";
+                    break;
+                    case 2 : cartBox[x].style.background  = "tomato";
+                    break;
+                    case 3 : cartBox[x].style.background  = "lightgreen";
+                    break;
+                    case 4 : cartBox[x].style.background  = "lightblue";
+                    break;
+                }
+            }
+            
         }
 
 
