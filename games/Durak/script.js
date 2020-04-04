@@ -82,10 +82,14 @@ for(let i = 0; i < carts.length; i++){
             }
         }
 
-        if(kindOfCartSort[0] == undefined){
+        if(kindOfCartSort[0] === undefined){
             let out = new String();
             //aq unda iyos undenfined-is dros reaqcia realizebuli
+            opponent.innerHTML += `
+                <a href="javascript:void(0)" class="cart">${carts[i].innerText}</a>
+            `;
 
+            console.log("unda miighos botma");
         } else {
 
             
