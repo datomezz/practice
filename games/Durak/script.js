@@ -81,15 +81,46 @@ for(let i = 0; i < carts.length; i++){
                 kindOfCartSort.push(y);
             }
         }
-
+        console.log(kindOfCartSort, "kind of sort");
+        //kartis migheba (bot)
         if(kindOfCartSort[0] === undefined){
             let out = new String();
             //aq unda iyos undenfined-is dros reaqcia realizebuli
+            let style = new String();
+            switch(Number(carts[i].innerText.charAt(0))){
+                case 1 : style = "background : pink";
+                break;
+                case 2 : style = "background : tomato";
+                break;
+                case 3 : style = "background : lightgreen";
+                break;
+                case 4 : style = "background : lightblue";
+                break;
+            }
             opponent.innerHTML += `
-                <a href="javascript:void(0)" class="cart">${carts[i].innerText}</a>
+            <a href="javascript:void(0)" class="cart" style="${style}">${carts[i].innerText}</a>
             `;
 
+            opponentsArr.push(Number(carts[i].innerText));
+
+            let sameValueCart = carts[i].innerText.charAt(1);
+
+            for(let i = 0; i < playersArr.length; i++){
+                if(Number(playersArr[i].toString().charAt(1)) != sameValueCart){
+                    for(let x in carts){
+                        if(Number(carts[x].innerText) == playersArr[i]){
+
+                            carts[x].style.background = "red";
+                            carts[x].style.pointerEvents = "none";
+                        }
+                    }
+
+                }
+            }
+            console.log(opponentsArr, "opponentsArr");
+
             console.log("unda miighos botma");
+            
         } else {
 
             for(let y in kindOfCartSort){
@@ -102,17 +133,31 @@ for(let i = 0; i < carts.length; i++){
                     sameKindBiggerCart.push(kindOfCartSort[y]);
                 } else {
                     kindOfCartSort.splice(y, 1);
-    
                 }
             }
+            //kartis migheba (bot)
             if(sameKindBiggerCart.length == 0){
+                //this script works when bot take carts
+                let style = new String();
+                switch(Number(carts[i].innerText.charAt(0))){
+                    case 1 : style = "background : pink";
+                    break;
+                    case 2 : style = "background : tomato";
+                    break;
+                    case 3 : style = "background : lightgreen";
+                    break;
+                    case 4 : style = "background : lightblue";
+                    break;
+                }
+                
                 opponent.innerHTML += `
-                <a href="javascript:void(0)" class="cart">${carts[i].innerText}</a>
+                <a href="javascript:void(0)" class="cart" style="${style}">${carts[i].innerText}</a>
                 `;
-                console.log(sameKindBiggerCart, "same");
+                
+                opponentsArr.push(Number(carts[i].innerText));
 
                 let sameValueCart = carts[i].innerText.charAt(1);
-                
+
                 for(let i = 0; i < playersArr.length; i++){
                     if(Number(playersArr[i].toString().charAt(1)) != sameValueCart){
                         for(let x in carts){
@@ -177,8 +222,6 @@ for(let i = 0; i < carts.length; i++){
                     }
                 }
 
-                console.log(playersArr);
-                console.log(playersArr, "player");
             }
         }
 
