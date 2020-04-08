@@ -172,6 +172,7 @@ for(let i = 0; i < carts.length; i++){
                 }
                 
             }
+            
             else {
                 let y = sameKindBiggerCart[0];
         
