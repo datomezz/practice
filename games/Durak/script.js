@@ -184,7 +184,6 @@ for(let i = 0; i < carts.length; i++){
                         opponentsArr.splice(num, 1);
                     }
                 }
-                
     
                 //add elements to battleground
                 ground.innerHTML = `
