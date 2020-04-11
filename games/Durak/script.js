@@ -13,7 +13,6 @@ let origin = [
 let playersArr = new Array();
 let opponentsArr = new Array();
 
-
 function setKoziri(){
     let koziri = document.querySelector(".koziri");
     let rand = Math.floor(Math.random() * 4) + 1;
