@@ -56,7 +56,6 @@ for(let i = 0; i < carts.length; i++){
 
     } else {
         playersArr.push(Number(origin[rand]));
-
     }
 
     origin.splice(rand, 1);
@@ -67,46 +66,6 @@ for(let i = 0; i < carts.length; i++){
         carts[i].style.display = "none";
         playersArr.splice(i-6, 1);
 
-        turn++;
-        if(turn > 2 && opponentsArr.length > opponents_current_number){
-            let out = new String();
-            //aq unda iyos undenfined-is dros reaqcia realizebuli
-            let style = new String();
-            switch(Number(carts[i].innerText.charAt(0))){
-                case 1 : style = "background : pink";
-                break;
-                case 2 : style = "background : tomato";
-                break;
-                case 3 : style = "background : lightgreen";
-                break;
-                case 4 : style = "background : lightblue";
-                break;
-            }
-            opponent.innerHTML += `
-            <a href="javascript:void(0)" class="cart" style="${style}">${carts[i].innerText}</a>
-            `;
-
-            opponentsArr.push(Number(carts[i].innerText));
-
-            let sameValueCart = carts[i].innerText.charAt(1);
-
-            for(let i = 0; i < playersArr.length; i++){
-                if(Number(playersArr[i].toString().charAt(1)) != sameValueCart){
-                    for(let x in carts){
-                        if(Number(carts[x].innerText) == playersArr[i]){
-
-                            carts[x].style.background = "red";
-                            carts[x].style.pointerEvents = "none";
-                        }
-                    }
-
-                }
-            }
-            console.log(opponents_current_number, opponentsArr.length, "opponentsArr");
-        } else {
-            let opponents_current_number = opponentsArr.length;
-            let players_current_number = playersArr.length;
-            console.log(opponents_current_number, opponentsArr.length, "opponentsArr");
             //sort carts for new
             let x = Number(carts[i].innerText);
             opponentsArr = opponentsArr.sort(function(a, b){return b - a}).reverse();
@@ -124,23 +83,14 @@ for(let i = 0; i < carts.length; i++){
             if(kindOfCartSort[0] === undefined){
                 let out = new String();
                 //aq unda iyos undenfined-is dros reaqcia realizebuli
-                let style = new String();
-                switch(Number(carts[i].innerText.charAt(0))){
-                    case 1 : style = "background : pink";
-                    break;
-                    case 2 : style = "background : tomato";
-                    break;
-                    case 3 : style = "background : lightgreen";
-                    break;
-                    case 4 : style = "background : lightblue";
-                    break;
-                }
+
                 opponent.innerHTML += `
-                <a href="javascript:void(0)" class="cart" style="${style}">${carts[i].innerText}</a>
+                <a href="javascript:void(0)" class="cart" style="background : gray">${carts[i].innerText}</a>
                 `;
 
                 opponentsArr.push(Number(carts[i].innerText));
 
+                //disable player's move
                 let sameValueCart = carts[i].innerText.charAt(1);
 
                 for(let i = 0; i < playersArr.length; i++){
@@ -160,111 +110,95 @@ for(let i = 0; i < carts.length; i++){
                 
             } else {
 
-                for(let y in kindOfCartSort){
-                    let x_value = carts[i].innerText.charAt(0);
-                    let y_value = kindOfCartSort[y].toString().charAt(0);
-                    let z = x_value === y_value;
-        
-        
-                    if(Number(x_value) === Number(y_value)){
-                        sameKindBiggerCart.push(kindOfCartSort[y]);
-                    } else {
-                        kindOfCartSort.splice(y, 1);
-                    }
-                }
-                //kartis migheba (bot)
-                if(sameKindBiggerCart.length == 0){
-                    //this script works when bot take carts
-                    let style = new String();
-                    switch(Number(carts[i].innerText.charAt(0))){
-                        case 1 : style = "background : pink";
-                        break;
-                        case 2 : style = "background : tomato";
-                        break;
-                        case 3 : style = "background : lightgreen";
-                        break;
-                        case 4 : style = "background : lightblue";
-                        break;
-                    }
-                    
-                    opponent.innerHTML += `
-                    <a href="javascript:void(0)" class="cart" style="${style}">${carts[i].innerText}</a>
-                    `;
-                    
-                    opponentsArr.push(Number(carts[i].innerText));
-
-                    let sameValueCart = carts[i].innerText.charAt(1);
-
-                    for(let i = 0; i < playersArr.length; i++){
-                        if(Number(playersArr[i].toString().charAt(1)) != sameValueCart){
-                            for(let x in carts){
-                                if(Number(carts[x].innerText) == playersArr[i]){
-
-                                    carts[x].style.background = "red";
-                                    carts[x].style.pointerEvents = "none";
-                                }
-                            }
-
-                        }
-                    }
-                    
-                }
-                
-                else {
-                    let y = sameKindBiggerCart[0];
-            
-                    for(let num in opponentsArr){
-                        if(carts[num].innerText == sameKindBiggerCart[0]){
-                            carts[num].style.display = "none";
-                        }
-                        if(opponentsArr[num] == sameKindBiggerCart[0]){
-                            opponentsArr.splice(num, 1);
-                        }
-                    }
-        
-                    //add elements to battleground
-                    ground.innerHTML = `
-                        <div class="cart box">${carts[i].innerText}</div>
-                        <div class="cart box">${y}</div>
-                    `;
-                    //defines style of this new elements
-                    let cartBox = document.querySelectorAll(".box");
-
-                    for(let x = 0; x < cartBox.length; x++){
-                        switch(Number(cartBox[x].innerText.charAt(0))){
-                            case 1 : cartBox[x].style.background  = "pink";
-                            break;
-                            case 2 : cartBox[x].style.background  = "tomato";
-                            break;
-                            case 3 : cartBox[x].style.background  = "lightgreen";
-                            break;
-                            case 4 : cartBox[x].style.background  = "lightblue";
-                            break;
-                        }
-                    }
-                    
-                    //let player move the same value cart or not
-                    let sameValueCart = cartBox[0].innerText.charAt(1);
-
-                    for(let i = 0; i < playersArr.length; i++){
-                        if(Number(playersArr[i].toString().charAt(1)) != sameValueCart){
-                            for(let x in carts){
-                                if(Number(carts[x].innerText) == playersArr[i]){
-
-                                    carts[x].style.background = "red";
-                                    carts[x].style.pointerEvents = "none";
-                                }
-                            }
-
-                        }
-                    }
-
+            for(let y in kindOfCartSort){
+                let x_value = carts[i].innerText.charAt(0);
+                let y_value = kindOfCartSort[y].toString().charAt(0);        
+    
+                if(Number(x_value) === Number(y_value)){
+                    sameKindBiggerCart.push(kindOfCartSort[y]);
+                } else {
+                    kindOfCartSort.splice(y, 1);
                 }
             }
+            //kartis migheba (bot)
+            if(sameKindBiggerCart.length == 0){
+                //this script works when bot take carts
 
+                opponent.innerHTML += `
+                <a href="javascript:void(0)" class="cart" style="background : gray">${carts[i].innerText}</a>
+                `;
+                
+                opponentsArr.push(Number(carts[i].innerText));
+
+                //disable player's move
+                let sameValueCart = carts[i].innerText.charAt(1);
+
+                for(let i = 0; i < playersArr.length; i++){
+                    if(Number(playersArr[i].toString().charAt(1)) != sameValueCart){
+                        for(let x in carts){
+                            if(Number(carts[x].innerText) == playersArr[i]){
+
+                                carts[x].style.background = "red";
+                                carts[x].style.pointerEvents = "none";
+                            }
+                        }
+
+                    }
+                }
+                
+            }
+            
+            else {
+                let y = sameKindBiggerCart[0];
+        
+                for(let num in opponentsArr){
+                    if(carts[num].innerText == sameKindBiggerCart[0]){
+                        carts[num].style.display = "none";
+                    }
+                    if(opponentsArr[num] == sameKindBiggerCart[0]){
+                        opponentsArr.splice(num, 1);
+                    }
+                }
+    
+                //add elements to battleground
+                ground.innerHTML = `
+                    <div class="cart box">${carts[i].innerText}</div>
+                    <div class="cart box">${y}</div>
+                `;
+                //defines style of this new elements
+                let cartBox = document.querySelectorAll(".box");
+
+                for(let x = 0; x < cartBox.length; x++){
+                    switch(Number(cartBox[x].innerText.charAt(0))){
+                        case 1 : cartBox[x].style.background  = "pink";
+                        break;
+                        case 2 : cartBox[x].style.background  = "tomato";
+                        break;
+                        case 3 : cartBox[x].style.background  = "lightgreen";
+                        break;
+                        case 4 : cartBox[x].style.background  = "lightblue";
+                        break;
+                    }
+                }
+                
+                //let player move the same value cart or not
+                let sameValueCart = cartBox[0].innerText.charAt(1);
+
+                for(let i = 0; i < playersArr.length; i++){
+                    if(Number(playersArr[i].toString().charAt(1)) != sameValueCart){
+                        for(let x in carts){
+                            if(Number(carts[x].innerText) == playersArr[i]){
+
+                                carts[x].style.background = "red";
+                                carts[x].style.pointerEvents = "none";
+                            }
+                        }
+
+                    }
+                }
+
+            }
         }
-
-
     });
 }
 
