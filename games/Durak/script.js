@@ -59,37 +59,9 @@ for(let i = 0; i < carts.length; i++){
     carts[i].addEventListener("click", function(){
         //kartis amochra rogorc vizualurad aseve masividan
         carts[i].style.display = "none";
-        playersArr.splice(i-6, 1);
-
-        let x = Number(carts[i].innerText);
-        opponentsArr = opponentsArr.sort(function(a, b){return b - a}).reverse();
-
-        let kindOfCartSort = new Array();
-        let sameKindBiggerCart = new Array();
-
-        for(let y of opponentsArr){
-            if(y - x >= 0){
-                kindOfCartSort.push(y);
-            }
-        }
-
-        for(let y in kindOfCartSort){
-        let x_value = carts[i].innerText.charAt(0);
-        let y_value = kindOfCartSort[y].toString().charAt(0);        
-
-            if(Number(x_value) === Number(y_value)){
-                sameKindBiggerCart.push(kindOfCartSort[y]);
-            } else {
-                kindOfCartSort.splice(y, 1);
-            }
-        }
-
+        playersArr.splice(i - playersArr.length + 1, 1);
+        console.log(playersArr);
         
-        ground.innerHTML = `
-                            <div class="cart box">${carts[i].innerText}</div>
-                            <div class="cart box">${y}</div>
-                        `;
-        console.log(playersArr, opponentsArr);
     });
 }
 
