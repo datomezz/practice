@@ -1,0 +1,19 @@
+{
+    "slider" : [
+        {
+            "id" : 1,
+            "name" : "dato",
+            "surname" : "mezz"
+        },
+        {
+            "id" : 2,
+            "name" : "mari",
+            "surname" : "mezz"
+        },
+        {
+            "id" : 3,
+            "name" : "drunchi",
+            "surname" : "mezz"
+        }
+    ]
+}

@@ -132,17 +132,18 @@
     <script>
         const slider = document.querySelectorAll(".slider");
         const swipe = document.querySelectorAll(".swipe");
-        const sliderDots = document.querySelector(".slider__dots");
-        const dots = document.querySelectorAll(".dot");
-
-        let count = 0;
+        const sliderDots = document.querySelectorAll(".slider__dots");
         
+        let count = 0;
+
         function swipeSlide(sum){
+            console.log(count, "dot");
             for(let y = 0; y < slider.length; y++){
                 slider[y].style.display = "none";
+                dots[y].classList.remove("active");
             }
             slider[count += sum].style.display = "flex";
-            console.log(count, "function");
+            dots[count].classList.add("active");
         }
 
         slider[count].style.display = "flex";
@@ -150,22 +151,27 @@
         for(let i = 0; i < slider.length; i++){
             let dot = document.createElement("div");
             dot.className = "dot";
-            sliderDots.appendChild(dot);
+            sliderDots[0].appendChild(dot);
 
             dot.addEventListener("click", function(){
                 count = i;
                 for(let y = 0; y < slider.length; y++){
                     slider[y].style.display = "none";
+                    dots[y].classList.remove("active");
                 }
+                dots[count].classList.add("active");
                 slider[count].style.display = "flex";
             });
         }
-        
+
+        const dots = document.querySelectorAll(".dot");
+
         swipe[0].addEventListener("click", function(){
             if(count <= 0){
                 count = slider.length;
             }
             swipeSlide(-1);
+            ajax();
         });
         swipe[1].addEventListener("click", function(){
             if(count >= slider.length - 1){
@@ -174,7 +180,20 @@
             console.log(count, "swipe")
             swipeSlide(1);
         });
-        console.log(dots);
+
+        function ajax(){
+            const req = new XMLHttpRequest();
+            req.onreadystatechange = function(){
+                if(this.readyState == 4 && this.status == 200){
+                    let parse = JSON.parse(this.response);
+                    parse = parse.slider;
+                    alert(parse[0].name);
+                }
+            }
+            req.setRequestHeader("Content-type", "application/json");
+            req.open("POST", "slider.json");
+            req.send("name=yle&surname=pussy");
+        }
     </script>
 </body>
 </html>
