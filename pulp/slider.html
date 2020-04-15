@@ -171,7 +171,6 @@
                 count = slider.length;
             }
             swipeSlide(-1);
-            ajax();
         });
         swipe[1].addEventListener("click", function(){
             if(count >= slider.length - 1){
@@ -181,19 +180,6 @@
             swipeSlide(1);
         });
 
-        function ajax(){
-            const req = new XMLHttpRequest();
-            req.onreadystatechange = function(){
-                if(this.readyState == 4 && this.status == 200){
-                    let parse = JSON.parse(this.response);
-                    parse = parse.slider;
-                    alert(parse[0].name);
-                }
-            }
-            req.setRequestHeader("Content-type", "application/json");
-            req.open("POST", "slider.json");
-            req.send("name=yle&surname=pussy");
-        }
     </script>
 </body>
 </html>
