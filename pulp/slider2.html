@@ -85,6 +85,9 @@
         .active{
             background : lightcoral;
         }
+        .active-slide{
+            display : flex;
+        }
     </style>
 </head>
 <body>
@@ -126,36 +129,48 @@
         const slider = document.querySelectorAll(".slider");
         const swipe = document.querySelectorAll(".swipe");
         const sliderDots = document.querySelectorAll(".slider__dots");
-        let arr = [1, 2, 3, 4];
+        let arr = [0, 1, 2, 3];
         let plus = 1;
         let minus = -1;
 
         for(let i = 0; i < 4; i++){
-            slider[i].style.display = "flex";
+            slider[i].classList.add("active-slide");
         }
         swipe[0].onclick = () => {
-            swipeSlide(minus);
-            minus--;
+            swipeSlide(-1);
         }
         swipe[1].onclick = () => {
-            swipeSlide(plus);
-            plus++;
+            swipeSlide(1);
         }
-
+        console.log(arr);
         function swipeSlide(sum){
             for(let x = 0; x < slider.length; x++){
-                slider[x].style.display = "none";
+                slider[x].classList.remove("active-slide");
             }
             if(sum > 0){
                 console.log("metia");
                 for(let i in arr){
-                    slider[arr[i] + sum].style.display = "flex";
+                    if(arr[i] + sum > 8){
+                        arr[i] = -1;
+                        console.log(arr[i], "yleo");
+                    }
+                    slider[arr[i] + sum].classList.add("active-slide");
                     arr[i] += sum;
+                    console.log(arr[i], "i");
                 }
             } else {
+                for(let i in arr){
+                    if(arr[i] + sum < 0){
+                        arr[i] = 9;
+                        console.log(arr[i], "yleo");
+                    }
+                    slider[arr[i] + sum].classList.add("active-slide");
+                    arr[i] += sum;
+                    console.log(arr[i], "i");
+                }
                 console.log("naklebia");
                 for(let i in arr){
-                    slider[arr[i] + sum].style.display = "flex";
+                    slider[arr[i] + sum].classList.add("active-slide");;
                     arr[i] += sum;
                 }
             }
