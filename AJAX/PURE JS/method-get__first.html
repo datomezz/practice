@@ -44,7 +44,7 @@
             req.onreadystatechange = function(){
                 if(this.readyState == 4 && this.status == 200){
                     let parse = JSON.parse(this.response);
-                    parse = parse.users;
+                    parse = parse.users; 
                     
                     parse.forEach(element => {
                         let newDiv = document.createElement("div");
