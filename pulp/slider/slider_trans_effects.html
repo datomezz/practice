@@ -98,6 +98,10 @@
             from { filter : blur(5rem)}
             to { filter : blur(0)}
         }
+        @keyframes grayscale {
+            from { filter : grayscale(100%)}
+            to { filter : grayscale(0)}
+        }
     </style>
 </head>
 <body>
@@ -208,9 +212,10 @@
         //Choose Effect
         const effects = document.querySelectorAll(".effects button");
         const img = document.querySelectorAll(".slider img");
-        const effectsArr = ["fade", "blur", "fade"];
+        const effectsArr = ["fade", "blur", "grayscale"];
 
         for(let i = 0; i < effects.length; i++){
+            effects[i].innerText = effectsArr[i].toUpperCase();
             effects[i].addEventListener("click", function(){
                 for(let x = 0; x < img.length; x++){
                     img[x].style.animationName = effectsArr[i];
