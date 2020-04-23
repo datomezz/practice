@@ -27,9 +27,8 @@
         .slider > img{
             width : 100%;
             height : 100%;
-            transition : .2s ease;
             animation-name : fade;
-            animation-duration: .5s;
+            animation-duration: .7s;
             }
         .slider > h1{
             position : absolute;
@@ -86,10 +85,18 @@
         .active{
             background : lightcoral;
         }
-
+        .effect-container{
+            display : flex;
+            flex-direction : column;
+            align-items : center;
+        }
         @keyframes fade {
             from{ opacity: 0;}
             to{ opacity: 1;}
+        }
+        @keyframes blur {
+            from { filter : blur(5rem)}
+            to { filter : blur(0)}
         }
     </style>
 </head>
@@ -137,6 +144,14 @@
         </div>
         <div class="slider__dots"></div>
     </div>
+    <div class="effect-container">
+        <h2>აირჩიე ეფექტი</h2>
+        <div class="effects">
+            <button id="#">Fade</button>
+            <button id="#">Blur</button>
+            <button id="#">###</button>
+        </div>
+    </div>
     <script>
         const slider = document.querySelectorAll(".slider");
         const swipe = document.querySelectorAll(".swipe");
@@ -145,7 +160,6 @@
         let count = 0;
 
         function swipeSlide(sum){
-
             console.log(count, "dot");
             for(let y = 0; y < slider.length; y++){
                 slider[y].style.display = "none";
@@ -190,6 +204,20 @@
             console.log(count, "swipe")
             swipeSlide(1);
         });
+
+        //Choose Effect
+        const effects = document.querySelectorAll(".effects button");
+        const img = document.querySelectorAll(".slider img");
+        const effectsArr = ["fade", "blur", "fade"];
+
+        for(let i = 0; i < effects.length; i++){
+            effects[i].addEventListener("click", function(){
+                for(let x = 0; x < img.length; x++){
+                    img[x].style.animationName = effectsArr[i];
+                }
+            });
+        }
+
 
     </script>
 </body>
