@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider Slick</title>
+    <link rel="stylesheet" href="../../libraries/slick/slick.css">
+    <script src="../../libraries/jquery-3.4.1.min.js"></script>
+    <style>
+        *{
+            box-sizing : border-box;
+            margin : 0;
+            padding : 0;
+        }
+        .wrapper{
+            width : 40rem;
+            height : auto;
+            border : 1px solid #000;
+            margin : 0 auto;
+        }
+        .wrapper > img {
+            width : 100%;
+            height : 20rem;
+        }
+        .slick-prev, .slick-next{
+            position : absolute;
+            z-index : 10;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <img src="https://picsum.photos/536/352">
+        <img src="https://picsum.photos/536/347">
+        <img src="https://picsum.photos/536/348">
+        <img src="https://picsum.photos/536/349">
+        <img src="https://picsum.photos/536/350">
+    </div>
+    <script src="../../libraries/slick/slick.min.js"></script>
+    <script>
+    $('.wrapper').slick({
+        lazyLoad: 'ondemand',
+        slidesToShow: 3,
+        responsive : [
+            {
+                breakpoint : 768,
+                settings : {
+                    arrows : false,
+                    centerMode : true,
+                    slidesToShow : 2
+                }
+            }
+            {
+                breakpoint : 500,
+                settings : {
+                    arrows : false,
+                    centerMode : true,
+                    slidesToShow : 1
+                }
+
+            }
+        ]
+    });
+    </script>
+</body>
+</html>
