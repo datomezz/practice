@@ -6,6 +6,7 @@
     <title>Slider Slick</title>
     <link rel="stylesheet" href="../../libraries/slick/slick.css">
     <script src="../../libraries/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../../libraries/aos-master/dist/aos.css">
     <style>
         *{
             box-sizing : border-box;
@@ -17,6 +18,8 @@
             height : auto;
             border : 1px solid #000;
             margin : 0 auto;
+            padding : 0 2rem;
+            position : relative;
         }
         .wrapper > img {
             width : 100%;
@@ -25,8 +28,37 @@
         .slick-prev, .slick-next{
             position : absolute;
             z-index : 10;
+            top : 50%;
+            transform : translate(0, -50%);
+            border-radius : 5px;
+            padding : .3rem;
+            outline : none;
         }
-
+        .slick-prev {
+            left : 0;
+        }
+        .slick-next {
+            right : 0;
+        }
+        .container {
+            margin : 60rem auto 0 auto;
+            border : 1px solid black;
+            width : 45rem;
+            height : 11rem;
+            padding : .5rem;
+            display : flex;
+            flex-direction : row;
+            overflow : hidden;
+            justify-content : space-around;
+        }
+        .box {
+            width : 10rem;
+            height : 10rem;
+            display : flex;
+            justify-content : center;
+            align-items : center;
+            border : 1px dotted #000;
+        }
         
     </style>
 </head>
@@ -38,11 +70,20 @@
         <img src="https://picsum.photos/536/349">
         <img src="https://picsum.photos/536/350">
     </div>
+    <div class="container" data-aos="flip-left">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+    </div>
+
     <script src="../../libraries/slick/slick.min.js"></script>
+    <script src="../../libraries/aos-master/dist/aos.js"></script>
     <script>
     $('.wrapper').slick({
         lazyLoad: 'ondemand',
         slidesToShow: 3,
+
         responsive : [
             {
                 breakpoint : 768,
@@ -51,7 +92,7 @@
                     centerMode : true,
                     slidesToShow : 2
                 }
-            }
+            },
             {
                 breakpoint : 500,
                 settings : {
@@ -63,6 +104,18 @@
             }
         ]
     });
+    $(".slick-next").text(">");
+    $(".slick-prev").text("<");
+
+    const colorArr = ["lightgreen", "lightblue", "tomato", "pink", "yellow", "purple"];
+    let box = $(".box");
+    
+    for(let i = 0; i < box.length; i++){
+        let rand = Math.floor(Math.random() * colorArr.length);
+        $(".box")[i].style.background = colorArr[rand];
+    }
+    console.log($(".box"));
+    AOS.init();
     </script>
 </body>
 </html>
