@@ -59,6 +59,7 @@
 
 .section {
   height: 60rem;
+  overflow: hidden;
 }
 
 .section__box {
@@ -131,19 +132,20 @@
   color: #fff;
 }
 
-.footer__social {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.wrapper {
+  width: 10rem;
+  height: 35rem;
+  overflow: hidden;
+  text-align: center;
+}
+
+.slick-arrow {
+  background: transparent;
+}
+
+.wrapper__img {
+  height: auto;
+  width: 6rem !important;
+  margin: 1rem 0;
 }
 /*# sourceMappingURL=main.css.map */

@@ -55,7 +55,7 @@ $footer : #414141;
 }
 .section {
     height : 60rem;
-
+    overflow : hidden;
 }
 .section__box{
     min-height : 12rem;
@@ -121,7 +121,18 @@ $footer : #414141;
     color : #fff;
 }
 
-.footer__social {
-    @include flex(row, center, center);
+.wrapper {
+    width : 10rem;
+    height : 35rem;
+    overflow: hidden;
+    text-align: center;
+}
+.slick-arrow{
+    background : transparent;
+}
 
+.wrapper__img {
+    height : auto;
+    width : 6rem !important;
+    margin : 1rem 0;
 }
