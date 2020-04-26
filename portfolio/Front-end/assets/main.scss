@@ -88,7 +88,7 @@ $footer : #414141;
 .section__photo {
     width : 100%;
     height : 40rem;
-    background : url(../Front-end/img/mezzcodes.png);
+    background : url(/portfolio/Front-end/img/mezzcodes.png);
     background-size : contain;
     background-repeat : no-repeat;
     background-position: center;
@@ -104,10 +104,10 @@ $footer : #414141;
 }
 .wave{
     width : 100%;
-    height : auto;
+    height : 5rem;
     position: absolute;
     z-index: 1;
-    top : -7rem;
+    top : -5rem;
 }
 
 .subscribe {
@@ -119,6 +119,8 @@ $footer : #414141;
 }
 .footer__right-title {
     color : #fff;
+    font-size : 1.7rem;
+    text-align : center;
 }
 
 .wrapper {
@@ -135,4 +137,22 @@ $footer : #414141;
     height : auto;
     width : 6rem !important;
     margin : 1rem 0;
+}
+
+.social__icon {
+    transition : .2s ease;
+   &:hover{
+       color : $blue !important;
+   }
+}
+
+@media screen and (max-width : 915px){
+    *{
+        font-size : 10px;
+    }
+}
+@media screen and (max-width : 1118px){
+    *{
+        font-size : 13px;
+    }
 }

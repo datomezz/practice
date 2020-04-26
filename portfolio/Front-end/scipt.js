@@ -46,8 +46,8 @@ $('.wrapper').slick({
     ]
 });
 
-$(".slick-next").text("").css({"display" : "none"});
-$(".slick-prev").text("").css({"display" : "none"});
+$(".slick-next").text("").css({"display" : "none !important"});
+$(".slick-prev").text("").css({"display" : "none !important"});
 
 
 document.querySelectorAll(".section__arrow")[0].onclick = function(){
