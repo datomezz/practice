@@ -1,0 +1,149 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Firago;
+}
+
+@font-face {
+  * {
+    font-family: Firago;
+    src: url(../assets/FiraGO-Bold.ttf) format("ttf");
+  }
+}
+
+.bg-gray {
+  background: #E9E9E9;
+}
+
+.cl-blue {
+  color: #29B2FF;
+}
+
+.header__navigation {
+  height: 10rem;
+}
+
+.portfolio__link, .portfolio__link:hover {
+  text-decoration: none;
+  color: #000;
+}
+
+.header__link {
+  font-weight: bold;
+  letter-spacing: 4px;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+  -webkit-transition: .2s linear;
+  transition: .2s linear;
+}
+
+.header__link .fa-home {
+  color: #686868;
+  font-size: 2rem;
+  -webkit-animation-delay: 0;
+          animation-delay: 0;
+  -webkit-transition: .2 s linear;
+  transition: .2 s linear;
+}
+
+.header__link .fa-home:hover {
+  color: #29B2FF;
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+}
+
+.header__link:hover {
+  color: #29B2FF;
+  font-size: 1.25rem;
+}
+
+.section {
+  height: 60rem;
+}
+
+.section__box {
+  min-height: 12rem;
+}
+
+.section__box .author {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  font-weight: bold;
+}
+
+.section__box .description {
+  text-align: center;
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+}
+
+.section__box .colab__text {
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.colab__box .colab__box-text {
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  background: #F1F1F1;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.section__photo {
+  width: 100%;
+  height: 40rem;
+  background: url(/portfolio/Front-end/img/mezzcodes.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.portfolio__footer {
+  height: 14rem;
+  background: #414141;
+  position: relative;
+}
+
+.footer__wave {
+  position: relative;
+}
+
+.wave {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  z-index: 1;
+  top: -7rem;
+}
+
+.subscribe {
+  margin-left: -1rem;
+}
+
+.copyright {
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.footer__right-title {
+  color: #fff;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=main.css.map */
