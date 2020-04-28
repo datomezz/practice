@@ -21,6 +21,7 @@
 
 .header__navigation {
   height: 10rem;
+  cursor: pointer;
 }
 
 .portfolio__link, .portfolio__link:hover {
@@ -48,8 +49,8 @@
 
 .header__link .fa-home:hover {
   color: #29B2FF;
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 
 .header__link:hover {

@@ -28,6 +28,7 @@ $footer : #414141;
 }
 .header__navigation {
     height : 10rem;
+    cursor : pointer;
 }
 .portfolio__link, .portfolio__link:hover{
     text-decoration : none;
@@ -45,7 +46,7 @@ $footer : #414141;
         transition : .2 s linear;
         &:hover{
             color : $blue;
-            transform : scale(.5);
+            transform : scale(1.5);
         }
     }
     &:hover {

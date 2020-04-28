@@ -1,6 +1,5 @@
 AOS.init();
-
-
+ 
 var wave1 = $('#feel-the-wave').wavify({
     height: 30,
     bones: 5,
@@ -46,8 +45,8 @@ $('.wrapper').slick({
     ]
 });
 
-$(".slick-next").text("").css({"display" : "none !important"});
-$(".slick-prev").text("").css({"display" : "none !important"});
+$(".slick-next").css({"display" : "none", "z-index" : "-1000"});
+$(".slick-prev").css({"display" : "none", "z-index" : "-1000"});
 
 
 document.querySelectorAll(".section__arrow")[0].onclick = function(){
@@ -56,3 +55,24 @@ document.querySelectorAll(".section__arrow")[0].onclick = function(){
 document.querySelectorAll(".section__arrow")[1].onclick = function(){
     document.querySelector(".slick-next").click();
 }
+
+
+const menuDiv = $(".header__navigation");
+const menuText = $("header div a");
+const hover_audio = new Audio("../Front-end/assets/hover.mp3");
+
+for(let i = 0; i < menuDiv.length; i++){
+    menuDiv[i].addEventListener("mouseenter", function(){
+        menuText[i].classList.remove("animated", "bounceInRight" || "animated", "bounceInDown");
+        menuText[i].style.animationDelay = "0s";
+        menuText[i].style.animationDuration = ".9s";
+        menuText[i].classList.add("animated", "flipInX");
+        hover_audio.play();
+        setTimeout(function(){
+            menuText[i].classList.remove("animated", "flipInX");
+        }, 1000);
+    });
+}
+
+let radar = "antimetrovski";
+alert(radar);
