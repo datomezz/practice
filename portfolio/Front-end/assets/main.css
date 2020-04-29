@@ -1,3 +1,57 @@
+.portfolio__skills {
+  border-bottom: 0.6rem solid #E9E9E9;
+}
+
+.header__skills {
+  height: 7rem;
+  cursor: pointer;
+}
+
+.header__pagename {
+  font-size: 2rem;
+  cursor: pointer;
+  font-weight: bold;
+  letter-spacing: .4rem;
+  text-align: center;
+  margin: 0;
+}
+
+.workplace {
+  border-right: 10px solid #E9E9E9;
+  border-left: 10px solid #E9E9E9;
+  min-height: 50rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.workplace__wrapper {
+  width: 50rem;
+  min-height: 30rem;
+  padding: 2rem 0;
+}
+
+.workplace__item-text {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: .8rem;
+}
+
+.workplace__item-img {
+  width: 3rem;
+  height: 3rem;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13,6 +67,22 @@
 
 .bg-gray {
   background: #E9E9E9;
+}
+
+.bg-bootstrap {
+  background-color: #563D7C !important;
+}
+
+.text-bootstrap {
+  color: #563D7C;
+}
+
+.bg-woo {
+  background-color: #9B5C8F !important;
+}
+
+.text-woo {
+  color: #9B5C8F;
 }
 
 .cl-blue {

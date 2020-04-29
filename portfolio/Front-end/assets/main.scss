@@ -2,12 +2,16 @@ $gray : #E9E9E9;
 $blue : #29B2FF;
 $footer : #414141;
 
+$border : #E9E9E9;
+
 @mixin flex($direction, $justify, $align){
     display : flex;
     flex-direction : $direction;
     justify-content : $justify;
     align-items : $align;
 }
+
+@import "_skills.scss";
 
 *{
     box-sizing : border-box;
@@ -17,11 +21,21 @@ $footer : #414141;
     }
     font-family: Firago;
 }
-.portfolio {
 
-}
 .bg-gray {
     background : $gray;
+}
+.bg-bootstrap { 
+    background-color : #563D7C !important;
+}
+.text-bootstrap {
+    color : #563D7C;
+}
+.bg-woo {
+    background-color : #9B5C8F !important;
+}
+.text-woo {
+    color : #9B5C8F;
 }
 .cl-blue { 
     color : $blue;
@@ -146,6 +160,7 @@ $footer : #414141;
        color : $blue !important;
    }
 }
+
 
 @media screen and (max-width : 915px){
     *{

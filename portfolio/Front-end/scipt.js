@@ -48,12 +48,15 @@ $('.wrapper').slick({
 $(".slick-next").css({"display" : "none", "z-index" : "-1000"});
 $(".slick-prev").css({"display" : "none", "z-index" : "-1000"});
 
+const slider_arrow = document.querySelectorAll(".section__arrow");
 
-document.querySelectorAll(".section__arrow")[0].onclick = function(){
-    document.querySelector(".slick-prev").click();
-}
-document.querySelectorAll(".section__arrow")[1].onclick = function(){
-    document.querySelector(".slick-next").click();
+if(slider_arrow[0]){
+    slider_arrow[0].onclick = function(){
+        document.querySelector(".slick-prev").click();
+    }
+    slider_arrow[1].onclick = function(){
+        document.querySelector(".slick-next").click();
+    }
 }
 
 
@@ -74,5 +77,8 @@ for(let i = 0; i < menuDiv.length; i++){
     });
 }
 
-let radar = "antimetrovski";
-alert(radar);
+const skills_wrapper = document.querySelector(".workplace__wrapper");
+
+if(skills_wrapper){
+
+}

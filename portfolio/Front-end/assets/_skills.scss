@@ -1,0 +1,41 @@
+
+
+.portfolio__skills {
+    border-bottom : .6rem solid $border;
+
+}
+
+.header__skills {
+    height : 7rem;
+    cursor : pointer;
+}
+
+.header__pagename {
+    font-size : 2rem;
+    cursor : pointer;
+    font-weight : bold;
+    letter-spacing : .4rem;
+    text-align : center;
+    margin : 0;
+}
+
+.workplace {
+    border-right : 10px solid $border;
+    border-left : 10px solid $border;
+    min-height : 50rem;
+    @include flex(row, center, center);
+}
+.workplace__wrapper {
+    width : 50rem;
+    min-height : 30rem;
+    padding : 2rem 0;
+}
+
+.workplace__item-text {
+    transform: rotate(-90deg);
+    font-size : .8rem;
+}
+.workplace__item-img {
+    width : 3rem;
+    height : 3rem;
+}
