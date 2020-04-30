@@ -115,6 +115,23 @@ let data_radar = {
     ]
 }
 
+let options_radar = {
+    maintainAspectRatio: false,
+    scales: {
+        yAxes: [{
+            stacked: true,
+            gridLines: {
+            display: true,
+            color: "rgba(255,99,132,0.2)"
+            }
+        }],
+        xAxes: [{
+            gridLines: {
+            display: false
+            }
+        }]
+    }
+}
 var myDoughnutChart = new Chart(ctx_pie, {
     type: 'doughnut',
     data: data_pie
@@ -123,22 +140,33 @@ var myDoughnutChart = new Chart(ctx_pie, {
 
 var myRadarChart = new Chart(ctx_radar, {
     type: 'radar',
-    data: data_radar
+    data: data_radar,
+    opstions : options_radar
 });
 
-const skills_wrapper = document.querySelector(".workplace__wrapper");
+const wrapper_article = document.querySelectorAll(".workplace__wrapper-item");
+const arrows = document.querySelectorAll(".skill__arrow");
 
-const wrapper = document.querySelectorAll(".workplace__wrapper article");
+console.log(arrows);
+let count = -1;
+let sumArr = [-1, 1];
 
-console.log(wrapper);
-if(wrapper){
-    let count = 0;
+arrows[1].addEventListener("click", function(){
+    if(count >= 2){
+        count = -1;
+    }
+    swapArrow(1);
+});
+arrows[0].addEventListener("click", function(){
+    if(count <= 0){
+        count = wrapper_article.length;
+    }
+    swapArrow(-1);
+});
 
-    document.addEventListener("click", function(){
-        count++;
-        for(let x in wrapper){
-            wrapper[x].style.display = "none";
-        }
-        wrapper[count].style.display = "block";
-    });
+function swapArrow(sum){
+    for(let i = 0; i < wrapper_article.length; i++){
+        wrapper_article[i].classList.remove("enabled");
+    }
+    wrapper_article[count += sum].classList.add("enabled");
 }
