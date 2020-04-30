@@ -6,7 +6,7 @@
 }
 
 .header__skills {
-    height : 7rem;
+    height : 7rem !important;
     cursor : pointer;
 }
 
@@ -29,8 +29,16 @@
     width : 50rem;
     min-height : 30rem;
     padding : 2rem 0;
+    position : relative;
 }
+.workplace__wrapper-item {
+    display : none; //flex
+    flex-direction : column;
+    justify-content : space-between;
+    width : 100%;
+    overflow : hidden;
 
+}
 .workplace__item-text {
     transform: rotate(-90deg);
     font-size : .8rem;

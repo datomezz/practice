@@ -77,8 +77,68 @@ for(let i = 0; i < menuDiv.length; i++){
     });
 }
 
+const ctx_pie = document.querySelector("#chart_pie").getContext("2d");
+const ctx_radar = document.querySelector("#chart_radar").getContext("2d");
+
+const ctx_pie_color = ["#777BB3", "#F7E018", "#563D7C", "#464342", "#9B5C8F"];
+
+let data_pie = {
+    datasets: [{
+        data: [56, 85, 90, 75, 40],
+        backgroundColor: ctx_pie_color,
+        hoverBorderWidth : 8,
+        hoverBorderColor : "#fff"
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: [
+        'PHP',
+        'Javascript',
+        'Bootstrap',
+        'Wordpress',
+        "WooCommerce"
+    ],
+};
+
+let data_radar = {
+    datasets : [{
+        backgroundColor : "transparent",
+        data: [56, 85, 90, 75, 40],
+        pointHoverBorderColor : ctx_pie_color
+    }],
+    labels: [
+        'PHP',
+        'Javascript',
+        'Bootstrap',
+        'Wordpress',
+        "WooCommerce"
+    ]
+}
+
+var myDoughnutChart = new Chart(ctx_pie, {
+    type: 'doughnut',
+    data: data_pie
+});
+
+
+var myRadarChart = new Chart(ctx_radar, {
+    type: 'radar',
+    data: data_radar
+});
+
 const skills_wrapper = document.querySelector(".workplace__wrapper");
 
-if(skills_wrapper){
+const wrapper = document.querySelectorAll(".workplace__wrapper article");
 
+console.log(wrapper);
+if(wrapper){
+    let count = 0;
+
+    document.addEventListener("click", function(){
+        count++;
+        for(let x in wrapper){
+            wrapper[x].style.display = "none";
+        }
+        wrapper[count].style.display = "block";
+    });
 }

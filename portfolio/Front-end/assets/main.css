@@ -3,7 +3,7 @@
 }
 
 .header__skills {
-  height: 7rem;
+  height: 7rem !important;
   cursor: pointer;
 }
 
@@ -39,6 +39,20 @@
   width: 50rem;
   min-height: 30rem;
   padding: 2rem 0;
+  position: relative;
+}
+
+.workplace__wrapper-item {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
 }
 
 .workplace__item-text {
@@ -86,7 +100,7 @@
 }
 
 .cl-blue {
-  color: #29B2FF;
+  color: #29b2ff;
 }
 
 .header__navigation {
@@ -118,13 +132,13 @@
 }
 
 .header__link .fa-home:hover {
-  color: #29B2FF;
+  color: #29b2ff;
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
 }
 
 .header__link:hover {
-  color: #29B2FF;
+  color: #29b2ff;
   font-size: 1.25rem;
 }
 
@@ -228,7 +242,7 @@
 }
 
 .social__icon:hover {
-  color: #29B2FF !important;
+  color: #29b2ff !important;
 }
 
 @media screen and (max-width: 915px) {
