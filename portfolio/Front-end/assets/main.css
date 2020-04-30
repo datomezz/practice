@@ -207,6 +207,10 @@
           align-items: flex-start;
 }
 
+.workplace__wrapper-item__info .quote {
+  text-align: center;
+}
+
 .workplace__wrapper-item__info p {
   font-size: 1.3rem;
   text-align: center;
@@ -396,6 +400,9 @@
 @media screen and (max-width: 915px) {
   * {
     font-size: 10px;
+  }
+  .workplace__wrapper-item__info p {
+    font-size: 1rem;
   }
 }
 

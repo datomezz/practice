@@ -166,6 +166,11 @@ $border : #E9E9E9;
     *{
         font-size : 10px;
     }
+    .workplace__wrapper-item__info {
+        p{
+            font-size : 1rem;
+        }
+    }
 }
 @media screen and (max-width : 1118px){
     *{

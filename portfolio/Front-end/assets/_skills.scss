@@ -101,7 +101,9 @@
 
 .workplace__wrapper-item__info {
     @include flex(column, center, flex-start);
-
+    .quote {
+        text-align : center;
+    }
     p{
         font-size : 1.3rem;
         text-align : center;
