@@ -78,7 +78,7 @@ for(let i = 0; i < menuDiv.length; i++){
 }
 
 const ctx_pie = document.querySelector("#chart_pie").getContext("2d");
-const ctx_radar = document.querySelector("#chart_radar").getContext("2d");
+const ctx_bar = document.querySelector("#chart_bar").getContext("2d");
 
 const ctx_pie_color = ["#777BB3", "#F7E018", "#563D7C", "#464342", "#9B5C8F"];
 
@@ -90,7 +90,6 @@ let data_pie = {
         hoverBorderColor : "#fff"
     }],
 
-    // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
         'PHP',
         'Javascript',
@@ -100,11 +99,11 @@ let data_pie = {
     ],
 };
 
-let data_radar = {
+let data_bar = {
     datasets : [{
-        backgroundColor : "transparent",
-        data: [56, 85, 90, 75, 40],
-        pointHoverBorderColor : ctx_pie_color
+        backgroundColor : ctx_pie_color,
+        data: [56, 85, 90, 75, 40, 0, 100],
+        label : "knowledge"
     }],
     labels: [
         'PHP',
@@ -115,58 +114,71 @@ let data_radar = {
     ]
 }
 
-let options_radar = {
-    maintainAspectRatio: false,
-    scales: {
-        yAxes: [{
-            stacked: true,
-            gridLines: {
-            display: true,
-            color: "rgba(255,99,132,0.2)"
-            }
-        }],
-        xAxes: [{
-            gridLines: {
-            display: false
-            }
-        }]
-    }
-}
 var myDoughnutChart = new Chart(ctx_pie, {
     type: 'doughnut',
     data: data_pie
 });
 
 
-var myRadarChart = new Chart(ctx_radar, {
-    type: 'radar',
-    data: data_radar,
-    opstions : options_radar
+var myBarrChart = new Chart(ctx_bar, {
+    type: 'bar',
+    data : data_bar
 });
+
 
 const wrapper_article = document.querySelectorAll(".workplace__wrapper-item");
 const arrows = document.querySelectorAll(".skill__arrow");
 
-console.log(arrows);
-let count = -1;
-let sumArr = [-1, 1];
+if(wrapper_article){
+    let count = 0;
+    
+    arrows[1].addEventListener("click", function(){
+        if(count >= wrapper_article.length - 1){
+            count = -1;
+        }
+        swapArrow(1);
+    });
+    arrows[0].addEventListener("click", function(){
+        if(count <= 0){
+            count = wrapper_article.length;
+        }
+        swapArrow(-1);
+    });
+    
+    function swapArrow(sum){
+        for(let i = 0; i < wrapper_article.length; i++){
+            wrapper_article[i].classList.remove("enabled");
+        }
+        wrapper_article[count += sum].classList.add("enabled");
+        if(count == 1){
+            quoteWritter();
+        } else {
+            quoteCount = 0;
+            quoteNode.innerHTML = "";
+        }
+    }
+}
 
-arrows[1].addEventListener("click", function(){
-    if(count >= 2){
-        count = -1;
-    }
-    swapArrow(1);
-});
-arrows[0].addEventListener("click", function(){
-    if(count <= 0){
-        count = wrapper_article.length;
-    }
-    swapArrow(-1);
-});
+const progress_bars = document.querySelectorAll(".progress-bar");
+const progress_bars_percentArr = ["56","85","90","75","40"];
 
-function swapArrow(sum){
-    for(let i = 0; i < wrapper_article.length; i++){
-        wrapper_article[i].classList.remove("enabled");
+if (progress_bars){
+    for(let i = 0; i < progress_bars.length; i++){
+        let rand = Math.floor(Math.random() * 7) + 3;
+        progress_bars[i].style.width = progress_bars_percentArr[i] + "%";
+        progress_bars[i].style.transition = `${rand}s`;
     }
-    wrapper_article[count += sum].classList.add("enabled");
+}
+
+const quoteNode = document.querySelector(".quote");
+let quote = "“Talk is cheap. Show me the code.”";
+
+let quoteCount = 0;
+
+function quoteWritter(){
+    if(quoteCount < quote.length){
+        quoteNode.innerHTML += quote.charAt(quoteCount);
+        quoteCount++;
+        setTimeout(quoteWritter, 80);
+    }
 }
