@@ -15,8 +15,8 @@
     <script src="../../libraries/jquery-3.4.1.min.js"></script>
     <script src="../../libraries/fontawesome/js/all.js"></script>
 </head>
-<body>
-    <main class="portfolio container-fluid m-0 p-0">
+<body data-barba="wrapper">
+    <main class="portfolio container-fluid m-0 p-0" data-barba="container" data-barba-namespace="home">
         <header class="portfolio__header row p-0 m-0">
             <div class="header__navigation col-md-4 d-flex justify-content-center align-items-center">
                 <a class="portfolio__link header__link animated bounceInRight" href="#">SKILLS</a>
@@ -77,14 +77,15 @@
             <div class="footer__right col-lg-4 col-md-6 d-flex flex-column justify-content-around align-items-center">
                 <p class="footer__right-title">FOLLOW ME ON SOCIAL MEDIA</p>
                 <div class="footer__social w-100 d-flex justify-content-around">
-                    <a href="portfolio__link" href="#"><i class="fab fa-instagram text-light h3 social__icon"></i></a>
-                    <a href="portfolio__link" href="#"><i class="fab fa-facebook-square text-light h3 social__icon"></i></a>
-                    <a href="portfolio__link" href="#"><i class="fab fa-telegram text-light h3 social__icon"></i></a>
+                    <a class="portfolio__link" href="#"><i class="fab fa-instagram text-light h3 social__icon"></i></a>
+                    <a class="portfolio__link" href="#"><i class="fab fa-facebook-square text-light h3 social__icon"></i></a>
+                    <a class="portfolio__link" href="#"><i class="fab fa-telegram text-light h3 social__icon"></i></a>
                 </div>
             </div>
         </footer>
     </main>
-
+<script src="https://unpkg.com/@barba/core"></script>
+<script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
 <script src="../../libraries/chartJS/moment.js"></script>
 <script src="../../libraries/chartJS/Chart.min.js"></script>
 <script src="../../libraries/slick/slick.min.js"></script>

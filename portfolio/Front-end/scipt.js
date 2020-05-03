@@ -116,13 +116,21 @@ let data_bar = {
 
 var myDoughnutChart = new Chart(ctx_pie, {
     type: 'doughnut',
-    data: data_pie
+    data: data_pie,
+    options : {
+        responsive : true,
+        maintainAspectRatio : false
+    }
 });
 
 
 var myBarrChart = new Chart(ctx_bar, {
     type: 'bar',
-    data : data_bar
+    data : data_bar,
+    options : {
+        responsive : true,
+        maintainAspectRatio : false
+    }
 });
 
 
@@ -182,3 +190,7 @@ function quoteWritter(){
         setTimeout(quoteWritter, 80);
     }
 }
+
+barba.init({
+    // ...
+})
