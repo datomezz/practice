@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LocalStorage</title>
+    <style>
+        *{
+            box-sizing : border-box;
+            margin : 0;
+            padding : 0;
+        }
+        body{
+            display :flex;
+            justify-content: center;
+        }
+        .star__container {
+            min-width : 15rem;
+            height : auto;
+            border : 1px solid black;
+            padding : .5rem;
+            display : inline-flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        .star__stars {
+            display : flex;
+            flex-direction: row;
+
+        }
+        .star {
+            font-size : 2rem;
+            color : #f91155;
+            
+        }
+        .star:last-child{
+            background: -webkit-linear-gradient(0deg, rgba(249,17,85,1) 50%, rgba(219,219,219,1) 50%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .star:hover{
+            color : #f91155;
+            cursor : pointer;
+            opacity: .8;
+        }
+        .star:last-child:hover{
+            transition : .6s;
+            background: #f91155;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .star__rating{
+            display : flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-left : .8rem;
+        }
+        .star__rating-number{
+            font-size : 1.5rem;
+        }
+        .star__rating-text{
+            font-weight: 900;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="star__container">
+        <div class="star__stars">
+            <i class="fas fa-star star"></i>
+            <i class="fas fa-star star"></i>
+            <i class="fas fa-star star"></i>
+            <i class="fas fa-star star"></i>
+            <i class="fas fa-star star"></i>
+        </div>
+        <div class="star__rating">
+            <span class="star__rating-text star__rating-number">10+</span>
+            <span class="star__rating-text ">შეფასება</span>
+        </div>
+    </div>
+    <div class="box"><i class="fas fa-star"></i></div>
+
+    <script src="https://kit.fontawesome.com/bb6e79ddfa.js"></script>
+    <script>
+        const star = document.querySelectorAll(".star");
+
+
+        for(let i = 0; i < star.length; i++){
+            star[i].addEventListener("click", function(e){
+                let numberOfClickedStar = i;
+                
+                e.preventDefault();
+                localStorage.setItem("pointerEvent", "false");
+                localStorage.setItem("opacity", ".4");
+
+                star[i].style.opacity = ".4";
+
+                for(let x = 0; x < star.length; x++){
+                    star[x].style.pointerEvents = "none";
+                }
+                console.log(localStorage);
+            });
+        }
+
+        if(localStorage.getItem("pointerEvent") === "false"){
+            for(let x = 0; x < star.length; x++){
+                star[x].style.pointerEvents = "none";
+            }
+        }
+
+        star[1].innerText = localStorage.getItem('stars');
+        star[1].style.opacity = localStorage.getItem("opacity");
+        
+    </script>
+</body>
+</html>
