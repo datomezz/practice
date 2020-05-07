@@ -75,31 +75,33 @@
             <i class="fas fa-star star"></i>
         </div>
         <div class="star__rating">
-            <span class="star__rating-text star__rating-number">10+</span>
-            <span class="star__rating-text ">შეფასება</span>
+            <span class="star__rating-text star__rating-number">10</span>
+            <span class="star__rating-text ">+შეფასება</span>
         </div>
     </div>
-    <div class="box"><i class="fas fa-star"></i></div>
+
 
     <script src="https://kit.fontawesome.com/bb6e79ddfa.js"></script>
     <script>
         const star = document.querySelectorAll(".star");
-
+        let ratingNumber = document.querySelector(".star__rating-number");
 
         for(let i = 0; i < star.length; i++){
+
             star[i].addEventListener("click", function(e){
-                let numberOfClickedStar = i;
-                
                 e.preventDefault();
                 localStorage.setItem("pointerEvent", "false");
                 localStorage.setItem("opacity", ".4");
+                localStorage.setItem("number", i);
 
                 star[i].style.opacity = ".4";
+
+                increaseRatingNumber();
 
                 for(let x = 0; x < star.length; x++){
                     star[x].style.pointerEvents = "none";
                 }
-                console.log(localStorage);
+                
             });
         }
 
@@ -107,10 +109,20 @@
             for(let x = 0; x < star.length; x++){
                 star[x].style.pointerEvents = "none";
             }
+
+            star[localStorage.getItem("number")].style.opacity = ".4";
+            ratingNumber.innerText = localStorage.getItem("ratingNumber")
         }
 
-        star[1].innerText = localStorage.getItem('stars');
-        star[1].style.opacity = localStorage.getItem("opacity");
+        function increaseRatingNumber(){
+            let newNum = ratingNumber.innerText;
+            newNum = Number(newNum)  + 1;
+            ratingNumber.innerText = newNum;
+
+            localStorage.setItem("ratingNumber", newNum);
+            
+        }
+
         
     </script>
 </body>
