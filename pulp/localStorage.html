@@ -17,7 +17,7 @@
         .star__container {
             min-width : 15rem;
             height : auto;
-            border : 1px solid black;
+
             padding : .5rem;
             display : inline-flex;
             flex-direction: row;
@@ -63,21 +63,65 @@
             font-weight: 900;
         }
         
+        .price__star {
+            display : flex;
+            flex-direction : column;
+            padding : 1rem;
+            align-items: center;
+        }
+        .price__container {
+            display : flex;
+            flex-direction : row;
+            justify-content : center;
+            margin-bottom : .8rem;
+            background : #f5f6f8;
+            width : 100%;
+            padding : .6rem;
+        }
+        .old__price {
+            display : flex;
+            align-items : flex-end;
+            font-weight : bolder;
+            padding-bottom: .32rem;
+            letter-spacing : .1rem;
+            text-decoration: line-through;
+            color : #a69da2;
+            position : relative;
+        }
+        .old__price::before {
+            content : " ";
+            border-bottom : 3px solid #f91155;
+            bottom : 28%;
+            display : block;
+            width : 100%;
+            position : absolute;
+        }
+        .new__price {
+            color : #f91155;
+            font-weight : bold;
+            font-size : 3rem;
+            letter-spacing : .1rem;
+        }
     </style>
 </head>
 <body>
-    <h1>85ლ</h1>
-    <div class="star__container">
-        <div class="star__stars">
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
-            <i class="fas fa-star star"></i>
+    <div class="price__star">
+        <div class="price__container">
+            <h1 class="new__price">85₾</h1>
+            <h2 class="old__price">100₾</h2>
         </div>
-        <div class="star__rating">
-            <span class="star__rating-text star__rating-number">10</span>
-            <span class="star__rating-text ">+შეფასება</span>
+        <div class="star__container">
+            <div class="star__stars">
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+                <i class="fas fa-star star"></i>
+            </div>
+            <div class="star__rating">
+                <span class="star__rating-text star__rating-number">10</span>
+                <span class="star__rating-text ">+შეფასება</span>
+            </div>
         </div>
     </div>
 
@@ -125,7 +169,32 @@
             
         }
 
-        
+
+        //Price Conventer
+
+        function percentOfPrice(arr){
+            let num = arr.join("");
+            num = Number(num);
+            num = num + Math.floor(num/2);
+            console.log(num);
+            oldPrice.innerText = num + "₾";
+        }
+
+        let oldPrice = document.querySelector(".old__price");
+        let newPrice = document.querySelector(".new__price");
+        newPrice = newPrice.innerText;
+        let priceArr = [];
+
+        for(let i = 0; i < newPrice.length; i++){
+            
+            if(Number(newPrice.charAt(i))){
+                priceArr.push(newPrice.charAt(i))
+            }
+            
+        }
+        percentOfPrice(priceArr);
+
+
     </script>
 </body>
 </html>
