@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date</title>
+    <style>
+        *{
+            box-sizing : border-box;
+            margin : 0;
+            padding : 0;
+
+        }
+        body {
+            display : flex;
+            justify-content :  center;
+            padding : 5rem;
+        }
+        .countdown {
+            border : 1px solid black;
+        }
+        .countdown__elements {
+            width : 30rem;
+            height : 6.5rem;
+            padding : .8rem 1.25rem;
+            background : #3a4652;
+            border-radius : .5rem;
+
+            display : flex;
+            flex-direction : row;
+            justify-content : space-between;
+        }
+        .countdown__element {
+            width : 5rem;
+            height : 5rem;
+            background : #fff;
+            border-radius : .5rem;
+            font-size : 4rem;
+            font-weight : bolder;
+            color : #fb0d59;
+
+            position : relative;
+
+            display : flex;
+            align-items : center;
+            justify-content : center;
+        }
+
+        /* time names */
+        .countdown__days::before {
+            display : block;
+            content : "დღე";
+            position : absolute;
+            font-size : 1rem;
+            bottom : -2rem;
+        }
+        .countdown__hours::before {
+            display : block;
+            content : "საათი";
+            position : absolute;
+            font-size : 1rem;
+            bottom : -2rem;
+        }
+        .countdown__minutes::before {
+            display : block;
+            content : "წუთი";
+            position : absolute;
+            font-size : 1rem;
+            bottom : -2rem;
+        }
+        .countdown__seconds::before {
+            display : block;
+            content : "წამი";
+            position : absolute;
+            font-size : 1rem;
+            bottom : -2rem;
+        }
+        /**********************/
+
+        .countdown__dots {
+            display : flex;
+            align-items : center;
+            color : #fff;
+            font-size : 3rem;
+            font-weight: bolder;
+            animation-name : Fade;
+            animation-duration : .97s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+        }
+        @keyframes Fade {
+            from {opacity : 0}
+            to {opacity : 1}
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown">
+        <div class="countdown__elements">
+            <div class="countdown__element countdown__days"></div>
+
+            <div class="countdown__dots">:</div>
+
+            <div class="countdown__element countdown__hours"></div>
+
+            <div class="countdown__dots">:</div>
+
+            <div class="countdown__element countdown__minutes"></div>
+
+            <div class="countdown__dots">:</div>
+
+            <div class="countdown__element countdown__seconds"></div>
+        </div>
+    </div>
+
+    <script>
+        const countDownElements = document.querySelectorAll(".countdown__element");
+
+        const endTime = new Date("2020-06-16T12:25").getTime();
+
+        setInterval(function(){
+            let now = new Date().getTime();
+            let newDate = endTime - now;
+
+            let days = Math.floor(newDate / (1000 * 60 * 60 * 25));
+            let hours = Math.floor((newDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            let minutes = Math.floor((newDate % (1000 * 60 * 60)) / (1000 * 60));
+            let seconds = Math.floor((newDate % (1000 * 60)) / 1000);
+
+            let dateArr = [days, hours, minutes, seconds];
+
+            for(let i = 0; i < dateArr.length; i++){
+                countDownElements[i].innerText = dateArr[i];
+            }
+
+        }, 1000);
+
+    </script>
+</body>
+</html>
