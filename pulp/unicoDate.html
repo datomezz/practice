@@ -26,24 +26,44 @@
             background : #3a4652;
             border-radius : .5rem;
 
+            position : relative;
+            z-index : -2;
+
             display : flex;
             flex-direction : row;
             justify-content : space-between;
         }
         .countdown__element {
-            width : 5rem;
-            height : 5rem;
+            width : 4.5rem;
+            height : 4.5rem;
             background : #fff;
             border-radius : .5rem;
-            font-size : 4rem;
+            font-size : 3rem;
             font-weight : bolder;
             color : #fb0d59;
+            border : 1px solid rgb(190, 190, 190);
 
             position : relative;
+            
 
             display : flex;
             align-items : center;
             justify-content : center;
+        }
+
+        .countdown__seconds::after {
+            display : block;
+            width : 4.3rem;
+            height : 2rem;
+            background : #fff;
+            border-radius : .5rem;
+            content : "";
+            
+            position : absolute;
+            bottom : -.3rem;
+            z-index : -1;
+          
+            transform : rotate(-10deg);
         }
 
         /* time names */
@@ -52,34 +72,39 @@
             content : "დღე";
             position : absolute;
             font-size : 1rem;
-            bottom : -2rem;
+            bottom : -2.7rem;
+            color : #3a4652;
         }
         .countdown__hours::before {
             display : block;
             content : "საათი";
             position : absolute;
             font-size : 1rem;
-            bottom : -2rem;
+            bottom : -2.7rem;
+            color : #3a4652;
         }
         .countdown__minutes::before {
             display : block;
             content : "წუთი";
             position : absolute;
             font-size : 1rem;
-            bottom : -2rem;
+            bottom : -2.7rem;
+            color : #3a4652;
         }
         .countdown__seconds::before {
             display : block;
             content : "წამი";
             position : absolute;
             font-size : 1rem;
-            bottom : -2rem;
+            bottom : -2.7rem;
+            color : #3a4652;
         }
         /**********************/
 
         .countdown__dots {
             display : flex;
             align-items : center;
+            height : 4.5rem;
             color : #fff;
             font-size : 3rem;
             font-weight: bolder;
@@ -98,17 +123,11 @@
     <div class="countdown">
         <div class="countdown__elements">
             <div class="countdown__element countdown__days"></div>
-
             <div class="countdown__dots">:</div>
-
             <div class="countdown__element countdown__hours"></div>
-
             <div class="countdown__dots">:</div>
-
             <div class="countdown__element countdown__minutes"></div>
-
             <div class="countdown__dots">:</div>
-
             <div class="countdown__element countdown__seconds"></div>
         </div>
     </div>

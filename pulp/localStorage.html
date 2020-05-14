@@ -107,7 +107,7 @@
 <body>
     <div class="price__star">
         <div class="price__container">
-            <h1 class="new__price">85₾</h1>
+            <h1 class="new__price">150₾</h1>
             <h2 class="old__price"></h2>
         </div>
         <div class="star__container">
@@ -186,9 +186,12 @@
         let priceArr = [];
 
         for(let i = 0; i < newPrice.length; i++){
-            
+            if(Number(newPrice.charAt(i)) === 0){
+                priceArr.push(newPrice.charAt(i));
+            }
             if(Number(newPrice.charAt(i))){
-                priceArr.push(newPrice.charAt(i))
+                priceArr.push(newPrice.charAt(i));
+                console.log(priceArr);
             }
             
         }
