@@ -86,6 +86,7 @@ width:98%;
 vertical-align:middle;
 color: #000;
 }
+
     </style>
     <script src="../libraries/jquery-3.4.1.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -114,13 +115,13 @@ color: #000;
                 </div>
             </div>
         </div>
-        <div class="myComment border p-4">
+        <div class="myComment col-12 border p-4">
             <form class="myComment__form d-flex flex-column justify-content-center align-items-center">
-                <div class="myComment__id d-flex justify-content-center">
-                    <input class="form-control col-4 mr-5" type="text" id="myCommentName" placeholder="სახელი" required>
-                    <input class="form-control col-4" type="text" id="myCommentSurname" placeholder="გვარი" required>
+                <div class="myComment__id d-flex justify-content-center p-4">
+                    <input class="form-control col-md-4 col-6 mr-5" type="text" id="myCommentName" placeholder="სახელი" required>
+                    <input class="form-control col-md-4 col-6" type="text" id="myCommentSurname" placeholder="გვარი" required>
                 </div>
-                <textarea class="form-control col-8 mt-5 mb-2" id="myCommentText" placeholder="რეცენზია" rows="7" required></textarea>
+                <textarea class="form-control col-md-8 col-12 mt-5 mb-2" id="myCommentText" placeholder="რეცენზია" rows="7" required></textarea>
                 <div class="myComment__button col-8 d-flex justify-content-end p-0">
                     <button class="btn btn-primary">button</button>
                 </div>
