@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Comments</title>
+    <style>
+        body {
+            background : #33414d;
+
+        }
+        .myComment {
+            width : 1000px;
+            min-height : 425px;
+            background : #f5f6f7;
+            margin : 2rem auto;
+        }
+        img {
+            width : 5rem;
+        }
+        .comments {
+            width : 1000px;
+            margin : 2rem auto;
+        }
+        .comments__id {
+            width : 10rem;
+            color : #fff;
+        }
+    </style>
+    <script src="../libraries/jquery-3.4.1.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="comments bg-dark">
+        <div class="comment d-flex justify-content-center">
+            <img src="https://idd35.ru/wa-data/public/shop/themes/dsvpro/img/noimage200.png" class="img-fluid bg-light mr-5">
+            <div class="comment__field">
+                <div class="comments__id d-flex justify-content-between">
+                    <p class="comments__name">name</p>
+                    <p class="comments__surname">surname</p>
+                </div>
+                <div class="comments__text text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, deleniti!</div>
+            </div>
+        </div>
+    </div>
+    <div class="myComment p-4">
+        <form class="myComment__form d-flex flex-column justify-content-center align-items-center">
+            <div class="myComment__id d-flex justify-content-center">
+                <input class="form-control col-4 mr-5" type="text" id="myCommentName" placeholder="სახელი" required>
+                <input class="form-control col-4" type="text" id="myCommentSurname" placeholder="გვარი" required>
+            </div>
+            <textarea class="form-control col-8 mt-5 mb-2" id="myCommentText" placeholder="რეცენზია" rows="7" required></textarea>
+            <div class="myComment__button col-8 d-flex justify-content-end p-0">
+                <button class="btn btn-primary">button</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+    
+    <script>
+        const form = document.querySelector("form");
+        let comments = document.querySelector(".comments");
+
+        let myName = document.querySelector("#myCommentName");
+        let mySurname = document.querySelector("#myCommentSurname");
+        let textArea = document.querySelector("#myCommentText");
+
+        let commentCount = localStorage.getItem("count") || 1;
+        console.log(commentCount);
+        let commentArr = [];
+
+        if(localStorage.getItem("comment1")){
+            for(let i = 1; i < commentCount; i++){
+                comments.innerHTML += localStorage.getItem(`comment${i}`);
+            }
+        }
+
+        form.addEventListener("submit", function(e){
+
+            localStorage.setItem("name", myName.value);
+            localStorage.setItem("surname", mySurname.value);
+            localStorage.setItem("text", textArea.value);
+
+            commentArr.push(myName.value, mySurname.value, textArea.value);
+
+            createComment(commentArr);
+
+            commentCount++;
+            localStorage.setItem("count", commentCount);
+
+        });
+
+
+        function createComment(commentArr){
+            let newComment = `
+            <div class="comment d-flex justify-content-center">
+                <img src="https://idd35.ru/wa-data/public/shop/themes/dsvpro/img/noimage200.png" class="img-fluid bg-light mr-5">
+                <div class="comment__field">
+                    <div class="comments__id d-flex justify-content-between">
+                        <p class="comments__name">${commentArr[0]}<p>
+                        <p class="comments__surname">${commentArr[1]}<p>
+                    </div>
+                    <div class="comments__text text-light">${commentArr[2]}<div>
+                </div>
+            </div>
+            `;
+            
+            localStorage.setItem(`comment${commentCount}`, newComment);
+        }
+
+    </script>
+</body>
+</html>

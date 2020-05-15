@@ -13,8 +13,11 @@
         }
         body {
             display : flex;
-            justify-content :  center;
+            flex-direction : column;
+            justify-content :  space-around;
+            align-items: center;
             padding : 5rem;
+            height : 50rem;
         }
         .countdown {
             border : 1px solid black;
@@ -131,7 +134,6 @@
             <div class="countdown__element countdown__seconds"></div>
         </div>
     </div>
-
     <script>
         const countDownElements = document.querySelectorAll(".countdown__element");
 
