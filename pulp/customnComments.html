@@ -26,34 +26,107 @@
             width : 10rem;
             color : #fff;
         }
+
+        .single_comment{
+            width: 100%;
+        }
+        .message{
+z-index: 2;
+position: relative;
+left: 80px;
+top: 15px;
+min-height:70px;
+padding:10px 0 0 30px;
+margin-bottom:5px;
+margin-top: 5px;
+background-color:#fff;
+border-radius: 15px;
+-webkit-box-shadow: 6px 12px 23px 0px rgba(102,102,102,1);
+-moz-box-shadow: 6px 12px 23px 0px rgba(102,102,102,1);
+box-shadow: 6px 12px 23px 0px rgba(102,102,102,1);
+margin-right: 80px;
+}
+.messageimg{
+z-index: 3;
+position: absolute;
+border-radius: 50%;
+width:100px;
+height:100px;
+border:4px solid #fff;
+-webkit-box-shadow: 6px 12px 23px 0px rgba(102,102,102,1);
+-moz-box-shadow: 6px 12px 23px 0px rgba(102,102,102,1);
+box-shadow: 6px 12px 23px 0px rgba(102,102,102,1);
+
+background : #ccc;
+}
+.name{
+
+float:left;
+margin-left:3px;
+color: #232323;
+opacity: 0.5;
+font-family: myriad_geo;
+}
+.count{
+    
+    margin-top: 15px;
+
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #5a5a5a;
+}
+.text{
+float:left;
+margin-left:3px;
+word-wrap: break-word;
+word-break: break-all;
+text-align-last: left;
+width:98%;
+vertical-align:middle;
+color: #000;
+}
     </style>
     <script src="../libraries/jquery-3.4.1.min.js"></script>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 </head>
 <body>
-    <div class="comments bg-dark">
-        <div class="comment d-flex justify-content-center">
-            <img src="https://idd35.ru/wa-data/public/shop/themes/dsvpro/img/noimage200.png" class="img-fluid bg-light mr-5">
-            <div class="comment__field">
-                <div class="comments__id d-flex justify-content-between">
-                    <p class="comments__name">name</p>
-                    <p class="comments__surname">surname</p>
+    <div class="container">
+        <div class="row p-5">
+            <div class="comments">
+                <div class="single_comment" style="margin: 50px 0"> 
+                    <img class="messageimg" src="http://aqcia.unico.ge/commentimages/5ebdd8a9be2f71.60676946.jpg"> 
+                    <div class="message d-flex flex-column"> 
+                        <b class="name">Elisabeth</b><p class="text">gushin shevukvete da dges ukve saxlshi momitanes, dzalian didi madloba tqven aseti sauketeso momsaxurebstvis ))</p>
+                    </div>
                 </div>
-                <div class="comments__text text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, deleniti!</div>
+                <div class="single_comment" style="margin: 50px 0"> 
+                    <img class="messageimg" src="http://aqcia.unico.ge/commentimages/5ebdd84d30f0c7.09885624.jpg"> 
+                    <div class="message d-flex flex-column"> 
+                        <b class="name">EKA GIO</b><p class="text">სამი კვირაა უკვე ოჯახში ვიყენებთ და ძალიან მაგრად მუშაობს</p>
+                    </div>
+                </div>
+                <div class="single_comment" style="margin: 50px 0"> 
+                    <img class="messageimg" src="http://aqcia.unico.ge/commentimages/5ebdd81623ba05.09323163.jpg"> 
+                    <div class="message d-flex flex-column"> 
+                        <b class="name">მაკა წერეთელი</b><p class="text">თქვენი ოპერატიულობა და ფასები ძალიან მაოცებს, მადლობა თქვენ ♥</p>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="myComment p-4">
-        <form class="myComment__form d-flex flex-column justify-content-center align-items-center">
-            <div class="myComment__id d-flex justify-content-center">
-                <input class="form-control col-4 mr-5" type="text" id="myCommentName" placeholder="სახელი" required>
-                <input class="form-control col-4" type="text" id="myCommentSurname" placeholder="გვარი" required>
-            </div>
-            <textarea class="form-control col-8 mt-5 mb-2" id="myCommentText" placeholder="რეცენზია" rows="7" required></textarea>
-            <div class="myComment__button col-8 d-flex justify-content-end p-0">
-                <button class="btn btn-primary">button</button>
-            </div>
-        </form>
+        <div class="myComment border p-4">
+            <form class="myComment__form d-flex flex-column justify-content-center align-items-center">
+                <div class="myComment__id d-flex justify-content-center">
+                    <input class="form-control col-4 mr-5" type="text" id="myCommentName" placeholder="სახელი" required>
+                    <input class="form-control col-4" type="text" id="myCommentSurname" placeholder="გვარი" required>
+                </div>
+                <textarea class="form-control col-8 mt-5 mb-2" id="myCommentText" placeholder="რეცენზია" rows="7" required></textarea>
+                <div class="myComment__button col-8 d-flex justify-content-end p-0">
+                    <button class="btn btn-primary">button</button>
+                </div>
+            </form>
+        </div>
+
     </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
@@ -91,21 +164,15 @@
 
         });
 
-
         function createComment(commentArr){
             let newComment = `
-            <div class="comment d-flex justify-content-center">
-                <img src="https://idd35.ru/wa-data/public/shop/themes/dsvpro/img/noimage200.png" class="img-fluid bg-light mr-5">
-                <div class="comment__field">
-                    <div class="comments__id d-flex justify-content-between">
-                        <p class="comments__name">${commentArr[0]}<p>
-                        <p class="comments__surname">${commentArr[1]}<p>
-                    </div>
-                    <div class="comments__text text-light">${commentArr[2]}<div>
+            <div class="single_comment" style="margin: 50px 0"> 
+                <img class="messageimg" src="https://idd35.ru/wa-data/public/shop/themes/dsvpro/img/noimage200.png"> 
+                <div class="message d-flex flex-column"> 
+                    <b class="name">${commentArr[0]} ${commentArr[1]}</b><p class="text">${commentArr[2]}</p>
                 </div>
             </div>
             `;
-            
             localStorage.setItem(`comment${commentCount}`, newComment);
         }
 
