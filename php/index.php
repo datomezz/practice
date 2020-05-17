@@ -21,37 +21,16 @@
 </head>
 
 <body>
-<?php 
 
-    $connect = mysqli_connect('127.0.0.1', 'root', '');
-
-    if ($connect->connect_error) {
-        die("Connection failed: " . $connect->connect_error);
-    }
-    echo "Connected successfully";
-
-?>
-    <form>
-        <a href="javascript:void(0)" type="submit">submit</a>
-        <h1>text</h1>
+    <form action="upload.php" method="GET">
+        <!-- <input type="file" name="image"> -->
+        <input type="text" name="image">
+        <button type="submit" name="submit">UPLOAD</button>
     </form>
 
 
 <script>
-    const text = document.querySelector("h1");
-    const button = document.querySelector("a");
 
-    button.addEventListener("click", function(){
-        let req = new XMLHttpRequest();
-        req.onreadystatechange = function(){
-            if(this.readyState == 4 && this.status == 200){
-                text.innerHTML = this.response;
-                console.log(this.response);
-            }
-        }
-        req.open("GET", "ajax.php", true);
-        req.send();
-    });
 
 
 
