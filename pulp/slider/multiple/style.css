@@ -1,0 +1,40 @@
+* {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+}
+
+.slider { 
+    width : 40rem;
+    border : 1px solid black;
+    height : 15rem;
+    padding : 1rem;
+    margin : 1rem auto;
+    
+}
+
+.slide {
+    width : 10rem;
+    height : 10rem;
+    background : gray;
+
+    padding : 0 .5rem;
+}
+
+.slider .slick-slide {
+    margin : 0 1rem;
+}
+
+.slick-arrow {
+    background : red;
+    position : absolute;
+    top: 50%;
+    transform : translate(0, -50%);
+}
+
+.slick-arrow:first-child {
+    left : 0;
+}
+.slick-arrow:last-child{
+    right : 0;
+}
