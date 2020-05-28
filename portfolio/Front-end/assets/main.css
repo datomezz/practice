@@ -374,8 +374,8 @@
 .slider__wrapper {
   width: 10rem;
   height: 35rem;
+  overflow: hidden;
   text-align: center;
-  position: relative;
   padding: 2rem 0;
 }
 
@@ -396,9 +396,18 @@
 
 .section__arrow {
   position: absolute;
-  top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   z-index: 10;
+}
+
+.section__arrow:first-child {
+  top: -3rem;
+}
+
+.section__arrow:last-child {
+  bottom: -3rem;
 }
 
 @media screen and (max-width: 915px) {
