@@ -138,14 +138,12 @@ $border : #E9E9E9;
     text-align : center;
 }
 
-.wrapper {
+.slider__wrapper {
     width : 10rem;
     height : 35rem;
-    overflow: hidden;
     text-align: center;
-}
-.slick-arrow{
-    background : transparent;
+    position : relative;
+    padding : 2rem 0;
 }
 
 .wrapper__img {
@@ -161,6 +159,12 @@ $border : #E9E9E9;
    }
 }
 
+.section__arrow {
+    position : absolute;
+    top : 0;
+    left : 0;
+    z-index : 10;
+}
 
 @media screen and (max-width : 915px){
     *{

@@ -16,14 +16,14 @@ var wave2 = $('#feel-the-wave-two').wavify({
     speed: .1
 });
 
-$('.wrapper').slick({
-    lazyLoad: 'ondemand',
-    slidesToShow: 2,
+$('.slider__wrapper').slick({
+    slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
     vertical : true,
     verticalSwiping: true,
+    prevArrow : "<button class='section__arrow btn btn-secondary mb-2'>▲</button>",
+    nextArrow : '<button class="section__arrow btn btn-secondary mt-2">▼</button>',
+
     responsive : [
         {
             breakpoint : 768,
@@ -44,21 +44,6 @@ $('.wrapper').slick({
         }
     ]
 });
-
-$(".slick-next").css({"display" : "none", "z-index" : "-1000"});
-$(".slick-prev").css({"display" : "none", "z-index" : "-1000"});
-
-const slider_arrow = document.querySelectorAll(".section__arrow");
-
-if(slider_arrow[0]){
-    slider_arrow[0].onclick = function(){
-        document.querySelector(".slick-prev").click();
-    }
-    slider_arrow[1].onclick = function(){
-        document.querySelector(".slick-next").click();
-    }
-}
-
 
 const menuDiv = $(".header__navigation");
 const menuText = $("header div a");
