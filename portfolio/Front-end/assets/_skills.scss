@@ -100,7 +100,7 @@
 }
 
 .workplace__wrapper-item__info {
-    @include flex(column, center, flex-start);
+    @include flex(column, center, center);
     .quote {
         text-align : center;
     }
@@ -108,6 +108,9 @@
         font-size : 1.3rem;
         text-align : center;
         font-weight : bold;
-        padding : 2rem;
+        padding : 2rem 0 ;
+    }
+    a {
+        font-size : 2rem;
     }
 }

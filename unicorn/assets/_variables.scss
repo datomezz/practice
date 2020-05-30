@@ -1,0 +1,28 @@
+@mixin flex($direction, $justify, $align){
+    display : flex;
+    flex-direction : $direction;
+    justify-content : $justify;
+    align-items : $align;
+}
+
+@font-face {
+    font-family : Firago;
+    src : url("fonts/FiraGO-Book.ttf");
+}
+
+$darkBlue : #223549;
+
+* {
+    box-sizing : border-box;
+    font-family : Firago, sans-serif;
+}
+
+a {
+    text-decoration : none;
+    color : #000;
+
+    &:hover {
+        color : inherit;
+        text-decoration : inherit;
+    }
+}

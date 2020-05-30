@@ -202,9 +202,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .workplace__wrapper-item__info .quote {
@@ -215,7 +215,11 @@
   font-size: 1.3rem;
   text-align: center;
   font-weight: bold;
-  padding: 2rem;
+  padding: 2rem 0;
+}
+
+.workplace__wrapper-item__info a {
+  font-size: 2rem;
 }
 
 * {
@@ -383,6 +387,7 @@
   height: auto;
   width: 6rem !important;
   margin: 1rem 0;
+  outline: none;
 }
 
 .social__icon {
