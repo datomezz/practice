@@ -12,8 +12,8 @@ for(let i = 0; i < slides.length; i++){
 $(document).ready(function(){
     $('.slider').slick({
         infinite: true,
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         prevArrow : "<div>yleo</div>",
         nextArrow : "<div>mutelo</div>"
     });
