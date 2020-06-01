@@ -16,4 +16,20 @@ if(sliderSaleDots.length > 0){
     }
 }
 
-console.log(sliderSaleDots);
+$('.slider__category').slick({
+    infinite : true,
+    slidesToShow : 5,
+    slidesToScroll : 4,
+    prevArrow : "",
+    nextArrow : "",
+    dots : true,
+    dotsClass : "slider__category-dots"
+});
+
+let sliderCategoryDots = document.querySelectorAll(".slider__category-dots button");
+
+if(sliderCategoryDots.length > 0){
+    for(let i = 0; i < sliderCategoryDots.length; i++){
+        sliderCategoryDots[i].innerText = "";
+    }
+}
