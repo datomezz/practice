@@ -76,18 +76,13 @@
 
             @include flex(row, center, center);
 
-            &::before {
-                display : none;
-                content : "•";
-                color : $lightBlue;
-                font-size : 3.04rem;
-            }
         }
     }
 
     .slick-active{
-        &:read-only button::before {
-            display : block;
+        &:read-only button {
+            background : $lightBlue;
+            border : .2rem solid #fff;
         }
     }
 }

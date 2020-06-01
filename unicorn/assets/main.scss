@@ -6,3 +6,49 @@
 body { 
     background : $lightDark;
 }
+
+.proposition__link {
+    background : #fff;
+    font-size : .8rem;
+    padding : .5rem 1rem;
+}
+
+.proposition__headtext {
+    width : 15rem;
+    margin-bottom : 2rem;
+    color : #fff;
+}
+
+.proposition {
+    border-radius : .7rem;
+    height : 12rem;
+}
+
+.proposition__biggest {
+    background : $unicoRed;
+
+    padding : 2rem 3rem;
+}
+.proposition__bigger {
+    background : #F8A714;
+    padding : 1rem 2rem;
+
+    width : 54%;
+}
+
+.proposition__big {
+    background : #4A4A4A;
+    width : 42%;
+    padding : 1rem 2rem;
+}
+
+.proposition__long {
+    background : #EDF0F5;
+
+    height : 100%;
+}
+
+.proposition__small {
+    background : red;
+    height : 40rem;
+}

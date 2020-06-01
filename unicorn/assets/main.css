@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @font-face {
   font-family: Firago;
   src: url("fonts/FiraGO-Regular.ttf");
@@ -369,19 +368,14 @@ a:hover {
           align-items: center;
 }
 
-.slider__sale-dots li button::before {
-  display: none;
-  content: "•";
-  color: #116BE5;
-  font-size: 3.04rem;
+.slider__sale-dots .slick-active:-moz-read-only button {
+  background: #116BE5;
+  border: .2rem solid #fff;
 }
 
-.slider__sale-dots .slick-active:-moz-read-only button::before {
-  display: block;
-}
-
-.slider__sale-dots .slick-active:read-only button::before {
-  display: block;
+.slider__sale-dots .slick-active:read-only button {
+  background: #116BE5;
+  border: .2rem solid #fff;
 }
 
 /* Slider Category */
@@ -651,5 +645,49 @@ a:hover {
 
 body {
   background: #FBFBFF;
+}
+
+.proposition__link {
+  background: #fff;
+  font-size: .8rem;
+  padding: .5rem 1rem;
+}
+
+.proposition__headtext {
+  width: 15rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+.proposition {
+  border-radius: .7rem;
+  height: 12rem;
+}
+
+.proposition__biggest {
+  background: #F92162;
+  padding: 2rem 3rem;
+}
+
+.proposition__bigger {
+  background: #F8A714;
+  padding: 1rem 2rem;
+  width: 54%;
+}
+
+.proposition__big {
+  background: #4A4A4A;
+  width: 42%;
+  padding: 1rem 2rem;
+}
+
+.proposition__long {
+  background: #EDF0F5;
+  height: 100%;
+}
+
+.proposition__small {
+  background: red;
+  height: 40rem;
 }
 /*# sourceMappingURL=main.css.map */
