@@ -33,22 +33,56 @@ body {
     background : #F8A714;
     padding : 1rem 2rem;
 
-    width : 54%;
+    width : 55%;
+
+    @include flex(column, space-between, flex-start);
+
 }
 
 .proposition__big {
     background : #4A4A4A;
-    width : 42%;
+    width : 43%;
     padding : 1rem 2rem;
+
+    @include flex(column, space-between, flex-start);
+
+    .proposition__headtext {
+        padding-right : 1rem;
+    }
 }
 
 .proposition__long {
     background : #EDF0F5;
-
     height : 100%;
+    padding : 2rem 0 1rem 0;
+
+    @include flex(column, space-between, center);
+
+    .proposition__headtext {
+        padding : 1rem;
+        color : #000;
+        width : 100%;
+        text-align : center;
+    }
 }
 
 .proposition__small {
-    background : red;
-    height : 40rem;
+    background : #8E14F8;
+    padding : 2rem 1rem 1rem 1rem;
+
+    @include flex(column, space-between, flex-start);
+
+    &:last-child {
+        background : #0FB9B1;
+    }
+
+}
+
+
+@media screen and (max-width : 767px){
+    .proposition__long {
+        @include flex(row, center, center);
+
+        height : 12rem !important;
+    }
 }

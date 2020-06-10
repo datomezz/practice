@@ -18,7 +18,7 @@ var wave2 = $('#feel-the-wave-two').wavify({
 
 $('.slider__wrapper').slick({
     slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToScroll: 3,
     vertical : true,
     verticalSwiping: true,
     prevArrow : "<button class='section__arrow btn btn-secondary mb-2'>▲</button>",
