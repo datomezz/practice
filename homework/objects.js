@@ -175,3 +175,45 @@ function filterRangeInPlace(arr, a, b){
 
 console.log(filterRangeInPlace(filterArr, 1, 23));
 //Array Filter everything between 2 numbers
+
+//Negative Sort
+let sortArr = [5, 2, 1, -10, 8];
+
+sortArr.sort(function (b, a){return a-b});
+
+console.log(sortArr);
+//Negative Sort
+
+
+//Sort String Arrays
+let stringArr = ["HTML", "Javascript", "CSS", "Bootstrap", "PHP", "MYSQL", "SASS/SCSS", "GIT", "AJAX", "Wordpress", "WooCommerce"];
+
+function stringSort(arr) {
+    let newStringArr = [];
+
+    for(let i = 0; i < arr.length; i++) {
+        newStringArr.push(arr[i]);
+    }
+    
+    return newStringArr.sort();
+}
+
+console.table(stringSort(stringArr));
+console.log(stringArr);
+//Sort String Arrays
+
+//random number array
+let numberArr = [1,2,3,4,5,6];
+console.log("random array numbers :", numberArr.sort(() => Math.random() - 0.5));
+//random number array
+
+//Sort Objects in array
+let dato = { name: "Dato", age: 23 };
+let natia = { name: "Natia", age: 25 };
+let mari = { name: "Mari", age: 18 };
+
+let people = [dato, natia, mari];
+
+console.log(people.sort((a,b) => {return a.age - b.age}));
+//Sort Objects in array
+
