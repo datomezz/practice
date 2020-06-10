@@ -90,7 +90,7 @@ multiplyNumeric(menu);
 
 //adding class in string
 let obj = {
-    className : "open"
+    className : "open door"
 }
 
 function addClass(obj, cls){
@@ -111,3 +111,67 @@ function addClass(obj, cls){
 console.log(addClass(obj, "open"));
 //adding class in string
 
+//Tranform CSS class to JS CSS class
+let comelizeString = "background-color";
+
+function comelize(str) {
+    str = str.split("-");
+    let newClass = "";
+    for(let i = 0; i < str.length; i++){
+        let strArr = [];
+        for(let y = 0; y < str[i].length; y++){
+            if(i > 0 && y == 0){
+                strArr.push(str[i].charAt(y).toUpperCase());
+            } else {
+                strArr.push(str[i].charAt(y));
+            }
+        }
+
+        newClass += strArr.join("");
+    }
+    return newClass;
+}
+
+console.log(comelize(comelizeString));
+//Tranform CSS class to JS CSS class
+
+//remove Class from Obj
+function removeClass(obj, cls){
+    let str = obj.className;
+    str = str.split(" ");
+    
+    for(let i = 0; i < str.length; i++){
+        if(str[i] === cls){
+            str[i] = "";
+            console.log(str);
+        }
+    }
+    str = str.join("");
+    return str;
+}
+
+console.log(removeClass(obj, "open"));
+//remove Class from Obj
+
+//Array Filter everything between 2 numbers
+let filterArr = [5, 3, 8, 1, 4, 7, 0, 13, 23];
+
+function filterRangeInPlace(arr, a, b){
+    let newArr = [];
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] > a && arr[i] < b) {
+            newArr.push(arr[i]);
+        }
+    }
+    arr = [];
+
+    for(let i = 0; i < newArr.length; i++){
+        arr.push(newArr[i]);
+    }
+
+    return arr;
+
+}
+
+console.log(filterRangeInPlace(filterArr, 1, 23));
+//Array Filter everything between 2 numbers
