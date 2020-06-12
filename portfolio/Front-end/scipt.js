@@ -62,67 +62,72 @@ for(let i = 0; i < menuDiv.length; i++){
     });
 }
 
-const ctx_pie = document.querySelector("#chart_pie").getContext("2d");
-const ctx_bar = document.querySelector("#chart_bar").getContext("2d");
+const ctx_pie = document.querySelector("#chart_pie");
+const ctx_bar = document.querySelector("#chart_bar");
 
-const ctx_pie_color = ["#777BB3", "#F7E018", "#563D7C", "#464342", "#9B5C8F"];
-
-let data_pie = {
-    datasets: [{
-        data: [56, 85, 90, 75, 40],
-        backgroundColor: ctx_pie_color,
-        hoverBorderWidth : 8,
-        hoverBorderColor : "#fff"
-    }],
-
-    labels: [
-        'PHP',
-        'Javascript',
-        'Bootstrap',
-        'Wordpress',
-        "WooCommerce"
-    ],
-};
-
-let data_bar = {
-    datasets : [{
-        backgroundColor : ctx_pie_color,
-        data: [56, 85, 90, 75, 40, 0, 100],
-        label : "knowledge"
-    }],
-    labels: [
-        'PHP',
-        'Javascript',
-        'Bootstrap',
-        'Wordpress',
-        "WooCommerce"
-    ]
+if(ctx_pie && ctx_bar) {
+    ctx_bar = ctx_bar.getContext("2d");
+    ctx_pie = ctx_pie.getContext("2d");
+    const ctx_pie_color = ["#777BB3", "#F7E018", "#563D7C", "#464342", "#9B5C8F"];
+    
+    let data_pie = {
+        datasets: [{
+            data: [56, 85, 90, 75, 40],
+            backgroundColor: ctx_pie_color,
+            hoverBorderWidth : 8,
+            hoverBorderColor : "#fff"
+        }],
+    
+        labels: [
+            'PHP',
+            'Javascript',
+            'Bootstrap',
+            'Wordpress',
+            "WooCommerce"
+        ],
+    };
+    
+    let data_bar = {
+        datasets : [{
+            backgroundColor : ctx_pie_color,
+            data: [56, 85, 90, 75, 40, 0, 100],
+            label : "knowledge"
+        }],
+        labels: [
+            'PHP',
+            'Javascript',
+            'Bootstrap',
+            'Wordpress',
+            "WooCommerce"
+        ]
+    }
+    
+    var myDoughnutChart = new Chart(ctx_pie, {
+        type: 'doughnut',
+        data: data_pie,
+        options : {
+            responsive : true,
+            maintainAspectRatio : false
+        }
+    });
+    
+    
+    var myBarrChart = new Chart(ctx_bar, {
+        type: 'bar',
+        data : data_bar,
+        options : {
+            responsive : true,
+            maintainAspectRatio : false
+        }
+    });
 }
 
-var myDoughnutChart = new Chart(ctx_pie, {
-    type: 'doughnut',
-    data: data_pie,
-    options : {
-        responsive : true,
-        maintainAspectRatio : false
-    }
-});
-
-
-var myBarrChart = new Chart(ctx_bar, {
-    type: 'bar',
-    data : data_bar,
-    options : {
-        responsive : true,
-        maintainAspectRatio : false
-    }
-});
 
 
 const wrapper_article = document.querySelectorAll(".workplace__wrapper-item");
 const arrows = document.querySelectorAll(".skill__arrow");
 
-if(wrapper_article){
+if(wrapper_article.length > 0){
     let count = 0;
     
     arrows[1].addEventListener("click", function(){
@@ -177,5 +182,18 @@ function quoteWritter(){
 }
 
 barba.init({
-    // ...
-})
+    transitions: [{
+      async : true,
+      name: 'opacity-transition',
+      leave(data) {
+        return gsap.to(data.current.container, {
+          opacity: 0
+        });
+      },
+      enter(data) {
+        return gsap.from(data.next.container, {
+          opacity: 0
+        });
+      }
+    }]
+  });

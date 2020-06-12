@@ -216,4 +216,3 @@ let people = [dato, natia, mari];
 
 console.log(people.sort((a,b) => {return a.age - b.age}));
 //Sort Objects in array
-
