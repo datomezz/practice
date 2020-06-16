@@ -2,7 +2,6 @@
 
 .header {
     background : #fff;
-    // border-radius : 0 0 1.6rem 1.6rem;
 }
 
 .header__info {
@@ -213,7 +212,38 @@
     }
 }
 
-.mobile__menu {
-    position: fixed;
-    bottom : 0;
+.mobile__nav {
+    background : #fff;
+
+    .mobile__actions{
+        min-height : 5rem;
+        padding : 3% 0;
+        .mobile__action {
+            i {
+                font-size : 1rem;
+                color : $darkBlue;
+                transition : .3s ease;
+            }
+    
+            .mobile__text {
+                font-size : .6rem;
+                transition : .3s ease;
+            }
+
+            &:hover {
+                i, .mobile__text{
+                    color : $lightBlue;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width : 768px) {
+    .header {
+        border-radius : 0 0 1.6rem 1.6rem;
+    }
+    .mobile__nav {
+        border-radius : 1.6rem 1.6rem 0 0;
+    }
 }

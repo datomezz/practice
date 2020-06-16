@@ -312,8 +312,38 @@ a:hover {
   color: #fff;
 }
 
-.mobile__menu {
-  position: fixed;
-  bottom: 0;
+.mobile__nav {
+  background: #fff;
+}
+
+.mobile__nav .mobile__actions {
+  min-height: 5rem;
+  padding: 3% 0;
+}
+
+.mobile__nav .mobile__actions .mobile__action i {
+  font-size: 1rem;
+  color: #223549;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.mobile__nav .mobile__actions .mobile__action .mobile__text {
+  font-size: .6rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.mobile__nav .mobile__actions .mobile__action:hover i, .mobile__nav .mobile__actions .mobile__action:hover .mobile__text {
+  color: #116BE5;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    border-radius: 0 0 1.6rem 1.6rem;
+  }
+  .mobile__nav {
+    border-radius: 1.6rem 1.6rem 0 0;
+  }
 }
 /*# sourceMappingURL=main.css.map */
