@@ -62,8 +62,8 @@ for(let i = 0; i < menuDiv.length; i++){
     });
 }
 
-const ctx_pie = document.querySelector("#chart_pie");
-const ctx_bar = document.querySelector("#chart_bar");
+let ctx_pie = document.querySelector("#chart_pie");
+let ctx_bar = document.querySelector("#chart_bar");
 
 if(ctx_pie && ctx_bar) {
     ctx_bar = ctx_bar.getContext("2d");

@@ -29,11 +29,16 @@ document.documentElement.addEventListener("click", () => {
             parse = parse.posts;
             let container = document.querySelector(".container");
             let sum = "";
-
-            parse.forEach( (item, index) => {
+            const newParse = parse.map(item => {
+                return {
+                    dasaxeleba : item.title,
+                    avtori : item.author
+                }
+            })
+            .forEach( (item, index) => {
                 sum += `<h5>ID : ${index}</h5>
-                        <h4>Title : ${item["title"]}</h4>
-                        <h3>Author : ${item["author"]}</h3>
+                        <h4>Title : ${item["dasaxeleba"]}</h4>
+                        <h3>Author : ${item["avtori"]}</h3>
                 `;
             });
             container.innerHTML = sum;
@@ -109,3 +114,14 @@ let reduceNum = numArr.reduce((sum, item) => {
 });
 
 console.log(reduceNum);
+
+let spliceArr = arr.map(item => item);
+
+spliceArr.splice(0, 3, "axali", "masivi");
+arr.splice(2,3);
+
+console.log(arr, spliceArr);
+
+let x = arr.concat(spliceArr, arrFilter, [1,2,3,4,5,6]);
+
+console.log("X", x);
