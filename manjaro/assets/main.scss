@@ -54,12 +54,31 @@
     background : $lightDark;
     height : 2.5rem;
     padding : 0 10%;
+    transition : .3s ease;
+
+    i {
+        transition : .1s ease;
+    }
 
     .category__text {
         color : $darkBlue;
         font-size : .7rem;
         margin : 0 0 0 .5rem;
+        transition : .3s ease;
     }
+
+    &:hover {
+        background : $lightBlue;
+
+        i {
+            color : #fff;
+        }
+
+        .category__text {
+            color : #fff;
+        }
+    }
+
 }
 
 
@@ -69,10 +88,30 @@
 
     .input__category {
         background : #fff;
+        transition : .3s ease;
+
+        i {
+            font-size : .8rem;
+            margin-bottom : -.18rem;
+        }
 
         .category__text {
             font-size : .6rem;
             color : $darkBlue;
+        }
+
+        &:hover {
+            background : $lightBlue;
+
+            i {
+                color : #fff;
+                transition : .3s ease;
+            }
+            
+            .category__text {
+                color : #fff;
+                transition : .3s ease;
+            }
         }
     }
     .search__input {
@@ -122,13 +161,29 @@
 
     .user__login {
         background : $lightBlue;
-        img {
-            width : 1rem;
-            height : 1rem;
+        transition : .3s ease;
+        i {
+            font-size : 1rem;
+            color : #fff;
+            transition : .3s ease;
         }
         .user__text {
             font-size : .75rem;
             color : #fff;
+            font-weight: bold;
+            transition : .3s ease;
+        }
+
+        &:hover {
+            background : #fff;
+            border : 1px solid $lightBlue;
+            i {
+                color : $lightBlue;
+                font-weight: bold;
+            }
+            .user__text {
+                color : $lightBlue;
+            }
         }
     }
     
@@ -178,18 +233,6 @@
         }
     }
 }
-.tooltip-inner {
-    font-size : .67rem;
-    font-weight : 100;
-}
-// .header__humburger {
-//     width : 1.2rem;
-
-//     .humburger {
-//         color : #707070;
-//     }
-
-// }
 .header__search {
     width : 2.5rem;
     height : 2.5rem;
@@ -242,8 +285,18 @@
 @media screen and (max-width : 768px) {
     .header {
         border-radius : 0 0 1.6rem 1.6rem;
+        .header__category {
+            background : transparent;
+
+            &:hover {
+                i {
+                    color : $lightBlue;
+                }
+            }
+        }
     }
     .mobile__nav {
         border-radius : 1.6rem 1.6rem 0 0;
     }
+
 }

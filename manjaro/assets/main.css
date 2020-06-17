@@ -40,6 +40,11 @@ a:hover {
   text-overflow: ellipsis;
 }
 
+.tooltip-inner {
+  font-size: .67rem;
+  font-weight: 100;
+}
+
 .header {
   background: #fff;
 }
@@ -96,12 +101,33 @@ a:hover {
   background: #FBFBFF;
   height: 2.5rem;
   padding: 0 10%;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.header__category i {
+  -webkit-transition: .1s ease;
+  transition: .1s ease;
 }
 
 .header__category .category__text {
   color: #223549;
   font-size: .7rem;
   margin: 0 0 0 .5rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.header__category:hover {
+  background: #116BE5;
+}
+
+.header__category:hover i {
+  color: #fff;
+}
+
+.header__category:hover .category__text {
+  color: #fff;
 }
 
 .header__input {
@@ -111,11 +137,34 @@ a:hover {
 
 .header__input .input__category {
   background: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.header__input .input__category i {
+  font-size: .8rem;
+  margin-bottom: -.18rem;
 }
 
 .header__input .input__category .category__text {
   font-size: .6rem;
   color: #223549;
+}
+
+.header__input .input__category:hover {
+  background: #116BE5;
+}
+
+.header__input .input__category:hover i {
+  color: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.header__input .input__category:hover .category__text {
+  color: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 .header__input .search__input {
@@ -195,16 +244,37 @@ a:hover {
 
 .header__user .user__login {
   background: #116BE5;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
-.header__user .user__login img {
-  width: 1rem;
-  height: 1rem;
+.header__user .user__login i {
+  font-size: 1rem;
+  color: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 .header__user .user__login .user__text {
   font-size: .75rem;
   color: #fff;
+  font-weight: bold;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.header__user .user__login:hover {
+  background: #fff;
+  border: 1px solid #116BE5;
+}
+
+.header__user .user__login:hover i {
+  color: #116BE5;
+  font-weight: bold;
+}
+
+.header__user .user__login:hover .user__text {
+  color: #116BE5;
 }
 
 .header__user .user__action {
@@ -273,11 +343,6 @@ a:hover {
   right: -.2rem;
 }
 
-.tooltip-inner {
-  font-size: .67rem;
-  font-weight: 100;
-}
-
 .header__search {
   width: 2.5rem;
   height: 2.5rem;
@@ -341,6 +406,12 @@ a:hover {
 @media screen and (max-width: 768px) {
   .header {
     border-radius: 0 0 1.6rem 1.6rem;
+  }
+  .header .header__category {
+    background: transparent;
+  }
+  .header .header__category:hover i {
+    color: #116BE5;
   }
   .mobile__nav {
     border-radius: 1.6rem 1.6rem 0 0;
