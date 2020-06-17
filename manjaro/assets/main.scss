@@ -282,6 +282,15 @@
     }
 }
 
+.unico__modalContainer {
+    @include flex(row, center, center);
+
+    .unico__modalContent {
+        // width : 40rem;
+        // height : 40rem;
+    }
+}
+
 @media screen and (max-width : 768px) {
     .header {
         border-radius : 0 0 1.6rem 1.6rem;
