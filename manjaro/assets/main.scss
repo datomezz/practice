@@ -1,294 +1,40 @@
 @import "_variables.scss";
-
-.header {
-    background : #fff;
-}
-
-.header__info {
-    padding : 1rem 0;
-    border-bottom : 1px solid #EEEDF0;
-    .header__text-link {
-        font-size : .7rem;
-        transition : .3s ease;
-    }
-    
-    .header__spin-link {
-        color : #F92162;
-        position : relative;
-        font-family : Myriad;
-    
-        &::after {
-            content : "";
-            display : block;
-            height : 1px;
-            border-bottom : 1px solid #F92162;
-            width : 50%;
-            transition : .3s ease;
-    
-            position : absolute;
-            right : 0;
-            bottom : -1.285rem;
-        }
-        &:hover {
-            color : $lightBlue;
-        }
-        &:hover::after {
-            width : 100%;
-            border-color : $lightBlue;
-        }
-    }
-    
-    .header__questions {
-        .header__text-link {
-            color : $darkBlue;
-            opacity : .5;
-    
-            &:hover {
-                opacity : 1;
-            }
-        }
-    }
-}
-
-.header__category {
-    background : $lightDark;
-    height : 2.5rem;
-    padding : 0 10%;
-    transition : .3s ease;
-
-    i {
-        transition : .1s ease;
-    }
-
-    .category__text {
-        color : $darkBlue;
-        font-size : .7rem;
-        margin : 0 0 0 .5rem;
-        transition : .3s ease;
-    }
-
-    &:hover {
-        background : $lightBlue;
-
-        i {
-            color : #fff;
-        }
-
-        .category__text {
-            color : #fff;
-        }
-    }
-
-}
-
-
-.header__input {
-    background : $lightDark;
-    height : 2.5rem;
-
-    .input__category {
-        background : #fff;
-        transition : .3s ease;
-
-        i {
-            font-size : .8rem;
-            margin-bottom : -.1;
-        }
-
-        .category__text {
-            font-size : .6rem;
-            color : $darkBlue;
-        }
-
-        &:hover {
-            background : $lightBlue;
-
-            i {
-                color : #fff;
-                transition : .3s ease;
-            }
-            
-            .category__text {
-                color : #fff;
-                transition : .3s ease;
-            }
-        }
-    }
-    .search__input {
-        background : $lightDark;
-        border : none;
-        outline : none;
-        font-size : .8rem;
-
-        &::placeholder {
-            font-size : .6rem;
-            color : $darkBlue;
-            opacity : .4;
-        }
-    }
-    .input__button {
-        height : 2rem;
-        border : none;
-        outline : none;
-        background : transparent;
-
-    }
-    .search__button {
-        width : 2rem;
-        height : 2rem;
-        transition : .3s ease;
-        color : $darkBlue;
-        background : #fff;
-        border-radius : 50%;
-
-        @include flex(row, center, center);
-
-        i {
-            font-size : .7rem;
-            color : inherit;
-        }
-
-        &:hover {
-            background : $lightBlue;
-            color : #fff;
-        }
-
-    }
-}
-
-.header__user {
-    height : 2.5rem;
-
-    .user__login {
-        background : $lightBlue;
-        transition : .3s ease;
-        i {
-            font-size : 1rem;
-            color : #fff;
-            transition : .3s ease;
-        }
-        .user__text {
-            font-size : .75rem;
-            color : #fff;
-            font-weight: bold;
-            transition : .3s ease;
-        }
-
-        &:hover {
-            background : #fff;
-            border : 1px solid $lightBlue;
-            i {
-                color : $lightBlue;
-                font-weight: bold;
-            }
-            .user__text {
-                color : $lightBlue;
-            }
-        }
-    }
-    
-    .user__action {
-        width : 2.5rem;
-        height : 2.5rem;
-        border-radius : 50%;
-        background : $lightDark;
-
-        @include flex(row, center, center);
-
-        i {
-            transition : .3s ease;
-        }
-
-        &:hover {
-            i {
-                color : $lightBlue;
-            }
-        }
-
-        img {
-            width : 2rem;
-            height : 2rem;
-        }
-    }
-    
-    .header__shopping-cart {
-        position : relative ;
-
-        &::after {
-            content : "3";
-            display : block;
-            background : #F92162;
-            width : 1rem;
-            height : 1rem;
-            border-radius : 50%;
-            color : #fff;
-            font-size : .75rem;
-            overflow : hidden;
-    
-            @include flex(row, center, center);
-    
-            position : absolute;
-            top : -.2rem;
-            right : -.2rem;
-        }
-    }
-}
-.header__search {
-    width : 2.5rem;
-    height : 2.5rem;
-    border-radius : 50%;
-
-    @include flex(row, center, center);
-
-    i {
-        width : 1rem;
-        color : #707070;
-        transition : .3s ease;
-    }
-
-    &:hover {
-        background : $lightBlue;
-
-        i {
-            color : #fff;
-        }
-    }
-}
-
-.mobile__nav {
-    background : #fff;
-
-    .mobile__actions{
-        min-height : 5rem;
-        padding : 3% 0;
-        .mobile__action {
-            i {
-                font-size : 1rem;
-                color : $darkBlue;
-                transition : .3s ease;
-            }
-    
-            .mobile__text {
-                font-size : .6rem;
-                transition : .3s ease;
-            }
-
-            &:hover {
-                i, .mobile__text{
-                    color : $lightBlue;
-                }
-            }
-        }
-    }
-}
+@import "_header.scss";
 
 .unico__modalContainer {
     @include flex(row, center, center);
-
-
+    background : $lightDark;
 }
 
-@media screen and (max-width : 768px) {
+.modal__search {
+    background : #fff;
+    height : 3rem;
+    
+    text-overflow : ellipsis;
+    overflow : hidden;
+
+    .modal__input {
+        background : transparent;
+        border : none;
+        outline : none;
+        font-size : .8rem;
+        &::placeholder {
+            font-size : .7rem;
+        }
+    }
+}
+
+.modal__close {
+    .close {
+        transition : .3s ease;
+        outline : none;
+
+        span {
+            font-size : 2.5rem;
+        }
+    }
+}
+@media (max-width : 768px) {
     .header {
         border-radius : 0 0 1.6rem 1.6rem;
         .header__category {
@@ -304,5 +50,9 @@
     .mobile__nav {
         border-radius : 1.6rem 1.6rem 0 0;
     }
-
+}
+@media (max-width: 1200px) {
+    .modal-xl {
+        max-width : 90%;
+    }
 }

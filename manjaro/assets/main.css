@@ -45,6 +45,10 @@ a:hover {
   font-weight: 100;
 }
 
+.unico-bg__gray {
+  background: #FBFBFF;
+}
+
 .header {
   background: #fff;
 }
@@ -417,9 +421,50 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: #FBFBFF;
 }
 
-@media screen and (max-width: 768px) {
+.modal__search {
+  background: #fff;
+  height: 3rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.modal__search .modal__input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: .8rem;
+}
+
+.modal__search .modal__input::-webkit-input-placeholder {
+  font-size: .7rem;
+}
+
+.modal__search .modal__input:-ms-input-placeholder {
+  font-size: .7rem;
+}
+
+.modal__search .modal__input::-ms-input-placeholder {
+  font-size: .7rem;
+}
+
+.modal__search .modal__input::placeholder {
+  font-size: .7rem;
+}
+
+.modal__close .close {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  outline: none;
+}
+
+.modal__close .close span {
+  font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
   .header {
     border-radius: 0 0 1.6rem 1.6rem;
   }
@@ -431,6 +476,12 @@ a:hover {
   }
   .mobile__nav {
     border-radius: 1.6rem 1.6rem 0 0;
+  }
+}
+
+@media (max-width: 1200px) {
+  .modal-xl {
+    max-width: 90%;
   }
 }
 /*# sourceMappingURL=main.css.map */
