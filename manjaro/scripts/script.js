@@ -11,21 +11,23 @@ let logIn = document.querySelectorAll(".user__login");
 
 logIn.forEach(item => {
     item.addEventListener("click", function(){ 
-        modalAjax("Login Form", "testLogin.html");
+        modalAjax("modal-xl", "testLogin.html");
     });
 });
 
 allCategory.addEventListener("click", function() {
-    modalAjax("Login Form", "testLogin.html");
+    modalAjax("", "testLogin.html");
 });
 
-function modalAjax(header, url) {
+function modalAjax(modalType, url) {
     let req = new XMLHttpRequest();
-    let modalHeader = document.querySelector(".modal-header");
     let modalContent = document.querySelector(".modal-body");
+    let modalContainer = document.querySelector(".unico__modalContainer");
+
     req.onreadystatechange = function() {
+        modalContainer.classList.remove("modal-xl");
         if(this.readyState == 4 && this.status == 200){
-            modalHeader.innerText = header;
+            if(modalType) modalContainer.classList.add(modalType);
             modalContent.innerHTML = this.response;
         }
     }

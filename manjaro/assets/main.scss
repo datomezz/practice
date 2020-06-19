@@ -285,10 +285,7 @@
 .unico__modalContainer {
     @include flex(row, center, center);
 
-    .unico__modalContent {
-        // width : 40rem;
-        // height : 40rem;
-    }
+
 }
 
 @media screen and (max-width : 768px) {
