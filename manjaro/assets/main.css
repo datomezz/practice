@@ -49,6 +49,10 @@ a:hover {
   background: #FBFBFF;
 }
 
+.unico-modal__radius {
+  border-radius: 1.6rem;
+}
+
 .header {
   background: #fff;
 }
@@ -502,6 +506,132 @@ a:hover {
 
 .modal__category-ul .modal__li:hover i, .modal__category-ul .modal__li:hover .modal__link {
   color: #116BE5;
+}
+
+.modal__login .modal__textHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Myriad;
+}
+
+.modal__login .modal__loginProposition {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.modal__login .modal__loginProposition .modal__loginProposition-text {
+  font-size: .75rem;
+}
+
+.modal__login .modal__loginProposition .registration__link {
+  font-size: .75rem;
+  color: #116BE5;
+}
+
+.modal__login .modal__inputContainer {
+  color: #92A9CE;
+  border-bottom: 1px solid #92A9CE;
+  padding: .8rem 0;
+}
+
+.modal__login .modal__inputContainer .modal__input {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: .9rem;
+  color: #92A9CE;
+  padding: 1rem;
+}
+
+.modal__login .modal__inputContainer .modal__input::-webkit-input-placeholder {
+  color: #92A9CE;
+}
+
+.modal__login .modal__inputContainer .modal__input:-ms-input-placeholder {
+  color: #92A9CE;
+}
+
+.modal__login .modal__inputContainer .modal__input::-ms-input-placeholder {
+  color: #92A9CE;
+}
+
+.modal__login .modal__inputContainer .modal__input::placeholder {
+  color: #92A9CE;
+}
+
+.modal__login .modal__inputContainer .input__recovery {
+  font-size: .8rem;
+  color: rgba(34, 53, 73, 0.4);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.modal__login .modal__inputContainer .input__recovery:hover {
+  color: #92A9CE;
+}
+
+.modal__login .modal__button {
+  width: 100%;
+  padding: .75rem 0;
+  font-size: .8rem;
+  color: #116BE5;
+  border: 1px solid #116BE5;
+  background: transparent;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.modal__login .modal__button:hover {
+  background: #116BE5;
+  color: #fff;
+}
+
+.modal__login .login__separator {
+  position: relative;
+}
+
+.modal__login .login__separator hr {
+  border-top: 1px solid #92A9CE;
+}
+
+.modal__login .login__separator .separator__text {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background: #FBFBFF;
+  border: thin solid #92A9CE;
+  padding: .3rem .7rem;
+  font-size: .8rem;
+  color: #92A9CE;
+}
+
+.modal__login .login__socials a {
+  font-size: .9rem;
+  padding: 4% 8%;
 }
 
 @media (max-width: 768px) {

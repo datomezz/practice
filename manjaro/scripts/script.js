@@ -16,7 +16,7 @@ category.addEventListener("click", function() {
 
 logIn.forEach(item => {
     item.addEventListener("click", function(){ 
-        modalAjax("testLogin.html");
+        modalAjax("login.html", "modal-md");
     });
 });
 
@@ -30,7 +30,7 @@ function modalAjax(url, modalType) {
     let modalContainer = document.querySelector(".unico__modalContainer");
 
     req.onreadystatechange = function() {
-        modalContainer.classList.remove("modal-xl");
+        modalContainer.className = "unico__modalContainer modal-dialog h-100";
         if(this.readyState == 4 && this.status == 200){
             if(modalType) modalContainer.classList.add(modalType);
             modalContent.innerHTML = this.response;

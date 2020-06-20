@@ -25,6 +25,7 @@ $darkBlue : #223549;
 $lightBlue : #116BE5;
 $lightDark : #FBFBFF;
 $unicoRed : #F92162;
+$loginText : #92A9CE;
 
 * {
     box-sizing : border-box;
@@ -59,4 +60,8 @@ a {
 
 .unico-bg__gray { 
     background : $lightDark;
+}
+
+.unico-modal__radius {
+    border-radius : 1.6rem;
 }
