@@ -3,7 +3,10 @@
 
 .unico__modalContainer {
     @include flex(row, center, center);
-    background : $lightDark;
+
+    .modal-content {
+        border-radius: .8rem;
+    }
 }
 
 .modal__search {
@@ -34,6 +37,33 @@
         }
     }
 }
+
+.modal__category-ul {
+    list-style : none;
+    height : 16rem;
+    width : 100%;
+    
+    @include flex(column, flex-start, flex-start);
+    flex-wrap : wrap;
+
+    .modal__li {
+        transition : .3s ease;
+
+        i ,.modal__link {
+            font-size : .9rem;
+            margin-right : 1rem;
+            transition : .3s ease;
+        }
+
+
+        &:hover {
+            i, .modal__link {
+                color : $lightBlue;
+            }
+        }
+    }
+}
+
 @media (max-width : 768px) {
     .header {
         border-radius : 0 0 1.6rem 1.6rem;
@@ -51,6 +81,8 @@
         border-radius : 1.6rem 1.6rem 0 0;
     }
 }
+
+
 @media (max-width: 1200px) {
     .modal-xl {
         max-width : 90%;

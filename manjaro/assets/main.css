@@ -421,7 +421,10 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #FBFBFF;
+}
+
+.unico__modalContainer .modal-content {
+  border-radius: .8rem;
 }
 
 .modal__search {
@@ -462,6 +465,43 @@ a:hover {
 
 .modal__close .close span {
   font-size: 2.5rem;
+}
+
+.modal__category-ul {
+  list-style: none;
+  height: 16rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.modal__category-ul .modal__li {
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.modal__category-ul .modal__li i, .modal__category-ul .modal__li .modal__link {
+  font-size: .9rem;
+  margin-right: 1rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.modal__category-ul .modal__li:hover i, .modal__category-ul .modal__li:hover .modal__link {
+  color: #116BE5;
 }
 
 @media (max-width: 768px) {

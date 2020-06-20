@@ -38,7 +38,7 @@
                     </div>
                 </div>
                 <div class="header__input col-4 d-md-flex d-none justify-content-between rounded-pill position-relative p-1">
-                    <a href="#" class="input__category col-lg-3 col-md-2 d-flex justify-content-center align-items-center rounded-pill p-0 m-0">
+                    <a href="#" class="input__category col-lg-3 col-md-2 d-flex justify-content-center align-items-center rounded-pill p-0 m-0" data-toggle="modal" data-target="#modal">
                         <i class="fas fa-th-large mr-1"></i>
                         <p class="category__text unico-text__ellipsis d-lg-block d-md-none d-none m-0">კატეგორია</p>
                     </a>
@@ -107,26 +107,12 @@
             </div>
         </nav>
     </header>
-    <aside class=" p-0" id="modal">
-        <div class="unico__modalContainer modal-dialog modal-xl">
-            <div class="modal-content border-none">
-                <div class="modal-body unico-bg__gray">
-                    <div class="d-md-flex d-none flex-column justify-content-between px-5 py-3 m-0">
-                        <div class="row justify-content-between m-0">
-                            <div class="modal__search col-lg-3 col-md-6 d-flex justify-content-between align-items-center rounded-pill p-0">
-                                <i class="fas fa-search col-1"></i>
-                                <input type="text" name="all-category-search" class="modal__input col-10 p-0 pr-3" placeholder="მოძებნე სასურველი კატეგორია">
-                            </div>
-                            <div class="modal__close d-flex align-items-center">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                            </div>
-                        </div>
-                        <div class="row m-0 mt-3">
-                            321312
-                        </div>
-                    </div>
-                </div>
+    <aside class="modal fade p-0" id="modal">
+        <div class="unico__modalContainer modal-dialog h-100">
+            <div class="modal-content unico-bg__gray border-0">
+                <div class="modal-body">
 
+                </div>
             </div>
         </div>
     </aside>

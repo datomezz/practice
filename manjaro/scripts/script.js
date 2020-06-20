@@ -8,18 +8,23 @@ try {
 
 let allCategory = document.querySelector(".header__category");
 let logIn = document.querySelectorAll(".user__login");
+let category = document.querySelector(".input__category");
+
+category.addEventListener("click", function() {
+    modalAjax("category.html", "modal-lg");
+});
 
 logIn.forEach(item => {
     item.addEventListener("click", function(){ 
-        modalAjax("modal-xl", "testLogin.html");
+        modalAjax("testLogin.html");
     });
 });
 
 allCategory.addEventListener("click", function() {
-    modalAjax("", "testLogin.html");
+    modalAjax("allcategory.html", "modal-xl");
 });
 
-function modalAjax(modalType, url) {
+function modalAjax(url, modalType) {
     let req = new XMLHttpRequest();
     let modalContent = document.querySelector(".modal-body");
     let modalContainer = document.querySelector(".unico__modalContainer");
