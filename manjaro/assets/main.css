@@ -552,8 +552,8 @@ a:hover {
 
 .modal__login .modal__inputContainer {
   color: #92A9CE;
-  border-bottom: 1px solid #92A9CE;
-  padding: .8rem 0;
+  padding: .5rem 0;
+  border-bottom: thin solid #92A9CE;
 }
 
 .modal__login .modal__inputContainer .modal__input {
@@ -581,6 +581,18 @@ a:hover {
   color: #92A9CE;
 }
 
+.modal__login .modal__inputContainer .modal__input:focus {
+  color: #116BE5;
+}
+
+.modal__login .modal__inputContainer:hover {
+  border-color: #116BE5;
+}
+
+.modal__login .modal__inputContainer:hover * {
+  color: #116BE5;
+}
+
 .modal__login .modal__inputContainer .input__recovery {
   font-size: .8rem;
   color: rgba(34, 53, 73, 0.4);
@@ -590,6 +602,26 @@ a:hover {
 
 .modal__login .modal__inputContainer .input__recovery:hover {
   color: #92A9CE;
+}
+
+.modal__login .form-check-label {
+  font-size: .65rem;
+}
+
+.modal__login .modal__link {
+  color: #116BE5;
+}
+
+.modal__login .modal__link:hover {
+  color: #223549;
+}
+
+.modal__login .modal__capcha .capcha__text {
+  font-size: .8rem;
+  padding: 1rem 2rem;
+  background: gray;
+  color: #fff;
+  cursor: pointer;
 }
 
 .modal__login .modal__button {

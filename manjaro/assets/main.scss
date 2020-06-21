@@ -86,8 +86,8 @@
 
     .modal__inputContainer {
         color : $loginText;
-        border-bottom : 1px solid $loginText;
-        padding : .8rem 0;
+        padding : .5rem 0;
+        border-bottom : thin solid $loginText;
 
         .modal__input {
             background : transparent;
@@ -100,6 +100,17 @@
             &::placeholder {
                 color : $loginText; 
             }
+
+            &:focus {
+                color : $lightBlue;
+            }
+        }
+
+        &:hover {
+            border-color : $lightBlue;
+            * {
+                color : $lightBlue;
+            }
         }
 
 
@@ -111,6 +122,30 @@
             &:hover {
                 color : $loginText;
             }
+        }
+
+
+    }
+
+    .form-check-label {
+        font-size : .65rem;
+    }
+    .modal__link {
+        color : $lightBlue;
+
+        &:hover {
+            color : $darkBlue;
+        }
+    }
+
+    .modal__capcha {
+        .capcha__text {
+            font-size : .8rem;
+            padding : 1rem 2rem;
+            background : gray;
+            color : #fff;
+            cursor : pointer;
+            
         }
     }
 
