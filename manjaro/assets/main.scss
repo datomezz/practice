@@ -194,6 +194,113 @@
     }
 }
 
+//slider
+.slider__sale {
+    position : relative;
+    height : auto;
+    border-radius : 1rem;
+
+    .slick-list {
+        overflow : hidden;
+        height : inherit;
+    }
+
+    .slider__ads-link {
+        outline : none;
+        height : inherit;
+    }
+    .slider__img {
+        width : 100%;
+        height : 20rem;
+        border-radius : 1rem;
+    }
+
+
+    .slider__arrow {
+        position : absolute;
+        z-index : 2;
+        top : 50%;
+        transform : translate(0, -50%);
+        right : -1.5rem;
+        
+        border-radius : 50rem;
+        width : 3rem;
+        height : 3rem;
+        background  : #fff;
+
+
+        @include flex(row, center, center);
+
+        &:first-child {
+            left : -1.5rem;
+        }
+
+        .arrow {
+            color : $lightBlue;
+            opacity : .3;
+            transition : .3s ease;
+        }
+
+        &:hover .arrow {
+            opacity: 1;
+        }
+    }
+}
+
+.slider__sale-dots {
+    @include flex(row, space-between, center);
+    
+    position : absolute;
+    bottom : 1rem;
+    left : 50%;
+    z-index : 2;
+    transform : translate(-50%, 0);
+
+    padding : 0;
+    margin : 0;
+
+    li {
+        list-style : none;
+        button {
+            background : #fff;
+            width : 1.05rem;
+            height : 1.05rem;
+            border : none;
+            outline : none;
+            border-radius : 50%;
+            margin-right : .3rem;
+            
+            padding : 0;
+            
+
+            @include flex(row, center, center);
+
+        }
+    }
+
+    .slick-active{
+        &:read-only button {
+            background : $lightBlue;
+            border : .2rem solid #fff;
+        }
+    }
+}
+
+
+
+@media (max-width: 1200px) {
+    .modal-xl {
+        max-width : 90%;
+    }
+}
+@media (max-width : 992px) {
+    .slider__sale {
+        .slider__img {
+            height : 15rem;
+        }
+    }
+}
+
 @media (max-width : 768px) {
     .header {
         border-radius : 0 0 1.6rem 1.6rem;
@@ -211,11 +318,17 @@
         border-radius : 1.6rem 1.6rem 0 0;
     }
 
+    .slider__sale {
+        .slider__img {
+            height : 10rem;
+        }
+        .slider__arrow {
+            display : none !important;
+        }
+    }
+
 }
 
+@media (max-width : 576px) {
 
-@media (max-width: 1200px) {
-    .modal-xl {
-        max-width : 90%;
-    }
 }

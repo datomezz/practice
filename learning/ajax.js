@@ -31,4 +31,14 @@ function ajax(method, url) {
     req.send();
 }
 
-ajax("GET", "https://jsonplaceholder.typicode.com/users");
+// document.documentElement.addEventListener("click", function(){ 
+//     ajax("GET", "https://jsonplaceholder.typicode.com/users");
+// });
+
+fetch("https://jsonplaceholder.typicode.com/users")
+    .then((response) => {
+        return response;
+    })
+    .then((data) => {
+        console.log(data);
+    });
