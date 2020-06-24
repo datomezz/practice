@@ -766,6 +766,8 @@ a:hover {
   border-radius: 50%;
   margin-right: .3rem;
   padding: 0;
+  font-size: .1rem;
+  color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -794,6 +796,7 @@ a:hover {
 .services-container {
   height: 8rem;
   background: #fff;
+  margin: 6rem 0;
 }
 
 .services-container .services {
@@ -959,6 +962,127 @@ a:hover {
   color: #8E14F8;
 }
 
+/* Slider Category */
+.slider-category {
+  outline: none;
+}
+
+.slider-category .slick-slide {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 15rem;
+  height: 16rem;
+  overflow: hidden;
+  background: #fff;
+  border-radius: .8rem;
+  margin: 0 1rem;
+  outline: none;
+}
+
+.slider-category .slick-slide .slider-img__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.slider-category .slick-slide .slider-img__container .slider-category-img {
+  width: 6rem;
+  height: 8rem;
+}
+
+.slider-category__attributes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider-category__attributes .slider-category__header {
+  font-size: .9rem;
+  text-align: center;
+}
+
+.slider-category__attributes .slider-category__count {
+  font-size: .8rem;
+  color: #223549;
+}
+
+.slider-category__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: -3rem;
+  right: .5rem;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+}
+
+.slider-category__dots li {
+  list-style: none;
+}
+
+.slider-category__dots li button {
+  border: 1px solid #116BE5;
+  width: .8rem;
+  height: .8rem;
+  outline: none;
+  border-radius: .2rem;
+  margin-right: .3rem;
+  padding: 0;
+  font-size: .1rem;
+  color: transparent;
+}
+
+.slider-category__dots .slick-active:-moz-read-only button {
+  background: #116BE5;
+}
+
+.slider-category__dots .slick-active:read-only button {
+  background: #116BE5;
+}
+
 @media (max-width: 1200px) {
   .modal-xl {
     max-width: 90%;
@@ -1010,6 +1134,46 @@ a:hover {
   }
   .slider-thumbnail .slider__arrow {
     display: none !important;
+  }
+  .slider-category__dots li {
+    background: #fff;
+    height: .8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slider-category__dots li:first-child {
+    border-radius: 50% 0 0 50% !important;
+    overflow: hidden;
+  }
+  .slider-category__dots li:last-child {
+    border-radius: 0 50% 50% 0 !important;
+    overflow: hidden;
+  }
+  .slider-category__dots button {
+    border: none !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+    background: #fff;
+  }
+  .slider-category__dots .slick-active button {
+    border-radius: 50% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .services-container {
+    margin: 0 0 3rem 0;
   }
 }
 /*# sourceMappingURL=main.css.map */

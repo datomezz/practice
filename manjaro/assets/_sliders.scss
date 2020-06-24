@@ -76,6 +76,8 @@
             
             padding : 0;
             
+            font-size : .1rem;
+            color : transparent;
 
             @include flex(row, center, center);
 

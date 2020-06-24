@@ -4,6 +4,87 @@
 @import "_sliders.scss";
 @import "_services.scss";
 
+/* Slider Category */
+
+.slider-category {
+    outline : none;
+
+    .slick-slide {
+        display : inline-flex !important;
+        flex-direction : column;
+        justify-content : center;
+        align-content : center;
+
+        width : 15rem;
+        height : 16rem;
+        overflow : hidden;
+        background : #fff;
+        border-radius : .8rem;
+        margin : 0 1rem;
+        outline : none;
+
+        .slider-img__container {
+            @include flex(row, center, center);
+
+            margin-bottom : 1rem;
+            .slider-category-img {
+                width : 6rem;
+                height : 8rem;
+
+            }
+        }
+    }
+}
+
+.slider-category__attributes {
+    @include flex(column, center, center);
+
+    .slider-category__header {
+        font-size : .9rem;
+        text-align : center;
+    }
+    .slider-category__count {
+        font-size : .8rem;
+        color : $darkBlue;
+    }
+}
+
+.slider-category__dots {
+    @include flex(row, space-between, center);
+    
+    position : absolute;
+    top : -3rem;
+    right : .5rem;
+    z-index : 2;
+
+    padding : 0;
+    margin : 0;
+
+    li {
+        list-style : none;
+        button {
+            border : 1px solid $lightBlue;
+            width : .8rem;
+            height : .8rem;
+
+            outline : none;
+            border-radius : .2rem;
+            margin-right : .3rem;
+            
+            padding : 0;
+
+            font-size : .1rem;
+            color : transparent;
+        }
+    }
+
+    .slick-active{
+        &:read-only button {
+            background : $lightBlue;
+        }
+    }
+}
+
 
 @media (max-width: 1200px) {
     .modal-xl {
@@ -62,8 +143,38 @@
         }
     }
 
+    .slider-category__dots {
+        li {
+            background : #fff;
+            height : .8rem;
+            @include flex(row, center, center);
+
+            &:first-child {
+                border-radius : 50% 0 0 50% !important;
+                overflow : hidden;
+            }
+
+            &:last-child {
+                border-radius : 0 50% 50% 0 !important;
+                overflow : hidden;
+            }
+        }
+        button {
+            border : none !important;
+            margin : 0 !important;
+            border-radius : 0 !important;
+            background : #fff;
+        }
+        .slick-active {
+            button {
+                border-radius : 50% !important;
+            }
+        }
+    }
 }
 
 @media (max-width : 576px) {
-
+    .services-container {
+        margin : 0 0 3rem 0;
+    }
 }

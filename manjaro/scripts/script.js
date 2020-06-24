@@ -45,15 +45,45 @@ $('.slider-thumbnail').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots : true,
+    autoplay : true,
+    autoplaySpeed : 5000,
     dotsClass : "slider-thumbnail__dots",
     prevArrow : "<a class='slider__arrow' href='javascript:void(0)'><i class='fas fa-arrow-left arrow'></i></a>",
     nextArrow : "<a class='slider__arrow' href='javascript:void(0)'><i class='fas fa-arrow-right arrow'></a>"
 });
 
-let sliderSaleDots = document.querySelectorAll(".slider-thumbnail__dots button");
 
-if(sliderSaleDots.length > 0){
-    for(let i = 0; i < sliderSaleDots.length; i++){
-        sliderSaleDots[i].innerText = "";
-    }
-}
+$('.slider-category').slick({
+    infinite : true,
+    slidesToShow : 5,
+    slidesToScroll : 4,
+    prevArrow : "",
+    nextArrow : "",
+    dots : true,
+    autoplay : true,
+    autoplaySpeed : 7000,
+    dotsClass : "slider-category__dots",
+    responsive : [
+        {
+            breakpoint : 992,
+            settings : {
+                slidesToShow : 4,
+                slidesToScroll : 4
+            }
+        },
+        {
+            breakpoint : 768,
+            settings : {
+                slidesToShow : 3,
+                slidesToScroll : 3
+            }
+        },
+        {
+            breakpoint : 574,
+            settings : {
+                slidesToShow : 2,
+                slidesToScroll : 2
+            }
+        }
+    ]
+});
