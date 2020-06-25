@@ -93,9 +93,22 @@
 }
 //SLIDER SALE
 
+@keyframes pizdec {
+    from {
+        color : red;
+    }
+    to {
+        color : blue;
+    }
+}
+
 /* Slider Category */
 .slider-category {
     outline : none;
+
+    .slick-list {
+        overflow: visible;
+    }
 
     .slider-category__article {
         outline : none;
@@ -107,13 +120,34 @@
         justify-content : center;
         align-content : center;
 
-        width : 15rem;
         height : 16rem;
         overflow : hidden;
         background : #fff;
         border-radius : .8rem;
         margin : 0 1rem;
         outline : none;
+
+        position : relative;
+
+        transition : .3s ease;
+
+        &:hover {
+            transform : scale(1.1);
+            background : #ececec;
+
+            // &::after {
+            //     content : "→";
+            //     display : inline-block;
+            //     font-size : 1.5rem;
+            //     color : $lightBlue;
+            //     position : absolute;
+            //     bottom : .3rem;
+
+            //     animation-name : pizdec;
+            //     animation-duration : .5s ease;
+            // }
+            
+        }
 
         .slider-img__container {
             @include flex(row, center, center);
@@ -132,6 +166,7 @@
     @include flex(column, center, center);
 
     .slider-category__header {
+        font-family : Myriad;
         font-size : .9rem;
         text-align : center;
     }
