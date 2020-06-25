@@ -1,3 +1,8 @@
+.slider__title {
+    font-family : Myriad;
+    font-weight : bold;
+}
+
 //SLIDER SALE
 .slider-thumbnail {
     position : relative;
@@ -229,13 +234,52 @@
         overflow : hidden;
         border : none;
 
+        .img__attributes {
+            height : 3rem;
+
+            .product__action {
+                width : 2.2rem;
+                height : 2.2rem;
+                border-radius : 50%;
+                background : $lightDark;
+
+                @include flex(row, center, center);
+
+                &:hover {
+                    i {
+                        color : $lightBlue;
+                    }
+                }
+                
+            }
+
+            .attributes__sale {
+                display : inline-block;
+                width : 2.2rem;
+                height : 2.2rem;
+                border-radius : 50%;
+                background : $unicoRed;
+                box-shadow: 0px 0px .5rem 0 $unicoRed;
+                color : #fff;
+                font-size : .6rem;
+                @include flex(row, center, center);
+            }
+
+        }
+
         .img__container {
             width : 100%;
             height : 12rem;
             padding : 1rem;
             overflow : hidden;
-
+            
             position : relative;
+            
+            &:hover {
+                .slider-product__hover {
+                    opacity : 1;
+                }
+            }
 
             .slider-product__sale {
                 display : inline-block;
@@ -245,7 +289,6 @@
                 background : $unicoRed;
                 box-shadow: 0px 0px .5rem 0 $unicoRed;
                 
-
                 color : #fff;
                 font-size : .8rem;
                 @include flex(row, center, center);
@@ -257,16 +300,64 @@
                 width : 100%;
                 height : 100%;
             }
+
+            .slider-product__hover {
+                @include flex(row, space-between, center);
+
+                position : absolute;
+                top : 50%;
+                left : 50%;
+                transform : translate(-50%, -50%);
+
+                border-radius : 1rem;
+                padding : 1rem;
+                background : rgba(34, 53, 73, .7);
+                width : 95%;
+                height : 95%;
+                opacity : 0;
+                transition : .3s ease;
+
+                .product__action {
+                    width : 3rem;
+                    height : 3rem;
+                    border-radius : 50%;
+                    outline : none;
+                    transition : .1s ease;
+
+                    @include flex(row, center, center);
+
+                    i {
+                        color : #fff;
+                    }
+
+                    &:hover {
+                        transform : scale(1.2);
+                    }
+                }
+
+                .action__like {
+                    background : $unicoRed;
+                }
+
+                .action__exchange {
+                    background : #F8A714;
+                }
+
+                .action__card {
+                    background : $lightBlue;
+                }
+
+            }
         }
 
         .slider-product__attributes {
             width : 100%;
-            height : 9rem;
+            height : 12rem;
 
             outline : none;
-            padding : 1rem;
+            padding : 0 1rem 1rem 1rem;
 
-            @include flex(column, space-between, flex-start);
+            @include flex(column, center, flex-start);
 
             .slider-product__header {
                 font-size : .8rem;
@@ -274,9 +365,11 @@
                 font-weight : bold;
                 display : inline-block;
                 outline : none;
+                overflow : hidden;
                 transition : .2s ease;
                 
-                height : 50%;
+                
+                height : 40%;
 
                 &:hover {
                     color : $lightBlue;
@@ -286,6 +379,7 @@
             .slider-product__footer {
                 @include flex(column, flex-start, flex-start);
                 width : 100%;
+                height : 2rem;
 
                 .slider-product__price {
                     @include flex(row, flex-start, center);
@@ -294,6 +388,8 @@
                     .price {
                         font-size : 1.4rem;
                         font-weight : bold;
+                        margin : 0;
+                        margin-right : .5rem !important;
                     }
 
                     .price__old {
@@ -330,6 +426,26 @@
                         overflow : hidden;
                         white-space : nowrap;
                     }
+                }
+            }
+        }
+        .slider-product__card {
+
+            .product__cart {
+                background : $lightBlue;
+                color : #fff;
+                font-size : .8rem;
+                width : 90%;
+                padding : .5rem 0;
+                margin-bottom : 1rem;
+                transition : .3s ease;
+
+                @include flex(row, center, center);
+
+                &:hover {
+                    border : thin solid $lightBlue;
+                    background : #fff;
+                    color : $lightBlue;
                 }
             }
         }

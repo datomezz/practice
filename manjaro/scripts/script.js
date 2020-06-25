@@ -95,8 +95,8 @@ $('.slider-product').slick({
     slidesToScroll : 3,
     prevArrow : "",
     nextArrow : "",
-    autoplay : true,
-    autoplaySpeed : 7000,
+    // autoplay : true,
+    // autoplaySpeed : 7000,
     dots : true,
     dotsClass : "slider-category__dots",
     responsive : [
@@ -138,7 +138,7 @@ function threeDot(str){
     let parent = str.parentNode.offsetHeight;
 
     let currentWidth = str.clientWidth;
-    let sum = (currentWidth / 16) * ((parent - 32) / 20);
+    let sum = currentWidth / 3;
 
     console.log(sum);
 
