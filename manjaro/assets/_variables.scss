@@ -34,7 +34,7 @@ $loginText : #92A9CE;
 
 body {
     background : $lightDark;
-    height : 100rem;
+    height : 220rem;
 }
 
 a {
@@ -64,4 +64,8 @@ a {
 
 .unico-modal__radius {
     border-radius : 1.6rem;
+}
+
+.unico-text__sale {
+    color : $unicoRed;
 }

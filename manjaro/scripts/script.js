@@ -55,15 +55,58 @@ $('.slider-thumbnail').slick({
 
 $('.slider-category').slick({
     infinite : true,
-    slidesToShow : 5,
+    slidesToShow : 6,
     slidesToScroll : 4,
     prevArrow : "",
     nextArrow : "",
-    dots : true,
     autoplay : true,
     autoplaySpeed : 7000,
+    dots : true,
     dotsClass : "slider-category__dots",
     responsive : [
+        {
+            breakpoint : 1200,
+            settings : {
+                slidesToShow : 4,
+                slidesToScroll : 4
+            }
+        },
+
+        {
+            breakpoint : 768,
+            settings : {
+                slidesToShow : 3,
+                slidesToScroll : 3
+            }
+        },
+        {
+            breakpoint : 574,
+            settings : {
+                slidesToShow : 2,
+                slidesToScroll : 2
+            }
+        }
+    ]
+});
+
+$('.slider-product').slick({
+    infinite : true,
+    slidesToShow : 5,
+    slidesToScroll : 3,
+    prevArrow : "",
+    nextArrow : "",
+    autoplay : true,
+    autoplaySpeed : 7000,
+    dots : true,
+    dotsClass : "slider-category__dots",
+    responsive : [
+        {
+            breakpoint : 1200,
+            settings : {
+                slidesToShow : 5,
+                slidesToScroll : 4
+            }
+        },
         {
             breakpoint : 992,
             settings : {
@@ -88,16 +131,29 @@ $('.slider-category').slick({
     ]
 });
 
+function threeDot(str){
+    let strText = str;
+    strText = strText.innerHTML;
+    console.log(strText);
+    let parent = str.parentNode.offsetHeight;
 
-//test
-let grids = document.querySelectorAll(".grid");
+    let currentWidth = str.clientWidth;
+    let sum = (currentWidth / 16) * ((parent - 32) / 20);
 
-grids.forEach(item => {
-    let colorArr = [];
+    console.log(sum);
 
-    for(let i = 0; i < 3; i++) {
-        let rand = Math.floor(Math.random() * 255);
-        colorArr.push(rand);
-    }
-    item.style.background = `rgba(${colorArr[0]}, ${colorArr[1]}, ${colorArr[2]})`;
-});
+    if(sum < strText.length){
+        strText = strText.split("").reverse().join("");
+        strText = strText.slice(strText.length - sum);
+        strText = strText.split("").reverse().join("");
+        str.innerHTML = strText + "...";
+    } 
+}
+
+let sliderLinks = document.querySelectorAll(".slider-product__header");
+
+console.log(sliderLinks[0]);
+
+for(let i = 0; i < sliderLinks.length; i++){
+    threeDot(sliderLinks[i]);
+}
