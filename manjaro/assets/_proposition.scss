@@ -1,0 +1,193 @@
+.proposition {
+    display : grid;
+    grid-template : 
+    'phone phone laptop bike' 12rem
+    'toys headphone laptop yard' 12rem
+    /2.5fr 1.5fr 1.2fr 1.5fr;
+    grid-gap : 1rem;
+
+
+    .proposition__radius {
+        border-radius : 1.2rem;
+    }
+
+    .proposition__content {
+        @include flex(row, space-between, center);
+        position : relative;
+        padding : 1.5rem 10%;
+        box-sizing : border-box;
+
+        &:nth-child(2) {
+            /* Toys */ 
+            padding : 1.5rem 8%;
+        }
+
+        &:nth-child(3) {
+            /* Headphone */
+            padding : 1.5rem 10%;
+        }
+
+        &:nth-child(4) {
+            /* Laptop */
+            .proposition__text {
+                @include flex(column, space-between, center);
+                width : 100%;
+                .proposition__title {
+                    font-family : Myriad;
+                    color : #000;
+                    font-size : 1.2rem;
+                    text-align : center;
+                }
+            }
+        }
+
+        &:nth-child(6) {
+            /* Yard */
+            .proposition__text {
+                .proposition__title {
+                    font-family : Myriad;
+                    font-size : 1.5rem;
+                }
+            }
+        }
+
+
+        .proposition__text {
+            @include flex(column, space-between, flex-start);
+            height : 100%;
+            width : 60%;
+            z-index : 10;
+            .proposition__title {
+                margin : 0;
+                color : #fff;
+            }
+            
+            .proposition__link {
+                background : #fff;
+                padding : .8rem 1.5rem;
+                font-size : .65rem;
+                font-weight : bold;
+                color : $darkBlue;
+                text-align : center;
+                transition : .2s ease;
+
+                &:hover {
+                    color : $lightBlue;
+                }
+            }
+
+        }
+
+        .proposition__phone {
+            position : absolute;
+            right : 15%;
+            transform : rotate(25deg);
+
+            width : 23%;
+        }
+
+        .proposition__toys {
+            position : absolute;
+            width : 75%;
+            height : 100%;
+            right : 0;
+        }
+
+        .proposition__headphone {
+            position : absolute;
+            width : 70%;
+            top : -10%;
+            right : -10%;
+        }
+
+        .proposition__laptop {
+            position : absolute;
+            top : 50%;
+            left : 50%;
+            transform : translate(-50%, -50%);
+
+            width : 80%;
+        }
+
+        .proposition__bike {
+            position : absolute;
+            right : -5%;
+            top : -5%;
+            transform : rotate(20deg);
+
+            width : 75%;
+        }
+    }
+
+    .grid-phone {
+        grid-area : phone;
+        background : $unicoRed;
+    }
+    .grid-toys {
+        grid-area : toys;
+        background : #F8A714;
+    }
+    .grid-headphone {
+        grid-area : headphone;
+        background : #4A4A4A;
+    }
+    .grid-laptop {
+        grid-area : laptop;
+        background : #EDF0F5;
+    }
+    .grid-bike {
+        grid-area : bike;
+        background : #8E14F8;
+    }
+    .grid-yard {
+        grid-area : yard;
+        background : #0FB9B1;
+    }
+}
+
+@media (max-width: 1200px) {
+    .modal-xl {
+        max-width : 90%;
+    }
+}
+@media (max-width : 992px) {
+    .slider-thumbnail {
+        .slider__img {
+            height : 15rem;
+        }
+    }
+
+    .services {
+        .promocode {
+            padding : 1.5rem 1rem !important;
+
+            .promocode__title {
+                font-size : 1rem;
+            }
+            .promocode__text {
+                font-size : .65rem !important;
+            }
+            .promocode__input {
+                &::placeholder {
+                    font-size : .7rem;
+                }
+            }
+        }
+    }
+
+    .proposition {
+        grid-template : 
+        'phone phone laptop bike' 8rem
+        'toys headphone laptop yard' 8rem
+        /2.5fr 1.5fr 1.2fr 1.5fr;
+
+        .proposition__title {
+            font-size : .8rem !important;
+        }
+
+        .proposition__link {
+            font-size : .5rem !important;
+            padding : .4rem .8rem !important;
+        }
+    }
+}

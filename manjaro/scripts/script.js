@@ -87,3 +87,17 @@ $('.slider-category').slick({
         }
     ]
 });
+
+
+//test
+let grids = document.querySelectorAll(".grid");
+
+grids.forEach(item => {
+    let colorArr = [];
+
+    for(let i = 0; i < 3; i++) {
+        let rand = Math.floor(Math.random() * 255);
+        colorArr.push(rand);
+    }
+    item.style.background = `rgba(${colorArr[0]}, ${colorArr[1]}, ${colorArr[2]})`;
+});
