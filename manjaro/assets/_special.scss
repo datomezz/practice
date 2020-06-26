@@ -1,0 +1,140 @@
+.special {
+    height : 28rem;
+
+    .special__container {
+
+        .special__column {
+            border-radius : 1.5rem;
+            height : 100%;  
+    
+            .special__link {
+                border-radius : inherit;
+            }
+
+            .special__img {
+                border-radius : inherit;
+                width : 100%;
+                height : 100%;
+            }
+        }
+
+        .special__post {
+            background : #fff;
+            overflow : hidden;
+
+            position : relative;
+
+            &::before {
+                display : block;
+                content: "333";
+                background : $unicoRed;
+                width : 8rem;
+                height : 8rem;
+                border-radius : 50%;
+                
+                position : absolute;
+                right : -3rem;
+                top : -3rem;
+            }
+        }
+    }
+
+    .special-post {
+        position : relative;
+
+        @include flex(row, center, center);
+
+        .special__sale {
+            position : absolute;
+            z-index : 2;
+            top : 1.25rem;
+            right : .3rem;
+
+            font-size : 1.5rem;
+            font-weight : bold;
+            color : #fff;
+        }
+
+        .special-post__container {
+            width : 100%;
+            height : 22rem;
+
+            @include flex(column, space-between, flex-start);
+
+            .special-post__title {
+                font-family : Myriad;
+                font-size : 1.2rem;
+            }
+
+            .special-post__rate {
+                @include flex(row, flex-start, center);
+                width : 100%;
+
+                .stars {
+                    font-size : .7rem;
+                    margin-right : .5rem;
+
+                    i {
+                        color : #FF8970;
+                        cursor : pointer;
+                        transition : .3s ease;
+
+                        &:last-child {
+                            color : #ff88704f;
+                        }
+
+                        &:hover {
+                            color : $unicoRed;
+                        }
+                    }
+                }
+
+                .rate {
+                    font-family : Myriad;
+                    font-size : .7rem;
+                    overflow : hidden;
+                    white-space : nowrap;
+                }
+            }
+
+            .special-proposition__status {
+                font-size : .85rem;
+                margin-bottom : .5rem;
+            }
+
+            .special__price {
+                @include flex(column, center, flex-start);
+
+                .price {
+                    font-size : 1.5rem;
+                    font-weight : bold;
+                    color : $unicoRed;
+                }
+
+                .price__old {
+                    font-size : 1.2rem;
+                    font-weight : bold;
+                    text-decoration : line-through;
+                }
+            }
+
+            .special__button {
+                width : 100%;
+                a {
+                    border : 1px solid $lightBlue;
+                    color : $lightBlue;
+                    padding : .7rem 2rem;
+                    font-weight : bold;
+                    background : #fff;
+                    transition : .3s ease;
+
+                    &:hover {
+                        color : #fff;
+                        background : $lightBlue;
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -70,3 +70,138 @@ a {
     color : $unicoRed;
     margin : 0 !important;
 }
+
+.unico-category__title {
+
+    @include flex(row, flex-start, center);
+
+    .category {
+        font-family : Myriad;
+        font-weight : 500;
+        font-size : 1.5rem;
+        transition : .3s ease;
+
+        &:hover {
+            color : $lightBlue;
+        }
+    }
+
+    .subcategory {
+        @include flex(row, flex-start, center);
+        margin-left : 1rem;
+        a {
+            font-family : Myriad;
+            color : $loginText;
+            margin-right : 1rem !important;
+            font-size : .8rem;
+            transition : .3s ease;
+
+            &:hover {
+                color : $darkBlue;
+            }
+        }
+    }
+}
+
+.countdown {
+    padding : .7rem 1.5rem 1.5rem 1.5rem;
+    border-radius : .7rem;
+    background : #f9f9f9;
+
+    position : relative;
+
+    &::before {
+        display : block;
+        content : "";
+        width : 4.5rem;
+        height : .2rem;
+        background : linear-gradient(to left, $unicoRed, #fff);
+        border-radius : 1rem;
+
+        position : absolute;
+        top : 0;
+        left : .3rem;
+    }
+
+    .countdown__elements {
+        @include flex(row, space-between, center);
+
+        .countdown__element {
+            width : 2.5rem;
+            height : 2.5rem;
+            background : #fff;
+            border-radius : 50%;
+            font-weight : bold;
+            
+            position : relative;
+
+            @include flex(row, center, center);
+
+            &:last-child {
+                color : $unicoRed;
+                
+            }
+
+        }
+
+        .countdown__days {
+            &::before {
+                display : block;
+                content : "დღე";
+                position : absolute;
+                font-size : .75rem;
+                bottom : -1.2rem;
+                left : .53rem;
+                color : #000;
+            }
+        }
+        .countdown__hours {
+            &::before {
+                display : block;
+                content : "საათი";
+                position : absolute;
+                font-size : .75rem;
+                bottom : -1.2rem;
+                left : .53rem;
+                color : #000;
+            }
+        }
+        .countdown__minutes {
+            &::before {
+                display : block;
+                content : "წუთი";
+                position : absolute;
+                font-size : .75rem;
+                bottom : -1.2rem;
+                left : .53rem;
+                color : #000;
+            }
+        }
+        .countdown__seconds {
+            &::before {
+                display : block;
+                content : "წამი";
+                position : absolute;
+                font-size : .75rem;
+                bottom : -1.2rem;
+                left : .53rem;
+                color : #000;
+            }
+        }
+
+        .countdown__dots {
+            font-weight : bold;
+            font-size : 1.2rem;
+            animation-name : Fade;
+            animation-duration : 1s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease;
+            margin : 0 .3rem;
+        }
+    }
+
+    @keyframes Fade {
+        from {opacity : 0}
+        to {opacity : 1}
+    }
+}

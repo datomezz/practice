@@ -153,3 +153,24 @@ let sliderLinks = document.querySelectorAll(".slider-product__header");
 for(let i = 0; i < sliderLinks.length; i++){
     threeDot(sliderLinks[i]);
 }
+
+const countDownElements = document.querySelectorAll(".countdown__element");
+
+const endTime = new Date("2020-07-31T12:25").getTime();
+
+setInterval(function(){
+    let now = new Date().getTime();
+    let newDate = endTime - now;
+
+    let days = Math.floor(newDate / (1000 * 60 * 60 * 25));
+    let hours = Math.floor((newDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((newDate % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((newDate % (1000 * 60)) / 1000);
+
+    let dateArr = [days, hours, minutes, seconds];
+
+    for(let i = 0; i < dateArr.length; i++){
+        countDownElements[i].innerText = dateArr[i];
+    }
+
+}, 1000);
