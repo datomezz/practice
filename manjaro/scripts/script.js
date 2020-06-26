@@ -95,8 +95,8 @@ $('.slider-product').slick({
     slidesToScroll : 3,
     prevArrow : "",
     nextArrow : "",
-    // autoplay : true,
-    // autoplaySpeed : 7000,
+    autoplay : true,
+    autoplaySpeed : 7000,
     dots : true,
     dotsClass : "slider-category__dots",
     responsive : [
@@ -134,8 +134,6 @@ $('.slider-product').slick({
 function threeDot(str){
     let strText = str;
     strText = strText.innerHTML;
-    console.log(strText);
-    let parent = str.parentNode.offsetHeight;
 
     let currentWidth = str.clientWidth;
     let sum = currentWidth / 3;
@@ -151,8 +149,6 @@ function threeDot(str){
 }
 
 let sliderLinks = document.querySelectorAll(".slider-product__header");
-
-console.log(sliderLinks[0]);
 
 for(let i = 0; i < sliderLinks.length; i++){
     threeDot(sliderLinks[i]);

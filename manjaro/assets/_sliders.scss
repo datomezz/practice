@@ -1,6 +1,33 @@
 .slider__title {
-    font-family : Myriad;
-    font-weight : bold;
+
+    @include flex(row, flex-start, center);
+
+    .category {
+        font-family : Myriad;
+        font-weight : 500;
+        font-size : 1.5rem;
+        transition : .3s ease;
+
+        &:hover {
+            color : $lightBlue;
+        }
+    }
+
+    .subcategory {
+        @include flex(row, flex-start, center);
+        margin-left : 1rem;
+        a {
+            font-family : Myriad;
+            color : $loginText;
+            margin-right : 1rem !important;
+            font-size : .8rem;
+            transition : .3s ease;
+
+            &:hover {
+                color : $darkBlue;
+            }
+        }
+    }
 }
 
 //SLIDER SALE
@@ -185,7 +212,7 @@
     @include flex(row, space-between, center);
     
     position : absolute;
-    top : -3rem;
+    top : -3.53rem;
     right : .5rem;
     z-index : 2;
 
@@ -411,7 +438,7 @@
                             transition : .3s ease;
 
                             &:last-child {
-                                opacity : .3;
+                                color : #ff88704f;
                             }
 
                             &:hover {

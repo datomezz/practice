@@ -672,8 +672,61 @@ a:hover {
 }
 
 .slider__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slider__title .category {
   font-family: Myriad;
-  font-weight: bold;
+  font-weight: 500;
+  font-size: 1.5rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.slider__title .category:hover {
+  color: #116BE5;
+}
+
+.slider__title .subcategory {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 1rem;
+}
+
+.slider__title .subcategory a {
+  font-family: Myriad;
+  color: #92A9CE;
+  margin-right: 1rem !important;
+  font-size: .8rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.slider__title .subcategory a:hover {
+  color: #223549;
 }
 
 .slider-thumbnail {
@@ -928,7 +981,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: -3rem;
+  top: -3.53rem;
   right: .5rem;
   z-index: 2;
   padding: 0;
@@ -1258,7 +1311,7 @@ a:hover {
 }
 
 .slider-product .slider-product__article .slider-product__attributes .slider-product__footer .slider-product__rate .stars i:last-child {
-  opacity: .3;
+  color: #ff88704f;
 }
 
 .slider-product .slider-product__article .slider-product__attributes .slider-product__footer .slider-product__rate .stars i:hover {
@@ -1726,6 +1779,9 @@ a:hover {
   }
   .slider-thumbnail .slider__arrow {
     display: none !important;
+  }
+  .slider-category__dots {
+    top: -2.9rem !important;
   }
   .slider-category__dots li {
     background: #fff;
