@@ -91,7 +91,7 @@ $('.slider-category').slick({
 
 $('.slider-product').slick({
     infinite : true,
-    slidesToShow : 5,
+    slidesToShow : 6,
     slidesToScroll : 3,
     prevArrow : "",
     nextArrow : "",

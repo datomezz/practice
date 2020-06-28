@@ -1,9 +1,12 @@
 .unico-rek {
     height : 10rem;
-    border-radius : 1.5rem;
     overflow : hidden;
-
+    
+    a {
+        height: inherit;
+    }
     .rek__img {
         height : inherit;
+        border-radius : 1rem;
     }
 }

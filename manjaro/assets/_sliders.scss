@@ -327,8 +327,8 @@
                 transition : .3s ease;
 
                 .product__action {
-                    width : 3rem;
-                    height : 3rem;
+                    width : 2.7rem;
+                    height : 2.7rem;
                     border-radius : 50%;
                     outline : none;
                     transition : .1s ease;
@@ -392,10 +392,12 @@
 
                 .slider-product__price {
                     @include flex(row, flex-start, center);
+                    flex-wrap : nowrap;
+
                     width : 100%;
 
                     .price {
-                        font-size : 1.4rem;
+                        font-size : 1.1rem;
                         font-weight : bold;
                         margin : 0;
                         margin-right : .5rem !important;

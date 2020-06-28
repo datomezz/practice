@@ -249,6 +249,25 @@
                 font-size : .55rem !important;
             }
         }
+
+        .countdown {
+
+            .countdown__element {
+                width : 2rem;
+                height: 2rem;
+                font-size :.8rem;
+
+                &::before {
+                    font-size : .5rem;
+                    left : .5rem;
+                }
+            }
+
+            .countdown__dots {
+                font-size : .8rem;
+                margin : 0 .1rem;
+            }
+        }
         
     }
 
@@ -262,4 +281,5 @@
     .unico-rek {
         height : 6rem;
     }
+
 }

@@ -1294,8 +1294,8 @@ a:hover {
 }
 
 .slider-product .slider-product__article .img__container .slider-product__hover .product__action {
-  width: 3rem;
-  height: 3rem;
+  width: 2.7rem;
+  height: 2.7rem;
   border-radius: 50%;
   outline: none;
   -webkit-transition: .1s ease;
@@ -1404,11 +1404,13 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   width: 100%;
 }
 
 .slider-product .slider-product__article .slider-product__attributes .slider-product__footer .slider-product__price .price {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: bold;
   margin: 0;
   margin-right: .5rem !important;
@@ -2050,12 +2052,16 @@ a:hover {
 
 .unico-rek {
   height: 10rem;
-  border-radius: 1.5rem;
   overflow: hidden;
+}
+
+.unico-rek a {
+  height: inherit;
 }
 
 .unico-rek .rek__img {
   height: inherit;
+  border-radius: 1rem;
 }
 
 .slider-sale__container .unico-category__title {
@@ -2290,6 +2296,19 @@ a:hover {
   }
   .slider-product .slider-product__rate .rate {
     font-size: .55rem !important;
+  }
+  .slider-product .countdown .countdown__element {
+    width: 2rem;
+    height: 2rem;
+    font-size: .8rem;
+  }
+  .slider-product .countdown .countdown__element::before {
+    font-size: .5rem;
+    left: .5rem;
+  }
+  .slider-product .countdown .countdown__dots {
+    font-size: .8rem;
+    margin: 0 .1rem;
   }
   .unico-category__title .category {
     font-size: 1rem;
