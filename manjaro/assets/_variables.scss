@@ -34,7 +34,7 @@ $loginText : #92A9CE;
 
 body {
     background : $lightDark;
-    height : 220rem;
+    min-height : 350rem;
 }
 
 a {
@@ -60,6 +60,10 @@ a {
 
 .unico-bg__gray { 
     background : $lightDark;
+}
+
+.unico-bg__white {
+    background : #fff;
 }
 
 .unico-modal__radius {
@@ -142,50 +146,35 @@ a {
                 
             }
 
+            &::before {
+                display : block;
+                position : absolute;
+                font-size : .75rem;
+                left : .53rem;
+                bottom : -1.2rem;
+                color : #000;
+            }
+
         }
 
         .countdown__days {
             &::before {
-                display : block;
                 content : "დღე";
-                position : absolute;
-                font-size : .75rem;
-                bottom : -1.2rem;
-                left : .53rem;
-                color : #000;
             }
         }
         .countdown__hours {
             &::before {
-                display : block;
                 content : "საათი";
-                position : absolute;
-                font-size : .75rem;
-                bottom : -1.2rem;
-                left : .53rem;
-                color : #000;
             }
         }
         .countdown__minutes {
             &::before {
-                display : block;
                 content : "წუთი";
-                position : absolute;
-                font-size : .75rem;
-                bottom : -1.2rem;
-                left : .53rem;
-                color : #000;
             }
         }
         .countdown__seconds {
             &::before {
-                display : block;
                 content : "წამი";
-                position : absolute;
-                font-size : .75rem;
-                bottom : -1.2rem;
-                left : .53rem;
-                color : #000;
             }
         }
 
