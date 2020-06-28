@@ -92,7 +92,7 @@ $('.slider-category').slick({
 $('.slider-product').slick({
     infinite : true,
     slidesToShow : 6,
-    slidesToScroll : 3,
+    slidesToScroll : 6,
     prevArrow : "",
     nextArrow : "",
     autoplay : true,
@@ -131,14 +131,52 @@ $('.slider-product').slick({
     ]
 });
 
+$('.slider-brand').slick({
+    infinite : true,
+    slidesToShow : 6,
+    slidesToScroll : 6,
+    prevArrow : "",
+    nextArrow : "",
+    autoplay : true,
+    autoplaySpeed : 7000,
+    responsive : [
+        {
+            breakpoint : 1200,
+            settings : {
+                slidesToShow : 5,
+                slidesToScroll : 4
+            }
+        },
+        {
+            breakpoint : 992,
+            settings : {
+                slidesToShow : 4,
+                slidesToScroll : 4
+            }
+        },
+        {
+            breakpoint : 768,
+            settings : {
+                slidesToShow : 3,
+                slidesToScroll : 3
+            }
+        },
+        {
+            breakpoint : 574,
+            settings : {
+                slidesToShow : 2,
+                slidesToScroll : 2
+            }
+        }
+    ]
+});
+
 function threeDot(str){
     let strText = str;
     strText = strText.innerHTML;
 
     let currentWidth = str.clientWidth;
     let sum = currentWidth / 3;
-
-    console.log(sum);
 
     if(sum < strText.length){
         strText = strText.split("").reverse().join("");
