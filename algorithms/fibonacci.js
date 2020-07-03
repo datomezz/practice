@@ -1,11 +1,23 @@
-function fibonacci(num) {
-    let x = 0;
+// 1, 1, 2, 3, 5, 8, 13, 21, 34,
 
-    for(let i = 1; i < num + 1; i++) {
-        x = (i - 1) + (i -2 );
-        console.log(`წინა = ${i}`, `წინისწინა = ${i-1}`, x);
+function fibonacci(num) {
+    let wholeArr = [];
+    let countArr = [1, 1];
+
+    for(let i = 0; i < num; i++) {
+        let newArr = countArr[0] + countArr[1];
+        countArr.shift();
+        countArr.push(newArr);
+        console.log(countArr);
+
+        wholeArr.push(newArr);
     }
-    return x;
+
+    let string = wholeArr.join("/");
+
+    return {
+        string
+    }
 } 
 
-console.log(fibonacci(10));
+console.log(fibonacci(20));
