@@ -41,7 +41,8 @@
         .header__text-link {
             color : $darkBlue;
             opacity : .5;
-    
+            font-family : Firago-medium;
+
             &:hover {
                 opacity : 1;
             }
@@ -64,6 +65,8 @@
         font-size : .7rem;
         margin : 0 0 0 .5rem;
         transition : .3s ease;
+
+        font-family : Myriad;
     }
 
     &:hover {
@@ -97,6 +100,8 @@
         .category__text {
             font-size : .6rem;
             color : $darkBlue;
+
+            font-family : Myriad;
         }
 
         &:hover {
@@ -169,8 +174,9 @@
         .user__text {
             font-size : .75rem;
             color : #fff;
-            font-weight: bold;
             transition : .3s ease;
+
+            font-family : Myriad;
         }
 
         &:hover {
@@ -270,6 +276,7 @@
             .mobile__text {
                 font-size : .6rem;
                 transition : .3s ease;
+                font-family : Myriad;
             }
 
             &:hover {

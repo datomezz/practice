@@ -84,6 +84,7 @@ a:hover {
   font-size: 1.5rem;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+  color: #223549;
 }
 
 .unico-category__title .category:hover {
@@ -101,10 +102,12 @@ a:hover {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 1rem;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 100%;
+  margin-left: .8rem;
+  margin-bottom: -.3rem;
 }
 
 .unico-category__title .subcategory a {
@@ -118,6 +121,11 @@ a:hover {
 
 .unico-category__title .subcategory a:hover {
   color: #223549;
+}
+
+.unico-category__title .subcategory .more {
+  font-family: Firago-medium;
+  color: #116BE5;
 }
 
 .countdown {
@@ -285,6 +293,7 @@ a:hover {
 .header__info .header__questions .header__text-link {
   color: #223549;
   opacity: .5;
+  font-family: Firago-medium;
 }
 
 .header__info .header__questions .header__text-link:hover {
@@ -310,6 +319,7 @@ a:hover {
   margin: 0 0 0 .5rem;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+  font-family: Myriad;
 }
 
 .header__category:hover {
@@ -343,6 +353,7 @@ a:hover {
 .header__input .input__category .category__text {
   font-size: .6rem;
   color: #223549;
+  font-family: Myriad;
 }
 
 .header__input .input__category:hover {
@@ -452,9 +463,9 @@ a:hover {
 .header__user .user__login .user__text {
   font-size: .75rem;
   color: #fff;
-  font-weight: bold;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+  font-family: Myriad;
 }
 
 .header__user .user__login:hover {
@@ -591,6 +602,7 @@ a:hover {
   font-size: .6rem;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+  font-family: Myriad;
 }
 
 .mobile__nav .mobile__actions .mobile__action:hover i, .mobile__nav .mobile__actions .mobile__action:hover .mobile__text {
@@ -1061,7 +1073,7 @@ a:hover {
   margin-bottom: 1rem;
 }
 
-.slider-category .slick-slide .slider-img__container .slider-category-img {
+.slider-category .slick-slide .slider-img__container .slider-category__img {
   width: 6rem;
   height: 8rem;
 }
@@ -1089,8 +1101,10 @@ a:hover {
 }
 
 .slider-category__attributes .slider-category__count {
-  font-size: .8rem;
+  font-family: Firago-medium;
+  font-size: .7rem;
   color: #223549;
+  opacity: .6;
 }
 
 .slider-category__dots {
@@ -1238,14 +1252,14 @@ a:hover {
 
 .slider-product .slider-product__article .img__container .slider-product__sale {
   display: inline-block;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
   background: #F92162;
   -webkit-box-shadow: 0px 0px 0.5rem 0 #F92162;
           box-shadow: 0px 0px 0.5rem 0 #F92162;
   color: #fff;
-  font-size: .8rem;
+  font-size: .7rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1461,7 +1475,7 @@ a:hover {
 }
 
 .slider-product .slider-product__article .slider-product__attributes .slider-product__footer .slider-product__rate .rate {
-  font-family: Myriad;
+  font-family: Firago-medium;
   font-size: .7rem;
   overflow: hidden;
   white-space: nowrap;
@@ -1637,15 +1651,20 @@ a:hover {
   height: 10rem;
   background: #fff;
   padding: 1.5rem 1rem 1.5rem 2.3rem;
+  -webkit-box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.075);
+          box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.075);
 }
 
 .services-container .services .promocode .promocode__header .promocode__title {
   font-family: Myriad;
+  color: #0B0B4D;
 }
 
 .services-container .services .promocode .promocode__header .promocode__text {
   color: #116BE5;
   font-size: .8rem;
+  font-weight: 400;
+  font-family: Firago-medium;
 }
 
 .services-container .services .promocode .promocode__form {
@@ -1653,6 +1672,8 @@ a:hover {
   background: #fff;
   overflow: hidden;
   padding: .2rem .2rem .2rem .5rem;
+  -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.045);
+          box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.045);
 }
 
 .services-container .services .promocode .promocode__form .promocode__input {
@@ -1660,6 +1681,7 @@ a:hover {
   border: none;
   font-size: .8rem;
   color: #116BE5;
+  font-family: Firago-medium;
 }
 
 .services-container .services .promocode .promocode__form .promocode__input::-webkit-input-placeholder {
@@ -1754,7 +1776,7 @@ a:hover {
 }
 
 .services-container .services .service .service__title {
-  font-size: .7rem;
+  font-size: .75rem;
   font-family: Myriad;
 }
 
@@ -2109,6 +2131,7 @@ a:hover {
 }
 
 .special .special-post .special-post__container .special-proposition__status {
+  font-family: Myriad;
   font-size: .85rem;
   margin-bottom: .5rem;
 }
@@ -2632,6 +2655,9 @@ footer .footer__brands .footer__link i {
   }
   .unico-category__title .category {
     font-size: 1rem;
+  }
+  .unico-category__title h6 {
+    width: 65%;
   }
   .unico-rek {
     height: 6rem;

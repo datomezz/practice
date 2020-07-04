@@ -12,14 +12,20 @@
             height : 10rem;
             background : #fff;
             padding : 1.5rem 1rem 1.5rem 2.3rem;
+
+            box-shadow : 0 .3rem 1rem rgba(0,0,0,.075);
             .promocode__header {
                 
                 .promocode__title {
                     font-family : Myriad;
+                    color : #0B0B4D;
                 }
                 .promocode__text {
                     color : $lightBlue;
                     font-size : .8rem;
+                    font-weight : 400;
+
+                    font-family : Firago-medium;
                 }
             }
             .promocode__form {
@@ -29,11 +35,14 @@
 
                 padding : .2rem .2rem .2rem .5rem;
 
+                box-shadow : 0 .5rem 1rem 0 rgba(0,0,0,.045);
+
                 .promocode__input {
                     outline : none;
                     border : none;
                     font-size : .8rem;
                     color : $lightBlue;
+                    font-family : Firago-medium;
 
                     &::placeholder {
                         color : $darkBlue;
@@ -80,7 +89,7 @@
             }
 
             .service__title {
-                font-size : .7rem;
+                font-size : .75rem;
                 font-family : Myriad;
             }
         }

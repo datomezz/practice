@@ -83,6 +83,7 @@ a {
         font-weight : 500;
         font-size : 1.5rem;
         transition : .3s ease;
+        color : $darkBlue;
 
         &:hover {
             color : $lightBlue;
@@ -90,8 +91,11 @@ a {
     }
 
     .subcategory {
-        @include flex(row, flex-start, center);
-        margin-left : 1rem;
+        @include flex(row, flex-start, flex-end);
+
+        height: 100%;
+        margin-left : .8rem;
+        margin-bottom : -.3rem;
         a {
             font-family : Myriad;
             color : $loginText;
@@ -102,6 +106,11 @@ a {
             &:hover {
                 color : $darkBlue;
             }
+        }
+
+        .more {
+            font-family : Firago-medium;
+            color : #116BE5;
         }
     }
 }

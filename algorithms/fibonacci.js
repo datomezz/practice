@@ -1,5 +1,3 @@
-// 1, 1, 2, 3, 5, 8, 13, 21, 34,
-
 function fibonacci(num) {
     let wholeArr = [];
     let countArr = [1, 1];
@@ -8,7 +6,6 @@ function fibonacci(num) {
         let newArr = countArr[0] + countArr[1];
         countArr.shift();
         countArr.push(newArr);
-        console.log(countArr);
 
         wholeArr.push(newArr);
     }

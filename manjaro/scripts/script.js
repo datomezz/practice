@@ -45,7 +45,6 @@ $('.slider-thumbnail').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots : true,
-    autoplay : true,
     autoplaySpeed : 5000,
     dotsClass : "slider-thumbnail__dots",
     prevArrow : "<a class='slider__arrow' href='javascript:void(0)'><i class='fas fa-arrow-left arrow'></i></a>",
@@ -59,7 +58,6 @@ $('.slider-category').slick({
     slidesToScroll : 4,
     prevArrow : "",
     nextArrow : "",
-    autoplay : true,
     autoplaySpeed : 7000,
     dots : true,
     dotsClass : "slider-category__dots",
@@ -95,7 +93,6 @@ $('.slider-product').slick({
     slidesToScroll : 6,
     prevArrow : "",
     nextArrow : "",
-    autoplay : true,
     autoplaySpeed : 7000,
     dots : true,
     dotsClass : "slider-category__dots",
@@ -137,7 +134,6 @@ $('.slider-brand').slick({
     slidesToScroll : 6,
     prevArrow : "",
     nextArrow : "",
-    autoplay : true,
     autoplaySpeed : 7000,
     responsive : [
         {
