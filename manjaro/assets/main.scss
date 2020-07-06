@@ -252,6 +252,11 @@ footer {
             }
         }
     }
+
+        .unico__modalContainer { 
+            max-width : 90% !important;
+            margin : 0 auto !important;
+        }
 }
 
 @media (max-width : 768px) {
@@ -430,6 +435,12 @@ footer {
 
     .unico-rek__second {
         height : 12rem;
+    }
+
+    .login__socials {
+        a {
+            font-size : .75rem !important;
+        }
     }
 
 }

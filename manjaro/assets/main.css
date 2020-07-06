@@ -2519,6 +2519,10 @@ footer .footer__brands .footer__link i {
   footer .footer__column .footer__link {
     font-size: .6rem !important;
   }
+  .unico__modalContainer {
+    max-width: 90% !important;
+    margin: 0 auto !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2664,6 +2668,9 @@ footer .footer__brands .footer__link i {
   }
   .unico-rek__second {
     height: 12rem;
+  }
+  .login__socials a {
+    font-size: .75rem !important;
   }
 }
 /*# sourceMappingURL=main.css.map */
