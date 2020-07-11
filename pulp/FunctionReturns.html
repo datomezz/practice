@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with many returns</title>
+</head>
+<body>
+
+
+<script>
+    function makeCount() {
+        var currentCount = 1;
+
+        return {
+            next : function() {
+                return currentCount++;
+            },
+            set : function(value) {
+                return currentCount = value;
+            },
+            remove : function() {
+                return currentCount = 1;
+            }
+        }
+    }
+
+    window.addEventListener("load", function() {
+        let body = document.querySelector("body");
+        let out = "";
+        for(let i = 0; i < 3; i++) {
+            out += `<button>${i}</button>`;
+        }
+        body.innerHTML = out;
+
+        let buttons = document.querySelectorAll("button");
+        let counter = makeCount();
+
+        for(let i = 0; i < buttons.length; i++) {
+            buttons[i].addEventListener("click", function() {
+                switch (i) {
+                    case 0 : 
+                        counter.next();
+                        console.log(counter.next());
+                    break;
+                    case 1 : 
+                        counter.set(1000);
+                        console.log(counter.set(1000));
+                    break;
+                    case 2 : 
+                        counter.remove();
+                        console.log(counter.remove());
+                    break;
+                }
+            });
+        }
+
+    });
+
+
+
+</script>
+</body>
+</html>
