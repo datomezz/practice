@@ -7,88 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <div class="user">
-            <p class="text">Family</p>
-            <p class="text">GEL</p>
-            <p class="text">USD</p>
-            <p class="text">RUB</p>
-            <h5 class="text">Web</h5>
-        </div>
-    </div>
+
 <!-- <script src="arrays.js"></script> -->
 <!-- <script src="ajax.js"></script> -->
 <!-- <script src="promises.js"></script> -->
 
-<script>
-    let word = "Alakh Akbar";
-
-    let wordArr = word.split("");
-    wordArr.splice(0,5, "yle");
-
-    let newWord = wordArr.join("");
-
-    console.log(newWord);
-
-    let newArr = wordArr.concat(["ibiomaw"]);
-
-    newWord = newArr.join("");
-
-    console.log(newWord);
-
-    let newMap = wordArr.map(item => item + "SIRI");
-
-    console.log(newMap.join(""));
-
-    newMap.forEach((item, index) => {
-        console.log(index, item);
-    });
-
-
-    const users = [
-        {
-            name : "Dato",
-            surname : "Mezz",
-            netWorth : 2500,
-            type : "GEL"
-        },
-        {
-            name : "Mari",
-            surname : "Mezz",
-            netWorth : 50,
-            type : "USD"
-        },
-        {
-            name : "Nana",
-            surname : "Mezz",
-            netWorth : 35000,
-            type : "RUB"
-        },
-        {
-            name : "Zura",
-            surname : "Mezz",
-            netWorth : 1150,
-            type : "USD"
-        },
-        {
-            name : "Toma",
-            surname : "Mezz",
-            netWorth : 250,
-            type : "GEL"
-        }
-    ];
-
-    let usd = users.map(item => {
-        if(item["netWorth"] === "GEL") {
-            return item["netWorth"] /= 3.5;
-        } 
-        if(item["netWorth"] === "RUB") {
-            return item["netWorth"] / 210;
-        } 
-        return item["netWorth"];
-    });
-
-    console.log(usd);
-</script>
+<script src="functions.js"></script>
 </body>
 </html>
