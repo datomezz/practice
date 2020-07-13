@@ -189,6 +189,8 @@ footer {
 }
 
 @media (max-width: 1200px) {
+
+    //HEADER
     .header__info {
         padding : 1rem 0;
         .header__text-link {
@@ -276,6 +278,64 @@ footer {
 
     .header__user {
         padding : 0 0 0 2rem;
+    }
+
+    //SLIDER THUBNAIL
+    .slider-thumbnail {
+
+        .slider__img {
+            height : 20rem;
+            border-radius : 1rem;
+        }
+
+        .slider__arrow {
+            width : 3rem;
+            height : 3rem;
+        }
+
+        .slider-thumbnail__dots {
+            bottom : 1rem;
+        }
+    }
+
+    //SERVICES
+
+    .services-container {
+        height : 8rem;
+
+        .services {
+
+            .promocode__container {
+                padding : 0 1.8rem;
+            }
+        }
+
+        .promocode {
+            height : 10rem !important;
+        }
+
+        .promocode__title {
+            font-size : 1rem !important;
+        }
+        .promocode__text {
+            font-size : .8rem !important;
+        }
+
+        .service {
+
+            .service__brand {
+                width : 3rem !important;
+                height : 3rem !important;
+
+                i {
+                    font-size : 1rem !important;
+                }
+            }
+
+            .service__title {
+                font-size : .75rem !important;
+            }
+        }
     }
 
 
@@ -456,10 +516,22 @@ footer {
         margin : 0 0 3rem 0;
     }
 
+    .promocode__container {
+        padding : 0 1rem !important;
+    }
+
     .proposition {
         grid-gap : .5rem;
+        
         .proposition__content {
             padding : 1rem !important;
+        }
+    }
+
+    .slider-thumbnail {
+
+        .slider__img {
+            height : 13.75rem;
         }
     }
 

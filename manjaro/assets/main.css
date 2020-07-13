@@ -902,8 +902,8 @@ a:hover {
 
 .slider-thumbnail .slider__img {
   width: 100%;
-  height: 20rem;
-  border-radius: 1rem;
+  height: 28.1rem;
+  border-radius: 1.2rem;
 }
 
 .slider-thumbnail .slider__arrow {
@@ -914,8 +914,8 @@ a:hover {
           transform: translate(0, -50%);
   right: -1.5rem;
   border-radius: 50rem;
-  width: 3rem;
-  height: 3rem;
+  width: 3.43rem;
+  height: 3.43rem;
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -962,7 +962,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  bottom: 1rem;
+  bottom: 1.3rem;
   left: 50%;
   z-index: 2;
   -webkit-transform: translate(-50%, 0);
@@ -1652,7 +1652,7 @@ a:hover {
 
 /* SLIDER BRAND */
 .services-container {
-  height: 8rem;
+  height: 9rem;
   background: #fff;
   margin: 6rem 0;
 }
@@ -1661,10 +1661,14 @@ a:hover {
   height: inherit;
 }
 
+.services-container .services .promocode__container {
+  padding: 0 2.53rem;
+}
+
 .services-container .services .promocode {
   top: 0;
   border-radius: 1rem;
-  height: 10rem;
+  height: 12.125rem;
   background: #fff;
   padding: 1.5rem 1rem 1.5rem 2.3rem;
   -webkit-box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.075);
@@ -1672,13 +1676,14 @@ a:hover {
 }
 
 .services-container .services .promocode .promocode__header .promocode__title {
+  font-size: 1.75rem;
   font-family: Myriad;
   color: #0B0B4D;
 }
 
 .services-container .services .promocode .promocode__header .promocode__text {
   color: #116BE5;
-  font-size: .8rem;
+  font-size: .87rem;
   font-weight: 400;
   font-family: Firago-medium;
 }
@@ -1695,7 +1700,7 @@ a:hover {
 .services-container .services .promocode .promocode__form .promocode__input {
   outline: none;
   border: none;
-  font-size: .8rem;
+  font-size: .87rem;
   color: #116BE5;
   font-family: Firago-medium;
 }
@@ -1740,7 +1745,7 @@ a:hover {
 }
 
 .services-container .services .promocode .promocode__form .promocode__button i {
-  font-size: 2rem;
+  font-size: 2.06rem;
   color: #116BE5;
   -webkit-transition: .3s ease;
   transition: .3s ease;
@@ -1768,8 +1773,8 @@ a:hover {
 }
 
 .services-container .services .service .service__brand {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   overflow: hidden;
   display: -webkit-box;
@@ -1788,11 +1793,11 @@ a:hover {
 }
 
 .services-container .services .service .service__brand i {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 .services-container .services .service .service__title {
-  font-size: .75rem;
+  font-size: 1rem;
   font-family: Myriad;
 }
 
@@ -2560,6 +2565,42 @@ footer .footer__brands .footer__link i {
   .header__user {
     padding: 0 0 0 2rem;
   }
+  .slider-thumbnail .slider__img {
+    height: 20rem;
+    border-radius: 1rem;
+  }
+  .slider-thumbnail .slider__arrow {
+    width: 3rem;
+    height: 3rem;
+  }
+  .slider-thumbnail .slider-thumbnail__dots {
+    bottom: 1rem;
+  }
+  .services-container {
+    height: 8rem;
+  }
+  .services-container .services .promocode__container {
+    padding: 0 1.8rem;
+  }
+  .services-container .promocode {
+    height: 10rem !important;
+  }
+  .services-container .promocode__title {
+    font-size: 1rem !important;
+  }
+  .services-container .promocode__text {
+    font-size: .8rem !important;
+  }
+  .services-container .service .service__brand {
+    width: 3rem !important;
+    height: 3rem !important;
+  }
+  .services-container .service .service__brand i {
+    font-size: 1rem !important;
+  }
+  .services-container .service .service__title {
+    font-size: .75rem !important;
+  }
   .modal-xl {
     max-width: 90%;
   }
@@ -2707,11 +2748,17 @@ footer .footer__brands .footer__link i {
   .services-container {
     margin: 0 0 3rem 0;
   }
+  .promocode__container {
+    padding: 0 1rem !important;
+  }
   .proposition {
     grid-gap: .5rem;
   }
   .proposition .proposition__content {
     padding: 1rem !important;
+  }
+  .slider-thumbnail .slider__img {
+    height: 13.75rem;
   }
   .slider-product .slick-slide {
     margin-right: .5rem;
