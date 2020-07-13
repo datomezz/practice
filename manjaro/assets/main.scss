@@ -337,7 +337,6 @@ footer {
     }
 
     //SERVICES
-
     .services-container {
         height : 8rem;
 
@@ -376,19 +375,65 @@ footer {
         }
     }
 
+    //PROPOSITION 
+
+    .proposition {
+        grid-template : 
+        'phone phone laptop bike' 12rem
+        'toys headphone laptop yard' 12rem
+    }
+
+    //SLIDER PRODUCT 
+
+    .slider-product {
+
+        .img__container {
+            height : 12rem !important;
+
+            .slider-product__sale {
+                width : 2.5rem !important;
+                height : 2.5rem !important;
+            }
+
+            .slider-product__hover {
+
+                .product__action {
+                    width : 2.5rem !important;
+                    height : 2.5rem !important;
+                }
+            }
+
+        }
+        .slider-product__attributes {
+            height : 12rem !important;
+
+            .slider-product__header {
+                font-size : .8rem !important;
+                font-weight : bold;
+            }
+
+            .slider-product__footer {
+                
+                .price {
+                    font-size : 1.1rem !important;
+                }
+            }
+
+            .slider-product__rate {
+
+                .stars {
+                    font-size : .7rem !important;
+                }
+
+                .rate {
+                    font-size : .7rem !important;
+                }
+            }
+        }
+    }
 
     .modal-xl {
         max-width : 90%;
-    }
-
-    .slider-product {
-        .price {
-            font-size : 1rem !important;
-        }
-
-        .price__old {
-            font-size : .8rem !important;
-        }
     }
 }
 @media (max-width : 992px) {
@@ -560,6 +605,9 @@ footer {
 
     .proposition {
         grid-gap : .5rem;
+        grid-template : 
+        'phone phone laptop bike' 7.5rem
+        'toys headphone laptop yard' 7.5rem;
 
         .proposition__content {
             padding : 1rem !important;

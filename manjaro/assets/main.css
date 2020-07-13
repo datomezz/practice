@@ -114,7 +114,7 @@ a:hover {
   font-family: Myriad;
   color: #92A9CE;
   margin-right: 1rem !important;
-  font-size: .8rem;
+  font-size: 1.125rem;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
@@ -1188,34 +1188,10 @@ a:hover {
   height: 3rem;
 }
 
-.slider-product .slider-product__article .img__attributes .product__action {
-  width: 2.2rem;
-  height: 2.2rem;
-  border-radius: 50%;
-  background: #FBFBFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.slider-product .slider-product__article .img__attributes .product__action:hover i {
-  color: #116BE5;
-}
-
 .slider-product .slider-product__article .img__attributes .attributes__sale {
   display: inline-block;
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.125rem;
+  height: 2.125rem;
   border-radius: 50%;
   background: #F92162;
   -webkit-box-shadow: 0px 0px 0.5rem 0 #F92162;
@@ -1237,9 +1213,29 @@ a:hover {
           align-items: center;
 }
 
+.slider-product .slider-product__article .img__attributes .product__action {
+  width: 2.125rem;
+  height: 2.125rem;
+  background: #FBFBFB;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .slider-product .slider-product__article .img__container {
   width: 100%;
-  height: 12rem;
+  height: 13rem;
   padding: 1rem;
   overflow: hidden;
   position: relative;
@@ -1251,8 +1247,8 @@ a:hover {
 
 .slider-product .slider-product__article .img__container .slider-product__sale {
   display: inline-block;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 3.43rem;
+  height: 3.43rem;
   border-radius: 50%;
   background: #F92162;
   -webkit-box-shadow: 0px 0px 0.5rem 0 #F92162;
@@ -1310,8 +1306,8 @@ a:hover {
 }
 
 .slider-product .slider-product__article .img__container .slider-product__hover .product__action {
-  width: 2.7rem;
-  height: 2.7rem;
+  width: 3.43rem;
+  height: 3.43rem;
   border-radius: 50%;
   outline: none;
   -webkit-transition: .1s ease;
@@ -1354,7 +1350,7 @@ a:hover {
 
 .slider-product .slider-product__article .slider-product__attributes {
   width: 100%;
-  height: 12rem;
+  height: 13rem;
   outline: none;
   padding: 0 1rem 1rem 1rem;
   display: -webkit-box;
@@ -1373,9 +1369,8 @@ a:hover {
 }
 
 .slider-product .slider-product__article .slider-product__attributes .slider-product__header {
-  font-size: .8rem;
+  font-size: 1.1rem;
   line-height: 1rem;
-  font-weight: bold;
   display: inline-block;
   outline: none;
   overflow: hidden;
@@ -1426,7 +1421,7 @@ a:hover {
 }
 
 .slider-product .slider-product__article .slider-product__attributes .slider-product__footer .slider-product__price .price {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: bold;
   margin: 0;
   margin-right: .5rem !important;
@@ -1455,7 +1450,7 @@ a:hover {
 }
 
 .slider-product .slider-product__article .slider-product__attributes .slider-product__footer .slider-product__rate .stars {
-  font-size: .7rem;
+  font-size: .8rem;
 }
 
 .slider-product .slider-product__article .slider-product__attributes .slider-product__footer .slider-product__rate .stars i {
@@ -1475,7 +1470,7 @@ a:hover {
 
 .slider-product .slider-product__article .slider-product__attributes .slider-product__footer .slider-product__rate .rate {
   font-family: Firago-medium;
-  font-size: .7rem;
+  font-size: .8rem;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -1485,6 +1480,7 @@ a:hover {
   color: #fff;
   font-size: .8rem;
   width: 90%;
+  height: 2.75rem;
   padding: .5rem 0;
   margin-bottom: 1rem;
   -webkit-transition: .3s ease;
@@ -1819,7 +1815,7 @@ a:hover {
 .proposition {
   display: -ms-grid;
   display: grid;
-  grid-template: 'phone phone laptop bike' 12rem 'toys headphone laptop yard' 12rem /2.5fr 1.5fr 1.2fr 1.5fr;
+  grid-template: 'phone phone laptop bike' 15.625rem 'toys headphone laptop yard' 15.625rem /2.5fr 1.5fr 1.2fr 1.5fr;
   grid-gap: 1rem;
 }
 
@@ -2603,14 +2599,38 @@ footer .footer__brands .footer__link i {
   .services-container .service .service__title {
     font-size: .75rem !important;
   }
+  .proposition {
+    grid-template: 'phone phone laptop bike' 12rem 'toys headphone laptop yard' 12rem;
+  }
+  .slider-product .img__container {
+    height: 12rem !important;
+  }
+  .slider-product .img__container .slider-product__sale {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  .slider-product .img__container .slider-product__hover .product__action {
+    width: 2.5rem !important;
+    height: 2.5rem !important;
+  }
+  .slider-product .slider-product__attributes {
+    height: 12rem !important;
+  }
+  .slider-product .slider-product__attributes .slider-product__header {
+    font-size: .8rem !important;
+    font-weight: bold;
+  }
+  .slider-product .slider-product__attributes .slider-product__footer .price {
+    font-size: 1.1rem !important;
+  }
+  .slider-product .slider-product__attributes .slider-product__rate .stars {
+    font-size: .7rem !important;
+  }
+  .slider-product .slider-product__attributes .slider-product__rate .rate {
+    font-size: .7rem !important;
+  }
   .modal-xl {
     max-width: 90%;
-  }
-  .slider-product .price {
-    font-size: 1rem !important;
-  }
-  .slider-product .price__old {
-    font-size: .8rem !important;
   }
 }
 
@@ -2755,6 +2775,7 @@ footer .footer__brands .footer__link i {
   }
   .proposition {
     grid-gap: .5rem;
+    grid-template: 'phone phone laptop bike' 7.5rem 'toys headphone laptop yard' 7.5rem;
   }
   .proposition .proposition__content {
     padding: 1rem !important;
