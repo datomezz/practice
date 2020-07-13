@@ -81,7 +81,7 @@ a:hover {
 .unico-category__title .category {
   font-family: Myriad;
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 2rem;
   -webkit-transition: .3s ease;
   transition: .3s ease;
   color: #223549;
@@ -1011,24 +1011,6 @@ a:hover {
   border: .2rem solid #fff;
 }
 
-@-webkit-keyframes pizdec {
-  from {
-    color: red;
-  }
-  to {
-    color: blue;
-  }
-}
-
-@keyframes pizdec {
-  from {
-    color: red;
-  }
-  to {
-    color: blue;
-  }
-}
-
 /* Slider Category */
 .slider-category {
   outline: none;
@@ -1055,7 +1037,7 @@ a:hover {
           justify-content: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  height: 16rem;
+  height: 17.8rem;
   overflow: hidden;
   background: #fff;
   border-radius: .8rem;
@@ -1108,17 +1090,18 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 10%;
 }
 
 .slider-category__attributes .slider-category__header {
   font-family: Myriad;
-  font-size: .9rem;
+  font-size: 1.125rem;
   text-align: center;
 }
 
 .slider-category__attributes .slider-category__count {
   font-family: Firago-medium;
-  font-size: .7rem;
+  font-size: .87rem;
   color: #223549;
   opacity: .6;
 }
@@ -1138,7 +1121,7 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   position: absolute;
-  top: -3.53rem;
+  top: -3.83rem;
   right: .5rem;
   z-index: 2;
   padding: 0;
@@ -1151,8 +1134,8 @@ a:hover {
 
 .slider-category__dots li button {
   border: 1px solid #116BE5;
-  width: .8rem;
-  height: .8rem;
+  width: 1.12rem;
+  height: 1.12rem;
   outline: none;
   border-radius: .2rem;
   margin-right: .3rem;
@@ -2490,7 +2473,7 @@ footer .footer__brands .footer__link i {
   font-size: 1.5rem;
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1441px) {
   .header__info {
     padding: 1rem 0;
   }
@@ -2575,6 +2558,25 @@ footer .footer__brands .footer__link i {
   }
   .slider-thumbnail .slider-thumbnail__dots {
     bottom: 1rem;
+  }
+  .slider-category .slick-slide {
+    height: 16rem;
+  }
+  .slider-category .slider-category__attributes .slider-category__header {
+    font-size: .9rem;
+  }
+  .slider-category .slider-category__attributes .slider-category__count {
+    font-size: .7rem;
+  }
+  .slider-category__dots {
+    top: -3.53rem;
+  }
+  .slider-category__dots li button {
+    width: .8rem;
+    height: .8rem;
+  }
+  .unico-category__title .category {
+    font-size: 1.5rem;
   }
   .services-container {
     height: 8rem;
@@ -2759,6 +2761,11 @@ footer .footer__brands .footer__link i {
   }
   .slider-thumbnail .slider__img {
     height: 13.75rem;
+  }
+  .slider-category .slick-slide {
+    width: 9.75rem;
+    height: 13.75rem;
+    margin: 0 .5rem;
   }
   .slider-product .slick-slide {
     margin-right: .5rem;
