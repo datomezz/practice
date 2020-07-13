@@ -1,37 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .box {
-            width : 350px;
-            height : 250px;
-            display : inline-block;
-        }
-        img {
-            width : 100%;
-        }
-        p {
-            border : 3px dotted black;
-            text-align : center;
-
-        }
-    </style>
+<title>Page Title</title>
 </head>
 <body>
-    <div class="box">
-        <img src="https://picsum.photos/536/354">
-        <p style="background : lightgreen">radar</p>
-    </div>
-    <div class="box">
-        <img src="https://picsum.photos/536/352">
-        <p style="background : lightgray">radar</p>
-    </div>
-    <div class="box">
-        <img src="https://picsum.photos/536/351">
-        <p style="background : lightseagreen">radr</p>
-    </div>
+
+<h1>100</h1>
+<p>This is a paragraph.</p>
+
+<script>
+	let field = document.querySelector("h1");
+	function count() {
+    	let rand = Math.floor(Math.random() * 10000);
+        let currentNum = field.innerText;
+        currentNum = Number(currentNum);
+        currentNum += rand;
+        field.innerText = currentNum;
+    }
+
+    let x = document.querySelector("h1");
+
+    x.addEventListener("click", () => {
+        console.log("pizdec");
+    });
+</script>
 </body>
 </html>
