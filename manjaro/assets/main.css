@@ -345,7 +345,11 @@ a:hover {
 }
 
 .header__input-container {
-  padding: 0 0 0 5rem;
+  padding: 0 125px 0 30px;
+}
+
+.header__caregory-container {
+  padding: 0 12px 0 26px;
 }
 
 .header__input {
@@ -460,7 +464,6 @@ a:hover {
 
 .header__user {
   height: 3.43rem;
-  padding: 0 0 0 4.2rem;
 }
 
 .header__user .user__login {
@@ -2479,6 +2482,9 @@ footer .footer__brands .footer__link i {
   .header__info .header__spin-link::after {
     bottom: -1.285rem;
   }
+  .header__input-container {
+    padding: 0 125px 0 30px !important;
+  }
   .header__category {
     height: 2.5rem;
     padding: 0 10%;
@@ -2631,6 +2637,12 @@ footer .footer__brands .footer__link i {
   }
   .modal-xl {
     max-width: 90%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__input-container {
+    padding: 0 2rem 0 0 !important;
   }
 }
 

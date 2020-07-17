@@ -204,6 +204,10 @@ footer {
         }
     }
 
+    .header__input-container {
+        padding : 0 125px 0 30px !important;
+    }
+
     .header__category {
         height : 2.5rem;
         padding : 0 10%;
@@ -217,7 +221,6 @@ footer {
             margin : 0 0 0 .5rem;
         }
     }
-
     
     .header__input {
         height : 2.5rem;
@@ -436,6 +439,13 @@ footer {
         max-width : 90%;
     }
 }
+
+@media (max-width : 1200px) {
+    .header__input-container {
+        padding : 0 2rem 0 0 !important;
+    }
+}
+
 @media (max-width : 992px) {
     .header__input-container {
         padding : 0;

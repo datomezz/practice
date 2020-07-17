@@ -1,0 +1,17 @@
+include header.pug
+h1 hi! my name is #{name} #{surname}
+div(class="container")
+    each item, index in goods
+        include card.pug
+script.
+    let articles = document.querySelectorAll(".article");
+    for(let i = 0; i < articles.length; i++) {
+        let colorArr = [];
+
+        for(let i = 0; i < 3; i++) {
+            let rand = Math.floor(Math.random() * 255);
+            colorArr.push(rand);
+        }
+
+        articles[i].style.background = `rgb(${colorArr[0]}, ${colorArr[1]}, ${colorArr[2]})`;
+    }

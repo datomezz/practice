@@ -95,7 +95,11 @@
 }
 
 .header__input-container {
-    padding : 0 0 0 5rem;
+    padding : 0 125px 0 30px;
+}
+
+.header__caregory-container {
+    padding : 0 12px 0 26px;
 }
 
 .header__input {
@@ -176,7 +180,6 @@
 
 .header__user {
     height : 3.43rem;
-    padding : 0 0 0 4.2rem;
 
     .user__login {
         background : $lightBlue;
