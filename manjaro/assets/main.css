@@ -1644,15 +1644,15 @@ a:hover {
 }
 
 .services-container .services .promocode__container {
-  padding: 0 2.53rem;
+  padding: 0 0.9375rem;
 }
 
 .services-container .services .promocode {
   top: 0;
   border-radius: 1rem;
-  height: 12.125rem;
+  height: 12.19rem;
   background: #fff;
-  padding: 1.5rem 1rem 1.5rem 2.3rem;
+  padding: 1.8rem 2.3rem;
   -webkit-box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.075);
           box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.075);
 }
@@ -1674,12 +1674,13 @@ a:hover {
   border-radius: 2rem;
   background: #fff;
   overflow: hidden;
-  padding: .2rem .2rem .2rem .5rem;
+  padding: .2rem .8125rem .2rem .8125rem;
   -webkit-box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.045);
           box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.045);
 }
 
 .services-container .services .promocode .promocode__form .promocode__input {
+  height: 2.8125rem;
   outline: none;
   border: none;
   font-size: .87rem;
@@ -2588,6 +2589,10 @@ footer .footer__brands .footer__link i {
   }
   .services-container .promocode {
     height: 10rem !important;
+    padding: 1.125rem 1.5625rem !important;
+  }
+  .services-container .promocode .promocode__input {
+    font-size: .8rem !important;
   }
   .services-container .promocode__title {
     font-size: 1rem !important;
@@ -2787,7 +2792,7 @@ footer .footer__brands .footer__link i {
   }
   .proposition {
     grid-gap: .5rem;
-    grid-template: 'phone phone laptop bike' 7.5rem 'toys headphone laptop yard' 7.5rem;
+    grid-template: 'phone phone' 7.5rem 'toys headphone' 7.5rem;
   }
   .proposition .proposition__content {
     padding: 1rem !important;

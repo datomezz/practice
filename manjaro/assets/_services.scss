@@ -6,16 +6,16 @@
         height : inherit;
 
         .promocode__container {
-            padding : 0 2.53rem;
+            padding : 0 0.9375rem;
         }
 
         .promocode {
             top : 0;
 
             border-radius : 1rem;
-            height : 12.125rem;
+            height : 12.19rem;
             background : #fff;
-            padding : 1.5rem 1rem 1.5rem 2.3rem;
+            padding : 1.8rem 2.3rem;
 
             box-shadow : 0 .3rem 1rem rgba(0,0,0,.075);
             .promocode__header {
@@ -38,11 +38,12 @@
                 background : #fff;
                 overflow : hidden;
 
-                padding : .2rem .2rem .2rem .5rem;
+                padding : .2rem .8125rem .2rem .8125rem;
 
                 box-shadow : 0 .5rem 1rem 0 rgba(0,0,0,.045);
 
                 .promocode__input {
+                    height : 2.8125rem;
                     outline : none;
                     border : none;
                     font-size : .87rem;

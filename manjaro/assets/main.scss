@@ -352,6 +352,11 @@ footer {
 
         .promocode {
             height : 10rem !important;
+            padding : 1.125rem 1.5625rem !important;
+
+            .promocode__input {
+                font-size : .8rem !important;
+            }
         }
 
         .promocode__title {
@@ -616,8 +621,8 @@ footer {
     .proposition {
         grid-gap : .5rem;
         grid-template : 
-        'phone phone laptop bike' 7.5rem
-        'toys headphone laptop yard' 7.5rem;
+        'phone phone' 7.5rem
+        'toys headphone' 7.5rem;
 
         .proposition__content {
             padding : 1rem !important;

@@ -45,3 +45,25 @@ app.get("/posts", (req, res) => {
     }
     );
 });
+
+app.get("/post", (req, res) => {
+    return new Promise((resolve, reject) => {
+        console.log(req.query.id);
+        con.query(
+            `SELECT * FROM posts`,
+            (err, result) => {
+                if(err) reject(err);
+                resolve(result);
+                console.log(resolve(result));
+            }
+        );
+    }).then((value) => {
+        let post = {};
+        for(let i = 0; i < value.length; i++) {
+            post[value[i]["id"]] = value[i];
+        }
+        res.render("post", {
+            post : JSON.parse(JSON.stringify(post))
+        });
+    });
+});
