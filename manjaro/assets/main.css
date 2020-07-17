@@ -980,8 +980,8 @@ a:hover {
 
 .slider-thumbnail__dots li button {
   background: #fff;
-  width: 1.05rem;
-  height: 1.05rem;
+  width: .8rem;
+  height: .8rem;
   border: none;
   outline: none;
   border-radius: 50%;
@@ -1168,7 +1168,7 @@ a:hover {
 }
 
 .slider-product .slider-product__promo {
-  height: 24rem;
+  height: 26rem;
   overflow: hidden;
 }
 
@@ -1372,7 +1372,7 @@ a:hover {
 }
 
 .slider-product .slider-product__article .slider-product__attributes .slider-product__header {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   line-height: 1rem;
   display: inline-block;
   outline: none;
@@ -2003,10 +2003,6 @@ a:hover {
   background: #0FB9B1;
 }
 
-.special {
-  height: 28rem;
-}
-
 .special .special__container .special__column {
   border-radius: 1.5rem;
   height: 100%;
@@ -2022,9 +2018,57 @@ a:hover {
   height: 100%;
 }
 
+.special .special__container .special__column .special__ucha {
+  border-radius: inherit;
+  background: #F8A714;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.special .special__container .special__column .special__ucha .ucha__sale {
+  font-size: 2rem;
+  background: #fff;
+  padding: .3rem 1.8rem;
+  border-radius: 1rem;
+}
+
+.special .special__container .special__column .special__ucha .ucha__title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.special .special__container .special__column .special__ucha .ucha__link {
+  background: #fff;
+  padding: .8rem 1.5rem;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  font-family: Myriad;
+  font-size: .9rem;
+}
+
+.special .special__container .special__column .special__ucha .ucha__link:hover {
+  color: #fff;
+  background: #116BE5;
+}
+
 .special .special__container .special__post {
   background: #fff;
   overflow: hidden;
+  width: 100%;
   position: relative;
 }
 
@@ -2069,7 +2113,7 @@ a:hover {
 
 .special .special-post .special-post__container {
   width: 100%;
-  height: 22rem;
+  height: 26rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2087,7 +2131,7 @@ a:hover {
 
 .special .special-post .special-post__container .special-post__title {
   font-family: Myriad;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .special .special-post .special-post__container .special-post__rate {
@@ -2108,7 +2152,7 @@ a:hover {
 }
 
 .special .special-post .special-post__container .special-post__rate .stars {
-  font-size: .7rem;
+  font-size: .9rem;
   margin-right: .5rem;
 }
 
@@ -2128,8 +2172,8 @@ a:hover {
 }
 
 .special .special-post .special-post__container .special-post__rate .rate {
-  font-family: Myriad;
-  font-size: .7rem;
+  font-family: Firago-medium;
+  font-size: .9rem;
   overflow: hidden;
   white-space: nowrap;
 }
@@ -2157,13 +2201,13 @@ a:hover {
 }
 
 .special .special-post .special-post__container .special__price .price {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   color: #F92162;
 }
 
 .special .special-post .special-post__container .special__price .price__old {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
   text-decoration: line-through;
 }
@@ -2175,7 +2219,7 @@ a:hover {
 .special .special-post .special-post__container .special__button a {
   border: 1px solid #116BE5;
   color: #116BE5;
-  padding: .7rem 2rem;
+  padding: 1rem 3rem;
   font-weight: bold;
   background: #fff;
   -webkit-transition: .3s ease;
@@ -2613,6 +2657,9 @@ footer .footer__brands .footer__link i {
   .proposition {
     grid-template: 'phone phone laptop bike' 12rem 'toys headphone laptop yard' 12rem;
   }
+  .slider-product .slider-product__promo {
+    height: 24rem;
+  }
   .slider-product .img__container {
     height: 12rem !important;
   }
@@ -2639,6 +2686,42 @@ footer .footer__brands .footer__link i {
   }
   .slider-product .slider-product__attributes .slider-product__rate .rate {
     font-size: .7rem !important;
+  }
+  .special-post__container {
+    height: 22rem !important;
+  }
+  .special-post__container .special-post__title {
+    font-size: 1.2rem !important;
+  }
+  .special-post__container .special-post__rate .stars {
+    font-size: .7rem !important;
+  }
+  .special-post__container .special-post__rate .rate {
+    font-size: .7rem !important;
+  }
+  .special-post__container .special__price {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .special-post__container .special__price .price {
+    font-size: 1.5rem !important;
+  }
+  .special-post__container .special__price .price__old {
+    font-size: 1rem !important;
+  }
+  .special-post__container .special__button a {
+    padding: .7rem 2rem !important;
   }
   .modal-xl {
     max-width: 90%;
@@ -2776,7 +2859,7 @@ footer .footer__brands .footer__link i {
     width: 100%;
   }
   .slider-product .slider-product__promo {
-    height: 25.188rem;
+    height: 26rem;
   }
   footer {
     margin-bottom: 5rem;
@@ -2805,6 +2888,9 @@ footer .footer__brands .footer__link i {
     height: 13.75rem;
     margin: 0 .5rem;
   }
+  .slider-product .slider-product__promo {
+    height: 26.45rem;
+  }
   .slider-product .slick-slide {
     margin-right: .5rem;
   }
@@ -2831,6 +2917,20 @@ footer .footer__brands .footer__link i {
   }
   .slider-product .slider-product__rate .rate {
     font-size: .55rem !important;
+  }
+  .slider-product .slider-product__attributes {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+  .slider-product .slider-product__card {
+    height: 4.375rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slider-product .slider-product__card .product__cart {
+    margin: 0 !important;
   }
   .slider-product .countdown .countdown__element {
     width: 2rem;
