@@ -37,7 +37,7 @@ app.get("/posts", (req, res) => {
             goods[value[i]["id"]] = value[i];
         }
 
-        res.render("posts",{
+        res.render("posts", {
             name : "dato",
             surname : "mezz",
             goods : JSON.parse(JSON.stringify(goods))
@@ -48,22 +48,24 @@ app.get("/posts", (req, res) => {
 
 app.get("/post", (req, res) => {
     return new Promise((resolve, reject) => {
-        console.log(req.query.id);
         con.query(
-            `SELECT * FROM posts`,
-            (err, result) => {
+            `SELECT * FROM posts WHERE id="${req.query.id}"`,
+            function(err, result) {
                 if(err) reject(err);
                 resolve(result);
-                console.log(resolve(result));
             }
         );
     }).then((value) => {
-        let post = {};
+        let allPosts = {};
         for(let i = 0; i < value.length; i++) {
-            post[value[i]["id"]] = value[i];
+            allPosts[value[i]["id"]] = value[i];
         }
+        console.log(allPosts);
+
         res.render("post", {
-            post : JSON.parse(JSON.stringify(post))
+            allPosts : JSON.parse(JSON.stringify(allPosts))
         });
-    });
+    }).catch((err) => {
+        console.log(err);
+    })
 });

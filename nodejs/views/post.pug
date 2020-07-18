@@ -1,9 +1,10 @@
 include header
-div(class="post__container")
-    img(class="post__img", href="#", alt="img")
-    div(class="post__tags")
-        p(class="post__author") #{item["author"]}
-        p(class="post__category") #{item["category"]}
-    div(class="post__body")
-        h2(class="post__title") #{item["title"]}
-        p(class="post__info") #{item["description"]}
+each item, index in allPosts
+    div(class="post__container")
+        img(class="post__img", src="img/"+item["img"], alt="img")
+        div(class="post__tags")
+            p(class="post__author") #{item["author"]}
+            p(class="post__category") #{item["category"]}
+        div(class="post__body")
+            h2(class="post__title") #{item["title"]}
+            p(class="post__info") #{item["description"]}
