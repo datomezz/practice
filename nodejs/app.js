@@ -94,9 +94,24 @@ app.get("/burdul", (req, res) => {
             resolve(rand);
         }, 1000);
     });
+
     x.then((value) => {
-        res.render("burdul", {
-            rand : value
-        });
+        con.query(`INSERT INTO async (value) VALUES (${value})`);
+        con.query(
+            `SELECT * FROM async`,
+            (err, result) => {
+                if(err) throw err;
+
+                let obj = {}
+                for(let i = 0; i < result.length; i++) {
+                    obj[result[i]["id"]] = result[i];
+                }
+                
+                res.render("burdul", {
+                    rand : JSON.parse(JSON.stringify(obj))
+                });
+            }
+        );
     }).catch((err) => console.log(err));
+
 });
