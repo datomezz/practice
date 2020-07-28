@@ -8,12 +8,14 @@
 @import "_buisness.scss";
 
 footer {
+
     .footer__column {
         @include flex(column, flex-start, flex-start);
 
         .footer__title {
             font-family : Myriad;
-            font-size : .9rem;
+            font-size : 1.125rem;
+            margin : 0 0 20% 0;
         }
 
         .footer__body {
@@ -21,11 +23,11 @@ footer {
             @include flex(column, flex-start, flex-start);
 
             .footer__link {
-                font-family : Myriad;
-                font-size : .75rem;
+                font-family : Firago-medium;
+                font-size : 1rem;
                 color : $darkBlue;
                 opacity : .6;
-                margin-bottom : .8rem;
+                margin-bottom : 1.25rem;
                 word-spacing : .1rem;
                 transition : .3s ease;
 
@@ -92,8 +94,8 @@ footer {
     }
 
     .footer__logo {
-        width : 7rem;
-        height : 1.65rem;
+        max-width : 10.31rem;
+        height : 2.5rem;
 
         .logo {
             width : 100%;
@@ -103,7 +105,7 @@ footer {
     }
 
     .footer__copyright {
-        font-size : .75rem;
+        font-size : 1rem;
         font-weight : bold;
     }
 
@@ -111,7 +113,7 @@ footer {
         @include flex(row, center, center);
 
         i {
-            font-size : 2rem;
+            font-size : 3rem;
             color : $darkBlue;
             opacity : .3;
         }
@@ -188,7 +190,45 @@ footer {
     }
 }
 
-@media (max-width: 1441px) {
+.unico-container {
+    max-width : 1738px !important;
+}
+
+@media (max-width: 1601px) {
+
+    footer {
+
+        .footer__column {
+    
+            .footer__title {
+                font-size : .9rem;
+            }
+        }
+
+        .footer__link {
+            font-size : .75rem !important;
+        }
+
+        .footer__copyright {
+            font-size : .75rem;
+        }
+
+        .footer__brands {
+
+            i {
+                font-size : 2rem;
+            }
+        }
+    }
+
+    .unico-margin__y-large {
+        margin-top : 5.625rem;
+        margin-bottom : 5.625rem;
+    }
+
+    .unico-container {
+        max-width : 1464px !important;
+    }
 
     //HEADER
     .header__info {
@@ -483,6 +523,24 @@ footer {
         }
     }
 
+    .slider-sale__container {
+    
+        .countdown {
+            height : 4rem;
+    
+            .countdown__element {
+                width : 2rem;
+                height : 2rem;
+                background : #fff;
+    
+                &::before {
+                    left : .2rem;
+                    bottom : -1rem;
+                }
+            }
+        }
+    }
+
     .modal-xl {
         max-width : 90%;
     }
@@ -491,6 +549,15 @@ footer {
 @media (max-width : 1200px) {
     .header__input-container {
         padding : 0 2rem 0 0 !important;
+    }
+
+    //SPECIAL
+    .special-post__countdown {
+
+        .countdown  {
+            padding-right : .5rem;
+            padding-left : .5rem;
+        }
     }
 }
 
@@ -653,8 +720,15 @@ footer {
 }
 
 @media (max-width : 576px) {
-    .services-container {
-        margin : 0 0 3rem 0;
+
+    .unico-margin__y {
+        margin-top : 1.875rem;
+        margin-bottom : 1.875rem;
+    }
+
+    .unico-margin__y-large {
+        margin-top : 1.875rem;
+        margin-bottom : 1.875rem;
     }
 
     .promocode__container {
@@ -673,6 +747,9 @@ footer {
     }
 
     //SLIDER THUMBNAIL
+    .slider-thumbnail__container {
+        margin-top : 1.875rem;
+    }
     .slider-thumbnail {
 
         .slider__img {
@@ -741,6 +818,8 @@ footer {
         }
 
         .countdown {
+            padding-right : .5rem;
+            padding-left : .5rem;
 
             .countdown__element {
                 width : 2rem;
@@ -761,14 +840,19 @@ footer {
         
     }
 
+    //SLIDER BRAND
+    .slider-brand {
+
+        .slider-brand__article {
+            height : 3.875rem;
+        }
+    }
+
     .unico-category__title {
+        width : 70%;
 
         .category {
-            font-size : 1rem;
-        }
-
-        h6 {
-            width : 65%;
+            font-size : 1.5rem;
         }
     }
 

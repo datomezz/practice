@@ -67,7 +67,7 @@
     transition : .3s ease;
 
     i {
-        font-size : 1.1rem;
+        font-size : 1.2rem !important;
         transition : .1s ease;
     }
 
@@ -94,10 +94,6 @@
 
 }
 
-.header__input-container {
-    padding : 0 125px 0 30px;
-}
-
 .header__caregory-container {
     padding : 0 12px 0 26px;
 }
@@ -113,11 +109,11 @@
 
         i {
             font-size : .8rem;
-            margin-bottom : -.1;
+            margin-bottom : .07rem;
         }
 
         .category__text {
-            font-size : .87rem;
+            font-size : .8125rem;
             color : $darkBlue;
 
             font-family : Myriad;
@@ -138,11 +134,12 @@
         }
     }
     .search__input {
+        font-family : Firago-medium;
         background : $lightDark;
         border : none;
         outline : none;
-        font-size : .87rem;
-
+        font-size : .8125rem;
+        
         &::placeholder {
             font-size : .87rem;
             color : $darkBlue;
@@ -163,11 +160,12 @@
         color : $darkBlue;
         background : #fff;
         border-radius : 50%;
+        box-shadow : 0 0 .2rem rgba(0,0,0,.075)!important;
 
         @include flex(row, center, center);
 
         i {
-            font-size : .9rem;
+            font-size : 1rem;
             color : inherit;
         }
 
@@ -180,17 +178,19 @@
 
 .header__user {
     height : 3.43rem;
+    padding : 0 0 0 7.692%;
 
     .user__login {
         background : $lightBlue;
         transition : .3s ease;
         i {
-            font-size : 1rem;
+            font-size : 1.2rem;
             color : #fff;
             transition : .3s ease;
+            margin-left : -.3rem;
         }
         .user__text {
-            font-size : .87rem;
+            font-size : .8125rem;
             color : #fff;
             transition : .3s ease;
 
@@ -219,6 +219,7 @@
         @include flex(row, center, center);
 
         i {
+            font-size : 1.35rem;
             transition : .3s ease;
         }
 

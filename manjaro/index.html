@@ -8,10 +8,11 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script src="https://kit.fontawesome.com/bb6e79ddfa.js"></script>
     <link rel="stylesheet" href="assets/main.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css"> 
 </head>
 <body>
     <header class="container-fluid header px-lg-0 px-md-4 px-0">
-        <nav class="container p-0 px-lg-4 px-md-4 px-0" style="max-width : 1738px">
+        <nav class="container unico-container p-0 px-lg-4 px-md-4 px-0">
             <div class="header__info d-md-flex d-none justify-content-between align-items-center m-0">
                 <div class="header__questions">
                     <a class="header__text-link mr-3" href="javascript:void(0)">ჩვენ შესახებ</a>
@@ -22,12 +23,12 @@
             </div>
             <div class="header__container row justify-content-between m-0">
                 <div class="header__main col-xl-4 col-lg-4 col-md-3 col-2 col-12 d-flex justify-content-xl-start justify-content-lg-start justify-content-between p-0 m-0">
-                    <a class="logo__link col-xl-4 col-sm-3 col-4 row justify-content-md-start justify-content-center align-items-center order-md-0 order-1 p-0 pr-xl-4 pr-0 m-0" href="#">
+                    <a class="logo__link col-xl-4 col-lg-4 col-md-7 col-4 row justify-content-md-start justify-content-center align-items-center order-md-0 order-1 p-0 pr-xl-4 pr-0 m-0" href="#">
                         <img src="img/UNICO.GE.svg" class="header__logo-img" alt="logo">
                     </a>
                     <a class="header__caregory-container col-xl-6 col-lg-6 col-md-5 col-2 row justify-content-md-end justify-content-center align-items-center order-md-1 order-0 m-0 ml-xl-0 ml-lg-4" href="javascript:void(0)" data-toggle="modal" data-target="#modal">
                         <div class="header__category d-flex justify-content-center align-items-center rounded-pill m-0">
-                            <i class="fas fa-bars m-0"></i>
+                            <i class="uil uil-bars"></i>
                             <p class="category__text unico-text__ellipsis d-lg-block d-md-none d-none">ყველა კატეგორია</p>
                         </div>
                     </a>
@@ -37,43 +38,43 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xl-5 col-lg-4 col-md-4 header__input-container">
+                <div class="col-xl-4 col-lg-4 col-md-4 px-2">
                     <div class="header__input d-md-flex d-none justify-content-between rounded-pill position-relative p-1">
                         <a href="#" class="input__category col-lg-3 col-md-2 d-flex justify-content-center align-items-center rounded-pill p-0 m-0" data-toggle="modal" data-target="#modal">
-                            <i class="fas fa-th-large mr-lg-2 mr-md-0"></i>
+                            <i class="uil uil-apps mr-lg-1 mr-md-0"></i>
                             <p class="category__text unico-text__ellipsis d-lg-block d-md-none d-none m-0">კატეგორია</p>
                         </a>
                         <div class="col-6 row align-items-center p-0 m-0">
                             <input type="text" name="field" class="search__input w-100 px-1" placeholder="მოძებნე მარტივად">
                         </div>
                         <button name="search-submit" class="col-2 row justify-content-end input__button p-0 m-0">
-                            <div class="search__button shadow-sm">
+                            <div class="search__button">
                                 <i class="fas fa-search"></i>
                             </div>
                         </button>
                     </div>
                 </div>
-                <div class="header__user col-3 d-md-flex d-none justify-content-between p-0">
+                <div class="header__user col-4 d-md-flex d-none justify-content-between">
                     <a href="#" class="user__login col-4 d-flex align-items-center justify-content-center rounded-pill p-0" data-toggle="modal" data-target="#modal">
-                        <i class="far fa-user mr-lg-2 mr-md-0"></i>
+                        <i class="uil uil-user mr-lg-1 mr-md-0"></i>
                         <p class="user__text unico-text__ellipsis d-lg-block d-md-none d-none m-0">შესვლა</p>
                     </a>
-                    <a href="#" class="col-2 d-flex justify-content-center ml-lg-2 ml-0 p-0">
+                    <a href="#" class="d-flex justify-content-center ml-lg-2 ml-0 p-0">
                         <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom" title="შედარება">
-                            <i class="fas fa-exchange-alt"></i>
+                            <i class="uil uil-exchange"></i>
                         </div>
                     </a>
-                    <a href="#" class="col-2 d-flex justify-content-center p-0">
+                    <a href="#" class="d-flex justify-content-center p-0">
                         <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom" title="დამახსოვრებული">
-                            <i class="far fa-heart"></i>
+                            <i class="uil uil-heart"></i>
                         </div>
                     </a>
-                    <a href="#" class="col-2 d-flex justify-content-center p-0">
+                    <a href="#" class="d-flex justify-content-center p-0">
                         <div class="user__action header__shopping-cart" data-toggle="tooltip" data-placement="bottom" title="შეძენა">
-                            <i class="fas fa-shopping-cart"></i>
+                            <i class="uil uil-shopping-cart"></i>
                         </div>
                     </a>
-                    <a href="#" class="col-2 d-flex justify-content-center p-0">
+                    <a href="#" class="d-flex justify-content-center p-0">
                         <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom" title="ენის არჩევა">
                             <img src="img/ge.svg" alt="geo" class="img-fluid">
                         </div>
@@ -117,7 +118,7 @@
             </div>
         </div>
     </aside>
-    <section class="container my-md-5 mt-4 mb-5 px-md-4 px-2" style="max-width : 1818px">
+    <section class="slider-thumbnail__container container px-md-4 px-2" style="max-width : 1818px">
         <div class="slider-thumbnail">
             <a class="slider__ads-link" href="#"><img src="img/slider_1.png" alt="slider" class="slider__img"></a>
             <a class="slider__ads-link" href="#"><img src="img/slider_2.jpg" alt="slider" class="slider__img"></a>
@@ -125,14 +126,14 @@
             <a class="slider__ads-link" href="#"><img src="img/slider_4.jpg" alt="slider" class="slider__img"></a>
         </div>
     </section>
-    <section class="services-container container-fluid p-0">
-        <div class="container h-100 p-0" style="max-width : 1738px">
+    <section class="services-container unico-margin__y container-fluid p-0">
+        <div class="container unico-container h-100 p-0">
             <div class="services d-flex justify-content-between align-items-center m-0">
                 <div class="promocode__container col-xl-3 col-md-4 col-12">
                     <div class="promocode position-relative d-flex flex-column justify-content-between">
                         <div class="promocode__header">
                             <h4 class="promocode__title m-0">გაქვს პრომოკოდი?</h4>
-                            <p class="promocode__text m-0">მიიღე ფასდაკლება</p>
+                            <p class="promocode__text">მიიღე ფასდაკლება</p>
                         </div>
                         <form class="promocode__form d-flex justify-content-between" method="GET" action="#">
                             <input type="text" class="promocode__input w-75" placeholder="შეიყვანეთ პრომოკოდი">
@@ -177,7 +178,7 @@
             </div>
         </div>
     </section>
-    <main class="container p-0 px-xl-3 px-lg-2 px-md-1 px-1 my-5" style="max-width : 1738px; overflow : hidden">
+    <main class="container unico-container overflow-hidden p-0 px-xl-3 px-lg-2 px-md-1 px-1">
         <section class="unico-slider__container">
             <div class="unico-category__title mx-xl-0 mx-lg-3 mx-md-3 mx-3 my-4">
                 <a href="#" class="category">კატეგორიები</a>
@@ -297,7 +298,7 @@
                 </a>
             </div>
         </section>
-        <section class="proposition w-100 my-5 px-xl-0 px-lg-2 px-md-0 px-2">
+        <section class="proposition unico-margin__y w-100 px-xl-0 px-lg-2 px-md-0 px-2">
             <div class="proposition__content grid-phone proposition__radius">
                 <div class="proposition__text">
                     <h4 class="proposition__title">დღის სპეციალური შემოთავაზება</h4>
@@ -936,8 +937,8 @@
                 <a href="#" class="loadmore__button rounded-pill">ყველა პროდუქტის ნახვა</a>
             </div>
         </section>
-        <section class="row m-0 my-5">
-            <div class="unico-category__title mx-xl-0 mx-lg-3 mx-md-3 mx-3 mx-3 my-4">
+        <section class="unico-margin__y row">
+            <div class="unico-category__title w-100 mx-xl-0 mx-lg-3 mx-md-3 mx-3 mx-3 my-4">
                 <a href="#" class="category text-md-start text-center">სპეციალური შემოთავაზება</a>
                 <div class="subcategory d-md-flex d-none">
                     <a href="#" class="m-0"></a>
@@ -1570,7 +1571,7 @@
 
             </div>
         </section>
-        <section class="row w-100 m-0 mt-5">
+        <section class="unico-margin__y row w-100">
             <div class="unico-rek col-12 p-0 px-xl-0 px-lg-2 px-md-2 px-2">
                 <a href="#" target="_blank">
                     <img src="img/rek-1.png" alt="rek" class="img-fluid rek__img">
@@ -1579,8 +1580,8 @@
         </section>
     </main>
     <section class="container-fluid unico-bg__white p-0">
-        <div class="container p-0 px-xl-4 px-lg-2 px-md-1 px-1 my-5" style="max-width : 1738px">
-            <div class="slider-sale__container row pt-5 pb-4 m-0">
+        <div class="container unico-container p-0 px-xl-4 px-lg-2 px-md-1 px-1">
+            <div class="slider-sale__container row pt-md-5 pb-md-4 pt-3 pb-3 m-0">
                 <div class="unico-category__title mx-xl-0 mx-lg-3 mx-md-3 mx-3 px-md-0 px-2">
                     <a href="#" class="category">აქცია</a>
                     <div class="subcategory d-md-flex d-none">
@@ -2265,12 +2266,16 @@
             </div>
         </div>
     </section>
-    <div class="container p-0 px-xl-4 px-lg-2 px-md-1 px-1 my-5" style="max-width : 1738px">
-        <div class="unico-rek__second row p-0 px-xl-0 px-lg-2 px-md-2 px-2 m-0">
-            <a href="#" target="_blank">
-                <img src="img/rek-2.png" alt="rek" class="img-fluid rek__img">
-            </a>
+    <div class="container unico-container unico-margin__y-large">
+        <div class="row m-0">
+            <div class="unico-rek__second col-12 p-0 px-xl-0 px-lg-2 px-md-2 px-2 m-0">
+                <a href="#" target="_blank">
+                    <img src="img/rek-2.png" alt="rek" class="img-fluid rek__img">
+                </a>
+            </div>
         </div>
+    </div>
+    <div class="container unico-container unico-margin__y-large unico-margin__buttom p-0 px-xl-4 px-lg-2 px-md-1 px-1">
         <section class="unico-slider__container my-5">
             <div class="unico-category__title mx-xl-0 mx-lg-3 mx-md-3 mx-3 my-4">
                 <a href="#" class="category">კატეგორიის სახელი</a>
@@ -2818,7 +2823,7 @@
 
             </div>
         </section>
-        <section class="unico-slider__container my-5">
+        <section class="unico-slider__container unico-margin__y">
             <div class="unico-category__title mx-xl-0 mx-lg-3 mx-md-3 mx-3 my-4">
                 <a href="#" class="category">ბრენდები</a>
                 <div class="subcategory d-md-flex d-none">
@@ -2880,11 +2885,11 @@
             </div>
         </section>
     </div>
-    <footer class="container-fluid unico-bg__white mt-5">
-        <div class="container p-0" style="max-width : 1738px">
+    <footer class="container-fluid unico-bg__white p-0 px-xl-4 px-lg-2 px-md-1 px-1">
+        <div class="container unico-container p-0">
             <div class="d-md-flex d-none m-0 py-5">
                 <div class="footer__column col-2 p-0 px-2">
-                    <h2 class="footer__title mb-4">კომპანია</h2>
+                    <h2 class="footer__title">კომპანია</h2>
                     <div class="footer__body">
                         <a href="#" class="footer__link">ჩვენს შესახებ</a>
                         <a href="#" class="footer__link">გუნდის შესახებ</a>
@@ -2892,7 +2897,7 @@
                     </div>
                 </div>
                 <div class="footer__column col-2 p-0 px-2">
-                    <h2 class="footer__title mb-4">ჩემი ანგარიში</h2>
+                    <h2 class="footer__title">ჩემი ანგარიში</h2>
                     <div class="footer__body">
                         <a href="#" class="footer__link">ანგარიში</a>
                         <a href="#" class="footer__link">შეკვეთები</a>
@@ -2901,7 +2906,7 @@
                     </div>
                 </div>
                 <div class="footer__column col-2 p-0 px-2">
-                    <h2 class="footer__title mb-4">პირობები</h2>
+                    <h2 class="footer__title">პირობები</h2>
                     <div class="footer__body">
                         <a href="#" class="footer__link">დაბრუნების პოლიტიკა</a>
                         <a href="#" class="footer__link">მიტანის სერვისი</a>
@@ -2910,7 +2915,7 @@
                     </div>
                 </div>
                 <div class="footer__column col-2 p-0 px-2">
-                    <h2 class="footer__title mb-4">დახმარება</h2>
+                    <h2 class="footer__title">დახმარება</h2>
                     <div class="footer__body">
                         <a href="#" class="footer__link">დაბრუნების პოლიტიკა</a>
                         <a href="#" class="footer__link">მიტანის სერვისი</a>
@@ -2919,7 +2924,7 @@
                     </div>
                 </div>
                 <div class="footer__column col-2 p-0 px-2">
-                    <h2 class="footer__title mb-4">გათამაშება</h2>
+                    <h2 class="footer__title">გათამაშება</h2>
                     <div class="footer__body">
                         <a href="#" class="footer__link">დასპინე და მოიგე</a>
                         <a href="#" class="footer__link">უფასო სპინები</a>
@@ -2928,7 +2933,7 @@
                     </div>
                 </div>
                 <div class="footer__column col-2 p-0 px-2">
-                    <h2 class="footer__title mb-4">შემოგვიერთდით</h2>
+                    <h2 class="footer__title">შემოგვიერთდით</h2>
                     <div class="footer__body">
                         <a href="#" class="footer__link"><i class="fab fa-facebook-f"></i>facebook.</a>
                         <a href="#" class="footer__link"><i class="fab fa-youtube"></i>youtube.</a>
