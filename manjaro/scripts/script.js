@@ -11,17 +11,17 @@ let logIn = document.querySelectorAll(".user__login");
 let category = document.querySelector(".input__category");
 
 category.addEventListener("click", function() {
-    modalAjax("category.html", "modal-lg");
+    modalAjax("_category.html", "modal-lg");
 });
 
 logIn.forEach(item => {
     item.addEventListener("click", function(){ 
-        modalAjax("login.html", "modal-md");
+        modalAjax("_login.html", "modal-md");
     });
 });
 
 allCategory.addEventListener("click", function() {
-    modalAjax("allcategory.html", "modal-xl");
+    modalAjax("_allcategory.html", "modal-xl");
 });
 
 function modalAjax(url, modalType) {
@@ -173,7 +173,7 @@ function threeDot(str){
     strText = strText.innerHTML;
 
     let currentWidth = str.clientWidth;
-    let sum = currentWidth / 3;
+    let sum = currentWidth / 4;
 
     if(sum < strText.length){
         strText = strText.split("").reverse().join("");
@@ -193,19 +193,21 @@ const countDownElements = document.querySelectorAll(".countdown__element");
 
 const endTime = new Date("2020-07-31T12:25").getTime();
 
-setInterval(function(){
-    let now = new Date().getTime();
-    let newDate = endTime - now;
-
-    let days = Math.floor(newDate / (1000 * 60 * 60 * 25));
-    let hours = Math.floor((newDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    let minutes = Math.floor((newDate % (1000 * 60 * 60)) / (1000 * 60));
-    let seconds = Math.floor((newDate % (1000 * 60)) / 1000);
-
-    let dateArr = [days, hours, minutes, seconds];
-
-    for(let i = 0; i < dateArr.length; i++){
-        countDownElements[i].innerText = dateArr[i];
-    }
-
-}, 1000);
+if(countDownElements.length > 0) {
+    setInterval(function(){
+        let now = new Date().getTime();
+        let newDate = endTime - now;
+    
+        let days = Math.floor(newDate / (1000 * 60 * 60 * 25));
+        let hours = Math.floor((newDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((newDate % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((newDate % (1000 * 60)) / 1000);
+    
+        let dateArr = [days, hours, minutes, seconds];
+    
+        for(let i = 0; i < dateArr.length; i++){
+            countDownElements[i].innerText = dateArr[i];
+        }
+    
+    }, 1000);
+}

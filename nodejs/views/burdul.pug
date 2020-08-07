@@ -1,18 +1,8 @@
 include header
-each item, index in rand
-    h1 #{item["value"]}
-script.
-    function ajax() {
-        console.log("yleo");
-        let http = new XMLHttpRequest();
-
-        http.onreaedystatechange = function() {
-            if(this.readyState == 4 && this.status == 200) {
-                console.log(this.response);
-            }
-        }
-
-        http.open("GET", "http://localhost:3000/burdul");
-        http.send();
-    }
-    ajax();
+div(class="burdul-container")
+    h3(class="burdul__title") Clicker Count :
+    button(
+        class="burdul__button",
+        style="padding : .5rem 3rem; background : lightblue"
+    ) Click
+include footer

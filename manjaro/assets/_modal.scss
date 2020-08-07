@@ -66,36 +66,49 @@
     .modal__textHeader {
         @include flex(row, center, center);
         font-family: Myriad;
+        font-size : 2rem;
     }
 
     .modal__loginProposition {
         @include flex(column, space-between, flex-start);
 
         .modal__loginProposition-text {
-            font-size : .75rem;
+            font-family : Firago-medium;
+            font-size : 14px;
         }
 
         .registration__link {
-            font-size : .75rem;
+            font-family : Firago-medium;
+            font-size : 14px;
             color : $lightBlue;
         }
     }
 
     .modal__inputContainer {
+        font-family : Firago-medium;
         color : $loginText;
         padding : .5rem 0;
         border-bottom : thin solid $loginText;
+
+        i {
+            font-size : 1.2rem;
+        }
+
+        .icon__key {
+            transform : rotate(40deg);
+        }
 
         .modal__input {
             background : transparent;
             border : none;
             outline : none;
-            font-size : .9rem;
+            font-size : 1rem;
             color : $loginText;
             padding : 1rem;
 
             &::placeholder {
-                color : $loginText; 
+                color : $loginText;
+                font-family : Firago-medium;
             }
 
             &:focus {
@@ -112,7 +125,8 @@
 
 
         .input__recovery {
-            font-size : .8rem;
+            font-family : Firago-medium;
+            font-size : 11px;
             color : rgba(34, 53, 73, .4);
             transition : .3s ease;
 
@@ -147,9 +161,10 @@
     }
 
     .modal__button {
+        font-family : Firago-medium;
         width : 100%;
         padding: .75rem 0;
-        font-size : .8rem;
+        font-size : 13px;
         color : $lightBlue;
         border : 1px solid $lightBlue;
         background : transparent;
@@ -175,17 +190,19 @@
             left : 50%;
             transform : translate(-50%, 0);
 
+            font-family : Myriad;
             background : $lightDark;
             border : thin solid $loginText;
             padding : .3rem .7rem;
-            font-size : .8rem;
+            font-size : 11px;
             color : $loginText;
         }
     }
     
     .login__socials {
         a {
-            font-size : .9rem;
+            font-family : Firago-medium;
+            font-size : 13px;
             padding : 4% 8%;
         }
     }

@@ -287,13 +287,14 @@
         padding : 3% 0;
         .mobile__action {
             i {
-                font-size : 1rem;
+                font-size : 1.2rem;
                 color : $darkBlue;
                 transition : .3s ease;
+                margin-bottom : .1rem;
             }
     
             .mobile__text {
-                font-size : .6rem;
+                font-size : .625rem;
                 transition : .3s ease;
                 font-family : Myriad;
             }

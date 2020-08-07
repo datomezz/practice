@@ -95,7 +95,7 @@ footer {
 
     .footer__logo {
         max-width : 10.31rem;
-        height : 2.5rem;
+        height : 2.8rem;
 
         .logo {
             width : 100%;
@@ -126,7 +126,7 @@ footer {
                 i {
                     @include flex(row, center, center);
                     width : 2.5rem;
-                    height : 2.5rem;
+                    height : 2.8rem;
                     border-radius : 50%;
                     margin-right : .3rem;
                     transition : .3s ease;
@@ -147,7 +147,7 @@ footer {
                 i {
                     @include flex(row, center, center);
                     width : 2.5rem;
-                    height : 2.5rem;
+                    height : 2.8rem;
                     border-radius : 50%;
                     margin-right : .3rem;
                     transition : .3s ease;
@@ -167,7 +167,7 @@ footer {
                 i {
                     @include flex(row, center, center);
                     width : 2.5rem;
-                    height : 2.5rem;
+                    height : 2.8rem;
                     border-radius : 50%;
                     margin-right : .3rem;
                     transition : .3s ease;
@@ -196,30 +196,16 @@ footer {
 
 @media (max-width: 1601px) {
 
-    footer {
+    .unico-category__title {
+        @include flex(row, flex-start, center);
 
-        .footer__column {
-    
-            .footer__title {
-                font-size : .9rem;
-            }
-        }
-
-        .footer__link {
-            font-size : .75rem !important;
-        }
-
-        .footer__copyright {
+        h6 {
             font-size : .75rem;
+            color : $loginText;
         }
 
-        .footer__brands {
-
-            i {
-                font-size : 2rem;
-            }
-        }
     }
+
 
     .unico-margin__y-large {
         margin-top : 5.625rem;
@@ -249,35 +235,35 @@ footer {
     }
 
     .header__category {
-        height : 2.5rem;
-        padding : 0 10%;
+        height : 2.8rem;
+        padding : 0 5%;
 
         i {
             font-size : .9rem;
         }
 
         .category__text {
-            font-size : .7rem;
+            font-size : .8rem;
             margin : 0 0 0 .5rem;
         }
     }
     
     .header__input {
-        height : 2.5rem;
+        height : 2.8rem;
 
         .input__caregory {
             width : 100%;
 
         }
         .category__text {
-            font-size : .6rem !important;
+            font-size : .75rem !important;
         }
 
         .search__input {
-            font-size : .8rem;
+            font-size : .75rem;
     
             &::placeholder {
-                font-size : .6rem;
+                font-size : .75rem;
             }
         }
 
@@ -286,13 +272,13 @@ footer {
             height : 2rem;
     
             i {
-                font-size : .7rem;
+                font-size : .8rem;
             }
         }
     }
 
     .header__user {
-        height : 2.5rem;
+        height : 2.8rem;
 
         .user__text {
             font-size : .75rem !important;
@@ -300,7 +286,7 @@ footer {
 
         .user__action {
             width : 2.5rem;
-            height : 2.5rem;
+            height : 2.8rem;
         }
 
         .header__shopping-cart {
@@ -320,7 +306,25 @@ footer {
     }
 
     .header__user {
-        padding : 0 0 0 2rem;
+        padding : 0 0 0 7rem;
+
+        .user__login {
+            max-width : 120px;
+
+            i {
+                font-size : 1rem;
+            }
+
+            .user__text {
+                font-size : .6rem;
+            }
+        }
+
+        .user__action {
+            i {
+                font-size : 1.2rem;
+            }
+        }
     }
 
     //SLIDER THUBNAIL
@@ -352,10 +356,10 @@ footer {
         .slider-category__attributes {
         
             .slider-category__header {
-                font-size : .9rem;
+                font-size : .92rem;
             }
             .slider-category__count {
-                font-size : .7rem;
+                font-size : .75rem;
             }
         }
 
@@ -409,16 +413,16 @@ footer {
         .service {
 
             .service__brand {
-                width : 3rem !important;
-                height : 3rem !important;
+                width : 4rem !important;
+                height : 4rem !important;
 
                 i {
-                    font-size : 1rem !important;
+                    font-size : 1.3rem !important;
                 }
             }
 
             .service__title {
-                font-size : .75rem !important;
+                font-size : .92rem !important;
             }
         }
     }
@@ -434,6 +438,8 @@ footer {
     //SLIDER PRODUCT 
 
     .slider-product {
+
+
         .slider-product__promo {
             height : 24rem;
         }
@@ -442,15 +448,19 @@ footer {
             height : 12rem !important;
 
             .slider-product__sale {
-                width : 2.5rem !important;
-                height : 2.5rem !important;
+                width : 38px !important;
+                height : 38px !important;
             }
 
             .slider-product__hover {
 
                 .product__action {
-                    width : 2.5rem !important;
-                    height : 2.5rem !important;
+                    width : 45px !important;
+                    height : 45px !important;
+
+                    i {
+                        font-size : .9rem;
+                    }
                 }
             }
 
@@ -459,25 +469,28 @@ footer {
             height : 12rem !important;
 
             .slider-product__header {
-                font-size : .8rem !important;
-                font-weight : bold;
+                font-size : .92rem !important;
             }
 
             .slider-product__footer {
                 
                 .price {
-                    font-size : 1.1rem !important;
+                    font-size : 1.2rem !important;
+                }
+
+                .price__old {
+                    font-size : .85rem !important;
                 }
             }
 
             .slider-product__rate {
 
                 .stars {
-                    font-size : .7rem !important;
+                    font-size : .75rem !important;
                 }
 
                 .rate {
-                    font-size : .7rem !important;
+                    font-size : .75rem !important;
                 }
             }
         }
@@ -543,6 +556,33 @@ footer {
 
     .modal-xl {
         max-width : 90%;
+    }
+
+    //FOOTER
+
+    footer {
+
+        .footer__column {
+    
+            .footer__title {
+                font-size : .92rem;
+            }
+        }
+
+        .footer__link {
+            font-size : .85rem !important;
+        }
+
+        .footer__copyright {
+            font-size : .85rem;
+        }
+
+        .footer__brands {
+
+            i {
+                font-size : 2rem;
+            }
+        }
     }
 }
 

@@ -34,3 +34,35 @@ x.then((result) => {
 }).catch((err) => {
     console.log("Error", err);
 });
+
+let z = Promise.all([
+    new Promise(resolve => setTimeout(() => resolve(1), 3000)),
+    new Promise(resolve => setTimeout(() => resolve(2), 2000)),
+    new Promise(resolve => setTimeout(() => resolve(3), 1000))
+]).then(alert);
+
+console.log("Resolve", Promise.resolve("Hi").then(response => console.log(response)));
+console.log("Reject", Promise.reject("pizdec").catch(response => console.log(response)));
+
+//ASYNC & AWAIT
+
+async function delay(time) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => resolve(313), time);
+    }); 
+
+}
+
+delay(1000).then(result => console.log(result, "delay"));
+
+
+async function test() {
+    let x = 0;
+    console.log(x, "First")
+    let y = await new Promise((resolve, reject) => {
+        setTimeout(() => resolve(x += 10), 2000);
+    });
+    return y;
+}
+
+test().then(result => console.log(result, "Second"));

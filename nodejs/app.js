@@ -5,11 +5,14 @@ const mysql = require("mysql");
 const con = mysql.createConnection({
     host : "localhost",
     user : "root",
-    password : "datom3zz",
-    database : "zzD"
+    password : "",
+    database : "nodejs"
 });
 
 app.use(express.static("public"));
+
+app.use(express.json());
+
 app.set("view engine", "pug");
 
 app.listen(3000, () => {
@@ -70,48 +73,47 @@ app.get("/post", (req, res) => {
     })
 });
 
-app.get("/test", (req, res) => {
-    con.query(
-      "SELECT * FROM nodejs",
-      (err, result) => {
-          if(err) throw err;
-          let obj = {};
-          for(let i = 0; i < result.length; i++) {
-              obj[result[i]["id"]] = result[i];
-          }
-
-          res.render("test", {
-            obj : JSON.parse(JSON.stringify(obj))
-          });
-      }  
-    );
+app.get("/burdul", (req, res) => {
+    console.log(req.body);
+    res.render("burdul");
 });
 
-app.get("/burdul", (req, res) => {
-    let x = new Promise((resolve, reject) => {
-        setInterval(function(){
-            let rand = Math.floor(Math.random() * 1000);
-            resolve(rand);
-        }, 1000);
-    });
+app.post("/test", (req, res) => {
+    console.log(req.body.click);    
 
-    x.then((value) => {
-        con.query(`INSERT INTO async (value) VALUES (${value})`);
-        con.query(
-            `SELECT * FROM async`,
-            (err, result) => {
-                if(err) throw err;
-
-                let obj = {}
-                for(let i = 0; i < result.length; i++) {
-                    obj[result[i]["id"]] = result[i];
-                }
-                
-                res.render("burdul", {
-                    rand : JSON.parse(JSON.stringify(obj))
-                });
+    con.query(
+        `SELECT * FROM clicker WHERE id=1`,
+        (err, result) => {
+            if(err) throw err;
+            let obj = {};
+            for(let i = 0; i< result.length; i++) {
+                obj[result[i]["id"]] = result[i];
             }
-        );
-    }).catch((err) => console.log(err));
+            value = obj[1]["click"];
+        }
+    );
+    // console.log(value, "value");
+    value += req.body.click;
+    console.log(value, "value");
 
+    con.query(
+        `UPDATE clicker SET click = '${value}' WHERE id= '1'`,
+        (err, result) => {
+            if(err) throw err;
+        }
+    )
+
+    con.query(
+        `SELECT * FROM clicker WHERE id=1`,
+        (err, result) => {
+            if(err) throw err;
+            let obj = {};
+            for(let i = 0; i< result.length; i++) {
+                obj[result[i]["id"]] = result[i];
+            }
+            console.log(result[0]["click"], "result");
+            console.log(obj, "obj");
+            res.json(result[0]["click"]);
+        }
+    );
 });
