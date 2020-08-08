@@ -43,6 +43,19 @@ a:hover {
   margin-bottom: 8.125rem;
 }
 
+.unico-margin__y-small {
+  margin-top: 3.75rem !important;
+  margin-bottom: 3.75rem !important;
+}
+
+.unico-margin__top-small {
+  margin-top: 3.75rem !important;
+}
+
+.unico-margin__bottom-small {
+  margin-bottom: 3.75rem !important;
+}
+
 .unico-margin__buttom {
   margin-bottom: 5.625rem;
 }
@@ -1875,7 +1888,7 @@ a:hover {
 .proposition {
   display: -ms-grid;
   display: grid;
-  grid-template: 'phone phone laptop bike' 15.625rem 'toys headphone laptop yard' 15.625rem /2.5fr 1.5fr 1.2fr 1.5fr;
+  grid-template: 'phone phone laptop bike' 15.625rem 'toys headphone laptop yard' 15.625rem /2.5fr 1.5fr 1.2fr 1.5fr;
   grid-gap: 1rem;
 }
 
@@ -2307,6 +2320,188 @@ a:hover {
 
 .rek-main__second {
   height: 24.375rem;
+}
+
+.rek-category__first {
+  height: 11.25rem;
+}
+
+.search-result__container {
+  background: #fff;
+  height: 3.4375rem;
+  width: 100%;
+  padding: 0 50px;
+  -webkit-box-shadow: 10px 10px 30px #6666C10D;
+          box-shadow: 10px 10px 30px #6666C10D;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-result__container .search-result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-result__container .search-result .search-result__title {
+  color: #D6DBE0;
+  font-family: Firago-medium;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.search-result__container .search-result .search-result__title i {
+  font-size: 1.5rem;
+  margin: 0 .6rem;
+}
+
+.search-result__container .search-result .search-result__result {
+  color: #223549;
+  font-family: Firago-medium;
+  font-weight: bold;
+}
+
+.search-result__container .search-result .search-result__result span {
+  color: #116BE5;
+  font-family: Firago-medium;
+}
+
+.search-result__container .search-result__count {
+  color: #D6DBE0;
+}
+
+.filter__container {
+  -webkit-box-shadow: 10px 10px 30px #6666C10D;
+          box-shadow: 10px 10px 30px #6666C10D;
+}
+
+.filter__category {
+  background: #fff;
+  padding: 45px 38px 38px 42px;
+}
+
+.filter {
+  background: #fff;
+  padding: 45px 38px 38px 42px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.filter .filter__header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter .filter__header .filter__title {
+  font-family: Myriad;
+  font-size: 22px;
+}
+
+.filter .filter__header i {
+  font-size: 1.5rem;
+  color: #D6DBE0;
+}
+
+.filter .filter__search {
+  border: 1px solid #EDF0F5;
+  font-size: .8rem;
+  border-radius: 1rem;
+  width: 100%;
+  padding: 7.5px 1rem;
+  margin: 20px 0;
+}
+
+.filter .filter__back {
+  color: #116BE5;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.filter .filter__back i {
+  font-size: 1.2rem;
+}
+
+.filter .filter__submits .submit__big {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer .footer__column {
@@ -2746,7 +2941,7 @@ footer .footer__brands .footer__link i {
     font-size: .92rem !important;
   }
   .proposition {
-    grid-template: 'phone phone laptop bike' 12rem 'toys headphone laptop yard' 12rem;
+    grid-template: 'phone phone laptop bike' 12rem 'toys headphone laptop yard' 12rem;
   }
   .slider-product .slider-product__promo {
     height: 24rem;
@@ -2890,7 +3085,7 @@ footer .footer__brands .footer__link i {
     font-size: .7rem;
   }
   .proposition {
-    grid-template: 'phone phone laptop bike' 8rem 'toys headphone laptop yard' 8rem /2.5fr 1.5fr 1.2fr 1.5fr;
+    grid-template: 'phone phone laptop bike' 8rem 'toys headphone laptop yard' 8rem /2.5fr 1.5fr 1.2fr 1.5fr;
   }
   .proposition .proposition__title {
     font-size: .8rem !important;
@@ -2965,7 +3160,7 @@ footer .footer__brands .footer__link i {
     border-radius: 50% !important;
   }
   .proposition {
-    grid-template: 'phone phone' 8rem 'toys headphone ' 8rem /2.5fr 1.5fr;
+    grid-template: 'phone phone' 8rem 'toys headphone ' 8rem /2.5fr 1.5fr;
   }
   .proposition .grid-laptop, .proposition .grid-bike, .proposition .grid-yard {
     display: none;
@@ -3004,7 +3199,7 @@ footer .footer__brands .footer__link i {
   }
   .proposition {
     grid-gap: .5rem;
-    grid-template: 'phone phone' 7.5rem 'toys headphone' 7.5rem;
+    grid-template: 'phone phone' 7.5rem 'toys headphone' 7.5rem;
   }
   .proposition .proposition__content {
     padding: 1rem !important;
