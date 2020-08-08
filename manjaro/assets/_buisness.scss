@@ -1,5 +1,4 @@
 .unico-rek {
-    height : 13.75rem;
     overflow : hidden;
     
     a {
@@ -11,17 +10,13 @@
         border-radius : 1rem;
     }
 }
-
-.unico-rek__second {
+.rek-main__first {
+    height : 13.75rem;
+}
+.rek-main__second {
     height : 24.375rem;
-    overflow : hidden;
-    
-    a {
-        height: inherit;
-    }
-    .rek__img {
-        width : 100%;
-        height : 100%;
-        border-radius : 1rem;
-    }
+}
+
+.rek-category__first {
+
 }
