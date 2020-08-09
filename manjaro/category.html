@@ -139,21 +139,22 @@
             <div class="row m-0 unico-margin__y-small">
                 <div class="col-3 p-0">
                     <div class="filter__container">
-                        <div class="filter filter__category">
-                            <a href="javascript:void(0)" class="filter__header">
+                        <div class="filter filter__category accordion" id="filterCategoryAccordion">
+                            <a href="javascript:void(0)" class="filter__header" data-toggle="collapse" data-target="#filterCategoryCollapse" aria-expanded="true" aria-controls="filterCategoryCollapse">
                                 <h3 class="filter__title m-0">კატეგორია</h3>
                                 <i class="uil uil-angle-up"></i>
                             </a>
-                            <input type="text" class="filter__search" placeholder="ძებნა">
-                            <a class="filter__back" href="javascript:void(0)"><i class="uil uil-arrow-left"></i>უკან</a>
-                            <div class="filter__submits">
-                                <div class="submit__big ">
-                                    <input class="" type="checkbox" id="submit-1">
-                                    <label class="" for="submi-1">ელექტრონიკა</label>
-                                </div>
-                                <div class="submit__small form-check">
-                                    <input class="form-check-input" type="checkbox" id="submit-1">
-                                    <label class="form-check-label" for="submi-1">მობილური ტელეფონები</label>
+                            <div id="filterCategoryCollapse" class="collapse show" data-parent="#filterCategoryAccordion">
+                                <input type="text" class="filter__search" placeholder="ძებნა">
+                                <a class="filter__back" href="javascript:void(0)"><i class="uil uil-arrow-left"></i>უკან</a>
+                                <div class="filter__submits">
+                                    <a class="submit" href="javascript:void(0)"><span class="submit__checkbox"></span>ელექტრონიკა</a>
+                                    <div class="sub-submit__container">
+                                        <a class="submit submit__small" href="javascript:void(0)"><span class="submit__checkbox"></span>მობილური ტელეფონები</a>
+                                        <a class="submit submit__small" href="javascript:void(0)"><span class="submit__checkbox"></span>მობილური ტელეფონების აქსესუარები</a>
+                                        <a class="submit submit__small" href="javascript:void(0)"><span class="submit__checkbox"></span>ჭკვიანი საათები და სამაჯურები</a>
+                                        <a class="submit submit__small" href="javascript:void(0)"><span class="submit__checkbox"></span>სტაციონალური ტელეფონები</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

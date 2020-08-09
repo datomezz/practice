@@ -44,7 +44,6 @@
 }
 .filter__category {
     background : #fff;
-    padding : 45px 38px 38px 42px;
 }
 
 .filter {
@@ -65,6 +64,11 @@
         i {
             font-size : 1.5rem;
             color : #D6DBE0;
+            transition : .3s ease;
+        }
+
+        .icon__rotate {
+            transform : rotate(180deg);
         }
     }
 
@@ -75,24 +79,65 @@
         width : 100%;
         padding : 7.5px 1rem;
         margin : 20px 0;
+        outline : none;
     }
 
     .filter__back {
         color : $lightBlue;
         font-size : 14px;
-        @include flex(row, center, center);
+        @include flex(row, flex-start, center);
 
         i {
-            font-size : 1.2rem;
+            font-size : 1.5rem;
+            margin-left : -.55rem;
         }
     }
 
     .filter__submits {
-        
-        .submit__big {
+        @include flex(column, flex-start, flex-start);
+        margin-top : 10px;
+       
+        .submit {
             @include flex(row, flex-start, center);
+
+            font-family : Firago-medium;
+            margin-bottom : 5px;
+            font-size : 1.125rem;
+
+            .submit__checkbox {
+                display : inline-block;
+                width : 1rem;
+                height : 1rem;
+                border : thin solid $lightBlue;
+                background : #fff;
+                border-radius : 4px;
+                margin-right : 10px;
+            }
+
+            .checkbox__active {
+                background : $lightBlue;
+                border-color : $lightBlue !important;
+            }
         }
 
+        .submit__small {
+            font-size : 1rem;
+
+            .submit__checkbox {
+                width : 2px;
+                height : 1rem;
+                border-color : #D6DBE0;
+            }
+        }
+
+        .submit__active {
+            color : $lightBlue;
+        }
+
+        .sub-submit__container {
+            margin-top : 8px;
+            margin-left : 15px;
+        }
     }
 
 

@@ -211,3 +211,29 @@ if(countDownElements.length > 0) {
     
     }, 1000);
 }
+
+//CATEGORY
+
+let ckeckboxes = document.querySelectorAll(".submit__checkbox");
+let submits = document.querySelectorAll(".submit");
+
+if(submits.length > 0) {
+    for(let i = 0; i < submits.length; i++) {
+        submits[i].onclick = function() {
+            submits[i].classList.toggle("submit__active");
+            ckeckboxes[i].classList.toggle("checkbox__active");
+
+        }
+    }
+}
+
+let filterHeaders = document.querySelectorAll(".filter__header");
+let filterHeadersIcons = document.querySelectorAll(".filter__header i");
+
+if(filterHeaders.length > 0) {
+    for(let i = 0; i < filterHeaders.length; i++) {
+        filterHeaders[i].onclick = function() {
+            filterHeadersIcons[i].classList.toggle("icon__rotate");
+        }
+    }
+}
