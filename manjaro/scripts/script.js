@@ -237,3 +237,22 @@ if(filterHeaders.length > 0) {
         }
     }
 }
+
+let colors = document.querySelectorAll(".color");
+
+if(colors.length > 0) {
+    colors.forEach(element => {
+        element.onclick = function() {
+            element.classList.toggle("color__active");
+        }
+    });
+}
+
+$('.slider-history').slick({
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dotsClass : "slider-history__dots",
+    prevArrow : "",
+    nextArrow : ""
+});
