@@ -248,6 +248,21 @@ if(colors.length > 0) {
     });
 }
 
+let filterSwitcher = document.querySelector(".filter-main__header");
+let filterMain = document.querySelector(".filter-main");
+
+if(filterSwitcher) {
+
+    filterSwitcher.onclick = function() {
+        if(filterSwitcher.getAttribute("aria-expanded") === "true"){
+            filterMain.className = "filter filter-main main__action";
+        } else {
+            filterMain.className = "filter filter-main";
+        }
+    }
+
+}
+
 $('.slider-history').slick({
     dots: true,
     slidesToShow: 1,

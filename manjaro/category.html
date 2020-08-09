@@ -136,9 +136,15 @@
                     <span class="search-result__count">სულ მოიძებნა 13,314 შედეგი</span>
                 </div>
             </div>
-            <div class="row m-0 unico-margin__y-small">
+            <div class="row m-0 unico-margin__y-small filter__margin">
                 <div class="col-xl-3 col-lg-4 col-md-5 col-12 p-0">
-                    <div class="filter__container">
+                    <div class="filter filter-main accordion d-md-none d-flex" id="filterMainAccordion">
+                        <a class="filter-main__header" href="javascript:void(0)" data-toggle="collapse" data-target="#filterMainCollapse" aria-expanded="true" aria-controls="filterMainCollapse">
+                            <h3 class="filter__title m-0">ფილტრაცია</h3>
+                            <i class="uil uil-filter"></i>
+                        </a>
+                    </div>
+                    <div class="filter__container collapse show" id="filterMainCollapse" data-parent="#filterMainAccordion">
                         <div class="filter filter__category accordion" id="filterCategoryAccordion">
                             <a href="javascript:void(0)" class="filter__header" data-toggle="collapse" data-target="#filterCategoryCollapse" aria-expanded="true" aria-controls="filterCategoryCollapse">
                                 <h3 class="filter__title m-0">კატეგორია</h3>
@@ -178,6 +184,7 @@
                                 <i class="uil uil-angle-up"></i>
                             </a>
                             <div id="filterYearCollapse" class="w-100 collapse show" data-parent="#filterYearAccordion">
+                                <input class="w-100" type="range" min="2008" max="2020">
                                 <div class="values__container">
                                     <span class="values__range">2008</span>
                                     <span class="values__separator">-</span>

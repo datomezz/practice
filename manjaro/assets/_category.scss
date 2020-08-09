@@ -64,7 +64,7 @@
         border-radius : 0 0 2rem 2rem;
     }
 
-    .filter__header {
+    .filter__header, .filter-main__header {
         width : 100%;
         margin-bottom : 20px;
         @include flex(row, space-between, center);
@@ -78,6 +78,7 @@
             font-size : 1.5rem;
             color : #D6DBE0;
             transition : .3s ease;
+            
         }
 
         .icon__rotate {
@@ -196,6 +197,28 @@
     }
 }
 
+.filter-main {
+    border: 1px solid #D6DBE04D;
+    background : #FFFFFF;
+    height : 55px;
+    padding : 0;
+    border-radius : 28px !important;
+    padding : 19px 32px 17px 30px;
+
+    @include flex(row, flex-start, center);
+
+    .filter-main__header {
+        margin : 0;
+
+        @include flex(row, space-between, center);
+
+        i {
+            color : #000;
+        }
+    }
+}
+
+//CATEGORY
 .category__filter {
     height : 75px;
     background : #fff;
@@ -430,6 +453,11 @@
         }
     }
 
+    //FILTER
+    .filter__container {
+        border-radius : 0;
+        border-top : none;
+    }
     .filter {
         padding : 5.5% 9% 9% 9.6%;
 
@@ -471,11 +499,34 @@
         }
     }
 
+    .filter-main {
+        padding-top : 0;
+        padding-bottom : 0;
+        border-radius : 2rem 2rem 0 0 !important;
+        border-bottom : none;
+        transition : .4s ease;
+        .filter-main__header {
+            
+            .filter__title {
+                font-size : 1rem !important;
+            }
+        }
+    }
+
+    .filter__margin {
+        margin : 30px 0 !important;
+    }
+
+    .main__action {
+        border: 1px solid #D6DBE04D !important;
+        border-radius : 28px !important;
+    }
+
+    //CATEGORY
     .category__filter {
         padding : 0;
         background : transparent;
         border : none;
-        margin-top : 27px;
 
         .switchers__link {
             i {
