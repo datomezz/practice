@@ -1,22 +1,26 @@
 class Component {
     constructor(selector) {
-        this.$el = document.querySelector(selector);
+        this.$el = document.querySelectorAll(selector);
+        console.log(this.$el.length, "component");
     }
 
     toggle() {
         let count = 1;
-        console.log(this.$el, count);
-        this.$el.onclick = function() {
-
-            if(count % 2) {
-                this.style.height = "2rem";
-                count++;
-            } else {
-                this.style.height = "4rem";
-                count++;
-            }
+        if(this.$el.length > 0) {
+            this.$el.forEach(item => {
+                item.onclick = function() {
+                    if(count % 2) {
+                        item.style.height  = "2rem";
+                        count++;
+                    } else {
+                        item.style.height = "4rem";
+                        count++;
+                    }
+                }
+            });
         }
     }
+
     hide() {
         this.$el.style.display = "none";
     }
@@ -24,18 +28,18 @@ class Component {
     show() {
         this.$el.style.display = "flex";
     }
-
-
 }
 
-let y = new Component(".box");
+// let y = new Component(".box");
 
 class Box extends Component {
     constructor(options) {
         super(options.selector);
 
-        this.$el.style.width = this.$el.style.height = options.size + "rem";
-        this.$el.style.background = options.background;
+        for(let i = 0; i < this.$el.length; i++) {
+            this.$el[i].style.width = this.$el[i].style.height = options.size + "rem";
+            this.$el[i].style.background = options.background;
+        }
     }
 }
 
@@ -51,7 +55,9 @@ class Circle extends Box {
     constructor(options) {
         super(options);
 
-        this.$el.style.borderRadius = "50%";
+        for(let i = 0; i < this.$el.length; i++) {
+            this.$el[i].style.borderRadius = "50%";
+        }
     }
 }
 
