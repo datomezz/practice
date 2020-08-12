@@ -1,7 +1,6 @@
 class Component {
     constructor(selector) {
         this.$el = document.querySelectorAll(selector);
-        console.log(this.$el.length, "component");
     }
 
     toggle() {
@@ -21,6 +20,16 @@ class Component {
         }
     }
 
+    createBox() {
+        let element = `<div class="box"></div>`;
+        document.querySelector("body").innerHTML += element;
+    }
+
+    createCircle() {
+        let element = `<div class="circle"></div>`;
+        document.querySelector("body").innerHTML += element;
+    }
+
     hide() {
         this.$el.style.display = "none";
     }
@@ -29,8 +38,6 @@ class Component {
         this.$el.style.display = "flex";
     }
 }
-
-// let y = new Component(".box");
 
 class Box extends Component {
     constructor(options) {
