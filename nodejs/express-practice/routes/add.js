@@ -17,4 +17,10 @@ router.post("/", async (req, res) => {
     res.redirect("/");
 });
 
+router.post("/re-write", async (req, res) => {
+
+    await CreateUser.reWrite(req.body.id, req.body.name, req.body.surname);
+    res.redirect("/");
+});
+
 module.exports = router;

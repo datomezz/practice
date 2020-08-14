@@ -5,3 +5,23 @@ body {
 .active {
     background : rgba(0, 0 , 0, .1);
 }
+
+.article__container {
+    width : 20rem;
+    border : 1px dashed green;
+    margin-bottom : 1rem;
+
+    display : flex;
+    flex-direction : column;
+    background : #fff;
+
+    .article__text {
+        border : 1px dotted black;
+    }
+
+    .article__actions {
+        a {
+            margin-right : 1rem;
+        }
+    }
+}

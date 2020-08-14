@@ -1,6 +1,13 @@
 <h1>Users</h1>
 <ul>
     {{#each users}}
-        <h6>{{this.name}} {{this.surname}}</h6>
+        <div class="article__container">
+            <div class="article__text">Name : <span>{{this.name}}</span></div>
+            <div class="article__text">Surname : <span>{{this.surname}}</span></div>
+            <div class="article__actions">
+                <a href="/id={{this.id}}">LoadMore</a>
+                <a href="/edit/id={{this.id}}" style="color : tomato">Edit</a>
+            </div>
+        </div>
     {{/each}}
 </ul>

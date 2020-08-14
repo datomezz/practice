@@ -3,6 +3,28 @@ body {
 }
 
 .active {
-  color: darkblue;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.article__container {
+  width: 20rem;
+  border: 1px dashed green;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+}
+
+.article__container .article__text {
+  border: 1px dotted black;
+}
+
+.article__container .article__actions a {
+  margin-right: 1rem;
 }
 /*# sourceMappingURL=main.css.map */

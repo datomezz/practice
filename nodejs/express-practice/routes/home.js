@@ -12,10 +12,23 @@ router.get("/", async (req, res) => {
     });
 });
 
-router.get("/id=:id&name=:name", async (req, res) => {
+router.get("/id=:id", async (req, res) => {
     const users = await CreateUser.getById(req.params.id);
-    console.log(req.params);
-    res.render("index");
+
+    res.render("post", {
+        content : users
+    });
+});
+
+router.get("/edit/id=:id", async (req, res) => {
+    console.log(req.params.id);
+    const users = await CreateUser.getById(req.params.id);
+    console.log('users', users);
+
+    res.render("edit", {
+        title : "Edit Page",
+        content : users
+    });
 });
 
 module.exports = router;

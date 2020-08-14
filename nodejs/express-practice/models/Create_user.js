@@ -35,8 +35,6 @@ class CreateUser {
                 }
             );
         });
-
-        console.log(users);
     }
 
 
@@ -59,7 +57,29 @@ class CreateUser {
 
     static async getById(id) {
         const content = await CreateUser.getAll();
-        return content.find(item => item.id === id);
+        return content.find(item => item.id = id);
+    }
+
+    static async reWrite(id, name, surname) {
+        const content = await CreateUser.getAll();
+        let idx = content.findIndex(item => item.id);
+        
+        content[idx].name = name;
+        content[idx].surname = surname;
+
+        return new Promise((resolve, reject) => {
+            fs.writeFile(
+                path.join(__dirname, "..", "data", "users.json"),
+                JSON.stringify(content),
+                (err) => {
+                    if(err) {
+                        reject(err);
+                    } else {
+                        resolve();
+                    }
+                }
+            );
+        });
     }
 }
 
