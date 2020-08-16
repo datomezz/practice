@@ -4,17 +4,19 @@ let date = new Date().getTime();
 
 
 class CreateUser { 
-    constructor(name, surname) {
+    constructor(name, surname, price) {
         this.id = date;
         this.name = name,
         this.surname = surname;
+        this.price = price;
     }
 
     toJSON() {
         return {
             name : this.name,
             surname : this.surname,
-            id : this.id
+            id : this.id,
+            price : this.price
         }
     }
 

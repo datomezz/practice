@@ -1,12 +1,17 @@
 <h1>Users</h1>
 <ul>
+    {{#each db}}
+        <span>{{this.name}} db </span>
+    {{/each}}
     {{#each users}}
         <div class="article__container">
             <div class="article__text">Name : <span>{{this.name}}</span></div>
             <div class="article__text">Surname : <span>{{this.surname}}</span></div>
+            <div class="article__text">Price : <span>{{this.price}}</span></div>
             <div class="article__actions">
                 <a href="/id={{this.id}}">LoadMore</a>
                 <a href="/edit/id={{this.id}}" style="color : tomato">Edit</a>
+                <button type="submit" data-id="{{this.id}}" class="cart__submit waves-effect waves-light btn-small">Add to Cart</button>
             </div>
         </div>
     {{/each}}

@@ -1,15 +1,31 @@
 const express = require("express");
 const router = express.Router();
-const con = require("./mysql");
 const CreateUser = require("../models/Create_user");
+const Dbman = require("../models/Dbman");
 
 router.get("/", async (req, res) => {
     const users = await CreateUser.getAll();
+
+    const db = await Dbman.selectAll("express");
+
+    const insert = await Dbman.insertInto({
+        table : "express(name, surname)", 
+        values : "'pizdec', 'podkralsya'"
+    });
+
+    const update = await Dbman.update({
+        table : "express",
+        set : "name = 'eminem'",
+        where : "name = 'alakh'"
+    });
+
     res.render("index", {
         title : "Main",
         navbarActive : true,
-        users : users
+        users : users,
+        db : db
     });
+
 });
 
 router.get("/id=:id", async (req, res) => {
