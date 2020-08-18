@@ -270,7 +270,6 @@
             //ADDRESS
             .profile-address__article {
                 width : 74%;
-                height : 219px;
                 border: 1px dashed #D6DBE0;
                 border-radius: 10px;
                 padding : 30px;
@@ -278,15 +277,129 @@
 
                 @include flex(row, space-between, flex-start);
 
-                .profile-adress__edit {
-                    font-family : Firago-medium, unicons;
+                .profile-address__edit {
+                    font-family : Firago-bold, unicons;
+                    color : #B7BBBF;
+
+                    @include flex(row, center, center);
                     &::before {
                         content : "\e990";
                         font-size : 1.2rem;
                         margin-right : .5rem;
                     }
                 }
+
+                .profile-address__body {
+                    @include flex(column, center, center);
+
+                    .profile-address__locIcon {
+                        font-family : Firago-bold, unicons;
+                        width : 110px;
+                        height : 110px;
+                        border: 1px dashed #D6DBE0;
+                        border-radius : 50%;
+                        margin-bottom : 30px;
+
+                        @include flex(row, center, center);
+
+                        &::before {
+                            font-size : 3rem;
+                            color : $lightBlue;
+                        }
+
+                    }
+
+                    .home__icon {
+                        &::before {
+                            content : "\e9a4";
+                        }
+                    }
+
+                    .loc__icon {
+                        &::before {
+                            content : "\e8e2";
+                        }
+                    }
+
+                    .profile-address__street {
+                        font-family : Firago-bold;
+                        text-align : center;
+                    }
+                }
+
+                .profile-address__radio {
+                    @include flex(row, flex-start, center);
+
+                    .profile-address__label {
+                        font-family : Firago-bold;
+                        margin : 0;
+                        margin-right : 10px;
+                    }
+
+                    .input__radio {
+                        width : 1rem;
+                        height : 1rem;
+                    }
+                }
             }
+        }
+
+        .profile-button__container {
+            width : 100%;
+            text-align : center;
+            padding : 2% 0 3.4% 0;
+
+            .profile__button {
+                padding : 1.35% 5%;
+                background : $lightBlue;
+                border: 1px solid #116BE5;
+                border-radius: 28px;
+                font-family : Firago-medium;
+                color : #fff;
+                transition : .3s ease;
+
+                &:hover {
+                    background : #fff;
+                    color : $lightBlue;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width : 1601px) {
+    .profile-address__article {
+        width : 100% !important;
+
+        .profile-address__body {
+
+            .profile-address__street {
+                font-size : 13px;
+            }
+        }
+    }
+}
+
+@media (max-width : 1401px) {
+    .profile-address__article {
+
+        .profile-address__street, .profile-address__edit, .profile-address__label {
+            font-size : 13px;
+        }
+    }
+    
+    .profile-button__container {
+        .profile__button {
+            font-size : 13px;
+        }
+    }
+}
+
+@media (max-width : 992px) {
+    .profile-content__container {
+        .profile-address__locIcon {
+            width : 75px !important;
+            height : 75px !important;
         }
     }
 }
@@ -326,6 +439,34 @@
 
             .profile__button {
                 width : 100%;
+            }
+        }
+    }
+
+    //ADRESS
+
+    .profile-content__container {
+
+        .profile-address__locIcon {
+            width : 110px !important;
+            height : 110px !important;
+        }
+
+        .profile-address__article {
+            flex-direction : column !important;
+            align-items : center !important;
+
+            .profile-address__body {
+                margin : 30px 0;
+            }
+        }
+
+        .profile-button__container {
+            margin-bottom : 15px;
+
+            .profile__button {
+                width : 100%;
+                padding : 20px 0 !important;
             }
         }
     }

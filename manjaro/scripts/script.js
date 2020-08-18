@@ -339,7 +339,7 @@ class Fetch {
 
     init() {
         document.addEventListener("DOMContentLoaded", async function() {
-            const fetch = await new Fetch().getProfileModal(1, "profile-modal__container");
+            const fetch = await new Fetch().getProfileModal(0, "profile-modal__container");
             const profileInput = await new Dropdown("profile-input__select").init();
         });
     }

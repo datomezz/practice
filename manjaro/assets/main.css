@@ -10,6 +10,11 @@
 }
 
 @font-face {
+  font-family: Firago-bold;
+  src: url("fonts/FiraGO-Bold.ttf");
+}
+
+@font-face {
   font-family: Myriad;
   src: url("fonts/MyriadGEOMtavruliMedium.ttf");
 }
@@ -2757,7 +2762,6 @@ a:hover {
 
 .profile-content__container .profile-content__group .profile-content__body .profile-address__article {
   width: 74%;
-  height: 219px;
   border: 1px dashed #D6DBE0;
   border-radius: 10px;
   padding: 30px;
@@ -2777,14 +2781,158 @@ a:hover {
           align-items: flex-start;
 }
 
-.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-adress__edit {
-  font-family: Firago-medium, unicons;
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__edit {
+  font-family: Firago-bold, unicons;
+  color: #B7BBBF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-adress__edit::before {
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__edit::before {
   content: "\e990";
   font-size: 1.2rem;
   margin-right: .5rem;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__body .profile-address__locIcon {
+  font-family: Firago-bold, unicons;
+  width: 110px;
+  height: 110px;
+  border: 1px dashed #D6DBE0;
+  border-radius: 50%;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__body .profile-address__locIcon::before {
+  font-size: 3rem;
+  color: #116BE5;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__body .home__icon::before {
+  content: "\e9a4";
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__body .loc__icon::before {
+  content: "\e8e2";
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__body .profile-address__street {
+  font-family: Firago-bold;
+  text-align: center;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__radio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__radio .profile-address__label {
+  font-family: Firago-bold;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-address__article .profile-address__radio .input__radio {
+  width: 1rem;
+  height: 1rem;
+}
+
+.profile-content__container .profile-content__group .profile-button__container {
+  width: 100%;
+  text-align: center;
+  padding: 2% 0 3.4% 0;
+}
+
+.profile-content__container .profile-content__group .profile-button__container .profile__button {
+  padding: 1.35% 5%;
+  background: #116BE5;
+  border: 1px solid #116BE5;
+  border-radius: 28px;
+  font-family: Firago-medium;
+  color: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.profile-content__container .profile-content__group .profile-button__container .profile__button:hover {
+  background: #fff;
+  color: #116BE5;
+}
+
+@media (max-width: 1601px) {
+  .profile-address__article {
+    width: 100% !important;
+  }
+  .profile-address__article .profile-address__body .profile-address__street {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 1401px) {
+  .profile-address__article .profile-address__street, .profile-address__article .profile-address__edit, .profile-address__article .profile-address__label {
+    font-size: 13px;
+  }
+  .profile-button__container .profile__button {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  .profile-content__container .profile-address__locIcon {
+    width: 75px !important;
+    height: 75px !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -2813,6 +2961,29 @@ a:hover {
   }
   .profile-content__group .profile-input__group .profile__button {
     width: 100%;
+  }
+  .profile-content__container .profile-address__locIcon {
+    width: 110px !important;
+    height: 110px !important;
+  }
+  .profile-content__container .profile-address__article {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+  }
+  .profile-content__container .profile-address__article .profile-address__body {
+    margin: 30px 0;
+  }
+  .profile-content__container .profile-button__container {
+    margin-bottom: 15px;
+  }
+  .profile-content__container .profile-button__container .profile__button {
+    width: 100%;
+    padding: 20px 0 !important;
   }
 }
 
