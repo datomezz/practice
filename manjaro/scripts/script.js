@@ -271,3 +271,134 @@ $('.slider-history').slick({
     prevArrow : "",
     nextArrow : ""
 });
+
+class Dropdown {
+    constructor(el) {
+        this.$el = document.querySelector(`.${el}`);
+    }
+
+    init(ajax) {
+        this.$el.onclick = function() {
+            let title = this.children[0];
+            let dropdown = this.children[1];
+
+            dropdown.classList.toggle("d-none");
+            title.classList.toggle("icon__rotate");
+            console.log(this);
+
+            for(let i = 0; i < dropdown.children.length; i++) {
+                dropdown.children[i].onclick = function() {
+                    let currentTitleText = title.innerText;
+                    let currentTitleId = title.dataset.id; 
+                
+                    title.innerText = this.innerText;
+                    title.dataset.id = this.dataset.id;
+                    this.innerText = currentTitleText;
+                    this.dataset.id = currentTitleId;
+
+                    if(ajax) {
+                        const ajax = new Fetch().getProfileModal(Number(title.dataset.id), "profile-modal__container");
+                    }
+                }
+            }
+        }
+    }
+}
+
+class ClassAdder {
+    constructor(el, cls) {
+        this.$el = el;
+        this.class = cls;
+    }
+
+    toggleClass(ajax) {
+        let elements = document.querySelectorAll("." + this.$el);
+        let elClass = this.class;
+
+        elements.forEach(item => {
+            item.onclick = function() {
+                for(let i = 0; i < elements.length; i++) {
+                    elements[i].classList.remove("profile__active");
+                }
+
+                item.classList.toggle(elClass);
+
+                if(ajax) {
+                    const ajax = new Fetch().getProfileModal(Number(item.dataset.id), "profile-modal__container");
+                }
+            }
+        });
+    }
+}
+
+
+class Fetch {
+    constructor () {
+
+    }
+
+    init() {
+        document.addEventListener("DOMContentLoaded", async function() {
+            const fetch = await new Fetch().getProfileModal(1, "profile-modal__container");
+            const profileInput = await new Dropdown("profile-input__select").init();
+        });
+    }
+
+    async getProfileModal(dataset, modalContainer) {
+        let att = modalContainer;
+        let container = document.querySelector("." + att);
+    
+        switch (dataset) {
+            case 0 : 
+                await fetch("../views/profile/_personal.html")
+                .then(response => response.text())
+                .then(async html => {
+                    container.innerHTML = html;
+                    const profileInput = await new Dropdown("profile-input__select").init();
+                })
+                .catch(err => console.error(err));
+            break;
+            case 1 :
+                await fetch("../views/profile/_address.html")
+                .then(response => response.text())
+                .then(html => {
+                    container.innerHTML = html;
+                })
+                .catch(err => console.error(err));
+            break;
+            case 2 : 
+                await fetch("../views/profile/_referral.html")
+                .then(response => response.text())
+                .then(html => {
+                    container.innerHTML = html;
+                })
+                .catch(err => console.error(err));
+            break;
+            case 3 :
+                await fetch("../views/profile/_history.html")
+                .then(response => response.text())
+                .then(html => {
+                    container.innerHTML = html;
+                })
+                .catch(err => console.error(err));
+            break;
+        }
+    }
+
+}
+
+const profile = document.querySelector(".profile-panel__container");
+
+if(profile) {
+    const profileDropdown = new Dropdown("profile__selected").init(true);
+    const profilePage = new Fetch().init();
+    const profileToggle = new ClassAdder("profile-panel__link", "profile__active").toggleClass(true);
+}
+
+const filter = document.querySelector(".filter-dropdown__container");
+
+if(filter) {
+    const filterDropdown = new Dropdown("filter-dropdown__container").init();
+}
+
+

@@ -1,0 +1,332 @@
+.profile-panel__container {
+    background : #FFFFFF;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px #6666C10D;
+
+    .profile-panel__header {
+        @include flex(column, center, center);
+        padding : 60px 0;
+
+        .profile__avatar {
+            width : 130px;
+            height : 130px;
+            border-radius : 50%;
+        }
+
+        .profile-panel__name {
+            margin-top : 18px;
+            font-family : Firago-medium;
+        }
+    }
+
+    .profile-panel__body {
+        @include flex(column, flex-start, flex-start);
+
+        .profile-panel__link {
+            width : 100%;
+            height : 77px;
+            font-family : Myriad;
+            padding-left : 40px;
+            border-top : 1px solid #D6DBE0;
+            transition : .3s ease;
+            position : relative;
+
+            @include flex(row, flex-start, center);
+
+            &:hover {
+                color : $lightBlue;
+            }
+
+        }
+
+        .profile__active {
+            color : $lightBlue;
+
+            &::before {
+                content : "";
+                display : block;
+                background : $lightBlue;
+                width : 2px;
+                height : 16px;
+
+                position : absolute;
+                left : 0;
+            }
+        }
+
+        .profile__logout {
+            color : $unicoRed;
+
+            &:hover {
+                color: $unicoRed;
+                opacity : .7;
+            }
+        }
+    }
+
+    .profile-panel__body-mobile {
+        padding-bottom : 30px;
+        @include flex(row, space-around, center);
+
+        .profile__select {
+            padding : 16px 20px;
+            border: 1px solid #D6DBE0;
+            border-radius: 23px;
+            outline : none;
+
+            &::before {
+                padding-right : 2rem;
+            }
+
+            .profile__option {
+                display : block;
+                background : #FFFFFF;
+                padding : 16px 20px !important;
+            }
+        }
+
+        .profile__selected {
+
+            @include flex(column, flex-start, flex-start);
+
+            position: relative;
+
+            .profile__option-main {
+                width : 245px;
+                border: 1px solid #D6DBE0;
+                border-radius: 50px;
+                outline : none;
+                padding : 13px 20px;
+                color : #223549;
+                position : relative;
+                font-size : 12px;
+
+                &::after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight : 900;
+                    content : "\f0d7";
+                    display : block;
+                    font-size : 1.5rem;
+                    color: #D6DBE0;
+                    transition : .3s ease;
+                    
+                    position : absolute;
+                    top : 50%;
+                    transform : translate(0, -50%);
+                    right : 8%;
+                }
+            }
+
+            .icon__rotate {
+
+                &::after {
+                    transform : rotate(-180deg);
+                    top : 10%;
+                }
+            }
+
+            .profile__dropdown {
+                @include flex(column, flex-start, flex-start);
+                width : 100%;
+                border : 1px solid #D6DBE0;
+                background : #FFFFFF;
+                padding-bottom : .8rem;
+                
+                position : absolute;
+                top : 45px;
+                z-index : 10;
+
+                .profile__option {
+                    width : 100%;
+                    font-family : Myriad;
+                    font-size : 12px;
+                    padding : .5rem 2rem;
+                    transition : .3 ease;
+
+                    &:hover {
+                        background : $lightBlue;
+                        color : #fff;
+                    }
+                }
+            }
+        }
+
+        .profile__logout {
+            width : 45px;
+            height : 45px;
+            border-radius : 50%;
+            background : $unicoRed;
+
+            transform : rotate(180deg);
+
+            @include flex(row, center, center);
+
+            i {
+                font-size : 1.5rem;
+                color : #fff;
+            }
+        }
+    }
+}
+
+.profile-modal__container {
+    // min-height : 720px;
+    background : #fff;
+    box-shadow: 0px 3px 6px #6666C10D;
+    border-radius: 15px;
+}
+
+.profile-content__container {
+    @include flex(column, flex-start, flex-start);
+    padding : 35px 25px 0 25px;
+
+    .profile-content__group {
+        margin-bottom : 35px;
+        width : 100%;
+
+        &:last-child {
+            margin-bottom : 0;
+        }
+
+        .profile-content__title {
+            font-family : Myriad;
+            font-size : 24px;
+            margin-bottom : 30px;
+        }
+
+        .profile-content__body {
+            @include flex(row, space-between, flex-start);
+            flex-wrap : wrap;
+     
+            .profile-input__group {
+                @include flex(column, flex-start, flex-start);
+                margin-bottom : 30px;
+
+                .profile__label {
+                    font-family : Firago-medium;
+                }
+
+                .profile__input {
+                    width : 365px;
+                    height : 55px;
+                    border: 1px solid #D6DBE0;
+                    border-radius: 100px;
+                    padding : 0 5%;
+                    color: rgba(34, 53, 73, .6);
+                    outline : none;
+                }
+
+                .profile-input__select {
+                    width : 365px;
+                    height : 55px;
+                    border: 1px solid #D6DBE0;
+                    border-radius: 100px;
+                    padding : 0 5%;
+                    color: rgba(34, 53, 73, .6);
+                    outline : none;
+                    position : relative;
+
+                    @include flex(column, center, flex-start);
+
+                    .profile__dropdown {
+                        position : absolute;
+                        top : 75%;
+                        left : 0;
+                        z-index : 10;
+                        
+                        width : 100%;
+                        border : 1px solid #D6DBE0;
+                        background : #fff;
+
+                        @include flex(column, flex-start, flex-start);
+
+                        .profile__option {
+                            width : 100%;
+                            padding : 2% 0;
+                            transition : .2s ease;
+                            &:hover {
+                                color : #fff;
+                                background : $lightBlue;
+                            }
+                        }
+                    }
+                }
+
+                .profile__button {
+                    padding : 16px 60px;
+                    background : $lightBlue;
+                    border: 1px solid #116BE5;
+                    border-radius: 28px;
+                    font-family : Firago-medium;
+                    color : #fff;
+                    transition : .3s ease;
+
+                    &:hover {
+                        background : #fff;
+                        color : $lightBlue;
+                    }
+                }
+            }
+            //ADDRESS
+            .profile-address__article {
+                width : 74%;
+                height : 219px;
+                border: 1px dashed #D6DBE0;
+                border-radius: 10px;
+                padding : 30px;
+                margin : 0 auto 20px auto;
+
+                @include flex(row, space-between, flex-start);
+
+                .profile-adress__edit {
+                    font-family : Firago-medium, unicons;
+                    &::before {
+                        content : "\e990";
+                        font-size : 1.2rem;
+                        margin-right : .5rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width : 768px) {
+    .profile-panel__container {
+        padding : 0 .5rem;
+    }
+
+    .profile-modal__container {
+        min-height : auto !important;
+
+        .profile-content__container {
+            padding-bottom : 0;
+        }
+    }
+
+    .profile-content__group {
+
+        &:last-child {
+            margin-bottom : 0;  
+        }
+
+        .profile-input__group {
+            width : 100%;
+
+            .profile__input {
+                width : 100% !important;
+                height : 45px !important;
+            }
+
+            .profile-input__select {
+                width : 100% !important;
+                height : 45px !important;
+            }
+
+            .profile__button {
+                width : 100%;
+            }
+        }
+    }
+}

@@ -75,6 +75,13 @@ a {
     margin-bottom : 5.625rem;
 }
 
+.unico-margin__top-xsmall {
+    margin-top : 1.875rem;
+}
+.unico-margin__bottom-xsmall {
+    margin-bottom : 1.875rem;
+}
+
 .unico-text__ellipsis { 
     overflow : hidden;
     white-space : nowrap;
@@ -96,6 +103,11 @@ a {
 
 .unico-modal__radius {
     border-radius : 1.6rem;
+}
+
+.unico-icons__unicons {
+    font-family : unicons;
+    font-weight : 400;
 }
 
 .unico-product__sale {

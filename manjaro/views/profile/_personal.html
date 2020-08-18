@@ -1,0 +1,60 @@
+<div class="profile-content__container">
+    <div class="profile-content__group">
+        <h1 class="profile-content__title d-md-flex d-none">პერსონალური ინფორმაცია</h1>
+        <div class="profile-content__body">
+            <div class="profile-input__group">
+                <label class="profile__label" for="pname">სახელი</label>
+                <input class="profile__input" id="pname" name="pname" type="text" placeholder="სახელი" value="გუჩი" required>
+            </div>
+            <div class="profile-input__group">
+                <label class="profile__label" for="psurname">გვარი</label>
+                <input class="profile__input" id="psurname" name="psurname" type="text" placeholder="გვარი" value="მეინი" required>
+            </div>
+            <div class="profile-input__group">
+                <label class="profile__label" for="pgender">სქესი</label>
+                <div class="profile-input__select">
+                    <a href="javascript:void(0)" data-id="0" data-gender="male" class="profile__option-main unico-text__ellipsis">მამრობითი</a>
+                    <div class="profile__dropdown d-none">
+                        <a href="javascript:void(0)" data-id="1" data-gender="female" class="profile__option">მდედრობითი</a>
+                        <a href="javascript:void(0)" data-id="2" data-gender="other" class="profile__option">სხვა</a>
+                    </div>
+                </div>
+            </div>
+            <div class="profile-input__group">
+                <label class="profile__label">სამსახურის ნომერი</label>
+                <input class="profile__input" type="tel" placeholder="სამსახურის ნომ" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value="0322705245" required>
+            </div>
+            <div class="profile-input__group">
+                <label class="profile__label">ელ-ფოსტა</label>
+                <input class="profile__input" type="email" placeholder="მეილი" value="guwap@gmail.com" required>
+            </div>
+            <div class="profile-input__group">
+                <label class="profile__label">ტელეფონის ნომერი</label>
+                <input class="profile__input" type="tel" placeholder="ტელეფონის ნომ" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" value="599665544" required>
+            </div>
+            <div class="profile-input__group w-100">
+                <button type="submit" name="profile-submit__saveinfo" class="profile__button">შენახვა</button>
+            </div>
+        </div>
+    </div>
+    <div class="profile-content__group">
+        <h1 class="profile-content__title d-md-flex d-none">პაროლის ცვლილება</h1>
+        <div class="profile-content__body">
+            <div class="profile-input__group">
+                <label class="profile__label" for="poldpass">მიმდინარე პაროლი</label>
+                <input class="profile__input" id="poldpass" name="psurname" type="password" required>
+            </div>
+            <div class="profile-input__group">
+                <label class="profile__label" for="psurname">ახალი პაროლი</label>
+                <input class="profile__input" id="psurname" name="psurname" type="password" required>
+            </div>
+            <div class="profile-input__group">
+                <label class="profile__label" for="psurname">გაიმეორეთ პაროლი</label>
+                <input class="profile__input" id="psurname" name="psurname" type="password" required>
+            </div>
+            <div class="profile-input__group w-100">
+                <button type="submit" name="profile-submit__savepass" class="profile__button">შენახვა</button>
+            </div>
+        </div>
+    </div>
+</div>

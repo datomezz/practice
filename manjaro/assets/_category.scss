@@ -228,13 +228,46 @@
 
     @include flex(row, space-between, center);
 
-    .filter-dropdown {
+    .filter-dropdown__container {
+        position : relative;
 
         .filter-dropdown__title {
             font-family : Firago-medium;
+            transition : .3s ease;
 
-            i {
-                font-size : 1.3rem;
+            &:hover {
+                color : $lightBlue;
+            }
+
+            &::before {
+                content : "\e9ae";
+                font-family : unicons;
+                font-weight : 400;
+                font-size : 1.2rem;
+                margin-right : .5rem;
+            }
+        }
+
+        .filter-dropdown {
+            position : absolute;
+            min-width : 13rem;
+            background : #fff;
+            left : 1.5rem;
+            border : 1px solid black;
+            z-index : 10;
+
+            @include flex(column, flex-start, flex-start);
+
+            .filter-dropdown__link {
+                width : 100%;
+                padding : 3% 0;
+                transition : .2s ease;
+
+                
+                &:hover {
+                    background : $lightBlue;
+                    color : #fff;
+                }
             }
         }
     }
