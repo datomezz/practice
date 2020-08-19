@@ -2888,6 +2888,95 @@ a:hover {
   height: 1rem;
 }
 
+.profile-content__container .profile-content__group .profile-content__body .profile-referral__container {
+  width: 83%;
+  height: 70px;
+  border: 1px solid #D6DBE0;
+  border-radius: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-referral__container .referral__block {
+  width: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-referral__container .referral__block:first-child {
+  border-right: 3px solid #D6DBE0;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-referral__container .referral__block .referral__number {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #116BE5;
+  color: #fff;
+  font-family: Firago-bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-referral__container .referral__block .referral__copy::before {
+  content: "\e951";
+  color: #D6DBE0;
+  font-size: 1.5rem;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-referral__container .referral__input {
+  width: 90%;
+  height: 100%;
+  border-radius: 35px;
+  padding: 0 10px;
+  outline: none;
+  border: none;
+  color: #223549;
+  font-family: Firago-bold;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-referral__cover {
+  width: 82%;
+}
+
+.profile-content__container .profile-content__group .profile-content__body .profile-referral__cover .referral__img {
+  width: 100%;
+  height: auto;
+}
+
 .profile-content__container .profile-content__group .profile-button__container {
   width: 100%;
   text-align: center;
@@ -2907,6 +2996,163 @@ a:hover {
 
 .profile-content__container .profile-content__group .profile-button__container .profile__button:hover {
   background: #fff;
+  color: #116BE5;
+}
+
+.profile-content__container .profile-history__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-content__container .profile-history__container .profile-history__article {
+  width: 82%;
+  border-bottom: 1px solid #D6DBE0;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.profile-content__container .profile-history__container .profile-history__article:last-child {
+  border-bottom: none;
+}
+
+.profile-content__container .profile-history__container .profile-history__article .profile-history__grid {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 8px 20px;
+  grid-template: 'img title title title title logistic' 62.5px 'img date date date date logistic' 62.5px /125px 1fr 1fr 1fr 1fr 125px;
+}
+
+.profile-content__container .profile-history__container .profile-history__article .history-title__container {
+  grid-area: title;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.profile-content__container .profile-history__container .profile-history__article .history-title__container .history__title {
+  font-family: Firago-bold;
+  font-size: 18px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.profile-content__container .profile-history__container .profile-history__article .history-title__container .history__title:hover {
+  color: #116BE5;
+}
+
+.profile-content__container .profile-history__container .profile-history__article .history-img__container {
+  grid-area: img;
+  border: 1px solid #D6DBE0;
+  border-radius: 10px;
+  padding: 10%;
+}
+
+.profile-content__container .profile-history__container .profile-history__article .history-img__container .history__img {
+  width: 100%;
+  height: 100%;
+}
+
+.profile-content__container .profile-history__container .profile-history__article .history-date__container {
+  grid-area: date;
+  overflow: hidden;
+}
+
+.profile-content__container .profile-history__container .profile-history__article .history-date__container .history__date {
+  font-family: Firago-bold;
+  color: #B7BBBF;
+}
+
+.profile-content__container .profile-history__container .profile-history__article .history-logistic__container {
+  grid-area: logistic;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-content__container .profile-history__container .profile-history__article .history-logistic__container .history__logistic {
+  font-family: Firago-bold;
+  text-decoration: underline;
+  color: #116BE5;
+}
+
+.profile-content__container .profile-history__pagination {
+  width: 82%;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.profile-content__container .profile-history__pagination .history__pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.profile-content__container .profile-history__pagination .history__pagination .pagination__item {
+  font-family: Firago-bold;
+  font-size: 18px;
+  margin-right: 10px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.profile-content__container .profile-history__pagination .history__pagination .pagination__item:last-child {
+  margin-right: 0;
+}
+
+.profile-content__container .profile-history__pagination .history__pagination .pagination__item:hover {
+  color: #116BE5;
+}
+
+.profile-content__container .profile-history__pagination .pagination__active {
   color: #116BE5;
 }
 
@@ -2932,6 +3178,22 @@ a:hover {
   .profile-content__container .profile-address__locIcon {
     width: 75px !important;
     height: 75px !important;
+  }
+  .profile-history__container .profile-history__article {
+    width: 100% !important;
+  }
+  .profile-history__container .profile-history__article .profile-history__grid {
+    grid-gap: 16px 20px !important;
+    grid-template: 'title title title title' 1fr 'img img date date' 43px 'img img date date' 43px 'logistic logistic logistic logistic' 1fr /50px 50px 1fr 1fr !important;
+  }
+  .profile-history__container .profile-history__article .profile-history__grid .history-title__container .history__title {
+    font-size: 15px;
+  }
+  .profile-history__container .profile-history__article .profile-history__grid .history-date__container .history__date {
+    font-size: 13px;
+  }
+  .profile-history__pagination {
+    width: 100% !important;
   }
 }
 
@@ -2984,6 +3246,16 @@ a:hover {
   .profile-content__container .profile-button__container .profile__button {
     width: 100%;
     padding: 20px 0 !important;
+  }
+  .profile-referral__container {
+    height: 50px !important;
+  }
+  .profile-referral__cover {
+    width: 100% !important;
+    height: auto;
+  }
+  .profile-referral__cover .referral__img {
+    height: 175px !important;
   }
 }
 

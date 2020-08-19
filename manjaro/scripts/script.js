@@ -340,7 +340,11 @@ class Fetch {
     init() {
         document.addEventListener("DOMContentLoaded", async function() {
             const fetch = await new Fetch().getProfileModal(0, "profile-modal__container");
-            const profileInput = await new Dropdown("profile-input__select").init();
+
+            const $profileInputSelect = document.querySelector(".profile-input__select");
+            if($profileInputSelect) {
+                const profileInput = await new Dropdown("profile-input__select").init();
+            }
         });
     }
 
@@ -402,3 +406,9 @@ if(filter) {
 }
 
 
+function copyFunc(selector) {
+    let $el = document.querySelector("." + selector);
+    $el.select();
+    $el.setSelectionRange(0, 99999)
+    document.execCommand("copy");
+}
