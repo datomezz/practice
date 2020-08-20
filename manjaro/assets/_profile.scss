@@ -684,3 +684,9 @@
         }
     }
 }
+
+@media (max-width : 321px) {
+    .profile__option-main {
+        width : 100% !important;
+    }
+}

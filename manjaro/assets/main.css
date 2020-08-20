@@ -3259,6 +3259,12 @@ a:hover {
   }
 }
 
+@media (max-width: 321px) {
+  .profile__option-main {
+    width: 100% !important;
+  }
+}
+
 .search-result__container {
   background: #fff;
   height: 3.4375rem;

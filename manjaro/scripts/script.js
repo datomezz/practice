@@ -412,3 +412,19 @@ function copyFunc(selector) {
     $el.setSelectionRange(0, 99999)
     document.execCommand("copy");
 }
+
+function modalFetch(el, type) {
+    console.log(el.dataset.id);
+    fetch(`../views/modal/${type}.html`)
+    .then(response => response.text())
+    .then(data => {
+        const modalContent = document.querySelector(".modal-body");
+        const modalContainer = document.querySelector(".unico__modalContainer");
+
+        modalContainer.classList.add("modal-xl");
+        modalContent.innerHTML = data;
+    })
+    .catch(err => {
+        if(err) throw err;
+    });
+}
