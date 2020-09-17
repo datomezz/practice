@@ -27,4 +27,22 @@ body {
 .article__container .article__actions a {
   margin-right: 1rem;
 }
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.auth__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.auth__button {
+  width: 100%;
+}
 /*# sourceMappingURL=main.css.map */

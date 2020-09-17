@@ -25,3 +25,16 @@ body {
         }
     }
 }
+
+.p-0 {
+    padding : 0 !important;
+}
+
+.auth__container {
+    display : flex;
+    flex-direction : column;
+}
+
+.auth__button {
+    width : 100%;
+}

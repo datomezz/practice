@@ -20,3 +20,6 @@ submitCart.forEach(item => {
         });
     }
 });
+
+var instance = M.Tabs.init(document.querySelectorAll(".tabs"));
+

@@ -1,0 +1,16 @@
+@import "roboto.css";
+
+body {
+  background : transparent !important;
+}
+h1 {
+  font-family : Roboto;
+  color : #fff;
+}
+
+.slider {
+  z-index : 10 !important;
+  width : 40rem;
+  height : 10rem;
+  border : 1px solid #000;
+}

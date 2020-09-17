@@ -1,0 +1,21 @@
+@font-face {
+  font-family : Roboto;
+  src : url(03523cf578d69fa923226ff457b92d90.ttf) format("truetype");
+}
+body {
+  background : transparent !important;
+}
+h1 {
+  font-family : Roboto;
+  color : #fff;
+}
+
+.slider {
+  z-index : 10 !important;
+  width : 40rem;
+  height : 10rem;
+  border : 1px solid #000;
+}
+body {
+  background: darkRed; }
+

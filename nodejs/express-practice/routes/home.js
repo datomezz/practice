@@ -1,23 +1,12 @@
 const express = require("express");
 const router = express.Router();
+const authValidation = require("../middleware/auth");
 const CreateUser = require("../models/Create_user");
 const Dbman = require("../models/Dbman");
 
 router.get("/", async (req, res) => {
     const users = await CreateUser.getAll();
-
-    const db = await Dbman.selectAll("express");
-
-    const insert = await Dbman.insertInto({
-        table : "express(name, surname)", 
-        values : "'pizdec', 'podkralsya'"
-    });
-
-    const update = await Dbman.update({
-        table : "express",
-        set : "name = 'eminem'",
-        where : "name = 'alakh'"
-    });
+    const db = await Dbman.selectAll("test");
 
     res.render("index", {
         title : "Main",
@@ -28,7 +17,7 @@ router.get("/", async (req, res) => {
 
 });
 
-router.get("/id=:id", async (req, res) => {
+router.get("/id=:id", authValidation, async (req, res) => {
     const users = await CreateUser.getById(req.params.id);
 
     res.render("post", {
@@ -36,7 +25,7 @@ router.get("/id=:id", async (req, res) => {
     });
 });
 
-router.get("/edit/id=:id", async (req, res) => {
+router.get("/edit/id=:id", authValidation, async (req, res) => {
     console.log(req.params.id);
     const users = await CreateUser.getById(req.params.id);
     console.log('users', users);

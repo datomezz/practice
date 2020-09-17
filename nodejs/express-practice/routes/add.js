@@ -1,9 +1,10 @@
 const {Router} = require("express");
 const router = Router();
 const con = require("./mysql");
+const authValidation = require("../middleware/auth");
 const CreateUser = require("../models/Create_user");
 
-router.get("/", (req, res) => {
+router.get("/", authValidation, (req, res) => {
     res.render("add", {
         title : "Add",
         addActive : true

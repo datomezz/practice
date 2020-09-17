@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unico</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script src="https://kit.fontawesome.com/bb6e79ddfa.js"></script>
+  <link rel="stylesheet" href="assets/main.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+</head>
+
+<body>
+  <header class="container-fluid header px-lg-0 px-md-4 px-0">
+    <nav class="container unico-container p-0 px-lg-4 px-md-4 px-0">
+      <div class="header__info d-md-flex d-none justify-content-between align-items-center m-0">
+        <div class="header__questions">
+          <a class="header__text-link mr-3" href="javascript:void(0)">ჩვენ შესახებ</a>
+          <a class="header__text-link mr-3" href="javascript:void(0)">როგორ შევიძინო?</a>
+          <a class="header__text-link" href="javascript:void(0)">კონტაქტი</a>
+        </div>
+        <a class="header__text-link header__spin-link" href="javascript:void(0)">დასპინე, მოიგე</a>
+      </div>
+      <div class="header__container row justify-content-between m-0">
+        <div
+          class="header__main col-xl-4 col-lg-4 col-md-3 col-2 col-12 d-flex justify-content-xl-start justify-content-lg-start justify-content-between p-0 m-0">
+          <a class="logo__link col-xl-4 col-lg-4 col-md-7 col-4 row justify-content-md-start justify-content-center align-items-center order-md-0 order-1 p-0 pr-xl-4 pr-0 m-0"
+            href="#">
+            <img src="img/UNICO.GE.svg" class="header__logo-img" alt="logo">
+          </a>
+          <a class="header__caregory-container col-xl-6 col-lg-6 col-md-5 col-2 row justify-content-md-end justify-content-center align-items-center order-md-1 order-0 m-0 ml-xl-0 ml-lg-4"
+            href="javascript:void(0)" data-toggle="modal" data-target="#modal">
+            <div class="header__category d-flex justify-content-center align-items-center rounded-pill m-0">
+              <i class="uil uil-bars"></i>
+              <p class="category__text unico-text__ellipsis d-lg-block d-md-none d-none">ყველა კატეგორია</p>
+            </div>
+          </a>
+          <div class="col-2 d-md-none d-flex justify-content-center order-2 p-0">
+            <a href="#" class="header__search shadow-sm">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 px-2">
+          <div class="header__input d-md-flex d-none justify-content-between rounded-pill position-relative p-1">
+            <a href="#"
+              class="input__category col-lg-3 col-md-2 d-flex justify-content-center align-items-center rounded-pill p-0 m-0"
+              data-toggle="modal" data-target="#modal">
+              <i class="uil uil-apps mr-lg-1 mr-md-0"></i>
+              <p class="category__text unico-text__ellipsis d-lg-block d-md-none d-none m-0">კატეგორია</p>
+            </a>
+            <div class="col-6 row align-items-center p-0 m-0">
+              <input type="text" name="field" class="search__input w-100 px-1" placeholder="მოძებნე მარტივად">
+            </div>
+            <button name="search-submit" class="col-2 row justify-content-end align-items-center input__button p-0 m-0">
+              <div class="search__button">
+                <i class="fas fa-search"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="header__user col-4 d-md-flex d-none justify-content-between">
+          <a href="#" class="user__login col-4 d-flex align-items-center justify-content-center rounded-pill p-0"
+            data-toggle="modal" data-target="#modal">
+            <i class="uil uil-user mr-lg-1 mr-md-0"></i>
+            <p class="user__text unico-text__ellipsis d-lg-block d-md-none d-none m-0">შესვლა</p>
+          </a>
+          <a href="#" class="d-flex justify-content-center ml-lg-2 ml-0 p-0">
+            <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom" title="შედარება">
+              <i class="uil uil-exchange"></i>
+            </div>
+          </a>
+          <a href="#" class="d-flex justify-content-center p-0">
+            <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom"
+              title="დამახსოვრებული">
+              <i class="uil uil-heart"></i>
+            </div>
+          </a>
+          <a href="#" class="d-flex justify-content-center p-0">
+            <div class="user__action header__shopping-cart" data-toggle="tooltip" data-placement="bottom"
+              title="შეძენა">
+              <i class="uil uil-shopping-cart"></i>
+            </div>
+          </a>
+          <a href="#" class="d-flex justify-content-center p-0">
+            <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom"
+              title="ენის არჩევა">
+              <img src="img/ge.svg" alt="geo" class="img-fluid">
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <nav class="mobile__nav d-md-none d-flex container-fluid fixed-bottom px-4">
+      <div class="container p-0">
+        <div class="mobile__actions row justify-content-between align-items-center m-0">
+          <a href="#" class="mobile__action d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-home-alt"></i>
+            <p class="mobile__text m-0">მთავარი</p>
+          </a>
+          <a href="#" class="mobile__action d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-bars"></i>
+            <p class="mobile__text m-0">კატეგორიები</p>
+          </a>
+          <a href="#" class="mobile__action d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-exchange"></i>
+            <p class="mobile__text m-0">შედარება</p>
+          </a>
+          <a href="#"
+            class="mobile__action header__shopping-cart d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-shopping-cart"></i>
+            <p class="mobile__text m-0">კალათა</p>
+          </a>
+          <a href="#" class="user__login mobile__action d-flex flex-column justify-content-center align-items-center"
+            data-toggle="modal" data-target="#modal">
+            <i class="uil uil-user"></i>
+            <p class="mobile__text m-0">პროფილი</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <aside class="modal fade p-0" id="modal">
+    <div class="unico__modalContainer modal-dialog h-100">
+      <div class="modal-content unico-bg__gray border-1">
+        <div class="modal-body unico-modal__radius p-sm-5 p-3">
+
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <aside class="datails__fixed container-fluid d-md-flex d-none">
+    <div class="container p-0" style="max-width : 1350px">
+      <div class="d-flex justify-content-between align-items-center m-0">
+
+        <div class="fixed__article">
+          <div class="fixed__img-container">
+            <img src="img/alcatel.png" alt="alcatel" class="fixed__img" />
+          </div>
+          <div class="fixed__body">
+            <span class="fixed__title unico-text__ellipsis">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</span>
+            
+            <div class="details-rate unico-rate__container">
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+              <a href="#comments" class="rate m-0">34 შეფასება</a>
+            </div>
+
+          </div>
+        </div>
+
+        <a href="#" class="fixed__button">კალათაში დამატება<i class="uil uil-shopping-cart"></i></a>
+      </div>
+    </div>    
+  </aside>
+
+  <main class="details__main container unico-container p-0 px-xl-4 px-lg-2 px-md-1 px-1">
+    <div class="row m-0 unico-margin__y-small d-md-block d-none">
+      <div class="unico-rek rek-details__head col-12 p-0 px-xl-0 px-lg-2 px-md-2 px-2 m-0">
+        <a href="#" target="_blank">
+          <img src="img/rek-1.png" alt="rek" class="img-fluid rek__img">
+        </a>
+      </div>
+    </div>
+
+    <div class="breadcrumbs__container">
+      <ul class="breadcrumbs__list p-0">
+        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">მთავარი</a></li>
+        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">ელექტრონიკა</a></li>
+        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">მობილური ტელეფონი</a></li>
+        <li class="breadcrumbs__item"><a href="#" class="breadcrumbs__link">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</a></li>
+      </ul>
+    </div>
+    
+    <div class="details-title__container unico-margin__y-small">
+      <h2 href="#" class="details-title unico-text__ellipsis">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</h2>
+      <div class="details-title__attributes">
+        <div class="details-rate unico-rate__container">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <a href="#comments" class="rate m-0">34 შეფასება</a>
+          <span class="product__id">#3132153</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row p-0 m-0">
+      <div class="col-9 m-0 p-0 pr-4">
+        <div class="details-product__view details-product__container">
+          <div class="row p-0 m-0">
+            <div class="col-8 p-0">
+
+              <div class="details-product__slider">
+                <div class="slider-product-for">
+                  <div class="img__container">
+                    <img src="img/alcatel.png" alt="product-photo" class="slider__img">
+                  </div>
+                  <div class="img__container">
+                    <img src="img/beats.png" alt="product-photo" class="slider__img">
+                  </div>
+                  <div class="img__container">
+                    <img src="img/iphone.png" alt="product-photo" class="slider__img">
+                  </div>
+                  <div class="img__container">
+                    <img src="img/alcatel.png" alt="product-photo" class="slider__img">
+                  </div>
+                  <div class="img__container">
+                    <img src="img/beats.png" alt="product-photo" class="slider__img">
+                  </div>
+                  <div class="img__container">
+                    <img src="img/iphone.png" alt="product-photo" class="slider__img">
+                  </div>
+                </div>
+
+                <aside class="slider-product-nav">
+                  <div class="img__container">
+                    <img src="img/alcatel.png" alt="product-photo" class="slider__img">
+                  </div>
+                  <div class="img__container">
+                    <img src="img/beats.png" alt="product-photo" class="slider__img">
+                  </div>
+                  <div class="img__container">
+                    <img src="img/iphone.png" alt="product-photo" class="slider__img">
+                  </div>
+                  <div class="img__container">
+                    <img src="img/alcatel.png" alt="product-photo" class="slider__img">
+                  </div>
+                  <div class="img__container">
+                    <img src="img/beats.png" alt="product-photo" class="slider__img">
+                  </div>
+                  <div class="img__container">
+                    <img src="img/iphone.png" alt="product-photo" class="slider__img">
+                  </div>
+                </aside>
+              </div>
+
+            </div>
+            <div class="col-4 p-0 pl-4">
+              <div class="details-attributes__container">
+
+                <div class="attribute__methods">
+                  <a href="#" class="method__link"><i class="uil uil-heart"></i><span class="d-md-flex d-none">მსურს</span></a>
+                  <a href="#" class="method__link"><i class="uil uil-exchange"></i><span class="d-md-flex d-none">შედარება</span></a>
+                </div>
+
+                <span class="attributes__price">3349,99₾</span>
+
+                <div class="attributes__selectible">
+                  <div class="selectible__color">
+                    <a href="#" class="color__ball ball__red"></a>
+                    <a href="#" class="color__ball ball__purple"></a>
+                    <a href="#" class="color__ball ball__green"></a>
+                  </div>
+
+                  <div class="selectible__type">
+                    <a href="#" class="product__type type__active">64GB</a>
+                    <a href="#" class="product__type">124GB</a>
+                  </div>
+
+                </div>
+
+                <div class="details-attributes">
+
+                  <div class="attribute-item">
+                    <span class="attribute__key">მოდელი</span>
+                    <span class="attribute__value">Samsung Galaxy S20 Ultra (G988F)</span>
+                  </div>
+                  <div class="attribute-item">
+                    <span class="attribute__key">ეკრანი</span>
+                    <span class="attribute__value">6.90" (3200 x 1440) </span>
+                  </div>
+                  <div class="attribute-item">
+                    <span class="attribute__key">შიდა მეხსიარება</span>
+                    <span class="attribute__value">64GB</span>
+                  </div>
+                  <div class="attribute-item">
+                    <span class="attribute__key">ოპერატიული მეხსიერება</span>
+                    <span class="attribute__value">12GB</span>
+                  </div>
+
+                  <a href="#allAttributes" class="details-attributes__link">დეტალური მახასიათებლების ნახვა</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 p-0 m-0">
+
+        <div class="details-product__order details-product__container">
+          <div class="order__title-container">
+            <span class="order__title">სწრაფი შკვეთა</span>
+          </div>
+          <div class="order__header">
+  
+            <div class="order__buttons d-flex flex-row">
+              <div class="order__calculator">
+                <a href="javascript:void(0)" class="calculate">-</a>
+                <span class="calculate__result">5</span>
+                <a href="javascript:void(0)" class="calculate">+</a>
+              </div>
+              <button type="button" class="order__button button__buy">ყიდვა</button>
+            </div>
+  
+            <div class="order__buttons d-flex flex-column">
+              <button type="button" class="order__button button__lg button__cart">კალათაში დამატება<i class="uil uil-shopping-cart"></i></button>
+              <button type="button" class="order__button button__lg button__installment">განვადება</button>
+            </div>
+  
+            <div class="installment__cost">
+              <p class="installment m-0 mr-2">თვეში <span class="installment__value">34.56</span>₾-დან</p>
+              <a href="#" class="installment__info"><i class="uil uil-info-circle"></i></a>
+            </div>
+          </div>
+
+          <div class="order__footer">
+            <div class="delivery__container">
+              <span class="delivery__title">მიწოდება</span>
+              
+              <div class="delivery__region">
+                <span class="delivery__current">თბილისი</span>
+                <a href="#" class="delivery__change">შეცვლა</a>
+              </div>
+              <span class="delivery__about">მიწოდება მთელი <b>საქართველოს</b> მაშტაბით</span>
+            </div>
+
+            <div class="order__propositions">
+
+              <div class="proposition__item">
+                <i class="uil uil-check-circle"></i>
+                <div class="item__info">
+                  <span class="info__primary">მარაგშია</span>
+                  <span class="info__secondary"></span>
+                </div>
+              </div>
+              <div class="proposition__item">
+                <i class="uil uil-truck"></i>
+                <div class="item__info">
+                  <span class="info__primary">მიწოდება - 24 ივნისი</span>
+                  <span class="info__secondary">უფასო</span>
+                </div>
+              </div>
+              <div class="proposition__item">
+                <i class="uil uil-shield-check"></i>
+                <div class="item__info">
+                  <span class="info__primary">გარანტია 1 წელი</span>
+                  <span class="info__secondary"></span>
+                </div>
+              </div>
+              <div class="proposition__item">
+                <i class="uil uil-box"></i>
+                <div class="item__info">
+                  <span class="info__primary">დაბრუნების პოლიტიკა</span>
+                  <span class="info__secondary">24 საათი</span>
+                </div>
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container-fluid unico-bg__white p-0 px-xl-4 px-lg-2 px-md-1 px-1">
+    <div class="container unico-container p-0 px-xl-4 px-lg-2 px-md-1 px-1">
+      <div class="d-md-flex d-none m-0 py-5">
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">კომპანია</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">ჩვენს შესახებ</a>
+            <a href="#" class="footer__link">გუნდის შესახებ</a>
+            <a href="#" class="footer__link">კარიერა</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">ჩემი ანგარიში</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">ანგარიში</a>
+            <a href="#" class="footer__link">შეკვეთები</a>
+            <a href="#" class="footer__link">ხშირად დასმული კითხვები</a>
+            <a href="#" class="footer__link">დახმარება</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">პირობები</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">დაბრუნების პოლიტიკა</a>
+            <a href="#" class="footer__link">მიტანის სერვისი</a>
+            <a href="#" class="footer__link">წესები და პირობები</a>
+            <a href="#" class="footer__link">კონფიდენციალურობის პოლიტიკა</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">დახმარება</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">დაბრუნების პოლიტიკა</a>
+            <a href="#" class="footer__link">მიტანის სერვისი</a>
+            <a href="#" class="footer__link">წესები და პირობები</a>
+            <a href="#" class="footer__link">კონფიდენციალურობის პოლიტიკა</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">გათამაშება</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">დასპინე და მოიგე</a>
+            <a href="#" class="footer__link">უფასო სპინები</a>
+            <a href="#" class="footer__link">წესებიდა პირობები</a>
+            <a href="#" class="footer__link">დააგროვე რეფერალები</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">შემოგვიერთდით</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link"><i class="fab fa-facebook-f"></i>facebook.</a>
+            <a href="#" class="footer__link"><i class="fab fa-youtube"></i>youtube.</a>
+            <a href="#" class="footer__link"><i class="fab fa-instagram"></i>instagram.</a>
+          </div>
+        </div>
+      </div>
+      <hr class="d-md-block d-none mx-5">
+      <div class="d-flex flex-md-row flex-column justify-content-between align-items-center m-0 py-4">
+        <div class="footer__logo order-0">
+          <img src="img/UNICO.GE.svg" class="logo" alt="logo">
+        </div>
+        <h6 class="footer__copyright order-md-1 order-2 m-0">ყველა უფლება დაცულია</h6>
+        <div class="footer__brands order-md-2 order-1 my-md-0 my-4">
+          <i class="d-md-block d-none fab fa-cc-visa mr-2"></i>
+          <i class="d-md-block d-none fab fa-cc-mastercard"></i>
+          <a href="#" class="footer__link d-md-none d-flex"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer__link d-md-none d-flex"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="footer__link d-md-none d-flex"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>

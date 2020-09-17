@@ -1,29 +1,49 @@
-
-@mixin flex($direction, $justify, $align){
-    display : flex;
-    flex-direction : $direction;
-    justify-content : $justify;
-    align-items : $align;
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 @font-face {
-    font-family : Firago;
-    src : url("fonts/FiraGO-Regular.ttf");
+  font-family: Firago;
+  src: url("fonts/FiraGO-Regular.ttf");
 }
 
 @font-face {
-    font-family : Firago-medium;
-    src : url("fonts/FiraGO-Medium.ttf");
+  font-family: Firago-medium;
+  src: url("fonts/FiraGO-Medium.ttf");
 }
 
 @font-face {
-    font-family : Firago-bold;
-    src : url("fonts/FiraGO-Bold.ttf");
+  font-family: Firago-bold;
+  src: url("fonts/FiraGO-Bold.ttf");
 }
 
 @font-face {
-    font-family : Myriad;
-    src : url("fonts/MyriadGEOMtavruliMedium.ttf")
+  font-family: Myriad;
+  src: url("fonts/MyriadGEOMtavruliMedium.ttf")
+}
+
+//WORDPRESS FONT VARIALES
+@font-face {
+  font-family: FiraGO-Regular;
+  src: url("fonts/FiraGO-Regular.ttf");
+}
+
+@font-face {
+  font-family: FiraGO-Medium;
+  src: url("fonts/FiraGO-Medium.ttf");
+}
+
+@font-face {
+  font-family: FiraGO-Bold;
+  src: url("fonts/FiraGO-Bold.ttf");
+}
+
+@font-face {
+  font-family: MyriadGEOMtavruli;
+  src: url("fonts/MyriadGEOMtavruliMedium.ttf")
 }
 
 $darkBlue : #223549;
@@ -33,218 +53,265 @@ $unicoRed : #F92162;
 $loginText : #92A9CE;
 
 * {
-    box-sizing : border-box;
-    font-family : Firago, sans-serif;
+  box-sizing: border-box;
+  font-family: Firago, sans-serif;
+  outline : none !important;
 }
 
 body {
-    background : $lightDark;
+  background: $lightDark;
 }
 
 a {
-    text-decoration : none;
-    color : #000;
+  text-decoration: none;
+  color: #000;
 
-    &:hover {
-        color : inherit;
-        text-decoration : inherit;
-    }
+  &:hover {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+.unico-container {
+  max-width: 1738px !important;
 }
 
 .unico-margin__y {
-    margin : 5.625rem 0;
+  margin: 5.625rem 0;
 }
 
 .unico-margin__y-large {
-    margin-top : 8.125rem;
-    margin-bottom : 8.125rem;
+  margin-top: 8.125rem;
+  margin-bottom: 8.125rem;
 }
 
 .unico-margin__y-small {
-    margin-top : 3.75rem !important;
-    margin-bottom : 3.75rem !important;
+  margin-top: 3.75rem !important;
+  margin-bottom: 3.75rem !important;
 }
 
 .unico-margin__top-small {
-    margin-top : 3.75rem !important;
+  margin-top: 3.75rem !important;
 }
 
 .unico-margin__bottom-small {
-    margin-bottom : 3.75rem !important;
+  margin-bottom: 3.75rem !important;
 }
 
 .unico-margin__top {
-    margin-top : 5.625rem;
+  margin-top: 5.625rem;
 }
+
 .unico-margin__bottom {
-    margin-bottom : 5.625rem;
+  margin-bottom: 5.625rem;
 }
 
 .unico-margin__top-xsmall {
-    margin-top : 1.875rem;
-}
-.unico-margin__bottom-xsmall {
-    margin-bottom : 1.875rem;
+  margin-top: 1.875rem;
 }
 
-.unico-text__ellipsis { 
-    overflow : hidden;
-    white-space : nowrap;
-    text-overflow : ellipsis;
+.unico-margin__bottom-xsmall {
+  margin-bottom: 1.875rem;
+}
+
+.unico-text__ellipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .tooltip-inner {
-    font-size : .67rem;
-    font-weight : 100;
+  font-size: .67rem;
+  font-weight: 100;
 }
 
-.unico-bg__gray { 
-    background : $lightDark;
+.unico-bg__gray {
+  background: $lightDark;
 }
 
 .unico-bg__white {
-    background : #fff;
+  background: #fff;
 }
 
 .unico-modal__radius {
-    border-radius : 1.6rem;
+  border-radius: 1.6rem;
 }
 
 .unico-icons__unicons {
-    font-family : unicons;
-    font-weight : 400;
+  font-family: unicons;
+  font-weight: 400;
 }
 
 .unico-product__sale {
-    color : $unicoRed;
-    margin : 0 !important;
+  color: $unicoRed;
+  margin: 0 !important;
 }
 
 .unico-category__title {
 
-    @include flex(row, flex-start, center);
+  @include flex(row, flex-start, center);
 
-    .category {
-        font-family : Myriad;
-        font-weight : 500;
-        font-size : 2rem;
-        transition : .3s ease;
-        color : $darkBlue;
+  .category {
+    font-family: Myriad;
+    font-weight: 500;
+    font-size: 2rem;
+    transition: .3s ease;
+    color: $darkBlue;
 
-        &:hover {
-            color : $lightBlue;
-        }
+    &:hover {
+      color: $lightBlue;
+    }
+  }
+
+  .subcategory {
+    @include flex(row, flex-start, flex-end);
+
+    height: 100%;
+    margin-left: .8rem;
+    margin-bottom: -.3rem;
+
+    a {
+      font-family: Myriad;
+      color: $loginText;
+      margin-right: 1rem !important;
+      font-size: 1.125rem;
+      transition: .3s ease;
+
+      &:hover {
+        color: $darkBlue;
+      }
     }
 
-    .subcategory {
-        @include flex(row, flex-start, flex-end);
-
-        height: 100%;
-        margin-left : .8rem;
-        margin-bottom : -.3rem;
-        a {
-            font-family : Myriad;
-            color : $loginText;
-            margin-right : 1rem !important;
-            font-size : 1.125rem;
-            transition : .3s ease;
-
-            &:hover {
-                color : $darkBlue;
-            }
-        }
-
-        .more {
-            font-family : Firago-medium;
-            color : #116BE5;
-        }
+    .more {
+      font-family: Firago-medium;
+      color: #116BE5;
     }
+  }
 }
 
 .countdown {
-    padding : .7rem 1.5rem 1.5rem 1.5rem;
-    border-radius : .7rem;
-    background : #f9f9f9;
+  padding: .7rem 1.5rem 1.5rem 1.5rem;
+  border-radius: .7rem;
+  background: #f9f9f9;
 
-    position : relative;
+  position: relative;
 
-    &::before {
-        display : block;
-        content : "";
-        width : 4.5rem;
-        height : .2rem;
-        background : linear-gradient(to left, $unicoRed, #fff);
-        border-radius : 1rem;
+  &::before {
+    display: block;
+    content: "";
+    width: 4.5rem;
+    height: .2rem;
+    background: linear-gradient(to left, $unicoRed, #fff);
+    border-radius: 1rem;
 
-        position : absolute;
-        top : 0;
-        left : .3rem;
+    position: absolute;
+    top: 0;
+    left: .3rem;
+  }
+
+  .countdown__elements {
+    @include flex(row, space-between, center);
+
+    .countdown__element {
+      width: 2.5rem;
+      height: 2.5rem;
+      background: #fff;
+      border-radius: 50%;
+      font-weight: bold;
+
+      position: relative;
+
+      @include flex(row, center, center);
+
+      &:last-child {
+        color: $unicoRed;
+
+      }
+
+      &::before {
+        display: block;
+        position: absolute;
+        font-size: .75rem;
+        left: .53rem;
+        bottom: -1.2rem;
+        color: #000;
+      }
+
     }
 
-    .countdown__elements {
-        @include flex(row, space-between, center);
-
-        .countdown__element {
-            width : 2.5rem;
-            height : 2.5rem;
-            background : #fff;
-            border-radius : 50%;
-            font-weight : bold;
-            
-            position : relative;
-
-            @include flex(row, center, center);
-
-            &:last-child {
-                color : $unicoRed;
-                
-            }
-
-            &::before {
-                display : block;
-                position : absolute;
-                font-size : .75rem;
-                left : .53rem;
-                bottom : -1.2rem;
-                color : #000;
-            }
-
-        }
-
-        .countdown__days {
-            &::before {
-                content : "დღე";
-            }
-        }
-        .countdown__hours {
-            &::before {
-                content : "საათი";
-            }
-        }
-        .countdown__minutes {
-            &::before {
-                content : "წუთი";
-            }
-        }
-        .countdown__seconds {
-            &::before {
-                content : "წამი";
-            }
-        }
-
-        .countdown__dots {
-            font-weight : bold;
-            font-size : 1.2rem;
-            animation-name : Fade;
-            animation-duration : 1s;
-            animation-iteration-count: infinite;
-            animation-timing-function: ease;
-            margin : 0 .3rem;
-        }
+    .countdown__days {
+      &::before {
+        content: "დღე";
+      }
     }
 
-    @keyframes Fade {
-        from {opacity : 0}
-        to {opacity : 1}
+    .countdown__hours {
+      &::before {
+        content: "საათი";
+      }
     }
+
+    .countdown__minutes {
+      &::before {
+        content: "წუთი";
+      }
+    }
+
+    .countdown__seconds {
+      &::before {
+        content: "წამი";
+      }
+    }
+
+    .countdown__dots {
+      font-weight: bold;
+      font-size: 1.2rem;
+      animation-name: Fade;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease;
+      margin: 0 .3rem;
+    }
+  }
+
+  @keyframes Fade {
+    from {
+      opacity: 0
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+}
+
+.unico-rate__container {
+  @include flex(row, flex-start, center);
+  width: 100%;
+
+  .stars {
+    font-size: .8rem;
+    margin-right: 1.1rem;
+
+    i {
+      color: #FF8970;
+      cursor: pointer;
+      transition: .3s ease;
+
+      &:last-child {
+        color: #ff88704f;
+      }
+
+      &:hover {
+        color: $unicoRed;
+      }
+    }
+  }
+
+  .rate {
+    font-family: Firago-medium;
+    font-size: .8rem;
+    overflow: hidden;
+    white-space: nowrap;
+  }
 }
