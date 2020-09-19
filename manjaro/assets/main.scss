@@ -551,6 +551,181 @@
   }
 }
 
+//DETAILS COMMENTS
+
+.details-comments__container {
+  width : 100%;
+
+  .comments__title {
+    font-size : 32px;
+    font-family : MyriadGEOMtavruli;
+    margin-bottom : 70px;
+
+    span {
+      font-size : 18px;
+      font-family : MyriadGEOMtavruli;
+    }
+  }
+
+  .sub__comment {
+    margin-left : 120px;
+  }
+
+  .comments {
+    padding : 35px 40px;
+    border-right : 1px solid #F3F4F6;
+  }
+
+  .comments__next {
+    font-size : 13px;
+    font-family : FiraGO-Bold;
+    color : $lightBlue;
+  }
+}
+
+//__comment container
+.comment__container {
+  width : calc(100% - 120px);
+  margin-bottom : 40px;
+
+  @include flex(row, flex-start, flex-start);
+
+  //__header
+  .comment__header {
+    @include flex(column, flex-start, center);
+
+    margin-right : 30px;
+
+    .comment__img-container {
+      margin-bottom : 20px;
+
+      .comment__img {
+        width : 64px;
+        height : 64px;
+        border-radius : 50%;
+      }
+    }
+
+    .comment__reply {
+
+      i {
+        font-size : 1.5rem;
+        color : #92A9CE;
+        transition : .2s ease;
+  
+        &:hover {
+          color : $lightBlue;
+        }
+      }
+    }
+
+  }
+
+  //__body
+  .comment__body {
+    width : 100%;
+    
+    @include flex(column, center, flex-start);
+
+    // __attributes
+    .comment__attributes {
+      width : 100%;
+      margin-bottom : 25px;
+
+      @include flex(row, space-between, center);
+
+      .comment__info {
+        .comment__username {
+          font-size : 18px;
+          font-family : MyriadGEOMtavruli;
+
+          margin : 5px 0;
+        }
+
+        .comment__date-container {
+          @include flex(row, flex-start, flex-start);
+
+          .comment__date {
+            word-wrap: break-word;
+            color : #92A9CE;
+            font-family : FiraGO-Medium;
+
+            margin-right : 20px;
+          }
+
+          .unico-rate__container {
+            width : auto;
+          }
+        }
+      }
+
+      .comment__thumb {
+        @include flex(row, space-between, center);
+        .thumb {
+          font-size : 1.2rem;
+          cursor : pointer;
+
+          &:hover {
+            opacity : .8;
+          }
+        }
+
+        .thumb-up__active {
+          color : $lightBlue;
+        }
+
+        .thumb-down__active {
+          color : $unicoRed;
+        }
+
+        .thumb__count {
+          font-family : FiraGO-Medium;
+          margin : 0 10px;
+        }
+      }
+    }
+    
+    // __text
+    .comment__text {
+      font-size : 14px;
+      font-family : FiraGO-Regular;
+    }
+
+    // __hide
+
+    .comment__hide {
+      font-size : 12px;
+      font-family : FiraGO-Medium;
+      color : $lightBlue;
+      cursor : pointer;
+
+      margin-top : 10px;
+    }
+  }
+}
+
+// whole product rate
+.details__product-rate {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* //////////////////////////////////////// */

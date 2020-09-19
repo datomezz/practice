@@ -65,12 +65,12 @@ a:hover {
 }
 
 .unico-margin__y {
-  margin: 5.625rem 0;
+  margin: 5.625rem 0 !important;
 }
 
 .unico-margin__y-large {
-  margin-top: 8.125rem;
-  margin-bottom: 8.125rem;
+  margin-top: 8.125rem !important;
+  margin-bottom: 8.125rem !important;
 }
 
 .unico-margin__y-small {
@@ -5119,6 +5119,211 @@ footer .footer__brands .footer__link i {
 .details-product__order .order__propositions .proposition__item .item__info .info__secondary {
   font-size: 12px;
   font-family: FiraGO-Bold;
+}
+
+.details-comments__container {
+  width: 100%;
+}
+
+.details-comments__container .comments__title {
+  font-size: 32px;
+  font-family: MyriadGEOMtavruli;
+  margin-bottom: 70px;
+}
+
+.details-comments__container .comments__title span {
+  font-size: 18px;
+  font-family: MyriadGEOMtavruli;
+}
+
+.details-comments__container .sub__comment {
+  margin-left: 120px;
+}
+
+.details-comments__container .comments {
+  padding: 35px 40px;
+  border-right: 1px solid #F3F4F6;
+}
+
+.details-comments__container .comments__next {
+  font-size: 13px;
+  font-family: FiraGO-Bold;
+  color: #116BE5;
+}
+
+.comment__container {
+  width: calc(100% - 120px);
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.comment__container .comment__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 30px;
+}
+
+.comment__container .comment__header .comment__img-container {
+  margin-bottom: 20px;
+}
+
+.comment__container .comment__header .comment__img-container .comment__img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.comment__container .comment__header .comment__reply i {
+  font-size: 1.5rem;
+  color: #92A9CE;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+}
+
+.comment__container .comment__header .comment__reply i:hover {
+  color: #116BE5;
+}
+
+.comment__container .comment__body {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.comment__container .comment__body .comment__attributes {
+  width: 100%;
+  margin-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment__container .comment__body .comment__attributes .comment__info .comment__username {
+  font-size: 18px;
+  font-family: MyriadGEOMtavruli;
+  margin: 5px 0;
+}
+
+.comment__container .comment__body .comment__attributes .comment__info .comment__date-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.comment__container .comment__body .comment__attributes .comment__info .comment__date-container .comment__date {
+  word-wrap: break-word;
+  color: #92A9CE;
+  font-family: FiraGO-Medium;
+  margin-right: 20px;
+}
+
+.comment__container .comment__body .comment__attributes .comment__info .comment__date-container .unico-rate__container {
+  width: auto;
+}
+
+.comment__container .comment__body .comment__attributes .comment__thumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.comment__container .comment__body .comment__attributes .comment__thumb .thumb {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.comment__container .comment__body .comment__attributes .comment__thumb .thumb:hover {
+  opacity: .8;
+}
+
+.comment__container .comment__body .comment__attributes .comment__thumb .thumb-up__active {
+  color: #116BE5;
+}
+
+.comment__container .comment__body .comment__attributes .comment__thumb .thumb-down__active {
+  color: #F92162;
+}
+
+.comment__container .comment__body .comment__attributes .comment__thumb .thumb__count {
+  font-family: FiraGO-Medium;
+  margin: 0 10px;
+}
+
+.comment__container .comment__body .comment__text {
+  font-size: 14px;
+  font-family: FiraGO-Regular;
+}
+
+.comment__container .comment__body .comment__hide {
+  font-size: 12px;
+  font-family: FiraGO-Medium;
+  color: #116BE5;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 /* //////////////////////////////////////// */
