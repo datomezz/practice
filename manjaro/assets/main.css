@@ -5441,6 +5441,36 @@ footer .footer__brands .footer__link i {
   background: #FF8970;
 }
 
+#details .details-comments__container {
+  padding: 35px 45px;
+}
+
+#details .details-comments__container .details__title {
+  font-size: 32px;
+  font-family: FiraGO-Bold;
+  margin-bottom: 40px;
+}
+
+.details__attributes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.details__attributes .details-attributes .attribute-item:last-child {
+  border: none;
+}
+
 /* //////////////////////////////////////// */
 @media (max-width: 1601px) {
   .unico-category__title {

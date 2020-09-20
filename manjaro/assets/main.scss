@@ -795,6 +795,32 @@
   }
 }
 
+// Details Attributes
+#details {
+  .details-comments__container {
+    padding : 35px 45px;
+
+    .details__title {
+      font-size : 32px;
+      font-family : FiraGO-Bold;
+
+      margin-bottom : 40px;
+    }
+  }
+}
+
+.details__attributes {
+  @include flex(row, space-between, flex-start);
+
+  .details-attributes {
+
+    .attribute-item {
+      &:last-child {
+        border : none;
+      }
+    }
+  }
+}
 
 
 
