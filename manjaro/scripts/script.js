@@ -172,7 +172,13 @@ $(".slider-product-for").slick({
   arrows: true,
   prevArrow: "",
   nextArrow: "",
-  asNavFor: '.slider-product-nav'
+  asNavFor: '.slider-product-nav',
+  responsive: [{
+    breakpoint: 376,
+    settings: {
+      dots : true
+    }
+  }]
 });
 $(".slider-product-nav").slick({
   slidesToShow: 3,
