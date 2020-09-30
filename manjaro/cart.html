@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unico</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script src="https://kit.fontawesome.com/bb6e79ddfa.js"></script>
+  <link rel="stylesheet" href="assets/main.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+</head>
+
+<body>
+  <header class="container-fluid header px-lg-0 px-md-4 px-0">
+    <nav class="container unico-container p-0 px-lg-4 px-md-4 px-0">
+      <div class="header__info d-md-flex d-none justify-content-between align-items-center m-0">
+        <div class="header__questions">
+          <a class="header__text-link mr-3" href="javascript:void(0)">ჩვენ შესახებ</a>
+          <a class="header__text-link mr-3" href="javascript:void(0)">როგორ შევიძინო?</a>
+          <a class="header__text-link" href="javascript:void(0)">კონტაქტი</a>
+        </div>
+        <a class="header__text-link header__spin-link" href="javascript:void(0)">დასპინე, მოიგე</a>
+      </div>
+      <div class="header__container row justify-content-between m-0">
+        <div
+          class="header__main col-xl-4 col-lg-4 col-md-3 col-2 col-12 d-flex justify-content-xl-start justify-content-lg-start justify-content-between p-0 m-0">
+          <a class="logo__link col-xl-4 col-lg-4 col-md-7 col-4 row justify-content-md-start justify-content-center align-items-center order-md-0 order-1 p-0 pr-xl-4 pr-0 m-0"
+            href="#">
+            <img src="img/UNICO.GE.svg" class="header__logo-img" alt="logo">
+          </a>
+          <a class="header__caregory-container col-xl-6 col-lg-6 col-md-5 col-2 row justify-content-md-end justify-content-center align-items-center order-md-1 order-0 m-0 ml-xl-0 ml-lg-4"
+            href="javascript:void(0)" data-toggle="modal" data-target="#modal">
+            <div class="header__category d-flex justify-content-center align-items-center rounded-pill m-0">
+              <i class="uil uil-bars"></i>
+              <p class="category__text unico-text__ellipsis d-lg-block d-md-none d-none">ყველა კატეგორია</p>
+            </div>
+          </a>
+          <div class="col-2 d-md-none d-flex justify-content-center order-2 p-0">
+            <a href="#" class="header__search shadow-sm">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 px-2">
+          <div class="header__input d-md-flex d-none justify-content-between rounded-pill position-relative p-1">
+            <a href="#"
+              class="input__category col-lg-3 col-md-2 d-flex justify-content-center align-items-center rounded-pill p-0 m-0"
+              data-toggle="modal" data-target="#modal">
+              <i class="uil uil-apps mr-lg-1 mr-md-0"></i>
+              <p class="category__text unico-text__ellipsis d-lg-block d-md-none d-none m-0">კატეგორია</p>
+            </a>
+            <div class="col-6 row align-items-center p-0 m-0">
+              <input type="text" name="field" class="search__input w-100 px-1" placeholder="მოძებნე მარტივად">
+            </div>
+            <button name="search-submit" class="col-2 row justify-content-end align-items-center input__button p-0 m-0">
+              <div class="search__button">
+                <i class="fas fa-search"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="header__user col-4 d-md-flex d-none justify-content-between">
+          <a href="#" class="user__login col-4 d-flex align-items-center justify-content-center rounded-pill p-0"
+            data-toggle="modal" data-target="#modal">
+            <i class="uil uil-user mr-lg-1 mr-md-0"></i>
+            <p class="user__text unico-text__ellipsis d-lg-block d-md-none d-none m-0">შესვლა</p>
+          </a>
+          <a href="#" class="d-flex justify-content-center ml-lg-2 ml-0 p-0">
+            <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom" title="შედარება">
+              <i class="uil uil-exchange"></i>
+            </div>
+          </a>
+          <a href="#" class="d-flex justify-content-center p-0">
+            <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom"
+              title="დამახსოვრებული">
+              <i class="uil uil-heart"></i>
+            </div>
+          </a>
+          <a href="#" class="d-flex justify-content-center p-0">
+            <div class="user__action header__shopping-cart" data-toggle="tooltip" data-placement="bottom"
+              title="შეძენა">
+              <i class="uil uil-shopping-cart"></i>
+            </div>
+          </a>
+          <a href="#" class="d-flex justify-content-center p-0">
+            <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom"
+              title="ენის არჩევა">
+              <img src="img/ge.svg" alt="geo" class="img-fluid">
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <nav class="mobile__nav d-md-none d-flex container-fluid fixed-bottom px-4">
+      <div class="container p-0">
+        <div class="mobile__actions row justify-content-between align-items-center m-0">
+          <a href="#" class="mobile__action d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-home-alt"></i>
+            <p class="mobile__text m-0">მთავარი</p>
+          </a>
+          <a href="#" class="mobile__action d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-bars"></i>
+            <p class="mobile__text m-0">კატეგორიები</p>
+          </a>
+          <a href="#" class="mobile__action d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-exchange"></i>
+            <p class="mobile__text m-0">შედარება</p>
+          </a>
+          <a href="#"
+            class="mobile__action header__shopping-cart d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-shopping-cart"></i>
+            <p class="mobile__text m-0">კალათა</p>
+          </a>
+          <a href="#" class="user__login mobile__action d-flex flex-column justify-content-center align-items-center"
+            data-toggle="modal" data-target="#modal">
+            <i class="uil uil-user"></i>
+            <p class="mobile__text m-0">პროფილი</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <aside class="modal fade p-0" id="modal">
+    <div class="unico__modalContainer modal-dialog h-100">
+      <div class="modal-content unico-bg__gray border-1">
+        <div class="modal-body unico-modal__radius p-sm-5 p-3">
+
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main class="cart__container container unico-container p-0 px-xl-4 px-lg-2 px-md-1 px-3">
+    <!-- cart title -->
+    <h2 class="cart__title">კალათა</h2>
+
+    <div class="row m-0">
+      <div class="col-9 p-0">
+        <!-- all cart elements -->
+        <div class="cart-products__container">
+          <!-- cart item -->
+          <div class="cart-item unico-product__container">
+            <!-- checkbox -->
+            <input type="checkbox" name="cart-checkbox" class="cart-item__checkbox">
+            <!-- img -->
+            <div class="cart-item__imgbox">
+              <img src="/img/alcatel.png" class="cart-item__img" alt="cart" />
+            </div>
+            <!-- title -->
+            <a href="#" class="cart-item__title">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</a>
+            <!-- price -->
+            <div class="cart-item__price unico-price__container">
+              <span class="price">123,00₾</span>
+              <span class="price__old">245,00₾</span>
+            </div>
+            <!-- calculate -->
+            <div class="order__calculator">
+              <a href="javascript:void(0)" class="calculate">-</a>
+              <span class="calculate__result">5</span>
+              <a href="javascript:void(0)" class="calculate">+</a>
+            </div>
+            <!-- remove -->
+            <a href="#" class="cart-item__recyclebin">
+              <i class="uil uil-trash"></i>
+            </a>
+          </div>
+          <!-- cart item -->
+          <div class="cart-item unico-product__container">
+            <!-- checkbox -->
+            <input type="checkbox" name="cart-checkbox" class="cart-item__checkbox">
+            <!-- img -->
+            <div class="cart-item__imgbox">
+              <img src="/img/alcatel.png" class="cart-item__img" alt="cart" />
+            </div>
+            <!-- title -->
+            <a href="#" class="cart-item__title">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</a>
+            <!-- price -->
+            <div class="cart-item__price unico-price__container">
+              <span class="price">123,00₾</span>
+              <span class="price__old">245,00₾</span>
+            </div>
+            <!-- calculate -->
+            <div class="order__calculator">
+              <a href="javascript:void(0)" class="calculate">-</a>
+              <span class="calculate__result">5</span>
+              <a href="javascript:void(0)" class="calculate">+</a>
+            </div>
+            <!-- remove -->
+            <a href="#" class="cart-item__recyclebin">
+              <i class="uil uil-trash"></i>
+            </a>
+          </div>
+          <!-- cart item -->
+          <div class="cart-item unico-product__container">
+            <!-- checkbox -->
+            <input type="checkbox" name="cart-checkbox" class="cart-item__checkbox">
+            <!-- img -->
+            <div class="cart-item__imgbox">
+              <img src="/img/alcatel.png" class="cart-item__img" alt="cart" />
+            </div>
+            <!-- title -->
+            <a href="#" class="cart-item__title">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</a>
+            <!-- price -->
+            <div class="cart-item__price unico-price__container">
+              <span class="price">123,00₾</span>
+              <span class="price__old">245,00₾</span>
+            </div>
+            <!-- calculate -->
+            <div class="order__calculator">
+              <a href="javascript:void(0)" class="calculate">-</a>
+              <span class="calculate__result">5</span>
+              <a href="javascript:void(0)" class="calculate">+</a>
+            </div>
+            <!-- remove -->
+            <a href="#" class="cart-item__recyclebin">
+              <i class="uil uil-trash"></i>
+            </a>
+          </div>
+
+
+          <!-- ATTRIBUTES -->
+          <div class="cart__attributes">
+            <!-- selectAll -->
+            <div class="d-flex align-items-center">
+              <input id="cart-selectall" name="cart-selectall" class="selectall__checkbox" type="checkbox" />
+              <label for="cart-selectall" class="selectall__label">ყველას მონიშვნა</label>
+            </div>
+            <!-- remove -->
+            <a href="#" class="selectall__remove">წაშლა</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-3 p-0">
+        <div class="cart-products__summary">
+          3123
+        </div>
+      </div>
+    </div>
+
+    <!-- slider -->
+    <section class="unico-slider__container mb-md-0 my-md-5 my-0 mb-4 order-md-1 unico-margin__y order-2">
+      <div class="unico-category__title mx-xl-0 mx-lg-3 mx-md-3 mx-3 my-4">
+        <a href="#" class="category">ჩვენ გირჩევთ</a>
+        <div class="subcategory d-md-flex d-none">
+          <a href="#" class="m-0"></a>
+          <a href="#" class="m-0"></a>
+        </div>
+      </div>
+      <div class="slider-product">
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <span class="attributes__sale d-md-flex">-20 %</span>
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <span class="slider-product__sale d-md-flex d-none">-20 %</span>
+            <img src="img/alcatel.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)Alcatel
+              3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</a>
+            <div class="slider-product__footer">
+              <div class="slider-product__price mb-2 mb-2">
+                <p class="price unico-product__sale">549,00 ₾</p>
+                <p class="price__old m-0">667,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <img src="img/headphones.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">House of Marley EM-JH121-DN ყურსასმენი (ჰაუს ოფ მარლი)</a>
+            <div class="slider-product__footer mb-2">
+              <div class="slider-product__price mb-2">
+                <p class="price">129,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <span class="attributes__sale d-md-flex">-20 %</span>
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <span class="slider-product__sale d-md-flex d-none">-35 %</span>
+            <img src="img/alcatel.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">PHILIPS EP3519/00 ესპრესოს ყავის აპარატი (ფილიპსი)</a>
+            <div class="slider-product__footer">
+              <div class="slider-product__price mb-2 mb-2">
+                <p class="price unico-product__sale">1789,00 ₾</p>
+                <p class="price__old m-0">2267,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <span class="attributes__sale d-md-flex">-20 %</span>
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <span class="slider-product__sale d-md-flex d-none">-20 %</span>
+            <img src="img/alcatel.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)Alcatel
+              3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</a>
+            <div class="slider-product__footer">
+              <div class="slider-product__price mb-2 mb-2">
+                <p class="price unico-product__sale">549,00 ₾</p>
+                <p class="price__old m-0">667,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <img src="img/coffe.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">REDMOND RMC-PM504 Black მულტისახარში (რედმონდი)</a>
+            <div class="slider-product__footer mb-2">
+              <div class="slider-product__price mb-2">
+                <p class="price">3994,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <img src="img/headphones.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">House of Marley EM-JH121-DN ყურსასმენი (ჰაუს ოფ მარლი)</a>
+            <div class="slider-product__footer mb-2">
+              <div class="slider-product__price mb-2">
+                <p class="price">129,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <span class="attributes__sale d-md-flex">-20 %</span>
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <span class="slider-product__sale d-md-flex d-none">-35 %</span>
+            <img src="img/alcatel.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">PHILIPS EP3519/00 ესპრესოს ყავის აპარატი (ფილიპსი)</a>
+            <div class="slider-product__footer">
+              <div class="slider-product__price mb-2 mb-2">
+                <p class="price unico-product__sale">1789,00 ₾</p>
+                <p class="price__old m-0">2267,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <span class="attributes__sale d-md-flex">-20 %</span>
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <span class="slider-product__sale d-md-flex d-none">-20 %</span>
+            <img src="img/alcatel.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)Alcatel
+              3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</a>
+            <div class="slider-product__footer">
+              <div class="slider-product__price mb-2 mb-2">
+                <p class="price unico-product__sale">549,00 ₾</p>
+                <p class="price__old m-0">667,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <img src="img/coffe.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">REDMOND RMC-PM504 Black მულტისახარში (რედმონდი)</a>
+            <div class="slider-product__footer mb-2">
+              <div class="slider-product__price mb-2">
+                <p class="price">3994,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <img src="img/headphones.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">House of Marley EM-JH121-DN ყურსასმენი (ჰაუს ოფ მარლი)</a>
+            <div class="slider-product__footer mb-2">
+              <div class="slider-product__price mb-2">
+                <p class="price">129,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+        <article class="slider-product__article">
+          <div class="img__attributes d-md-none d-flex align-items-center my-2">
+            <div class="attributes__actions d-md-none d-flex justify-content-around w-100">
+              <span class="attributes__sale d-md-flex">-20 %</span>
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+            </div>
+          </div>
+          <div class="img__container">
+            <span class="slider-product__sale d-md-flex d-none">-35 %</span>
+            <img src="img/alcatel.png" alt="phone" class="slider-product__img">
+            <div class="slider-product__hover d-md-flex d-none">
+              <a href="#" class="product__action action__like">
+                <i class="far fa-heart"></i>
+              </a>
+              <a href="#" class="product__action action__exchange">
+                <i class="fas fa-exchange-alt"></i>
+              </a>
+              <a href="#" class="product__action action__card">
+                <i class="uil uil-shopping-cart"></i>
+              </a>
+            </div>
+          </div>
+          <div class='slider-product__attributes'>
+            <a href="#" class="slider-product__header m-0">PHILIPS EP3519/00 ესპრესოს ყავის აპარატი (ფილიპსი)</a>
+            <div class="slider-product__footer">
+              <div class="slider-product__price mb-2 mb-2">
+                <p class="price unico-product__sale">1789,00 ₾</p>
+                <p class="price__old m-0">2267,00 ₾</p>
+              </div>
+              <div class="slider-product__rate d-md-flex d-none">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <p class="rate m-0">34 შეფასება</p>
+              </div>
+            </div>
+          </div>
+          <div class="slider-product__cart d-md-none d-flex justify-content-center w-100">
+            <a href="#" class="product__cart rounded-pill">დამატება <i class="uil uil-shopping-cart"></i></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+  </main>
+  
+  <footer class="container-fluid unico-bg__white p-0 px-xl-4 px-lg-2 px-md-1 px-1">
+    <div class="container unico-container p-0 px-xl-4 px-lg-2 px-md-1 px-1">
+      <div class="d-md-flex d-none m-0 py-5">
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">კომპანია</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">ჩვენს შესახებ</a>
+            <a href="#" class="footer__link">გუნდის შესახებ</a>
+            <a href="#" class="footer__link">კარიერა</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">ჩემი ანგარიში</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">ანგარიში</a>
+            <a href="#" class="footer__link">შეკვეთები</a>
+            <a href="#" class="footer__link">ხშირად დასმული კითხვები</a>
+            <a href="#" class="footer__link">დახმარება</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">პირობები</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">დაბრუნების პოლიტიკა</a>
+            <a href="#" class="footer__link">მიტანის სერვისი</a>
+            <a href="#" class="footer__link">წესები და პირობები</a>
+            <a href="#" class="footer__link">კონფიდენციალურობის პოლიტიკა</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">დახმარება</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">დაბრუნების პოლიტიკა</a>
+            <a href="#" class="footer__link">მიტანის სერვისი</a>
+            <a href="#" class="footer__link">წესები და პირობები</a>
+            <a href="#" class="footer__link">კონფიდენციალურობის პოლიტიკა</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">გათამაშება</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">დასპინე და მოიგე</a>
+            <a href="#" class="footer__link">უფასო სპინები</a>
+            <a href="#" class="footer__link">წესებიდა პირობები</a>
+            <a href="#" class="footer__link">დააგროვე რეფერალები</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">შემოგვიერთდით</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link"><i class="fab fa-facebook-f"></i>facebook.</a>
+            <a href="#" class="footer__link"><i class="fab fa-youtube"></i>youtube.</a>
+            <a href="#" class="footer__link"><i class="fab fa-instagram"></i>instagram.</a>
+          </div>
+        </div>
+      </div>
+      <hr class="d-md-block d-none mx-5">
+      <div class="d-flex flex-md-row flex-column justify-content-between align-items-center m-0 py-4">
+        <div class="footer__logo order-0">
+          <img src="img/UNICO.GE.svg" class="logo" alt="logo">
+        </div>
+        <h6 class="footer__copyright order-md-1 order-2 m-0">ყველა უფლება დაცულია</h6>
+        <div class="footer__brands order-md-2 order-1 my-md-0 my-4">
+          <i class="d-md-block d-none fab fa-cc-visa mr-2"></i>
+          <i class="d-md-block d-none fab fa-cc-mastercard"></i>
+          <a href="#" class="footer__link d-md-none d-flex"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer__link d-md-none d-flex"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="footer__link d-md-none d-flex"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
