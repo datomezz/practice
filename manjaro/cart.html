@@ -138,7 +138,7 @@
     <h2 class="cart__title">კალათა</h2>
 
     <div class="row m-0">
-      <div class="col-9 p-0">
+      <div class="col-md-9 col-12 p-0">
         <!-- all cart elements -->
         <div class="cart-products__container">
           <!-- cart item -->
@@ -149,23 +149,25 @@
             <div class="cart-item__imgbox">
               <img src="/img/alcatel.png" class="cart-item__img" alt="cart" />
             </div>
-            <!-- title -->
-            <a href="#" class="cart-item__title">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</a>
-            <!-- price -->
-            <div class="cart-item__price unico-price__container">
-              <span class="price">123,00₾</span>
-              <span class="price__old">245,00₾</span>
+            <div class="d-md-flex flex-md-row flex-column">
+              <!-- title -->
+              <a href="#" class="cart-item__title">Alcatel 3X 2019 4GB 64GB მობილური ტელეფონი (ალქატელი)</a>
+              <!-- price -->
+              <div class="cart-item__price unico-price__container">
+                <span class="price">123,00₾</span>
+                <span class="price__old">245,00₾</span>
+              </div>
+              <!-- calculate -->
+              <div class="order__calculator">
+                <a href="javascript:void(0)" class="calculate">-</a>
+                <span class="calculate__result">5</span>
+                <a href="javascript:void(0)" class="calculate">+</a>
+              </div>
+              <!-- remove -->
+              <a href="#" class="cart-item__recyclebin">
+                <i class="uil uil-trash"></i>
+              </a>
             </div>
-            <!-- calculate -->
-            <div class="order__calculator">
-              <a href="javascript:void(0)" class="calculate">-</a>
-              <span class="calculate__result">5</span>
-              <a href="javascript:void(0)" class="calculate">+</a>
-            </div>
-            <!-- remove -->
-            <a href="#" class="cart-item__recyclebin">
-              <i class="uil uil-trash"></i>
-            </a>
           </div>
           <!-- cart item -->
           <div class="cart-item unico-product__container">
@@ -233,9 +235,61 @@
           </div>
         </div>
       </div>
-      <div class="col-3 p-0">
-        <div class="cart-products__summary">
-          3123
+      <div class="col-md-3 col-12 p-0">
+        <div class="cart-summary__container">
+
+          <div class="cart-summary unico-product__container">
+            <!-- basic information -->
+            <div class="cart-summary__basic">
+              <span class="cart-summary__title">კალათაშია</span>
+              <span class="cart-summary__itemscount">3 ნივთი / 9,1კგ</span>
+            </div>
+            <!-- count -->
+            <div class="cart-summary__count">
+              <!-- count item -->
+              <div class="count-item">
+                <span class="count-item__key">პროდუქცია (3)</span>
+                <span class="count-item__value">15,000 ₾</span>
+              </div>
+              <!-- count item -->
+              <div class="count-item">
+                <span class="count-item__key">ფასდაკლება</span>
+                <span class="count-item__value count-item__sale">-500 ₾</span>
+              </div>
+              <!-- count item -->
+              <div class="count-item">
+                <span class="count-item__key">პრომოკოდი</span>
+                <span class="count-item__value">60 ₾</span>
+              </div>
+              <!-- count item -->
+              <div class="count-total count-item">
+                <span class="count-item__key">ჯამში</span>
+                <span class="count-item__value">13,432 ₾</span>
+              </div>
+            </div>
+            <!-- order -->
+            <div class="cart-summary__order">
+              <a href="#" class="unico-button unico-button__blue">შეკვეთის გაგრძელება</a>
+              <span class="cart-summary__info">ღილაკზე დაჭერის შემდეგ გადახვალთ მისამართის ველზე</span>
+              <a href="#" class="unico-button unico-button__red">განვადება</a>
+            </div>
+          </div>
+          <!-- promocode -->
+          <div class="promocode__container promocode-cart__container p-0 px-0">
+            <div class="promocode d-flex flex-column justify-content-between">
+              <div class="promocode__header">
+                <h4 class="promocode__title m-0">გაქვს პრომოკოდი?</h4>
+                <p class="promocode__text">მიიღე ფასდაკლება</p>
+              </div>
+              <form class="promocode__form d-flex justify-content-between" method="GET" action="#">
+                <input type="text" class="promocode__input w-75" placeholder="შეიყვანეთ პრომოკოდი">
+                <button type="button" class="promocode__button">
+                  <i class="fab fa-telegram" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -792,7 +846,7 @@
       </div>
     </section>
   </main>
-  
+
   <footer class="container-fluid unico-bg__white p-0 px-xl-4 px-lg-2 px-md-1 px-1">
     <div class="container unico-container p-0 px-xl-4 px-lg-2 px-md-1 px-1">
       <div class="d-md-flex d-none m-0 py-5">

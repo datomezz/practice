@@ -1,118 +1,145 @@
-.services-container {
-    height : 9rem;
-    background : #fff;
-    .services {
-        height : inherit;
-
-        .promocode__container {
-            padding : 0 0.9375rem;
-        }
-
-        .promocode {
-            top : 0;
-
-            border-radius : 1rem;
-            height : 12.19rem;
-            background : #fff;
-            padding : 1.875rem;
-            box-shadow : 10px 10px 30px rgba(230,230,230, .33);
-
-            background-image : url("../img/service-circle.png");
-            background-repeat : no-repeat;
-            background-position-x: right;
-
-            .promocode__header {
-                
-                .promocode__title {
-                    font-size : 1.75rem;
-                    font-family : Myriad;
-                    color : #0B0B4D;
-                }
-                .promocode__text {
-                    margin : 0;
-                    margin-top : .4rem;
-                    color : $lightBlue;
-                    font-size : .87rem;
-                    font-weight : 400;
-
-                    font-family : Firago-medium;
-                }
-            }
-            .promocode__form {
-                border-radius : 2rem;
-                background : #fff;
-                overflow : hidden;
-
-                padding : .2rem .8125rem .2rem .8125rem;
-
-                box-shadow : 0 10px 30px rgba(102,102,193,.05);
-
-                .promocode__input {
-                    height : 2.8125rem;
-                    outline : none;
-                    border : none;
-                    font-size : .87rem;
-                    color : $lightBlue;
-                    font-family : Firago-medium;
-
-                    &::placeholder {
-                        color : $darkBlue;
-                        opacity : .4;
-                    }
-                }
-                .promocode__button {
-                    border : none;
-                    outline : none;
-                    background : none;
-                    @include flex(row, center, center);
-
-                    i {
-                        font-size : 2.06rem;
-                        color : $lightBlue;
-                        transition : .3s ease;
-
-                        &:hover {
-                            color : #000;
-                        }
-                    }
-                }
-            }
-        }
-
-        .service {
-
-            height : 6rem;
-
-            @include flex(row, center, center);
-
-            .service__brand {
-                width : 5rem;
-                height : 5rem;
-                border-radius : 50%;
-                overflow : hidden;
-
-                @include flex(row, center, center);
-
-                i {
-                    font-size : 1.5rem;
-                }
-
-            }
-
-            .service__title {
-                font-size : 1.1rem;
-                font-family : Myriad;
-            }
-        }
-    }
+.promocode__container {
+  padding: 0 0.9375rem;
 }
 
-.service__blue { background : rgba(17, 107, 229, 0.1)}
-.service__red { background : rgba(249, 33, 98, .16)}
-.service__yellow { background : rgba(248, 166, 20, .16)}
-.service__purple { background : rgba(142, 20, 248, .16)}
+.promocode {
+  top: 0;
 
-.brand__blue { color : $lightBlue }
-.brand__red { color : $unicoRed}
-.brand__yellow { color : #F8A714 }
-.brand__purple { color : #8E14F8 }
+  border-radius: 1rem;
+  height: 12.19rem;
+  background: #fff;
+  padding: 1.875rem;
+  box-shadow: 10px 10px 30px rgba(230, 230, 230, .33);
+
+  background-image: url("../img/service-circle.png");
+  background-repeat: no-repeat;
+  background-position-x: right;
+
+  .promocode__header {
+
+    .promocode__title {
+      font-size: 1.75rem;
+      font-family: Myriad;
+      color: #0B0B4D;
+    }
+
+    .promocode__text {
+      margin: 0;
+      margin-top: .4rem;
+      color: $lightBlue;
+      font-size: .87rem;
+      font-weight: 400;
+
+      font-family: Firago-medium;
+    }
+  }
+
+  .promocode__form {
+    border-radius: 2rem;
+    background: #fff;
+    overflow: hidden;
+
+    padding: .2rem .8125rem .2rem .8125rem;
+
+    box-shadow: 0 10px 30px rgba(102, 102, 193, .05);
+
+    .promocode__input {
+      height: 2.8125rem;
+      outline: none;
+      border: none;
+      font-size: .87rem;
+      color: $lightBlue;
+      font-family: Firago-medium;
+
+      &::placeholder {
+        color: $darkBlue;
+        opacity: .4;
+      }
+    }
+
+    .promocode__button {
+      border: none;
+      outline: none;
+      background: none;
+      @include flex(row, center, center);
+
+      i {
+        font-size: 2.06rem;
+        color: $lightBlue;
+        transition: .3s ease;
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.services-container {
+  height: 9rem;
+  background: #fff;
+
+  .services {
+    height: inherit;
+
+
+    .service {
+
+      height: 6rem;
+
+      @include flex(row, center, center);
+
+      .service__brand {
+        width: 5rem;
+        height: 5rem;
+        border-radius: 50%;
+        overflow: hidden;
+
+        @include flex(row, center, center);
+
+        i {
+          font-size: 1.5rem;
+        }
+
+      }
+
+      .service__title {
+        font-size: 1.1rem;
+        font-family: Myriad;
+      }
+    }
+  }
+}
+
+.service__blue {
+  background: rgba(17, 107, 229, 0.1)
+}
+
+.service__red {
+  background: rgba(249, 33, 98, .16)
+}
+
+.service__yellow {
+  background: rgba(248, 166, 20, .16)
+}
+
+.service__purple {
+  background: rgba(142, 20, 248, .16)
+}
+
+.brand__blue {
+  color: $lightBlue
+}
+
+.brand__red {
+  color: $unicoRed
+}
+
+.brand__yellow {
+  color: #F8A714
+}
+
+.brand__purple {
+  color: #8E14F8
+}

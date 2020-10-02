@@ -24,7 +24,8 @@
 
 .cart-products__container {
   width : 100%;
-  
+  padding-right : 25px;
+
   @include flex(column, flex-start, flex-start);
 }
 
@@ -123,11 +124,102 @@
   }
 }
 
+//SUMARRY
+
+.cart-summary__container {
+  .promocode__container, .promocode-cart__container {
+    padding : 0;
+    margin-top : 25px;
+  }
+}
+
+.cart-summary {
+  padding : 40px;
+
+  @include flex(column, flex-start, flex-start);
+}
+
+.cart-summary__basic {
+  width : 100%;
+  margin-bottom : 40px;
+
+  @include flex(row, space-between, center);
+
+  .cart-summary__title {
+    font-size : 24px;
+    font-family : FiraGO-Bold;
+  }
+
+  .cart-summary__itemscount {
+    font-size : 14px;
+    font-family : FiraGO-bold;
+    color : #B7BFC6;
+  }
+}
+
+.cart-summary__count {
+  width : 100%;
+}
+
+.count-item {
+  width : 100%;
+  margin-bottom : 14px;
+
+  @include flex(row, space-between, center);
+
+  .count-item__key {
+    font-family : FiraGO-Bold;
+  }
+
+  .count-item__value {
+    font-family: FiraGO-Bold;
+  }
+}
+
+.count-total {
+  border-top : thin solid #D6DBE0;
+  padding-top : 30px;
+  margin : 40px 0;
+
+  .count-item__key, .count-item__value {
+    font-size : 18px;
+  }
+}
+
+// summary order
+.cart-summary__order {
+  
+  width : 100%;
+
+  @include flex(column, flex-start, flex-start);
+
+  .cart-summary__info {
+    font-family : FiraGO-Medium;
+    font-size : 14px;
+    color : #8B9095;
+    margin : 20px 0 40px 0;
+  }
+}
+
+@media (max-width : 376px) {
+  // PROMOCODE
+  .promocode-cart__container {
+    margin-left : -1rem;
+    margin-right : -1rem;
+  }
+}
+
+
+
+
+
+
+
+
 /* //////////////////////////////////////// */
 
 
 @media (max-width: 1601px) {
-
   .unico-category__title {
     @include flex(row, flex-start, center);
 

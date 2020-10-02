@@ -400,6 +400,53 @@ a:hover {
   white-space: nowrap;
 }
 
+.unico-button {
+  width: 100%;
+  height: 55px;
+  font-family: FiraGO-Medium;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  color: #fff;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.unico-button__blue {
+  background: #116BE5;
+  color: #fff;
+}
+
+.unico-button__blue:hover {
+  color: #116BE5;
+  border-color: #116BE5;
+  background: #fff;
+}
+
+.unico-button__red {
+  background: #F92162;
+  color: #fff;
+}
+
+.unico-button__red:hover {
+  color: #F92162;
+  border-color: #F92162;
+  background: #fff;
+}
+
 .header {
   background: #fff;
 }
@@ -1825,20 +1872,11 @@ a:hover {
 }
 
 /* SLIDER BRAND */
-.services-container {
-  height: 9rem;
-  background: #fff;
-}
-
-.services-container .services {
-  height: inherit;
-}
-
-.services-container .services .promocode__container {
+.promocode__container {
   padding: 0 0.9375rem;
 }
 
-.services-container .services .promocode {
+.promocode {
   top: 0;
   border-radius: 1rem;
   height: 12.19rem;
@@ -1851,13 +1889,13 @@ a:hover {
   background-position-x: right;
 }
 
-.services-container .services .promocode .promocode__header .promocode__title {
+.promocode .promocode__header .promocode__title {
   font-size: 1.75rem;
   font-family: Myriad;
   color: #0B0B4D;
 }
 
-.services-container .services .promocode .promocode__header .promocode__text {
+.promocode .promocode__header .promocode__text {
   margin: 0;
   margin-top: .4rem;
   color: #116BE5;
@@ -1866,7 +1904,7 @@ a:hover {
   font-family: Firago-medium;
 }
 
-.services-container .services .promocode .promocode__form {
+.promocode .promocode__form {
   border-radius: 2rem;
   background: #fff;
   overflow: hidden;
@@ -1875,7 +1913,7 @@ a:hover {
           box-shadow: 0 10px 30px rgba(102, 102, 193, 0.05);
 }
 
-.services-container .services .promocode .promocode__form .promocode__input {
+.promocode .promocode__form .promocode__input {
   height: 2.8125rem;
   outline: none;
   border: none;
@@ -1884,27 +1922,27 @@ a:hover {
   font-family: Firago-medium;
 }
 
-.services-container .services .promocode .promocode__form .promocode__input::-webkit-input-placeholder {
+.promocode .promocode__form .promocode__input::-webkit-input-placeholder {
   color: #223549;
   opacity: .4;
 }
 
-.services-container .services .promocode .promocode__form .promocode__input:-ms-input-placeholder {
+.promocode .promocode__form .promocode__input:-ms-input-placeholder {
   color: #223549;
   opacity: .4;
 }
 
-.services-container .services .promocode .promocode__form .promocode__input::-ms-input-placeholder {
+.promocode .promocode__form .promocode__input::-ms-input-placeholder {
   color: #223549;
   opacity: .4;
 }
 
-.services-container .services .promocode .promocode__form .promocode__input::placeholder {
+.promocode .promocode__form .promocode__input::placeholder {
   color: #223549;
   opacity: .4;
 }
 
-.services-container .services .promocode .promocode__form .promocode__button {
+.promocode .promocode__form .promocode__button {
   border: none;
   outline: none;
   background: none;
@@ -1923,15 +1961,24 @@ a:hover {
           align-items: center;
 }
 
-.services-container .services .promocode .promocode__form .promocode__button i {
+.promocode .promocode__form .promocode__button i {
   font-size: 2.06rem;
   color: #116BE5;
   -webkit-transition: .3s ease;
   transition: .3s ease;
 }
 
-.services-container .services .promocode .promocode__form .promocode__button i:hover {
+.promocode .promocode__form .promocode__button i:hover {
   color: #000;
+}
+
+.services-container {
+  height: 9rem;
+  background: #fff;
+}
+
+.services-container .services {
+  height: inherit;
 }
 
 .services-container .services .service {
@@ -5806,6 +5853,7 @@ footer .footer__brands .footer__link i {
 
 .cart-products__container {
   width: 100%;
+  padding-right: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5956,6 +6004,128 @@ footer .footer__brands .footer__link i {
 .cart__attributes .selectall__remove {
   color: #F92162;
   margin-left: 20px;
+}
+
+.cart-summary__container .promocode__container, .cart-summary__container .promocode-cart__container {
+  padding: 0;
+  margin-top: 25px;
+}
+
+.cart-summary {
+  padding: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cart-summary__basic {
+  width: 100%;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-summary__basic .cart-summary__title {
+  font-size: 24px;
+  font-family: FiraGO-Bold;
+}
+
+.cart-summary__basic .cart-summary__itemscount {
+  font-size: 14px;
+  font-family: FiraGO-bold;
+  color: #B7BFC6;
+}
+
+.cart-summary__count {
+  width: 100%;
+}
+
+.count-item {
+  width: 100%;
+  margin-bottom: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.count-item .count-item__key {
+  font-family: FiraGO-Bold;
+}
+
+.count-item .count-item__value {
+  font-family: FiraGO-Bold;
+}
+
+.count-total {
+  border-top: thin solid #D6DBE0;
+  padding-top: 30px;
+  margin: 40px 0;
+}
+
+.count-total .count-item__key, .count-total .count-item__value {
+  font-size: 18px;
+}
+
+.cart-summary__order {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.cart-summary__order .cart-summary__info {
+  font-family: FiraGO-Medium;
+  font-size: 14px;
+  color: #8B9095;
+  margin: 20px 0 40px 0;
+}
+
+@media (max-width: 376px) {
+  .promocode-cart__container {
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
 }
 
 /* //////////////////////////////////////// */

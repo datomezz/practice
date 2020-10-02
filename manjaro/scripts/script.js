@@ -1,3 +1,5 @@
+const $ = jQuery.noConflict();
+
 try {
   $("[data-toggle='tooltip']").tooltip({
     template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>'
