@@ -147,6 +147,11 @@ a {
   margin: 0 !important;
 }
 
+//BACKGROUND
+.bg-unico__light {
+  background : #fff;
+}
+
 //PRODUCT CONTAINER
 .unico-product__container {
   box-shadow: 0px 0px 30px #6666C10D;
@@ -310,6 +315,7 @@ a {
   }
 }
 
+//RATE
 .unico-rate__container {
   @include flex(row, flex-start, center);
   width: 100%;

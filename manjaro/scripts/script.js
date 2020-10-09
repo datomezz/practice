@@ -489,3 +489,21 @@ if(detailsFixed) {
     document.body.scrollTop > 200 || document.documentElement.scrollTop > 200 ? detailsFixed.style.height = "110px" : detailsFixed.style.height = "0px";
   });
 }
+
+//CART BANK ACTIVE
+
+const bankItems = document.querySelectorAll(".cart-bank__item");
+
+if(bankItems.length > 0) {
+  bankItems.forEach((item, index, arr) => {
+    item.onclick = () => {
+      console.log(item);
+
+      for(let i = 0; i < arr.length; i++) {
+        arr[i].classList.remove("bank-item__active");
+      }
+
+      item.classList.toggle("bank-item__active");
+    }
+  });
+}
