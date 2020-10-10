@@ -108,6 +108,10 @@ a:hover {
   text-overflow: ellipsis;
 }
 
+.unico-text__underline {
+  text-decoration: underline;
+}
+
 .tooltip-inner {
   font-size: .67rem;
   font-weight: 100;
@@ -6466,6 +6470,10 @@ footer .footer__brands .footer__link i {
   margin-bottom: 30px;
 }
 
+.summary__container .summary__list:last-child .summary__body {
+  border-bottom: none;
+}
+
 .summary__body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6516,6 +6524,89 @@ footer .footer__brands .footer__link i {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.cart-finish__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.cart-finish__head {
+  width: 275px;
+  height: 275px;
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-finish__body .cart-finish__title {
+  font-family: MyriadGEOMtavruli;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.cart-finish__body .cart-finish__ordernum {
+  font-family: FiraGO-Medium;
+  font-size: 18px;
+  margin-bottom: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cart-finish__body .cart-finish__ordernum span {
+  color: #fff;
+  background: #116BE5;
+  border-radius: 50px;
+  font-size: 13px;
+  padding: 2px 10px;
+  margin-left: 15px;
+}
+
+.cart-finish__body .cart-finish__info {
+  font-family: FiraGO-Medium;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.cart-finish__body .cart-finish__info .cart-finish__link {
+  margin-left: 15px;
+  color: #116BE5;
+  font-family: FiraGO-Medium;
 }
 
 @media (max-width: 376px) {
