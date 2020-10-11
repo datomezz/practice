@@ -1,9 +1,4 @@
-html {
-  font-size : 10px;
-}
-
 body {
-  font-size : 1.6rem;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -15,16 +10,4 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.car {
-  display : inline-flex;
-  flex-direction : column;
-  align-items: center;
-  justify-content: center;
-
-
-  width : 15rem;
-  border : 1px dashed tomato;
-  margin-right : 1rem;
 }
