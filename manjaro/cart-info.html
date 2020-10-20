@@ -135,7 +135,7 @@
 
   <main class="cart__container container unico-container unico-margin__bottom p-0 px-xl-4 px-lg-2 px-md-1 px-3">
     <!-- cart title -->
-    <span class="d-flex flex-column unico-margin__y-small">
+    <span class="d-flex flex-column cart__title--margin">
       <h2 class="cart__title">შეკვეთის გაფორმება</h2>
       <a href="/cart.html" class="cart__subtitle"><i class="uil uil-angle-left"></i>კალათა</a>
     </span>
@@ -144,6 +144,23 @@
 
         <!-- AJAX AREA -->
         <div class="cart-ajax__container unico-product__container">
+
+          <div class="cart-input__container flex-row">
+            <!-- item -->
+            <div class="unico-input__container mr-md-4 mr-2">
+              <div class="unico-input__body cart-id__type">
+                <input type="radio" name="order-type-radio" value="1" id="physical__id">
+                <label for="physical__id" class="unico-label">ფიზიკური პირი</label>
+              </div>
+            </div>
+            <!-- item -->
+            <div class="unico-input__container">
+              <div class="unico-input__body cart-id__type">
+                <input type="radio" name="order-type-radio" value="0" id="law__id">
+                <label for="law__id" class="unico-label">იურიდიული პირი</label>
+              </div>
+            </div>
+          </div>
     
           <!-- client input -->
           <div class="cart-input__container">
