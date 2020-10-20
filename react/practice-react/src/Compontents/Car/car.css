@@ -1,0 +1,16 @@
+.car__container {
+  border : 1px solid black;
+  background : red;
+
+  width : 20rem;
+  margin-right : 2rem;
+
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+}
+
+.cars {
+  display : flex;
+}
