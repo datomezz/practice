@@ -1,0 +1,136 @@
+
+//FAVORITES
+.favorites__container {
+  @include flex(row, center, flex-start);
+  flex-wrap : wrap;
+  margin-bottom : 130px;
+}
+
+.favorites__item {
+  @include flex(row, flex-start, flex-start);
+  height : 220px;
+
+  padding : 30px;
+  margin-right : 25px;
+  margin-bottom : 25px;
+
+  .unico-rate__container {
+    margin-left : 30px;
+  }
+}
+
+.favorites__head {
+  width : 160px;
+  height : 160px;
+
+  @include flex(row, center, center);
+
+  .favorites__img {
+    width : 150px;
+    height : 150px;
+  }
+}
+
+.favorites__title {
+  display : block;
+  width : 230px;
+  font-size : 18px;
+  font-family : FiraGO-Medium;
+}
+
+.favorites__body {
+  margin-left : 30px;
+  @include flex(row, flex-start, flex-start);
+
+  .unico-price__container {
+    margin : 15px 0;
+
+    .price {
+      font-size : 24px;
+    }
+
+    .price__old {
+      font-size : 16px;
+    }
+  }
+}
+
+.favorites__action {
+  @include flex(column, flex-start, center);
+}
+
+.favorites__info {
+  margin-right : 40px;
+}
+
+.favorites__circle {
+  width : 34px;
+  height : 34px;
+  border-radius : 50%;
+  background : #FBFBFF;
+  margin-bottom : 10px;
+
+  @include flex(row, center, center);
+
+  i {
+    font-size : 1.2rem;
+  }
+}
+.favorites__circle--active {
+  i {
+    color : $unicoRed;
+  }
+}
+
+@media (max-width : 768px) {
+  .favorites__container {
+    margin-bottom : 30px;
+  }
+
+  .favorites__info {
+    width : 75%;
+    margin : 0;
+  }
+
+  .favorites__item {
+    height : 164px;
+  
+    margin-right : 0;
+    padding : 20px;
+  }
+
+  .favorites__head {
+    width : 80px;
+    height : 80px;
+  
+    .favorites__img {
+      width : 75px;
+      height : 75px;
+    }
+  }
+
+  .favorites__title {
+    width : auto;
+    font-size : 14px;
+  }
+
+  .favorites__action {
+    padding-right : 15px;
+  }
+
+  .favorites__body {
+    width : 100%;
+  
+    .unico-price__container {
+      margin : 8px 0;
+  
+      .price {
+        font-size : 22px;
+      }
+  
+      .price__old {
+        font-size : 14px;
+      }
+    }
+  }
+}

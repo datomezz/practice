@@ -506,3 +506,22 @@ if(bankItems.length > 0) {
     }
   });
 }
+
+
+//FAVORITES TITLE HEIGHT
+const favoritesItemTitle = document.querySelectorAll(".favorites__title");
+
+favoritesItemTitle
+  ? favoritesItemTitle.forEach(item => {
+    let strText = item;
+    strText = strText.innerText;
+
+    let numOfChars = strText.length;
+
+    const textArr = strText.split("");
+    textArr.splice(50, numOfChars);
+    const arrToString = textArr.join("");
+
+    item.innerText = arrToString + "...";
+  })
+  : null;
