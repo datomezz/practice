@@ -1,6 +1,6 @@
 .car__container {
   border : 1px solid black;
-  background : red;
+  background : transparent;
 
   width : 20rem;
   margin-right : 2rem;
@@ -13,4 +13,16 @@
 
 .cars {
   display : flex;
+}
+
+.input {
+  border : 3px solid black;
+}
+
+.red {
+  border-color : red;
+}
+
+.green {
+  border-color : green;
 }
