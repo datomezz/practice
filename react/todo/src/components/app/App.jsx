@@ -18,7 +18,7 @@ export default class App extends Component {
       countHave : 2,
       countDone : 0,
       todoList : [
-        {value : "Some"}
+        {value : "Some", state : false}
       ]
     }
   }
@@ -42,9 +42,9 @@ export default class App extends Component {
   render() {
     return (
       <div className={"app app__container"}>
-        <Header header={this.state.header} />
+        <Header haveTodo={this.state.countHave} haveDone={this.state.countDone} />
         <SearchPanel addTodo={this.addTodo} onChange={this.changeHeader} />
-        <ListItems todoList={this.state.todoList} />
+        <ListItems onClick={console.log("yyy")} todoList={this.state.todoList} />
       </div>
     )
   }

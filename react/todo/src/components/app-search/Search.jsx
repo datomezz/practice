@@ -1,6 +1,6 @@
 import React from "react";
 
-export default ({onChange, addTodo}) => {
+const Search = ({onChange, addTodo}) => {
   return (
     <div className={"input-group"}>
       <input className={"form-control mr-2"} onChange={onChange} type={"text"} placeholder={"Write Some"} />
@@ -8,3 +8,5 @@ export default ({onChange, addTodo}) => {
     </div>
   );
 }
+
+export default Search;
