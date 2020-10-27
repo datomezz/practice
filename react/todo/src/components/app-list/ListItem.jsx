@@ -13,17 +13,19 @@ export default class ListItem extends Component {
   }
 
   changeStyle = () => {
-    this.setState({styleState : !this.state.styleState})
+    this.setState((state) => {
+      return {
+        styleState : !state.styleState
+      }
+    });
   }
 
   render() {
     const {styleState} = this.state;
 
-    const style = {
-      color : styleState ? "tomato" : "black",
-      fontWeight : styleState ? "bold" : "normal"
-    }
+    const className = styleState ? "text-denger" : "text-light";
+    console.log(this.props.value, "value");
 
-    return <span className={"app__list--item"} style={style} onClick={this.changeStyle}>{this.props.value}</span>
+    return <span className={`app__list--item ` + className} onClick={this.changeStyle}>{this.props.value}</span>
   }
 } 

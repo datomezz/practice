@@ -15,16 +15,12 @@ export default class App extends Component {
     super(props);
     this.state = {
       header : "Some",
-      countHave : 2,
-      countDone : 0,
       todoList : [
         {value : "Some", state : false}
-      ]
+      ],
+      countHave : 1,
+      countDone : 0
     }
-  }
-
-  changeHeader = (e) => {
-    this.setState({header : e.target.value})
   }
 
   addTodo = () => {
@@ -34,17 +30,32 @@ export default class App extends Component {
 
   
     this.setState({
-      todoList : oldState
+      todoList : oldState,
+      countHave : oldState.length
     });
 
   }
 
+  onDelete = (id) => {
+    const oldState = [...this.state.todoList];
+    oldState.splice(id, 1);
+
+    this.setState({todoList : oldState});
+  }
+
+  innerText = (e) => {
+    const oldState = [...this.state.todoList];
+    oldState.push({value : e.target.value});
+
+    this.setState({todoList : oldState});
+  }
+
   render() {
     return (
-      <div className={"app app__container"}>
+      <div className={"app app__container bg-primary rounded p-4"}>
         <Header haveTodo={this.state.countHave} haveDone={this.state.countDone} />
-        <SearchPanel addTodo={this.addTodo} onChange={this.changeHeader} />
-        <ListItems onClick={console.log("yyy")} todoList={this.state.todoList} />
+        <SearchPanel inputValue={console.log("xxx")} addTodo={this.addTodo} />
+        <ListItems onDelete={this.onDelete} todoList={this.state.todoList} />
       </div>
     )
   }

@@ -1,3 +1,16 @@
 .app__list--item {
   cursor : pointer;
 }
+
+ol {
+  padding : 0;
+}
+
+.app__list {
+  list-style : none;
+}
+
+.text-denger {
+  color : tomato !important;
+  font-weight : bold;
+}
