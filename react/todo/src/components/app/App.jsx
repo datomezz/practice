@@ -15,9 +15,7 @@ export default class App extends Component {
     super(props);
     this.state = {
       header : "",
-      todoList : [],
-      countHave : 0,
-      countDone : 0
+      todoList : []
     }
   }
 
@@ -34,7 +32,6 @@ export default class App extends Component {
   
     this.setState({
       todoList : oldState,
-      countHave : oldState.length
     });
 
   }
@@ -45,8 +42,6 @@ export default class App extends Component {
 
     this.setState({
       todoList : oldState,
-      countHave : oldState.length,
-      countDone : oldState.reduce((sum, item) => {sum += item["done"]; return sum}, 0)
     });
   }
 
@@ -56,14 +51,8 @@ export default class App extends Component {
 
       oldState[id].done = !oldState[id].done;
 
-      const numOfDoneElements = oldState.reduce((sum, item) => {
-        sum += item["done"];
-        return sum;
-      }, 0);
-
       return {
         todoList : oldState,
-        countDone : numOfDoneElements
       }
     });
   }
@@ -71,7 +60,7 @@ export default class App extends Component {
   render() {
     return (
       <div className={"app app__container bg-primary rounded p-4"}>
-        <Header haveTodo={this.state.countHave} haveDone={this.state.countDone} />
+        <Header todoList={this.state.todoList} />
         <SearchPanel onChange={(e) => this.setState({header : e.target.value})} addTodo={this.addTodo} />
         <ListItems onDelete={this.onDelete} onDone={this.onDone} todoList={this.state.todoList} />
       </div>
