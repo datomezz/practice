@@ -1,5 +1,9 @@
 .app__list--item {
   cursor : pointer;
+  max-width : 18rem;
+  overflow : hidden;
+  text-overflow : ellipsis;
+
 }
 
 ol {
@@ -11,6 +15,7 @@ ol {
 }
 
 .text-denger {
-  color : tomato !important;
+  color : lightsalmon !important;
   font-weight : bold;
+  text-decoration : line-through;
 }

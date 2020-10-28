@@ -22,9 +22,9 @@ export default class ListItem extends Component {
 
   render() {
     const {styleState} = this.state;
+    const {isDone} = this.props;
 
-    const className = styleState ? "text-denger" : "text-light";
-    console.log(this.props.value, "value");
+    const className = isDone ? "text-denger" : "text-light";
 
     return <span className={`app__list--item ` + className} onClick={this.changeStyle}>{this.props.value}</span>
   }

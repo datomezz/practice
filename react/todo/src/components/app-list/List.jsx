@@ -14,7 +14,7 @@ export default class List extends React.Component {
   }
 
   render() {
-    const {todoList, onDelete} = this.props; 
+    const {todoList, onDelete, onDone} = this.props; 
     
     return (
       <ol>
@@ -22,8 +22,8 @@ export default class List extends React.Component {
           todoList.map((item, index) => {
             return(
               <li className="app__list d-flex justify-content-between align-items-center border p-2 my-3" key={index}>
-                <ListItem value={item.value} />
-                <ListButtons onDelete={() => onDelete(index)} />
+                <ListItem isDone={item.done} value={item.value} />
+                <ListButtons onDone={() => onDone(index)} onDelete={() => onDelete(index)} />
               </li>
             )
           })
