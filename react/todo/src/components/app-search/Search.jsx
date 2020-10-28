@@ -1,12 +1,17 @@
 import React from "react";
 
-const Search = ({onChange, addTodo}) => {
-  return (
-    <div className={"input-group mb-3"}>
-      <input className={"form-control mr-2"} onChange={onChange} type={"text"} placeholder={"Write Some"} />
-      <button className={"btn btn-warning"} onClick={addTodo}>Add</button>
-    </div>
-  );
-}
+export default class Search extends React.Component {
 
-export default Search;
+  addingToLabel = (e) => {
+    this.props.addingToLabel(e.target.value);
+  }
+
+  render() {
+    return (
+      <div className={"input-group mb-3"}>
+        <input className={"form-control mr-2"} onChange={this.addingToLabel} type={"text"} placeholder={"Search Todo..."} />
+        <button className={"btn btn-dark"} onClick={this.addTodo}>Search</button>
+      </div>
+    );
+  }
+} 
