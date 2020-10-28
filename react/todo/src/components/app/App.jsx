@@ -43,18 +43,11 @@ export default class App extends Component {
     this.setState({todoList : oldState});
   }
 
-  innerText = (e) => {
-    const oldState = [...this.state.todoList];
-    oldState.push({value : e.target.value});
-
-    this.setState({todoList : oldState});
-  }
-
   render() {
     return (
       <div className={"app app__container bg-primary rounded p-4"}>
         <Header haveTodo={this.state.countHave} haveDone={this.state.countDone} />
-        <SearchPanel inputValue={console.log("xxx")} addTodo={this.addTodo} />
+        <SearchPanel onChange={(e) => this.setState({header : e.target.value})} addTodo={this.addTodo} />
         <ListItems onDelete={this.onDelete} todoList={this.state.todoList} />
       </div>
     )
