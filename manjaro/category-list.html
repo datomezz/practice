@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unico</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script src="https://kit.fontawesome.com/bb6e79ddfa.js"></script>
+  <link rel="stylesheet" href="assets/main.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+</head>
+
+<body>
+  <header class="container-fluid header px-lg-0 px-md-4 px-0">
+    <nav class="container unico-container p-0 px-lg-4 px-md-4 px-0">
+      <div class="header__info d-md-flex d-none justify-content-between align-items-center m-0">
+        <div class="header__questions">
+          <a class="header__text-link mr-3" href="javascript:void(0)">ჩვენ შესახებ</a>
+          <a class="header__text-link mr-3" href="javascript:void(0)">როგორ შევიძინო?</a>
+          <a class="header__text-link" href="javascript:void(0)">კონტაქტი</a>
+        </div>
+        <a class="header__text-link header__spin-link" href="javascript:void(0)">დასპინე, მოიგე</a>
+      </div>
+      <div class="header__container row justify-content-between m-0">
+        <div
+          class="header__main col-xl-4 col-lg-4 col-md-3 col-2 col-12 d-flex justify-content-xl-start justify-content-lg-start justify-content-between p-0 m-0">
+          <a class="logo__link col-xl-4 col-lg-4 col-md-7 col-4 row justify-content-md-start justify-content-center align-items-center order-md-0 order-1 p-0 pr-xl-4 pr-0 m-0"
+            href="#">
+            <img src="img/UNICO.GE.svg" class="header__logo-img" alt="logo">
+          </a>
+          <a class="header__caregory-container col-xl-6 col-lg-6 col-md-5 col-2 row justify-content-md-end justify-content-center align-items-center order-md-1 order-0 m-0 ml-xl-0 ml-lg-4"
+            href="javascript:void(0)" data-toggle="modal" data-target="#modal">
+            <div class="header__category d-flex justify-content-center align-items-center rounded-pill m-0">
+              <i class="uil uil-bars"></i>
+              <p class="category__text unico-text__ellipsis d-lg-block d-md-none d-none">ყველა კატეგორია
+              </p>
+            </div>
+          </a>
+          <div class="col-2 d-md-none d-flex justify-content-center order-2 p-0">
+            <a href="#" class="header__search shadow-sm">
+              <i class="fas fa-search"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-xl-4 col-lg-4 col-md-4 px-2">
+          <div class="header__input d-md-flex d-none justify-content-between rounded-pill position-relative p-1">
+            <a href="#"
+              class="input__category col-lg-3 col-md-2 d-flex justify-content-center align-items-center rounded-pill p-0 m-0"
+              data-toggle="modal" data-target="#modal">
+              <i class="uil uil-apps mr-lg-1 mr-md-0"></i>
+              <p class="category__text unico-text__ellipsis d-lg-block d-md-none d-none m-0">კატეგორია</p>
+            </a>
+            <div class="col-6 row align-items-center p-0 m-0">
+              <input type="text" name="field" class="search__input w-100 px-1" placeholder="მოძებნე მარტივად">
+            </div>
+            <button name="search-submit" class="col-2 row justify-content-end align-items-center input__button p-0 m-0">
+              <div class="search__button">
+                <i class="fas fa-search"></i>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="header__user col-4 d-md-flex d-none justify-content-between">
+          <a href="#" class="user__login col-4 d-flex align-items-center justify-content-center rounded-pill p-0"
+            data-toggle="modal" data-target="#modal">
+            <i class="uil uil-user mr-lg-1 mr-md-0"></i>
+            <p class="user__text unico-text__ellipsis d-lg-block d-md-none d-none m-0">შესვლა</p>
+          </a>
+          <a href="#" class="d-flex justify-content-center ml-lg-2 ml-0 p-0">
+            <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom" title="შედარება">
+              <i class="uil uil-exchange"></i>
+            </div>
+          </a>
+          <a href="#" class="d-flex justify-content-center p-0">
+            <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom"
+              title="დამახსოვრებული">
+              <i class="uil uil-heart"></i>
+            </div>
+          </a>
+          <a href="#" class="d-flex justify-content-center p-0">
+            <div class="user__action header__shopping-cart" data-toggle="tooltip" data-placement="bottom"
+              title="შეძენა">
+              <i class="uil uil-shopping-cart"></i>
+            </div>
+          </a>
+          <a href="#" class="d-flex justify-content-center p-0">
+            <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom"
+              title="ენის არჩევა">
+              <img src="img/ge.svg" alt="geo" class="img-fluid">
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <nav class="mobile__nav d-md-none d-flex container-fluid fixed-bottom px-4">
+      <div class="container p-0">
+        <div class="mobile__actions row justify-content-between align-items-center m-0">
+          <a href="#" class="mobile__action d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-home-alt"></i>
+            <p class="mobile__text m-0">მთავარი</p>
+          </a>
+          <a href="#" class="mobile__action d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-bars"></i>
+            <p class="mobile__text m-0">კატეგორიები</p>
+          </a>
+          <a href="#" class="mobile__action d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-exchange"></i>
+            <p class="mobile__text m-0">შედარება</p>
+          </a>
+          <a href="#"
+            class="mobile__action header__shopping-cart d-flex flex-column justify-content-center align-items-center">
+            <i class="uil uil-shopping-cart"></i>
+            <p class="mobile__text m-0">კალათა</p>
+          </a>
+          <a href="#" class="user__login mobile__action d-flex flex-column justify-content-center align-items-center"
+            data-toggle="modal" data-target="#modal">
+            <i class="uil uil-user"></i>
+            <p class="mobile__text m-0">პროფილი</p>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <aside class="modal fade p-0" id="modal">
+    <div class="unico__modalContainer modal-dialog h-100">
+      <div class="modal-content unico-bg__gray border-1">
+        <div class="modal-body unico-modal__radius p-sm-5 p-3">
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <main class="container-fluid">
+    <section class="container unico-container p-0 px-lg-4 px-md-4 px-0">
+      <div class="row m-0 unico-margin__y-small d-md-flex d-none">
+        <div class="unico-rek rek-category__first col-12 p-0 px-xl-0 px-lg-2 px-md-2 px-2">
+          <a href="#" target="_blank">
+            <img src="img/rek-1.png" alt="rek" class="img-fluid rek__img">
+          </a>
+        </div>
+      </div>
+      <div class="row m-0">
+        <div class="search-result__container">
+          <div class="search-result">
+            <a class="search-result__title" href="#">მთავარი<i class="uil uil-angle-right-b"></i></a>
+            <p class="search-result__result m-0">ძებნის შედეგი "<span>MacBook Pro</span>"</p>
+          </div>
+          <span class="search-result__count">სულ მოიძებნა 13,314 შედეგი</span>
+        </div>
+      </div>
+      <div class="row m-0 unico-margin__y-small filter__margin">
+        <div class="col-xl-3 col-lg-4 col-md-5 col-12 p-0">
+          <div class="filter filter-main accordion d-md-none d-flex" id="filterMainAccordion">
+            <a class="filter-main__header" href="javascript:void(0)" data-toggle="collapse"
+              data-target="#filterMainCollapse" aria-expanded="true" aria-controls="filterMainCollapse">
+              <h3 class="filter__title m-0">ფილტრაცია</h3>
+              <i class="uil uil-filter"></i>
+            </a>
+          </div>
+          <div class="filter__container collapse show" id="filterMainCollapse" data-parent="#filterMainAccordion">
+            <div class="filter filter__category accordion" id="filterCategoryAccordion">
+              <a href="javascript:void(0)" class="filter__header" data-toggle="collapse"
+                data-target="#filterCategoryCollapse" aria-expanded="true" aria-controls="filterCategoryCollapse">
+                <h3 class="filter__title m-0">კატეგორია</h3>
+                <i class="uil uil-angle-up"></i>
+              </a>
+              <div id="filterCategoryCollapse" class="collapse show" data-parent="#filterCategoryAccordion">
+                <input type="text" class="filter__search" placeholder="ძებნა">
+                <a class="filter__back" href="javascript:void(0)"><i class="uil uil-arrow-left"></i>უკან</a>
+                <div class="filter__submits">
+                  <a class="submit" href="javascript:void(0)"><span class="submit__checkbox"></span>ელექტრონიკა</a>
+                  <div class="sub-submit__container">
+                    <a class="submit submit__small" href="javascript:void(0)"><span
+                        class="submit__checkbox"></span>მობილური ტელეფონები</a>
+                    <a class="submit submit__small" href="javascript:void(0)"><span
+                        class="submit__checkbox"></span>მობილური ტელეფონების აქსესუარები</a>
+                    <a class="submit submit__small" href="javascript:void(0)"><span
+                        class="submit__checkbox"></span>ჭკვიანი საათები და სამაჯურები</a>
+                    <a class="submit submit__small" href="javascript:void(0)"><span
+                        class="submit__checkbox"></span>სტაციონალური ტელეფონები</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="filter filter__price accordion" id="filterPriceAccordion">
+              <a href="javascript:void(0)" class="filter__header" data-toggle="collapse"
+                data-target="#filterPriceCollapse" aria-expanded="true" aria-controls="filterPriceCollapse">
+                <h3 class="filter__title m-0">ფასი</h3>
+                <i class="uil uil-angle-up"></i>
+              </a>
+              <div id="filterPriceCollapse" class="w-100 collapse show" data-parent="#filterPriceAccordion">
+                <input class="w-100" type="range" min="1" max="11420">
+                <div class="values__container">
+                  <span class="values__range">100₾</span>
+                  <span class="values__separator">-</span>
+                  <span class="values__range">1000₾</span>
+                </div>
+              </div>
+            </div>
+            <div class="filter filter__year accordion" id="filterYearAccordion">
+              <a href="javascript:void(0)" class="filter__header" data-toggle="collapse"
+                data-target="#filterYearCollapse" aria-expanded="true" aria-controls="filterYearCollapse">
+                <h3 class="filter__title m-0">წელი</h3>
+                <i class="uil uil-angle-up"></i>
+              </a>
+              <div id="filterYearCollapse" class="w-100 collapse show" data-parent="#filterYearAccordion">
+                <input class="w-100" type="range" min="2008" max="2020">
+                <div class="values__container">
+                  <span class="values__range">2008</span>
+                  <span class="values__separator">-</span>
+                  <span class="values__range">2020</span>
+                </div>
+              </div>
+            </div>
+            <div class="filter filter__year accordion" id="filterColorAccordion">
+              <a href="javascript:void(0)" class="filter__header" data-toggle="collapse"
+                data-target="#filterColorCollapse" aria-expanded="true" aria-controls="filterColorCollapse">
+                <h3 class="filter__title m-0">ფერი</h3>
+                <i class="uil uil-angle-up"></i>
+              </a>
+              <div id="filterColorCollapse" class="w-100 collapse show" data-parent="#filterColorAccordion">
+                <div class="colors__container">
+                  <a class="color color__red" href="javascript:void(0)"></a>
+                  <a class="color color__blue" href="javascript:void(0)"></a>
+                  <a class="color color__purple" href="javascript:void(0)"></a>
+                  <a class="color color__gray" href="javascript:void(0)"></a>
+                  <a class="color color__black" href="javascript:void(0)"></a>
+                  <a class="color color__yellow" href="javascript:void(0)"></a>
+                  <a class="color color__gray" href="javascript:void(0)"></a>
+                  <a class="color color__black" href="javascript:void(0)"></a>
+                  <a class="color color__yellow" href="javascript:void(0)"></a>
+                </div>
+              </div>
+            </div>
+            <div class="filter filter__brand accordion" id="filterBrandsAccordion">
+              <a href="javascript:void(0)" class="filter__header" data-toggle="collapse"
+                data-target="#filterBrandsCollapse" aria-expanded="true" aria-controls="filterBrandsCollapse">
+                <h3 class="filter__title m-0">ბრენდი</h3>
+                <i class="uil uil-angle-up"></i>
+              </a>
+              <div id="filterBrandsCollapse" class="w-100 collapse show" data-parent="#filterBrandsAccordion">
+                <input type="text" class="filter__search" placeholder="ძებნა">
+                <div class="filter__submits m-0">
+                  <a class="submit" href="javascript:void(0)"><span class="submit__checkbox"></span>Philips</a>
+                  <a class="submit" href="javascript:void(0)"><span class="submit__checkbox"></span>Apple</a>
+                  <a class="submit" href="javascript:void(0)"><span class="submit__checkbox"></span>Huawei</a>
+                  <a class="submit" href="javascript:void(0)"><span class="submit__checkbox"></span>Samsung</a>
+                  <a class="submit" href="javascript:void(0)"><span class="submit__checkbox"></span>Xiaomi</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="history__container d-md-flex d-none">
+            <h3 class="history__title">ისტორია</h3>
+            <div class="slider-history">
+              <div class="slider-history__unity">
+                <div class="slider-history__item">
+                  <img src="img/iphone.png" class="slider-history__img">
+                  <a class="slider-history__title" href="#">House of Marley EM-JH121-DN ყურსასმენი
+                    (ჰაუს ოფ მარლი)</a>
+                </div>
+                <div class="slider-history__item">
+                  <img src="img/coffe.png" class="slider-history__img">
+                  <a class="slider-history__title" href="#">House of Marley EM-JH121-DN ყურსასმენი
+                    (ჰაუს ოფ მარლი)</a>
+                </div>
+                <div class="slider-history__item">
+                  <img src="img/headphones.png" class="slider-history__img">
+                  <a class="slider-history__title" href="#">House of Marley EM-JH121-DN ყურსასმენი
+                    (ჰაუს ოფ მარლი)</a>
+                </div>
+              </div>
+              <div class="slider-history__unity">
+                <div class="slider-history__item">
+                  <img src="img/iphone.png" class="slider-history__img">
+                  <a class="slider-history__title" href="#">House of Marley EM-JH121-DN ყურსასმენი
+                    (ჰაუს ოფ მარლი)</a>
+                </div>
+                <div class="slider-history__item">
+                  <img src="img/iphone.png" class="slider-history__img">
+                  <a class="slider-history__title" href="#">House of Marley EM-JH121-DN ყურსასმენი
+                    (ჰაუს ოფ მარლი)</a>
+                </div>
+                <div class="slider-history__item">
+                  <img src="img/iphone.png" class="slider-history__img">
+                  <a class="slider-history__title" href="#">House of Marley EM-JH121-DN ყურსასმენი
+                    (ჰაუს ოფ მარლი)</a>
+                </div>
+              </div>
+              <div class="slider-history__unity">
+                <div class="slider-history__item">
+                  <img src="img/iphone.png" class="slider-history__img">
+                  <a class="slider-history__title" href="#">House of Marley EM-JH121-DN ყურსასმენი
+                    (ჰაუს ოფ მარლი)</a>
+                </div>
+                <div class="slider-history__item">
+                  <img src="img/iphone.png" class="slider-history__img">
+                  <a class="slider-history__title" href="#">House of Marley EM-JH121-DN ყურსასმენი
+                    (ჰაუს ოფ მარლი)</a>
+                </div>
+                <div class="slider-history__item">
+                  <img src="img/iphone.png" class="slider-history__img">
+                  <a class="slider-history__title" href="#">House of Marley EM-JH121-DN ყურსასმენი
+                    (ჰაუს ოფ მარლი)</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-9 col-lg-8 col-md-7 col-12 p-0 pl-md-4 pl-0">
+          <div class="category__filter">
+            <div class="filter-dropdown__container">
+              <a href="javascript:void(0)" class="filter-dropdown__title unico-text__ellipsis">ახალი
+                დამატებულები</a>
+              <div class="filter-dropdown d-none">
+                <a href="javascript:void(0)" class="filter-dropdown__link">პოპულარული</a>
+                <a href="javascript:void(0)" class="filter-dropdown__link">ძველი დამატებულები</a>
+                <a href="javascript:void(0)" class="filter-dropdown__link">რამე</a>
+              </div>
+            </div>
+            <div class="category__switchers">
+              <a class="switchers__link" href="#"><i class="uil uil-grids"></i></a>
+              <a class="switchers__link" href="#"><i class="uil uil-list-ul"></i></a>
+            </div>
+          </div>
+          <section class="category__section category-product">
+
+            <article class="unico-product__container category-product__article--row">
+              <div class="category__img--container">
+                <img src="/img/coffe.png" alt="category" class="" />
+              </div>
+              <div class="category-product__body--row">
+                <h3 class="category-product__title--row">Apple iPhone 11 4GB 64GB Black მობილური ტელეფონი (ეფლი)</h3>
+                <div class="category-product__attributes--row">
+                    <div class="attribute-item">
+                      <span class="attribute__key">მოდელი</span>
+                      <span class="attribute__value">Samsung Galaxy S20 Ultra (G988F)</span>
+                    </div>
+                    <div class="attribute-item">
+                      <span class="attribute__key">ეკრანი</span>
+                      <span class="attribute__value">6.90" (3200 x 1440) </span>
+                    </div>
+                    <div class="attribute-item">
+                      <span class="attribute__key">შიდა მეხსიარება</span>
+                      <span class="attribute__value">64GB</span>
+                    </div>
+                </div>
+
+                <div class="d-md-none d-flex flex-column">
+                  <div class="unico-price__container">
+                    <span class="price">156,00₾</span>
+                    <span class="price__old">156,00₾</span>
+                  </div>
+  
+                  <div class="unico-rate__container">
+                    <p class="rate">99 შეფასება</p>
+                    <div class="stars">
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="category-product__footer--row">
+
+                <div class="d-flex flex-row justify-content-start align-items-center">
+                  <div class="d-md-flex d-none flex-column">
+                    <div class="unico-price__container">
+                      <span class="price">156,00₾</span>
+                      <span class="price__old">156,00₾</span>
+                    </div>
+    
+                    <div class="unico-rate__container">
+                      <div class="stars">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </div>
+                      <p class="rate m-0">99 შეფასება</p>
+                    </div>
+                  </div>
+                  
+                  <div class="category-product__action">
+                    <a href="javascript:void(0)" class="action"><i class="far fa-heart" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0)" class="action"><i class="fas fa-exchange-alt" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+
+                <a href="#" class="category-product__button--container">
+                  <span class="button__label">დეტალური ნახვა</span>
+                  <span class="button__submit"><i class="uil uil-shopping-cart"></i></span>
+                </a>
+
+              </div>
+            </article>
+            <article class="unico-product__container category-product__article--row">
+              <div class="category__img--container">
+                <img src="/img/coffe.png" alt="category" class="" />
+              </div>
+              <div class="category-product__body--row">
+                <h3 class="category-product__title--row">Apple iPhone 11 4GB 64GB Black მობილური ტელეფონი (ეფლი)</h3>
+                <div class="category-product__attributes--row">
+                    <div class="attribute-item">
+                      <span class="attribute__key">მოდელი</span>
+                      <span class="attribute__value">Samsung Galaxy S20 Ultra (G988F)</span>
+                    </div>
+                    <div class="attribute-item">
+                      <span class="attribute__key">ეკრანი</span>
+                      <span class="attribute__value">6.90" (3200 x 1440) </span>
+                    </div>
+                    <div class="attribute-item">
+                      <span class="attribute__key">შიდა მეხსიარება</span>
+                      <span class="attribute__value">64GB</span>
+                    </div>
+                </div>
+
+                <div class="d-md-none d-flex flex-column">
+                  <div class="unico-price__container">
+                    <span class="price">156,00₾</span>
+                    <span class="price__old">156,00₾</span>
+                  </div>
+  
+                  <div class="unico-rate__container">
+                    <p class="rate">99 შეფასება</p>
+                    <div class="stars">
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                      <i class="fas fa-star" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="category-product__footer--row">
+
+                <div class="d-flex flex-row justify-content-start align-items-center">
+                  <div class="d-md-flex d-none flex-column">
+                    <div class="unico-price__container">
+                      <span class="price">156,00₾</span>
+                      <span class="price__old">156,00₾</span>
+                    </div>
+    
+                    <div class="unico-rate__container">
+                      <div class="stars">
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                        <i class="fas fa-star" aria-hidden="true"></i>
+                      </div>
+                      <p class="rate m-0">99 შეფასება</p>
+                    </div>
+                  </div>
+                  
+                  <div class="category-product__action">
+                    <a href="javascript:void(0)" class="action"><i class="far fa-heart" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0)" class="action"><i class="fas fa-exchange-alt" aria-hidden="true"></i></a>
+                  </div>
+                </div>
+
+                <a href="#" class="category-product__button--container">
+                  <span class="button__label">დეტალური ნახვა</span>
+                  <span class="button__submit"><i class="uil uil-shopping-cart"></i></span>
+                </a>
+
+              </div>
+            </article>
+
+          </section>
+          <div class="pagination__container unico-margin__top-small unico-margin__bottom">
+            <a class="pagination__item pagination__arrow" href="#"><i class="uil uil-arrow-left"></i></a>
+            <a class="pagination__item" href="#">1</a>
+            <a class="pagination__item" href="#">2</a>
+            <a class="pagination__item" href="#">3</a>
+
+            <a class="pagination__item pagination__arrow" href="#"><i class="uil uil-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container-fluid unico-bg__white p-0 px-xl-4 px-lg-2 px-md-1 px-1">
+    <div class="container unico-container p-0 px-xl-4 px-lg-2 px-md-1 px-1">
+      <div class="d-md-flex d-none m-0 py-5">
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">კომპანია</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">ჩვენს შესახებ</a>
+            <a href="#" class="footer__link">გუნდის შესახებ</a>
+            <a href="#" class="footer__link">კარიერა</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">ჩემი ანგარიში</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">ანგარიში</a>
+            <a href="#" class="footer__link">შეკვეთები</a>
+            <a href="#" class="footer__link">ხშირად დასმული კითხვები</a>
+            <a href="#" class="footer__link">დახმარება</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">პირობები</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">დაბრუნების პოლიტიკა</a>
+            <a href="#" class="footer__link">მიტანის სერვისი</a>
+            <a href="#" class="footer__link">წესები და პირობები</a>
+            <a href="#" class="footer__link">კონფიდენციალურობის პოლიტიკა</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">დახმარება</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">დაბრუნების პოლიტიკა</a>
+            <a href="#" class="footer__link">მიტანის სერვისი</a>
+            <a href="#" class="footer__link">წესები და პირობები</a>
+            <a href="#" class="footer__link">კონფიდენციალურობის პოლიტიკა</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">გათამაშება</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link">დასპინე და მოიგე</a>
+            <a href="#" class="footer__link">უფასო სპინები</a>
+            <a href="#" class="footer__link">წესებიდა პირობები</a>
+            <a href="#" class="footer__link">დააგროვე რეფერალები</a>
+          </div>
+        </div>
+        <div class="footer__column col-2 p-0 px-2">
+          <h2 class="footer__title">შემოგვიერთდით</h2>
+          <div class="footer__body">
+            <a href="#" class="footer__link"><i class="fab fa-facebook-f"></i>facebook.</a>
+            <a href="#" class="footer__link"><i class="fab fa-youtube"></i>youtube.</a>
+            <a href="#" class="footer__link"><i class="fab fa-instagram"></i>instagram.</a>
+          </div>
+        </div>
+      </div>
+      <hr class="d-md-block d-none mx-5">
+      <div class="d-flex flex-md-row flex-column justify-content-between align-items-center m-0 py-4">
+        <div class="footer__logo order-0">
+          <img src="img/UNICO.GE.svg" class="logo" alt="logo">
+        </div>
+        <h6 class="footer__copyright order-md-1 order-2 m-0">ყველა უფლება დაცულია</h6>
+        <div class="footer__brands order-md-2 order-1 my-md-0 my-4">
+          <i class="d-md-block d-none fab fa-cc-visa mr-2"></i>
+          <i class="d-md-block d-none fab fa-cc-mastercard"></i>
+          <a href="#" class="footer__link d-md-none d-flex"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="footer__link d-md-none d-flex"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="footer__link d-md-none d-flex"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>
