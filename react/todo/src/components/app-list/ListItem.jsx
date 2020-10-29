@@ -21,7 +21,6 @@ export default class ListItem extends Component {
   }
 
   render() {
-    const {styleState} = this.state;
     const {isDone} = this.props;
 
     const className = isDone ? "text-denger" : "text-light";

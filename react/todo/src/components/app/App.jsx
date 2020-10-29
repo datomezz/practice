@@ -16,7 +16,8 @@ export default class App extends Component {
     super(props);
     this.state = {
       todoList : [],
-      term : ""
+      term : "",
+      filter : "all"
     }
   }
 
@@ -72,16 +73,33 @@ export default class App extends Component {
     this.setState({term : term});    
   }
 
+  filter(arr, filter) {
+    switch(filter) {
+      case "all" :
+        return arr;
+      case "have" :
+        return arr.filter(item => !item.done)
+      case "done" : 
+        return arr.filter(item => item.done)
+      default : 
+        return arr
+    }
+  }
+
+  onFilterChange = (value) => {
+    this.setState({filter : value});
+  }
+
   render() {
 
-    const visibleItems = this.search(this.state.todoList, this.state.term);
+    const visibleItems = this.filter(this.search(this.state.todoList, this.state.term), this.state.filter);
 
     return (
       <div className={"app app__container bg-primary rounded p-4"}>
         <Header todoList={this.state.todoList} />
         <AddingForm addedText={this.addedText} />
         <ListItems onDelete={this.onDelete} onDone={this.onDone} todoList={visibleItems} />
-        <Search addingToLabel={this.addingToLabel} />
+        <Search onFilterChange={this.onFilterChange} addingToLabel={this.addingToLabel} />
       </div>
     )
   }

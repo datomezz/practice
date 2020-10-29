@@ -13,7 +13,7 @@ const TotalTodos = ({todoList}) => {
   return(
     <div className={"app__total--container d-flex justify-content-between align-items-center"}>
       <span className="h2 text-light">TODO APP</span>
-      <span className="h6 text-light">{_haveTodo} more to do, {_haveDone} done</span>
+      <span className="h6 text-light">{_haveTodo - _haveDone} more to do, {_haveDone} done</span>
     </div>
   )
 }
