@@ -1,7 +1,8 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 
 // COMPONENTS
 import RandomList from "./random-list";
+import Spinner from "../spinner/spinner";
 
 // MODELS
 import SwapService from "../models/swapService";
@@ -11,23 +12,12 @@ export default class Random extends Component {
     super();
 
     this.state = {
-      people: [
-        {
-          name: null,
-          gender: null,
-          height: null,
-        }
-      ],
-      person : [
-        {
-          name: "alaxi",
-          gender: null,
-          height: null,
-        }
-      ]
+      people: [],
+      person: [],
+      loader : true
     }
 
-    this.updatePerson(3);
+    setTimeout(this.updatePerson(), 1000);
   }
 
   SwapService = new SwapService();
@@ -36,27 +26,27 @@ export default class Random extends Component {
     await this.SwapService.getPeople()
       .then(data => {
         this.setState({ people: data })
-      })
-  }
-
-  async updatePerson(id) {
-    await this.SwapService.getPerson(id)
-    .then(data => {
-      const arr = [{
-        url : `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`,
-        name : data.name,
-        gender : data.gender,
-        height : data.height
-      }];
-
-      this.setState({person : arr})
     })
   }
 
-  render() {
+  async updatePerson() {
+    const rand = Math.floor(Math.random() * 25) + 2;
+    await this.SwapService.getPerson(rand)
+      .then(data => {
+        const arr = [{
+          url: `https://starwars-visualguide.com/assets/img/characters/${rand}.jpg`,
+          name: data.name,
+          gender: data.gender,
+          height: data.height
+        }];
 
-    return (
-      <div className="card w-75 mx-auto my-5">
+        this.setState({ person: arr, loader : false })
+      })
+  }
+
+  render() {
+    const RandomComponent = () => {
+      return (
         <div className={"row"}>
           <div className={"col-4"}>
             <img src={this.state.person[0].url} className="card-img-top" alt="..."></img>
@@ -67,7 +57,21 @@ export default class Random extends Component {
             </div>
           </div>
         </div>
+      )
+    }
+
+    const spinner = this.state.loader ? <Spinner /> : null;
+    const content = !this.state.loader ? <RandomComponent /> : null;
+
+    return(
+      <div className="card mx-auto my-5">
+        <div className={"row justify-content-between p-3 m-0"}>
+          <div className={"bg-warning rounded"}>
+            {spinner} {content}
+          </div>
+        </div>
       </div>
     )
+
   }
 }

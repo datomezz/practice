@@ -3,8 +3,7 @@ export default class SwapService {
 
   async API(api) {
     try {
-      const res = await fetch(`${this._apiURL}${api}`).then(res => res.json());
-      return res;
+      return await fetch(`${this._apiURL}${api}`).then(res => res.json());
     } catch (err) {throw new Error("Error", err)}
   }
 
