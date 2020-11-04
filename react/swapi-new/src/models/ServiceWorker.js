@@ -25,11 +25,12 @@ export default class ServiceWorker {
   //PLANETS
   async getAllPlanets() {
     const res = await this.getResourse(`/planets/`);
-    return res.results;
+    return res.results.map(this._transformPlanet);
   }
   
   async getPlanet(id) {
-    return await this.getResourse(`/planets/${id}/`);
+    const res = await this.getResourse(`/planets/${id}/`);
+    return this._transformPlanet(res);
   }
 
   //STARSHIPS
@@ -40,5 +41,21 @@ export default class ServiceWorker {
   
   async getStarship(id) {
     return await this.getResourse(`/starships/${id}/`);
+  }
+
+  _extractId(item) {
+    const idRegExp = /\/([0-9]*)\/$/;
+    return item.url.match(idRegExp)[1];
+  }
+
+  _transformPlanet(item) {
+
+    return {
+      id : this._extractId(item),
+      name : item.name,
+      population : item.population,
+      rotationPeriod : item.rotation_period,
+      diameter : item.diameter
+    }
   }
 }

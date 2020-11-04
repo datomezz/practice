@@ -5,42 +5,39 @@ import "./app-aside.css";
 
 // MODELS
 import ServiceWorker from "../models/ServiceWorker";
+import Spinner from "../spinner/spinner";
 
 export default class Aside extends Component {
 
   constructor() {
     super();
+    this.state = {
+      planet : {},
+      loader : true,
+    }
 
     this.updatePlanet();
   }
   
   ServiceWorker = new ServiceWorker();
 
-  state = {
-    id : null,
-    name : null,
-    population : null,
-    rotationPeriod : null,
-    diameter : null
-  }
-
   updatePlanet() {
     const rand = Math.floor(Math.random() * 15) + 2;
 
     this.ServiceWorker
       .getPlanet(rand)
-      .then(data => this.setState({
-        id : rand,
-        name : data.name,
-        population : data.population,
-        rotationPeriod : data.rotation_period,
-        diameter : data.diameter
-      }))
+      .then(data => {
+        this.setState({planet : data, loader : false})
+      })
       .catch(err => console.log("Planet Error", err));
   }
 
   render() {
-    const {id, name, population, rotationPeriod, diameter} = this.state;
+    const {planet : {id, name, population, rotationPeriod, diameter}, loader} = this.state;
+
+    if(loader) {
+      return <Spinner />
+    }
 
     return (
       <div className="card rounded my-5">
