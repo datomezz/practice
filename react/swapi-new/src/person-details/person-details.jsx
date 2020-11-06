@@ -3,30 +3,45 @@ import React, {Component} from "react";
 // MODELS
 import ServiceWorker from "../models/ServiceWorker";
 import Spinner from "../spinner/spinner";
+import ErrorIndicator from "../error-indicator/error-indicator";
 
 export default class PersonDetails extends Component {
 
   ServiceWorker = new ServiceWorker();
 
   state = {
-    person : null
+    person : null,
+    error : false
   }
 
   componentDidMount() {
     this._updatePerson();
   }
 
+  componentDidUpdate(prevProps) {
+    if(this.props.selectedPerson !== prevProps.selectedPerson) {
+      this._updatePerson();
+    }
+  }
+
   _updatePerson() {
-    this.ServiceWorker.getPerson(3)
+    this.ServiceWorker.getPerson(this.props.selectedPerson)
     .then(data => {
       console.log('data', data);
       this.setState({person : data});
       
     })
-    .catch(err => console.log("PERSON_DETAILS_ERROR", err));
+    .catch(err => {
+      console.error("PERSON_DETAILS_ERROR", err);
+      this.setState({error : true});
+    });
   }
 
   render() {
+
+    if(this.state.error) {
+      return <ErrorIndicator />
+    }
 
     if(!this.state.person) {
       return <Spinner />

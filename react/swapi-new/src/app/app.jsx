@@ -19,11 +19,12 @@ export default class App extends Component {
         {name : "planets"},
         {name : "starships"}
       ],
-      selectedPerson : null
+      selectedPerson : 1
     }
   }
 
   onItemSelected = (id) => {
+    console.log(id);
     this.setState({selectedPerson : id})
   }
 
