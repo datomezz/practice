@@ -17,7 +17,7 @@ export default class Navbar extends Component {
         {navbar.map(item => {
           return (
             <li key={item.name} className={"nav-item"}>
-              <a className={"nav-link text-light"} href="#">{toUppercaseFirstLetter(item.name)}</a>
+              <a href="" className={"nav-link text-light"}>{toUppercaseFirstLetter(item.name)}</a>
             </li>
           )
         })}

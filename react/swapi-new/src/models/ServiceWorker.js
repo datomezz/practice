@@ -19,7 +19,8 @@ export default class ServiceWorker {
   }
   
   async getPerson(id) {
-    return await this.getResourse(`/people/${id}/`);
+    const res = await this.getResourse(`/people/${id}/`);
+    return this._transformPeople(res);
   }
 
   //PLANETS
@@ -62,7 +63,10 @@ export default class ServiceWorker {
   _transformPeople = (item) => {
     return {
       id : this._extractId(item),
-      name : item.name
+      name : item.name,
+      height : item.height,
+      maas : item.mass,
+      gender : item.gender
     }
   }
 }
