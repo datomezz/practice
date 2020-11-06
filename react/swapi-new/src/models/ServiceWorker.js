@@ -15,7 +15,7 @@ export default class ServiceWorker {
 
   async getAllPeople() {
     const res = await this.getResourse(`/people/`);
-    return res.results;
+    return res.results.map(this._transformPeople);
   }
   
   async getPerson(id) {
@@ -48,7 +48,7 @@ export default class ServiceWorker {
     return item.url.match(idRegExp)[1];
   }
 
-  _transformPlanet(item) {
+  _transformPlanet = (item) => {
 
     return {
       id : this._extractId(item),
@@ -56,6 +56,13 @@ export default class ServiceWorker {
       population : item.population,
       rotationPeriod : item.rotation_period,
       diameter : item.diameter
+    }
+  }
+
+  _transformPeople = (item) => {
+    return {
+      id : this._extractId(item),
+      name : item.name
     }
   }
 }

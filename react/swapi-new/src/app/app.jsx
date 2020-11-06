@@ -1,14 +1,12 @@
 import React, {Component} from "react";
 
-// MODELS
-import ServiceWorker from "../models/ServiceWorker";
-
 // STYLE
 import "./app.css";
 
 // COMPONENTS
 import Aside from "../app-aside/app-aside";
 import Header from "../app-header/app-header";
+import ListItems from "../app-list/app-list";
 
 export default class App extends Component {
   constructor() {
@@ -28,6 +26,11 @@ export default class App extends Component {
       <div className={"container"}>
         <Header navbar={this.state.navbar} />
         <Aside />
+        <div className={"row"}>
+          <div className={"col-5"}>
+            <ListItems />
+          </div>
+        </div>
       </div>
     )
   }

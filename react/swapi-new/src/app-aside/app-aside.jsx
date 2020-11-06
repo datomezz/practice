@@ -17,13 +17,15 @@ export default class Aside extends Component {
       loader : true,
       error : false
     }
+  }
 
-    this.updatePlanet();
+  componentDidMount() {
+    setInterval(this.updatePlanet, 1500);
   }
   
   ServiceWorker = new ServiceWorker();
 
-  updatePlanet() {
+  updatePlanet = () => {
     const rand = Math.floor(Math.random() * 15) + 2;
 
     this.ServiceWorker
