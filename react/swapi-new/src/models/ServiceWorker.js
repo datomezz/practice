@@ -13,34 +13,34 @@ export default class ServiceWorker {
     return body;
   }
 
-  async getAllPeople() {
+  getAllPeople = async () => {
     const res = await this.getResourse(`/people/`);
     return res.results.map(this._transformPeople);
   }
   
-  async getPerson(id) {
+  getPerson = async (id) => {
     const res = await this.getResourse(`/people/${id}/`);
     return this._transformPeople(res);
   }
 
   //PLANETS
-  async getAllPlanets() {
+  getAllPlanets = async () => {
     const res = await this.getResourse(`/planets/`);
     return res.results.map(this._transformPlanet);
   }
   
-  async getPlanet(id) {
+  getPlanet = async (id) => {
     const res = await this.getResourse(`/planets/${id}/`);
     return this._transformPlanet(res);
   }
 
   //STARSHIPS
-  async getAllStarships() {
+  getAllStarships = async () => {
     const res = await this.getResourse(`/starships/`);
     return res.results;
   }
   
-  async getStarship(id) {
+  getStarship = async (id) => {
     return await this.getResourse(`/starships/${id}/`);
   }
 

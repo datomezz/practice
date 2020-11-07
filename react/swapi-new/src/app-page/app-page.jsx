@@ -27,7 +27,7 @@ export default class Page extends Component {
     return (
       <div className={"row justify-content-between my-5"}>
         <div className={"col-5"}>
-          <ListItems onItemSelected={this.onItemSelected} />
+          <ListItems getData={this.props.getData} onItemSelected={this.onItemSelected} />
         </div>
         <div className={"col-5"}>
           <PersonDetails selectedPerson={this.state.selectedPerson} />

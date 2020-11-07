@@ -9,6 +9,9 @@ import Header from "../app-header/app-header";
 import Page from "../app-page/app-page";
 import ErrorIndicator from "../error-indicator/error-indicator";
 
+// MODELS
+import ServiceWorker from "../models/ServiceWorker";
+
 export default class App extends Component {
   constructor() {
     super();
@@ -23,13 +26,15 @@ export default class App extends Component {
     }
   }
 
+  ServiceWorker = new ServiceWorker();
+
   componentDidCatch() {
     this.setState({error : true})
   }
   
 
   render() {
-    
+
     if(this.state.error) {
       return <ErrorIndicator />
     }
@@ -39,8 +44,9 @@ export default class App extends Component {
       <div className={"container"}>
         <Header navbar={this.state.navbar} />
         <Aside />
-        <Page />
-        <Page />
+        <Page getData={this.ServiceWorker.getAllPeople} />
+        <Page getData={this.ServiceWorker.getAllStarships} />
+        <Page getData={this.ServiceWorker.getAllPlanets} />
       </div>
     )
   }

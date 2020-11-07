@@ -13,9 +13,11 @@ export default class ItemList extends Component {
   }
   
   componentDidMount() {
-    this.ServiceWorker.getAllPeople()
-      .then(people => this.setState({people : people}))
-      .catch(err => console.log("People Error", err));
+    const {getData} = this.props;
+
+    getData()
+    .then(people => this.setState({people : people}))
+    .catch(err => console.log("People Error", err));
   }
 
   renderItems(arr) {
@@ -26,7 +28,7 @@ export default class ItemList extends Component {
           onClick={() => this.props.onItemSelected(id)}
           loaderSwitcher={() => this.props.loaderSwitcher()}
           className="list-group-item list-group-item-action">
-          {name} {id}
+          {name}
         </a>
       );
     });
