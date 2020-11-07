@@ -65,7 +65,7 @@ export default class ServiceWorker {
       id : this._extractId(item),
       name : item.name,
       height : item.height,
-      maas : item.mass,
+      mass : item.mass,
       gender : item.gender
     }
   }

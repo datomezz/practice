@@ -8,6 +8,7 @@ import Aside from "../app-aside/app-aside";
 import Header from "../app-header/app-header";
 import ListItems from "../app-list/app-list";
 import PersonDetails from "../person-details/person-details";
+import ErrorIndicator from "../error-indicator/error-indicator";
 
 export default class App extends Component {
   constructor() {
@@ -19,16 +20,24 @@ export default class App extends Component {
         {name : "planets"},
         {name : "starships"}
       ],
-      selectedPerson : 1
+      selectedPerson : 1,
+      error : false
     }
   }
 
-  onItemSelected = (id) => {
-    console.log(id);
-    this.setState({selectedPerson : id})
+  onItemSelected = (id) => this.setState({selectedPerson : id});
+
+  componentDidCatch() {
+    this.setState({error : true})
   }
+  
 
   render() {
+    if(this.state.error) {
+      return <ErrorIndicator />
+    }
+
+
     return (
       <div className={"container"}>
         <Header navbar={this.state.navbar} />

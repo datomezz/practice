@@ -54,8 +54,8 @@ export default class PersonDetails extends Component {
         <img src={`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`} className="card-img-top" alt={name} style={{height : "15rem", width : "10rem", margin : "0 auto"}} />
         <ul className="list-group list-group-flush">
           <li className="list-group-item">Name : {name}</li>
-          <li className="list-group-item">Height : {height}</li>
-          <li className="list-group-item">Mass : {mass}</li>
+          <li className="list-group-item">Height : {height} cm</li>
+          <li className="list-group-item">Mass : {mass} kg</li>
           <li className="list-group-item">Gender : {gender}</li>
         </ul>
       </div>

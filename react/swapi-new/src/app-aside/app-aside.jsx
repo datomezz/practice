@@ -20,7 +20,11 @@ export default class Aside extends Component {
   }
 
   componentDidMount() {
-    setInterval(this.updatePlanet, 1500);
+    this.interval = setInterval(this.updatePlanet, 2500);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval);
   }
   
   ServiceWorker = new ServiceWorker();
