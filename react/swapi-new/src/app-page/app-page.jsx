@@ -24,7 +24,9 @@ export default class Page extends Component {
     );
 
     return (
-      <Row left={listItems} right={personDetails} />
+      <ErrorBoundry>
+        <Row left={listItems} right={personDetails} />
+      </ErrorBoundry>
     )
   }
 }
