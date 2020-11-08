@@ -3,36 +3,28 @@ import React, {Component} from "react";
 // COMPONENTS
 import ListItems from "../app-list/app-list";
 import PersonDetails from "../person-details/person-details";
-import ErrorIndicator from "../error-indicator/error-indicator";
+import ErrorBoundry from "../error-boundry/error-boundry";
+import Row from "../app-row/app-row";
 
 export default class Page extends Component {
 
   state = {
     selectedPerson : 1,
-    error : false
-  }
-
-  componentDidCatch() {
-    this.setState({error : true});
   }
 
   onItemSelected = (id) => this.setState({selectedPerson : id});
 
   render() {
+    const listItems = (
+      <ListItems getData={this.props.getData} onItemSelected={this.onItemSelected} />
+    );
 
-    if(this.state.error) {
-      return <ErrorIndicator />
-    }
+    const personDetails = (
+      <PersonDetails selectedPerson={this.state.selectedPerson} />
+    );
 
     return (
-      <div className={"row justify-content-between my-5"}>
-        <div className={"col-5"}>
-          <ListItems getData={this.props.getData} onItemSelected={this.onItemSelected} />
-        </div>
-        <div className={"col-5"}>
-          <PersonDetails selectedPerson={this.state.selectedPerson} />
-        </div>
-      </div>
+      <Row left={listItems} right={personDetails} />
     )
   }
 }

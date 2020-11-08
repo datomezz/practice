@@ -45,8 +45,8 @@ export default class App extends Component {
         <Header navbar={this.state.navbar} />
         <Aside />
         <Page getData={this.ServiceWorker.getAllPeople} />
-        <Page getData={this.ServiceWorker.getAllStarships} />
-        <Page getData={this.ServiceWorker.getAllPlanets} />
+        {/* <Page getData={this.ServiceWorker.getAllStarships} />
+        <Page getData={this.ServiceWorker.getAllPlanets} /> */}
       </div>
     )
   }

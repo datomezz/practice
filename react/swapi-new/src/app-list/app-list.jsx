@@ -26,7 +26,6 @@ export default class ItemList extends Component {
         <a
           key={id}
           onClick={() => this.props.onItemSelected(id)}
-          loaderSwitcher={() => this.props.loaderSwitcher()}
           className="list-group-item list-group-item-action">
           {name}
         </a>
