@@ -9,6 +9,9 @@ import Header from "../app-header/app-header";
 import Page from "../app-page/app-page";
 import ErrorIndicator from "../error-indicator/error-indicator";
 
+import Row from "../app-row/app-row";
+import ItemDetails from "../item-details/item-details";
+
 // MODELS
 import ServiceWorker from "../models/ServiceWorker";
 
@@ -39,13 +42,29 @@ export default class App extends Component {
       return <ErrorIndicator />
     }
 
+    const {getPerson, getPlanet, getPersonImage, getPlanetImage} = this.ServiceWorker;
+
+    const personDetails = (
+      <ItemDetails 
+      selectedItem={2} 
+      getData={getPerson}
+      getImage={getPersonImage} />
+    );
+
+    const planetDetails =(
+      <ItemDetails 
+      selectedItem={4} 
+      getData={getPlanet}
+      getImage={getPlanetImage} />
+    )
 
     return (
       <div className={"container"}>
         <Header navbar={this.state.navbar} />
-        <Aside />
+        <Row left={personDetails} right={planetDetails} />
+        {/* <Aside />
         <Page getData={this.ServiceWorker.getAllPeople} />
-        {/* <Page getData={this.ServiceWorker.getAllStarships} />
+        <Page getData={this.ServiceWorker.getAllStarships} />
         <Page getData={this.ServiceWorker.getAllPlanets} /> */}
       </div>
     )

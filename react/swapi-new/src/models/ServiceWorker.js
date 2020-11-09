@@ -23,6 +23,14 @@ export default class ServiceWorker {
     return this._transformPeople(res);
   }
 
+  getPersonImage = (id) => {
+    return `https://starwars-visualguide.com/assets/img/characters/${id}.jpg`;
+  }
+
+  getPlanetImage = (id) => {
+    return `https://starwars-visualguide.com/assets/img/planets/${id}.jpg`;
+  }
+
   //PLANETS
   getAllPlanets = async () => {
     const res = await this.getResourse(`/planets/`);

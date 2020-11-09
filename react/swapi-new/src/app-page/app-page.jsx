@@ -2,30 +2,30 @@ import React, {Component} from "react";
 
 // COMPONENTS
 import ListItems from "../app-list/app-list";
-import PersonDetails from "../person-details/person-details";
+import ItemDetails from "../item-details/item-details";
 import ErrorBoundry from "../error-boundry/error-boundry";
 import Row from "../app-row/app-row";
 
 export default class Page extends Component {
 
   state = {
-    selectedPerson : 1,
+    selectedItem : 1
   }
 
-  onItemSelected = (id) => this.setState({selectedPerson : id});
+  onItemSelected = (id) => this.setState({selectedItem : id});
 
   render() {
     const listItems = (
       <ListItems getData={this.props.getData} onItemSelected={this.onItemSelected} />
     );
 
-    const personDetails = (
-      <PersonDetails selectedPerson={this.state.selectedPerson} />
+    const itemDetails = (
+      <ItemDetails selectedItem={this.state.selectedItem} />
     );
 
     return (
       <ErrorBoundry>
-        <Row left={listItems} right={personDetails} />
+        <Row left={listItems} right={itemDetails} />
       </ErrorBoundry>
     )
   }

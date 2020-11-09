@@ -9,15 +9,15 @@ export default class ItemList extends Component {
   ServiceWorker = new ServiceWorker();
 
   state = {
-    people : null
+    listItem : null
   }
   
   componentDidMount() {
     const {getData} = this.props;
 
     getData()
-    .then(people => this.setState({people : people}))
-    .catch(err => console.log("People Error", err));
+    .then(listItem => this.setState({listItem}))
+    .catch(err => console.log("listItem Error", err));
   }
 
   renderItems(arr) {
@@ -34,13 +34,13 @@ export default class ItemList extends Component {
   }
 
   render() {
-    const {people} = this.state;
+    const {listItem} = this.state;
     
-    if(!people) {
+    if(!listItem) {
       return <Spinner />
     }
     
-    const content = this.renderItems(people);
+    const content = this.renderItems(listItem);
     
     return(
       <ul className="list-group">
