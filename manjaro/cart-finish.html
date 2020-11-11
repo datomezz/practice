@@ -63,11 +63,25 @@
           </div>
         </div>
         <div class="header__user col-4 d-md-flex d-none justify-content-between">
-          <a href="#" class="user__login col-4 d-flex align-items-center justify-content-center rounded-pill p-0"
+
+          <div class="user__login col-4 d-flex align-items-center justify-content-center rounded-pill p-0"
             data-toggle="modal" data-target="#modal">
             <i class="uil uil-user mr-lg-1 mr-md-0"></i>
             <p class="user__text unico-text__ellipsis d-lg-block d-md-none d-none m-0">შესვლა</p>
-          </a>
+						<!-- After loggin -->
+						<i class="uil uil-angle-down"></i>
+            
+            <ul class="header__user--list unico-product__container d-none">
+                <a href="/my-account/" class="list-link">პროფილი</a>
+                <a href="/my-account/edit-account/" class="list-link">პერსონალური ინფორმაცია</a>
+                <a href="/my-account/edit-address/" class="list-link">მისამართი</a>
+                <a href="/my-account/orders/" class="list-link">რეფერალ კოდი</a>
+                <a href="/my-account/customer-logout/?_wpnonce=151a7c2bca" class="list-link link-logout">სისტემიდან გასვლა</a>
+            </ul>
+
+
+          </div>
+
           <a href="#" class="d-flex justify-content-center ml-lg-2 ml-0 p-0">
             <div class="user__action position-relative" data-toggle="tooltip" data-placement="bottom" title="შედარება">
               <i class="uil uil-exchange"></i>
@@ -101,7 +115,7 @@
             <i class="uil uil-home-alt"></i>
             <p class="mobile__text m-0">მთავარი</p>
           </a>
-          <a href="#" class="mobile__action d-flex flex-column justify-content-center align-items-center">
+          <a href="#" id="mobile-category" class="mobile__action d-flex flex-column justify-content-center align-items-center">
             <i class="uil uil-bars"></i>
             <p class="mobile__text m-0">კატეგორიები</p>
           </a>
@@ -130,6 +144,51 @@
 
         </div>
       </div>
+    </div>
+  </aside>
+
+  <aside class="category-list__mobile--container">
+    <div class="category-list__mobile">
+      <span class="category-list__button"><i class="uil uil-times"></i></span>
+      <h5 class="category-list__title w-75">აირჩიეთ სასურველი კატეგორია</h5>
+      <ul class="list-items">
+        <li class="list-item">
+          <i class="uil uil-airplay"></i>
+          <a href="#" class="list-link">ელექტრონიკა</a>
+        </li>
+        <li class="list-item">
+          <i class="uil uil-kid"></i>
+          <a href="#" class="list-link">საბავშვო</a>
+        </li>
+        <li class="list-item">
+          <i class="uil uil-home"></i>
+          <a href="#" class="list-link">საოჯახო</a>
+        </li>
+        <li class="list-item">
+          <i class="uil uil-airplay"></i>
+          <a href="#" class="list-link">ელექტრონიკა</a>
+        </li>
+        <li class="list-item">
+          <i class="uil uil-kid"></i>
+          <a href="#" class="list-link">საბავშვო</a>
+        </li>
+        <li class="list-item">
+          <i class="uil uil-home"></i>
+          <a href="#" class="list-link">საოჯახო</a>
+        </li>
+        <li class="list-item">
+          <i class="uil uil-airplay"></i>
+          <a href="#" class="list-link">ელექტრონიკა</a>
+        </li>
+        <li class="list-item">
+          <i class="uil uil-kid"></i>
+          <a href="#" class="list-link">საბავშვო</a>
+        </li>
+        <li class="list-item">
+          <i class="uil uil-home"></i>
+          <a href="#" class="list-link">საოჯახო</a>
+        </li>
+      </ul>
     </div>
   </aside>
 

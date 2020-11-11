@@ -460,7 +460,6 @@ a:hover {
 }
 
 .header__info {
-  padding: 1.87rem 0;
   border-bottom: 1px solid #EEEDF0;
 }
 
@@ -672,12 +671,25 @@ a:hover {
 .header__user {
   height: 3.43rem;
   padding: 0 0 0 7.692%;
+  position: relative;
 }
 
 .header__user .user__login {
+  position: relative;
   background: #116BE5;
+  cursor: pointer;
+  border: 1px solid transparent;
   -webkit-transition: .3s ease;
   transition: .3s ease;
+}
+
+.header__user .user__login .uil-angle-down {
+  margin-left: 5px;
+}
+
+.header__user .user__login .arrow__toggle {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .header__user .user__login i {
@@ -698,7 +710,7 @@ a:hover {
 
 .header__user .user__login:hover {
   background: #fff;
-  border: 1px solid #116BE5;
+  border-color: #116BE5;
 }
 
 .header__user .user__login:hover i {
@@ -777,6 +789,61 @@ a:hover {
   right: -.2rem;
 }
 
+.header__user--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 230px;
+  list-style: none;
+  padding: 20px 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  z-index: 11;
+  background: #fff;
+}
+
+.header__user--list .list-item {
+  width: 100%;
+}
+
+.header__user--list .list-link {
+  width: 100%;
+  padding: 7.5px 20px;
+  font-family: FiraGO-Medium;
+  font-size: 12px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.header__user--list .list-link:last-child {
+  margin-bottom: 0;
+}
+
+.header__user--list .list-link:hover {
+  background: #F4F4F4;
+  color: #116BE5;
+}
+
+.header__user--list .list-link:hover:last-child {
+  color: #F92162;
+}
+
+.header__user--list .link-logout {
+  color: #F92162;
+}
+
 .header__search {
   width: 2.5rem;
   height: 2.5rem;
@@ -835,7 +902,8 @@ a:hover {
   font-family: Myriad;
 }
 
-.mobile__nav .mobile__actions .mobile__action:hover i, .mobile__nav .mobile__actions .mobile__action:hover .mobile__text {
+.mobile__nav .mobile__actions .mobile__action:hover i,
+.mobile__nav .mobile__actions .mobile__action:hover .mobile__text {
   color: #116BE5;
 }
 
@@ -4740,6 +4808,85 @@ a:hover {
   .details__product-rate .review__item .rate {
     font-size: 13px;
   }
+}
+
+.category-list__mobile--container {
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  top: 0;
+  z-index: 3000;
+}
+
+.category-list__mobile--container .category-list__mobile {
+  width: 300px;
+  height: 100%;
+  background: #fff;
+  border-radius: 0 30px 30px 0;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  overflow: hidden;
+  padding: 45px 11px;
+  position: relative;
+}
+
+.category-list__mobile--container .category-list__button {
+  color: #D6DBE0;
+  cursor: pointer;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.category-list__mobile--container .category-list__button:hover {
+  color: #000;
+}
+
+.category-list__mobile--container .category-list__button i {
+  font-size: 2rem;
+}
+
+.category-list__mobile--container .category-list__title {
+  font-family: MyriadGEOMtavruli;
+  font-size: 16px;
+  margin: 30px 0;
+}
+
+.category-list__mobile--container .list-items {
+  max-height: 70%;
+  list-style: none;
+  overflow-y: scroll;
+  padding: 0;
+}
+
+.category-list__mobile--container .list-items::-webkit-scrollbar {
+  width: 3px;
+}
+
+.category-list__mobile--container .list-items::-webkit-scrollbar-thumb {
+  background-color: #116BE5;
+  outline: 1px solid slategrey;
+}
+
+.category-list__mobile--container .list-items .list-item {
+  margin-bottom: 18px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.category-list__mobile--container .list-items .list-item:hover {
+  color: #116BE5;
+}
+
+.category-list__mobile--container .list-items .list-link {
+  font-family: MyriadGEOMtavruli;
+  font-size: 13px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.category-list__mobile--container .list-items .list-link:hover {
+  color: #116BE5;
 }
 
 footer .footer__column {

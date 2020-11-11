@@ -525,3 +525,42 @@ favoritesItemTitle
     item.innerText = arrToString + "...";
   })
   : null;
+
+// MOBILE CATEGORY LIST TRIGGER
+
+const mobileCategory = document.querySelector("#mobile-category");
+const mobileClose = document.querySelector(".category-list__button");
+
+if(mobileCategory) {
+  const itemsContainer = document.querySelector(".category-list__mobile");
+  const wholeContainer = document.querySelector(".category-list__mobile--container");
+
+  const closeMobileModal = () => {
+    itemsContainer.style.transform = "translate(-300px)";
+    setTimeout(() => {wholeContainer.style.display = "none";}, 300);
+  }
+
+  const openMobileModal = () => {
+    wholeContainer.style.display = "block";
+    setTimeout(() => {itemsContainer.style.transform = "translate(0)"}, 200);
+  }
+
+  mobileClose.onclick = () => closeMobileModal();
+
+  mobileCategory.onclick = () => openMobileModal();
+}
+
+//HEADER USER DROPDOWN
+
+const userLogin = document.querySelector(".user__login");
+const userDropdown = document.querySelector(".header__user--list");
+
+
+if(userDropdown) {
+  const arrow = document.querySelector(".uil-angle-down");
+
+  userLogin.onclick = () => {
+    arrow.classList.toggle("arrow__toggle");
+    userDropdown.classList.toggle("d-flex");
+  }
+}
