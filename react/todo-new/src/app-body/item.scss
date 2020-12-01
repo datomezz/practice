@@ -1,0 +1,20 @@
+.todo-list__container {
+  overflow : hidden;
+
+  .todo-list__title {
+    width : 80%;
+    overflow : hidden;
+    text-overflow : ellipsis;
+    cursor : pointer;
+  }
+
+  .todo-list__title--active {
+    text-decoration : line-through;
+    font-weight : bolder;
+  }
+
+  .todo-list__title--important {
+    color : #22b24c;
+    font-weight : bolder;
+  }
+}
