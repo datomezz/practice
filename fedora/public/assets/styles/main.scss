@@ -1,0 +1,93 @@
+@import "./globals";
+@import "./countdown";
+
+.unico-container {
+  max-width : 144rem;
+  padding : 0;
+}
+
+.unico-header {
+  background : #fff;
+}
+
+.unico-navbar {
+  height : 8rem;
+
+  @include flex(row, flex-start, center);
+
+  img {
+    width : 8.8rem;
+    height : 3rem;
+  }
+}
+
+.unico-sticky {
+  background : var(--unico-blue);
+
+  position : sticky;
+  top : 0;
+  transition : .5s ease;
+
+  .unico-sale__container {
+    height : 15rem;
+
+    @include flex(row, space-between, center);
+
+    .sale__title--container {
+      max-width : 64rem;
+
+      @include flex(column, flex-start, flex-start);
+
+      .sale__title {
+        font-size : var(--font-xl);
+        color : #fff;
+        margin-bottom : 1.2rem;
+      }
+
+      .sale__title--subtitle {
+        font-size : var(--font-md);
+        color : #fff;
+      }
+    }
+  }
+}
+
+.sticky__active {
+  transform : translate(0, 0);
+}
+
+@media (max-width : 768px) {
+  .unico-sale__container {
+    flex-direction : column !important;
+    justify-content : flex-start !important;
+    align-items : center !important;
+
+    height : auto !important;
+    padding : 1.5rem 0 2.5rem 0;
+
+    .sale__title {
+      font-size : var(--font-md) !important;
+      text-align : center;
+      margin-bottom : 2rem !important;
+    }
+
+    .sale__title--subtitle {
+      display : none;
+    }
+
+    .countdown__elements {
+      width : 30rem;
+      justify-content : center !important;
+    }
+
+    .countdown__element {
+      width : 5rem !important;
+      height : 5rem !important;
+
+      &::before {
+        font-size : 1.4rem !important;
+      }
+    }
+
+  }
+}

@@ -1,0 +1,48 @@
+@mixin flex($direction, $justify, $align) {
+  display : flex;
+  flex-direction : $direction;
+  justify-content : $justify;
+  align-items : $align;
+}
+
+:root {
+  font-size : 10px;
+  --unico-background : #fbfbfb;
+  --unico-red : #f92162;
+  --unico-blue : #105bfb;
+  --unico-tomato : #ff8970;
+  --unico-gray : #9f9f9f;
+  --unico-green : #1cbf2f;
+  --unico-yellow : #f8a714;
+  --unico-dark : #737373;
+  --unico-purple : #8e24f9;
+
+  --font-xxl : 5.8rem;
+  --font-xl : 3.2rem;
+  --font-lg : 2.8rem;
+  --font-md : 2.2rem;
+  --font-normal : 1.6rem;
+  --font-sm : 1.4rem;
+
+  --radius-circle : 50%;
+  --radius-lg : 3rem;
+  --radius-md : 1.5rem;
+  --radius-sm : 1.2rem;
+
+  body {
+    font-size : 1.6rem;
+  }
+}
+
+@font-face {
+  font-family : helvetica;
+  src : url("../fonts/Helvetica-Neu-Bold.ttf");
+}
+
+* {
+
+}
+
+body {
+  background : var(--unico-background);
+}

@@ -1,0 +1,78 @@
+
+.countdown {
+  margin-bottom : 2rem;
+  @include flex(row, center, center);
+}
+.countdown__elements {
+  width : 50rem;
+  position : relative;
+
+  @include flex(row, flex-end, center);
+}
+.countdown__element {
+  width : 8rem;
+  height : 8rem;
+  background : #fff;
+  border-radius : var(--radius-sm);
+  font-size : var(--font-lg);
+  font-weight : bolder;
+
+  position : relative;
+  
+
+  display : flex;
+  align-items : center;
+  justify-content : center;
+
+  &::before {
+    font-size : 1.6rem;
+    color : #fff;
+
+    bottom : -2.7rem;
+    left : 49%;
+    transform : translate(-50%, 0);
+  }
+}
+
+/* time names */
+.countdown__days::before {
+  display : block;
+  content : "დღე";
+  position : absolute;
+}
+.countdown__hours::before {
+  display : block;
+  content : "საათი";
+  position : absolute;
+}
+.countdown__minutes::before {
+  display : block;
+  content : "წუთი";
+  position : absolute;
+}
+.countdown__seconds::before {
+  display : block;
+  content : "წამი";
+  position : absolute;
+}
+/**********************/
+
+.countdown__dots {
+  display : flex;
+  align-items : center;
+  height : 4.5rem;
+  color : #fff;
+  font-size : 3rem;
+  font-weight: bolder;
+  animation-name : Fade;
+  animation-duration : .97s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+
+  padding : 0 4.5%;
+}
+
+@keyframes Fade {
+  from {opacity : 0}
+  to {opacity : 1}
+}
