@@ -11,7 +11,7 @@
 </head>
 <body>
 <!-- STICKY COUNTDOWN -->
-<aside class="container-fluid unico-sticky">
+<aside class="container-fluid unico-sticky unico-prioritet-hight">
   <div class="container unico-container unico-sale__container">
     <div class="d-flex flex-md-row flex-column justify-content-between w-100 m-0">
       <div class="col-md-7 col-12 sale__title--container p-0">
@@ -44,16 +44,39 @@
 <!-- MAIN -->
 <main class="container unico-container d-flex justify-content-between mt-5">
 
-  <div class="unico-special">
-    <h2 class="unico-special__title">კვირის სპეციალური შემოთავაზება</h2>
-    <div class="unico-special__circle">
-      <span class="circle__count">11</span>
-      <span class="circle__count--word">ცალი</span>
+  <div class="col-4">
+
+    <div class="unico-special">
+      <span class="absolute__circle"></span>
+      <h2 class="unico-special__title">კვირის სპეციალური შემოთავაზება</h2>
+      <div class="unico-special__circle">
+        <span class="circle__count">11</span>
+        <span class="circle__count--word">ცალი</span>
+      </div>
+      <span class="unico-special__title--subtitle">მარაგში დარჩენილია მხოლოდ</span>
     </div>
-    <span class="unico-special__title--subtitle">მარაგში დარჩენილია მხოლოდ</span>
+
+    <div class="slider-top__nav">
+      <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" data-img="0" onclick="changeTopSlider(this)" />
+      <img src="./public/assets/img/2.png" alt="slider-img" data-img="1" onclick="changeTopSlider(this)" />
+      <img src="./public/assets/img/3.png" alt="slider-img" data-img="2" onclick="changeTopSlider(this)" />
+      <img src="./public/assets/img/4.png" alt="slider-img" data-img="3" onclick="changeTopSlider(this)" />
+    </div>
   </div>
 
-  <span>yyy</span>
+  <div class="col-4">
+    <div class="slider-top__for">
+      <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" />
+      <img src="./public/assets/img/2.png" alt="slider-img" />
+      <img src="./public/assets/img/3.png" alt="slider-img" />
+      <img src="./public/assets/img/4.png" alt="slider-img" />
+    </div>
+  </div>
+
+  <div class="col-4">
+
+  </div>
+
 </main>
   
 

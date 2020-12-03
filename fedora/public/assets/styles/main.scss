@@ -3,18 +3,103 @@
 @import "./header";
 
 .unico-special {
-  background : var(--unico-red);
+  position : relative;
+
   .unico-special__title {
     width : 24.5rem;
     font-size : var(--font-md);
     color : #fff;
+
+    position : relative;
+    z-index : 1;
   }
 
   .unico-special__title--subtitle {
     color : #fff;
+
+    position : relative;
+    z-index : 1;
   }
 
   .unico-special__circle {
-    
+    width : 12.2rem;
+    height : 12.2rem;
+    border-radius : var(--radius-circle);
+    background : #fff;
+    border : 3px solid var(--unico-red);
+
+    @include flex(column, center, center);
+
+    position : relative;
+    right : -25rem;
+    z-index : 1;
+
+    .circle__count {
+      font-size : var(--font-xl);
+      color : var(--unico-red);
+    }
+
+    .circle__count--word {
+      color : var(--unico-red);
+    }
+
+  }
+
+  .absolute__circle {
+    display : block;
+    width : 62rem;
+    height : 58rem;
+    background : var(--unico-red);
+    border-radius : var(--radius-circle);
+
+    position : absolute;
+    top : -30rem;
+    left : -24rem;
+    z-index : 0;
+
+
+  }
+}
+
+.slider-top__for {
+  display : flex;
+  justify-content : center;
+  margin-top : 5rem;
+  width : 100%;
+  cursor : pointer;
+
+  img {
+    display : none;
+    max-width : 45rem;
+    max-height : 52rem;
+    overflow : hidden;
+  }
+
+  .slider__active {
+    display : block;
+  }
+}
+
+.slider-top__nav {
+  flex-direction: column;
+  width : 25rem;
+  margin-top : 14rem;
+
+  img {
+    width : 10rem;
+    height : 10rem;
+    margin : 1rem;
+
+    filter: opacity(50%);
+    cursor : pointer;
+    transition : .3s ease;
+
+    &:hover {
+      filter : opacity(1);
+    }
+  }
+
+  .slider__active {
+    filter : opacity(1);
   }
 }
