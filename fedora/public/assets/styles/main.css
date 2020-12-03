@@ -35,21 +35,13 @@ body {
   background: var(--unico-background);
 }
 
+.unico-container {
+  max-width: 144rem;
+  padding: 0;
+}
+
 .countdown {
   margin-bottom: 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .countdown__elements {
@@ -162,11 +154,6 @@ body {
   to {
     opacity: 1;
   }
-}
-
-.unico-container {
-  max-width: 144rem;
-  padding: 0;
 }
 
 .unico-header {
@@ -290,5 +277,19 @@ body {
   .unico-sale__container .countdown__element::before {
     font-size: 1.4rem !important;
   }
+}
+
+.unico-special {
+  background: var(--unico-red);
+}
+
+.unico-special .unico-special__title {
+  width: 24.5rem;
+  font-size: var(--font-md);
+  color: #fff;
+}
+
+.unico-special .unico-special__title--subtitle {
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

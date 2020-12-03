@@ -1,7 +1,6 @@
 
 .countdown {
   margin-bottom : 2rem;
-  @include flex(row, center, center);
 }
 .countdown__elements {
   width : 50rem;
