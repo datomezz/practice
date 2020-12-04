@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.3/css/line.css">
   <link rel="stylesheet" href="./public/assets/styles/main.css" />
   <title>FEDORA</title>
 </head>
@@ -44,7 +45,7 @@
 <!-- MAIN -->
 <main class="container unico-container d-flex justify-content-between mt-5">
 
-  <div class="col-4">
+  <div class="col-3 p-0">
 
     <div class="unico-special">
       <span class="absolute__circle"></span>
@@ -57,14 +58,22 @@
     </div>
 
     <div class="slider-top__nav">
-      <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" data-img="0" onclick="changeTopSlider(this)" />
-      <img src="./public/assets/img/2.png" alt="slider-img" data-img="1" onclick="changeTopSlider(this)" />
-      <img src="./public/assets/img/3.png" alt="slider-img" data-img="2" onclick="changeTopSlider(this)" />
-      <img src="./public/assets/img/4.png" alt="slider-img" data-img="3" onclick="changeTopSlider(this)" />
+      <div class="img__container">
+        <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" data-img="0" onclick="changeTopSlider(this)" />
+      </div>
+      <div class="img__container">
+        <img src="./public/assets/img/2.png" alt="slider-img" data-img="1" onclick="changeTopSlider(this)" />
+      </div>
+      <div class="img__container">
+        <img src="./public/assets/img/3.png" alt="slider-img" data-img="2" onclick="changeTopSlider(this)" />
+      </div>
+      <div class="img__container">
+        <img src="./public/assets/img/4.png" alt="slider-img" data-img="3" onclick="changeTopSlider(this)" />
+      </div>
     </div>
   </div>
 
-  <div class="col-4">
+  <div class="col-5 p-0">
     <div class="slider-top__for">
       <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" />
       <img src="./public/assets/img/2.png" alt="slider-img" />
@@ -73,8 +82,44 @@
     </div>
   </div>
 
-  <div class="col-4">
+  <div class="col-4 p-0">
+    <div class="unico-info">
+      <h1 class="unico-info__title">Apple iPhone 11 Pro 256GB 4GB Midnight Green</h1>
+      <div class="unico-info__attributes">
+        <div class="unico-info__price">
+          <span class="price price__sale">1,275 ₾</span>
+          <span class="price price__old">1,599 ₾</span>
+        </div>
+        <div class="unico-info__rating">
 
+          <div class="stars">
+            <i class="uil uil-star"></i>
+            <i class="uil uil-star"></i>
+            <i class="uil uil-star"></i>
+            <i class="uil uil-star"></i>
+            <i class="uil uil-star"></i>
+          </div>
+          <p class="rate">34 შეფასება</p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="unico-form__container">
+      <h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
+      <form class="unico-form" method="POST" action="/">
+        <input type="text" name="unico-name" class="unico-input" placeholder="სახელი, გვარი" required />
+        <input type="text" name="unico-password" class="unico-input" placeholder="ნომერი" required />
+   
+        <div class="unico-form__body">
+          <div class="unico-calculator">
+            313
+          </div>
+          <button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
+        </div>
+
+      </form>
+    </div>
   </div>
 
 </main>

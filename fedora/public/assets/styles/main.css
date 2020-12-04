@@ -31,6 +31,10 @@
   src: url("../fonts/Helvetica-Neu-Bold.ttf");
 }
 
+* {
+  outline: none !important;
+}
+
 body {
   background: var(--unico-background);
 }
@@ -379,7 +383,7 @@ body {
 .slider-top__for img {
   display: none;
   max-width: 45rem;
-  max-height: 52rem;
+  height: 62rem;
   overflow: hidden;
 }
 
@@ -396,10 +400,29 @@ body {
   margin-top: 14rem;
 }
 
-.slider-top__nav img {
+.slider-top__nav .img__container {
   width: 10rem;
   height: 10rem;
+  border: 1px solid var(--unico-gray);
+  padding: .5rem;
   margin: 1rem;
+  border-radius: var(--radius-sm);
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.slider-top__nav img {
+  width: auto;
+  height: 100%;
   -webkit-filter: opacity(50%);
           filter: opacity(50%);
   cursor: pointer;
@@ -415,5 +438,135 @@ body {
 .slider-top__nav .slider__active {
   -webkit-filter: opacity(1);
           filter: opacity(1);
+}
+
+.unico-info .unico-info__title {
+  font-size: var(--font-xxl);
+  color: #000;
+  font-weight: bold;
+}
+
+.unico-info .unico-info__attributes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 90%;
+}
+
+.unico-info .unico-info__price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 4rem 0;
+}
+
+.unico-info .unico-info__price .price {
+  font-weight: bold;
+  margin-right: .6rem;
+}
+
+.unico-info .unico-info__price .price__sale {
+  font-size: var(--font-xl);
+  color: var(--unico-red);
+}
+
+.unico-info .unico-info__price .price__old {
+  text-decoration: line-through;
+}
+
+.unico-info .unico-info__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.unico-info .unico-info__rating .stars i {
+  font-size: 2rem;
+  color: var(--unico-yellow);
+}
+
+.unico-info .unico-info__rating .rate {
+  margin: 0 0 0 1rem;
+  color: var(--unico-gray);
+}
+
+.unico-form__container .unico-form__title {
+  font-size: var(--font-lg);
+  color: var(--unico-blue);
+  position: relative;
+}
+
+.unico-form__container .unico-form__title::after {
+  content: "";
+  display: block;
+  width: 30%;
+  height: .3rem;
+  border-radius: 5px;
+  background: var(--unico-blue);
+  margin-top: 1.5rem;
+}
+
+.unico-form__container .unico-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 3rem 0;
+}
+
+.unico-form__container .unico-input {
+  width: 100%;
+  border: 1px solid #e6e6e6;
+  border-radius: var(--radius-lg);
+  padding: 3% 6%;
+  margin-bottom: 1rem;
+}
+
+.unico-form__container .unico-form__button {
+  width: 20rem;
+  height: 6rem;
+  background: var(--unico-blue);
+  color: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid transparent;
 }
 /*# sourceMappingURL=main.css.map */

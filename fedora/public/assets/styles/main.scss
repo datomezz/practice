@@ -2,6 +2,7 @@
 @import "./countdown";
 @import "./header";
 
+// UNICO SPECIAL PROPOSITION
 .unico-special {
   position : relative;
 
@@ -61,6 +62,7 @@
   }
 }
 
+// SLIDER FOR
 .slider-top__for {
   display : flex;
   justify-content : center;
@@ -71,7 +73,7 @@
   img {
     display : none;
     max-width : 45rem;
-    max-height : 52rem;
+    height : 62rem;
     overflow : hidden;
   }
 
@@ -85,10 +87,25 @@
   width : 25rem;
   margin-top : 14rem;
 
-  img {
+  .img__container {
     width : 10rem;
     height : 10rem;
+    border : 1px solid var(--unico-gray);
+    padding : .5rem;
     margin : 1rem;
+    border-radius : var(--radius-sm);
+
+    display : inline-flex;
+    justify-content : center;
+    align-items : center;
+    overflow : hidden;
+
+    cursor : pointer;
+  }
+
+  img {
+    width : auto;
+    height : 100%;
 
     filter: opacity(50%);
     cursor : pointer;
@@ -101,5 +118,99 @@
 
   .slider__active {
     filter : opacity(1);
+  }
+}
+
+
+// UNICO INFO
+.unico-info {
+  .unico-info__title {
+    font-size : var(--font-xxl);
+    color : #000;
+    font-weight : bold;
+  }
+
+  .unico-info__attributes {
+    @include flex(row, space-between, center);
+
+    width : 90%;
+  }
+
+  .unico-info__price {
+    @include flex(row, flex-start, center);
+    margin : 4rem 0;
+
+    .price {
+      font-weight : bold;
+      margin-right : .6rem;
+    }
+
+    .price__sale {
+      font-size : var(--font-xl);
+      color : var(--unico-red);
+    }
+
+    .price__old {
+      text-decoration : line-through;
+    }
+  }
+
+  .unico-info__rating {
+    @include flex(column, flex-start, flex-end);
+
+    .stars {
+      i {
+        font-size : 2rem;
+        color : var(--unico-yellow);
+      }
+    }
+
+    .rate {
+      margin : 0 0 0 1rem;
+      color : var(--unico-gray);
+
+    }
+  }
+}
+
+// UNICO FORM
+.unico-form__container {
+  .unico-form__title {
+    font-size : var(--font-lg);
+    color : var(--unico-blue);
+    position : relative;
+
+    &::after {
+      content : "";
+      display : block;
+      width : 30%;
+      height : .3rem;
+      border-radius : 5px;
+      background : var(--unico-blue);
+      margin-top : 1.5rem;
+    }
+  }
+
+  .unico-form {
+    @include flex(column, flex-start, flex-start);
+    margin : 3rem 0;
+  }
+
+  .unico-input {
+    width : 100%;
+    border : 1px solid #e6e6e6;
+    border-radius : var(--radius-lg);
+    padding : 3% 6%;
+    margin-bottom : 1rem;
+  }
+
+  .unico-form__button {
+    width : 20rem;
+    height : 6rem;
+    background : var(--unico-blue);
+    color : #fff;
+    border-radius : var(--radius-lg);
+    border : 1px solid transparent;
+
   }
 }
