@@ -29,7 +29,6 @@
     @include flex(row, space-between, center);
 
     .sale__title--container {
-      max-width : 64rem;
 
       @include flex(column, flex-start, flex-start);
 
@@ -61,6 +60,7 @@
     padding : 1.5rem 0 2.5rem 0;
 
     .sale__title {
+      width : 100% !important;
       font-size : var(--font-md) !important;
       text-align : center;
       margin-bottom : 2rem !important;

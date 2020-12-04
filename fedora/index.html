@@ -37,90 +37,184 @@
   </div>
 </aside>
 <!-- HEADER -->
-<header class="container-fluid unico-header">
+<header class="container-fluid unico-header p-0">
+  <div class="container unico-container unico-special__mobile d-md-none d-block">
+    <h2 class="unico-special__mobile--title">კვირის სპეციალური შემოთავაზება</h2>
+    <span class="unico-special__mobile--subtitle">მარაგში დარჩნილია მხოლოდ</span>
+    <div class="unico-special__mobile--circle">
+      <span class="circle__count">11</span>
+    </div>
+  </div>
   <div class="container unico-container unico-navbar">
     <img src="./public/assets/img/logo.svg" alt="unico-logo" />
   </div>
 </header>
 <!-- MAIN -->
-<main class="container unico-container d-flex justify-content-between mt-5">
-
-  <div class="col-3 p-0">
-
-    <div class="unico-special">
-      <span class="absolute__circle"></span>
-      <h2 class="unico-special__title">კვირის სპეციალური შემოთავაზება</h2>
-      <div class="unico-special__circle">
-        <span class="circle__count">11</span>
-        <span class="circle__count--word">ცალი</span>
-      </div>
-      <span class="unico-special__title--subtitle">მარაგში დარჩენილია მხოლოდ</span>
-    </div>
-
-    <div class="slider-top__nav">
-      <div class="img__container">
-        <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" data-img="0" onclick="changeTopSlider(this)" />
-      </div>
-      <div class="img__container">
-        <img src="./public/assets/img/2.png" alt="slider-img" data-img="1" onclick="changeTopSlider(this)" />
-      </div>
-      <div class="img__container">
-        <img src="./public/assets/img/3.png" alt="slider-img" data-img="2" onclick="changeTopSlider(this)" />
-      </div>
-      <div class="img__container">
-        <img src="./public/assets/img/4.png" alt="slider-img" data-img="3" onclick="changeTopSlider(this)" />
-      </div>
-    </div>
-  </div>
-
-  <div class="col-5 p-0">
-    <div class="slider-top__for">
-      <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" />
-      <img src="./public/assets/img/2.png" alt="slider-img" />
-      <img src="./public/assets/img/3.png" alt="slider-img" />
-      <img src="./public/assets/img/4.png" alt="slider-img" />
-    </div>
-  </div>
-
-  <div class="col-4 p-0">
-    <div class="unico-info">
-      <h1 class="unico-info__title">Apple iPhone 11 Pro 256GB 4GB Midnight Green</h1>
-      <div class="unico-info__attributes">
-        <div class="unico-info__price">
-          <span class="price price__sale">1,275 ₾</span>
-          <span class="price price__old">1,599 ₾</span>
+<main class="container unico-container d-flex justify-content-between mt-5 px-md-0 px-5">
+  <div class="row m-0">
+    <div class="col-md-3 col-12 d-md-block d-none order-md-0 order-3 p-0">
+  
+      <div class="unico-special">
+        <span class="absolute__circle"></span>
+        <h2 class="unico-special__title">კვირის სპეციალური შემოთავაზება</h2>
+        <div class="unico-special__circle">
+          <span class="circle__count">11</span>
+          <span class="circle__count--word">ცალი</span>
         </div>
-        <div class="unico-info__rating">
-
-          <div class="stars">
-            <i class="uil uil-star"></i>
-            <i class="uil uil-star"></i>
-            <i class="uil uil-star"></i>
-            <i class="uil uil-star"></i>
-            <i class="uil uil-star"></i>
+        <span class="unico-special__title--subtitle">მარაგში დარჩენილია მხოლოდ</span>
+      </div>
+  
+      <div class="slider-top__nav">
+        <div class="img__container">
+          <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" data-img="0" onclick="changeTopSlider(this)" />
+        </div>
+        <div class="img__container">
+          <img src="./public/assets/img/2.png" alt="slider-img" data-img="1" onclick="changeTopSlider(this)" />
+        </div>
+        <div class="img__container">
+          <img src="./public/assets/img/3.png" alt="slider-img" data-img="2" onclick="changeTopSlider(this)" />
+        </div>
+        <div class="img__container">
+          <img src="./public/assets/img/4.png" alt="slider-img" data-img="3" onclick="changeTopSlider(this)" />
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-5 col-12 d-flex flex-column order-md-1 order-2 p-0">
+      <div class="d-flex justify-content-between align-items-center ">
+        <div class="slider-top__for">
+          <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" />
+          <img src="./public/assets/img/2.png" alt="slider-img" />
+          <img src="./public/assets/img/3.png" alt="slider-img" />
+          <img src="./public/assets/img/4.png" alt="slider-img" />
+        </div>
+  
+        <div class="slider-top__nav d-md-none d-block">
+          <div class="img__container">
+            <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" data-img="0" onclick="changeTopSlider(this)" />
           </div>
-          <p class="rate">34 შეფასება</p>
-
+          <div class="img__container">
+            <img src="./public/assets/img/2.png" alt="slider-img" data-img="1" onclick="changeTopSlider(this)" />
+          </div>
+          <div class="img__container">
+            <img src="./public/assets/img/3.png" alt="slider-img" data-img="2" onclick="changeTopSlider(this)" />
+          </div>
+          <div class="img__container">
+            <img src="./public/assets/img/4.png" alt="slider-img" data-img="3" onclick="changeTopSlider(this)" />
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="unico-form__container">
-      <h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
-      <form class="unico-form" method="POST" action="/">
-        <input type="text" name="unico-name" class="unico-input" placeholder="სახელი, გვარი" required />
-        <input type="text" name="unico-password" class="unico-input" placeholder="ნომერი" required />
-   
-        <div class="unico-form__body">
-          <div class="unico-calculator">
-            313
+      <div class="unico-form__container d-md-none d-block">
+        <h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
+        <form class="unico-form" method="POST" action="/">
+          <input type="text" name="unico-name" class="unico-input" placeholder="სახელი, გვარი" required />
+          <input type="text" name="unico-password" class="unico-input" placeholder="ნომერი" required />
+     
+          <div class="unico-form__body">
+            <div class="unico-calculator">
+              <span class="calculate"><i class="uil uil-minus-square"></i></span>
+              <span class="calculate__result">99</span>
+              <span class="calculate"><i class="uil uil-plus-square"></i></span>
+            </div>
+            <button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
           </div>
-          <button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
+  
+          <div class="unico-form__body mt-5">
+            <div class="">
+              <div class="unico-proposition__container">
+                <i class="uil uil-check"></i>
+                <span class="unico-proposition__title">2 წლიანი გარანტია</span>
+              </div>
+              <div class="unico-proposition__container">
+                <i class="uil uil-check"></i>
+                <span class="unico-proposition__title">2 წლიანი გარანტია</span>
+              </div>
+            </div>
+            <div class="">
+              <div class="unico-proposition__container">
+                <i class="uil uil-check"></i>
+                <span class="unico-proposition__title">2 წლიანი გარანტია</span>
+              </div>
+              <div class="unico-proposition__container">
+                <i class="uil uil-check"></i>
+                <span class="unico-proposition__title">2 წლიანი გარანტია</span>
+              </div>
+            </div>
+  
+          </div>
+  
+        </form>
+      </div>
+    </div>
+  
+    <div class="col-md-4 col-12 order-md-2 order-1 p-0">
+      <div class="unico-info">
+        <h1 class="unico-info__title">Apple iPhone 11 Pro 256GB 4GB Midnight Green</h1>
+        <div class="unico-info__attributes">
+          <div class="unico-info__price">
+            <span class="price price__sale">1,275 ₾</span>
+            <span class="price price__old">1,599 ₾</span>
+          </div>
+          <div class="unico-info__rating">
+  
+            <div class="stars">
+              <i class="uil uil-star"></i>
+              <i class="uil uil-star"></i>
+              <i class="uil uil-star"></i>
+              <i class="uil uil-star"></i>
+              <i class="uil uil-star"></i>
+            </div>
+            <p class="rate">34 შეფასება</p>
+  
+          </div>
         </div>
-
-      </form>
+      </div>
+  
+      <div class="unico-form__container d-md-block d-none">
+        <h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
+        <form class="unico-form" method="POST" action="/">
+          <input type="text" name="unico-name" class="unico-input" placeholder="სახელი, გვარი" required />
+          <input type="text" name="unico-password" class="unico-input" placeholder="ნომერი" required />
+     
+          <div class="unico-form__body">
+            <div class="unico-calculator">
+              <span class="calculate"><i class="uil uil-minus-square"></i></span>
+              <span class="calculate__result">99</span>
+              <span class="calculate"><i class="uil uil-plus-square"></i></span>
+            </div>
+            <button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
+          </div>
+  
+          <div class="unico-form__body mt-5">
+            <div class="">
+              <div class="unico-proposition__container">
+                <i class="uil uil-check"></i>
+                <span class="unico-proposition__title">2 წლიანი გარანტია</span>
+              </div>
+              <div class="unico-proposition__container">
+                <i class="uil uil-check"></i>
+                <span class="unico-proposition__title">2 წლიანი გარანტია</span>
+              </div>
+            </div>
+            <div class="">
+              <div class="unico-proposition__container">
+                <i class="uil uil-check"></i>
+                <span class="unico-proposition__title">2 წლიანი გარანტია</span>
+              </div>
+              <div class="unico-proposition__container">
+                <i class="uil uil-check"></i>
+                <span class="unico-proposition__title">2 წლიანი გარანტია</span>
+              </div>
+            </div>
+  
+          </div>
+  
+        </form>
+      </div>
     </div>
   </div>
+
 
 </main>
   

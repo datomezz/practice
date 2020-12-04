@@ -2,6 +2,47 @@
 @import "./countdown";
 @import "./header";
 
+.unico-special__mobile {
+  background : var(--unico-red);
+  min-height : 10rem;
+  padding : 2rem;
+  position : relative;
+
+  .unico-special__mobile--title {
+    color : #fff;
+    font-size : var(--font-xl);
+    text-align : center;
+  }
+
+  .unico-special__mobile--subtitle {
+    display : block;
+    color : #fff;
+    font-size : var(--font-sm);
+    text-align : center;
+  }
+
+  .unico-special__mobile--circle {
+    width : 8rem;
+    height : 8rem;
+    border-radius : 50%;
+    border : 4px solid var(--unico-red);
+    background : #fff;
+
+    @include flex(row, center, center);
+
+    
+    position : absolute;
+    right : 3%;
+    bottom : -4rem;
+
+    .circle__count {
+      color : var(--unico-red);
+      font-size : var(--font-xl);
+      font-weight : bold;
+    }
+  }
+}
+
 // UNICO SPECIAL PROPOSITION
 .unico-special {
   position : relative;
@@ -198,9 +239,10 @@
 
   .unico-input {
     width : 100%;
+    height : 6rem;
     border : 1px solid #e6e6e6;
     border-radius : var(--radius-lg);
-    padding : 3% 6%;
+    padding : 0 2.5rem;
     margin-bottom : 1rem;
   }
 
@@ -211,6 +253,114 @@
     color : #fff;
     border-radius : var(--radius-lg);
     border : 1px solid transparent;
+    transition : .3s ease;
 
+    &:hover {
+      border-color : var(--unico-blue);
+      background : #fff;
+      color : var(--unico-blue);
+    }
+  }
+}
+
+.unico-form__body {
+  @include flex(row, space-between, center);
+  width : 100%;
+}
+
+.unico-calculator {
+  width : 20rem;
+  height : 6rem;
+  border : 1px solid #e6e6e6;
+  border-radius : var(--radius-lg);
+
+  @include flex(row, space-between, center);
+
+  .calculate {
+    padding : 0 11%;
+    cursor : pointer;
+
+    i {
+      font-size : 2.5rem;
+      color : var(--unico-dark);
+    }
+
+    &:first-child {
+      border-right : 3px solid  #e6e6e6;
+    }
+
+    &:last-child {
+      border-left : 3px solid #e6e6e6;
+    }
+  }
+
+  .calculate__result {
+    max-widtH: 20%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+// PROPOSITION
+.unico-proposition__container {
+  i {
+    color : var(--unico-green);
+    margin-right : 1.5rem;
+  }
+}
+
+@media (max-width : 1440px) {
+  :root {
+    font-size : 7px;
+  }
+}
+
+@media (max-width : 768px) {
+  :root {
+    font-size : 10px;
+  }
+
+  .unico-info__title {
+    font-size : var(--font-xl) !important;
+  }
+
+  .slider-top__for {
+    max-width : 16rem;
+    height : 22rem;
+    margin-top : 0;
+
+    img {
+      height : 22rem;
+    }
+  }
+
+  .slider-top__nav {
+    margin-top : 0;
+    width : 16rem;
+
+    .img__container {
+      width : 6rem;
+      height : 6rem;
+
+      margin : .5rem;
+    }
+  }
+
+  // FORM
+  .unico-form__container {
+    margin-top : 4rem;
+  }
+
+  .unico-form__title {
+    font-size : var(--font-md);
+  }
+
+  .unico-form__body {
+    flex-wrap : wrap;
+  }
+
+  .unico-calculator {
+    margin-bottom : 10px;
   }
 }
