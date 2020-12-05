@@ -1,312 +1,24 @@
 @import "./globals";
 @import "./countdown";
 @import "./header";
+@import "./body";
 
-.unico-special__mobile {
-  background : var(--unico-red);
-  min-height : 10rem;
-  padding : 2rem;
-  position : relative;
+.unico-description__container {
+  height : 54rem;
+  background : var(--unico-blue);
+  border-radius : var(--radius-lg);
+  padding : 4rem;
 
-  .unico-special__mobile--title {
+
+  @include flex(column, flex-start, flex-start);
+
+  .unico-description__title {
     color : #fff;
     font-size : var(--font-xl);
-    text-align : center;
   }
 
-  .unico-special__mobile--subtitle {
-    display : block;
+  .unico-description__paragraph {
     color : #fff;
-    font-size : var(--font-sm);
-    text-align : center;
-  }
-
-  .unico-special__mobile--circle {
-    width : 8rem;
-    height : 8rem;
-    border-radius : 50%;
-    border : 4px solid var(--unico-red);
-    background : #fff;
-
-    @include flex(row, center, center);
-
-    
-    position : absolute;
-    right : 3%;
-    bottom : -4rem;
-
-    .circle__count {
-      color : var(--unico-red);
-      font-size : var(--font-xl);
-      font-weight : bold;
-    }
-  }
-}
-
-// UNICO SPECIAL PROPOSITION
-.unico-special {
-  position : relative;
-
-  .unico-special__title {
-    width : 24.5rem;
-    font-size : var(--font-md);
-    color : #fff;
-
-    position : relative;
-    z-index : 1;
-  }
-
-  .unico-special__title--subtitle {
-    color : #fff;
-
-    position : relative;
-    z-index : 1;
-  }
-
-  .unico-special__circle {
-    width : 12.2rem;
-    height : 12.2rem;
-    border-radius : var(--radius-circle);
-    background : #fff;
-    border : 3px solid var(--unico-red);
-
-    @include flex(column, center, center);
-
-    position : relative;
-    right : -25rem;
-    z-index : 1;
-
-    .circle__count {
-      font-size : var(--font-xl);
-      color : var(--unico-red);
-    }
-
-    .circle__count--word {
-      color : var(--unico-red);
-    }
-
-  }
-
-  .absolute__circle {
-    display : block;
-    width : 62rem;
-    height : 58rem;
-    background : var(--unico-red);
-    border-radius : var(--radius-circle);
-
-    position : absolute;
-    top : -30rem;
-    left : -24rem;
-    z-index : 0;
-
-
-  }
-}
-
-// SLIDER FOR
-.slider-top__for {
-  display : flex;
-  justify-content : center;
-  margin-top : 5rem;
-  width : 100%;
-  cursor : pointer;
-
-  img {
-    display : none;
-    max-width : 45rem;
-    height : 62rem;
-    overflow : hidden;
-  }
-
-  .slider__active {
-    display : block;
-  }
-}
-
-.slider-top__nav {
-  flex-direction: column;
-  width : 25rem;
-  margin-top : 14rem;
-
-  .img__container {
-    width : 10rem;
-    height : 10rem;
-    border : 1px solid var(--unico-gray);
-    padding : .5rem;
-    margin : 1rem;
-    border-radius : var(--radius-sm);
-
-    display : inline-flex;
-    justify-content : center;
-    align-items : center;
-    overflow : hidden;
-
-    cursor : pointer;
-  }
-
-  img {
-    width : auto;
-    height : 100%;
-
-    filter: opacity(50%);
-    cursor : pointer;
-    transition : .3s ease;
-
-    &:hover {
-      filter : opacity(1);
-    }
-  }
-
-  .slider__active {
-    filter : opacity(1);
-  }
-}
-
-
-// UNICO INFO
-.unico-info {
-  .unico-info__title {
-    font-size : var(--font-xxl);
-    color : #000;
-    font-weight : bold;
-  }
-
-  .unico-info__attributes {
-    @include flex(row, space-between, center);
-
-    width : 90%;
-  }
-
-  .unico-info__price {
-    @include flex(row, flex-start, center);
-    margin : 4rem 0;
-
-    .price {
-      font-weight : bold;
-      margin-right : .6rem;
-    }
-
-    .price__sale {
-      font-size : var(--font-xl);
-      color : var(--unico-red);
-    }
-
-    .price__old {
-      text-decoration : line-through;
-    }
-  }
-
-  .unico-info__rating {
-    @include flex(column, flex-start, flex-end);
-
-    .stars {
-      i {
-        font-size : 2rem;
-        color : var(--unico-yellow);
-      }
-    }
-
-    .rate {
-      margin : 0 0 0 1rem;
-      color : var(--unico-gray);
-
-    }
-  }
-}
-
-// UNICO FORM
-.unico-form__container {
-  .unico-form__title {
-    font-size : var(--font-lg);
-    color : var(--unico-blue);
-    position : relative;
-
-    &::after {
-      content : "";
-      display : block;
-      width : 30%;
-      height : .3rem;
-      border-radius : 5px;
-      background : var(--unico-blue);
-      margin-top : 1.5rem;
-    }
-  }
-
-  .unico-form {
-    @include flex(column, flex-start, flex-start);
-    margin : 3rem 0;
-  }
-
-  .unico-input {
-    width : 100%;
-    height : 6rem;
-    border : 1px solid #e6e6e6;
-    border-radius : var(--radius-lg);
-    padding : 0 2.5rem;
-    margin-bottom : 1rem;
-  }
-
-  .unico-form__button {
-    width : 20rem;
-    height : 6rem;
-    background : var(--unico-blue);
-    color : #fff;
-    border-radius : var(--radius-lg);
-    border : 1px solid transparent;
-    transition : .3s ease;
-
-    &:hover {
-      border-color : var(--unico-blue);
-      background : #fff;
-      color : var(--unico-blue);
-    }
-  }
-}
-
-.unico-form__body {
-  @include flex(row, space-between, center);
-  width : 100%;
-}
-
-.unico-calculator {
-  width : 20rem;
-  height : 6rem;
-  border : 1px solid #e6e6e6;
-  border-radius : var(--radius-lg);
-
-  @include flex(row, space-between, center);
-
-  .calculate {
-    padding : 0 11%;
-    cursor : pointer;
-
-    i {
-      font-size : 2.5rem;
-      color : var(--unico-dark);
-    }
-
-    &:first-child {
-      border-right : 3px solid  #e6e6e6;
-    }
-
-    &:last-child {
-      border-left : 3px solid #e6e6e6;
-    }
-  }
-
-  .calculate__result {
-    max-widtH: 20%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-
-// PROPOSITION
-.unico-proposition__container {
-  i {
-    color : var(--unico-green);
-    margin-right : 1.5rem;
   }
 }
 
@@ -360,7 +72,18 @@
     flex-wrap : wrap;
   }
 
-  .unico-calculator {
-    margin-bottom : 10px;
+  .unico-calculator, .unico-form__button {
+    width : 16.5rem !important;
+    margin-top : .4rem;
+  }
+
+  .unico-proposition__title {
+    font-size : 1.2rem;
+  }
+}
+
+@media (max-width : 374px) {
+  :root {
+    font-size : 8px;
   }
 }

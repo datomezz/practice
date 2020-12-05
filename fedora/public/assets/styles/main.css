@@ -314,7 +314,7 @@ body {
 
 .unico-special__mobile .unico-special__mobile--title {
   color: #fff;
-  font-size: var(--font-xl);
+  font-size: var(--font-md);
   text-align: center;
 }
 
@@ -695,6 +695,35 @@ body {
   margin-right: 1.5rem;
 }
 
+.unico-description__container {
+  height: 54rem;
+  background: var(--unico-blue);
+  border-radius: var(--radius-lg);
+  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.unico-description__container .unico-description__title {
+  color: #fff;
+  font-size: var(--font-xl);
+}
+
+.unico-description__container .unico-description__paragraph {
+  color: #fff;
+}
+
 @media (max-width: 1440px) {
   :root {
     font-size: 7px;
@@ -735,8 +764,18 @@ body {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .unico-calculator {
-    margin-bottom: 10px;
+  .unico-calculator, .unico-form__button {
+    width: 16.5rem !important;
+    margin-top: .4rem;
+  }
+  .unico-proposition__title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 374px) {
+  :root {
+    font-size: 8px;
   }
 }
 /*# sourceMappingURL=main.css.map */
