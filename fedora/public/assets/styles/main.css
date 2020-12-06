@@ -80,11 +80,16 @@ body {
 }
 
 section {
-  margin: 0 0 16rem 0;
+  margin: 0 !important;
+  margin-bottom: 16rem !important;
 }
 
 section:nth-child(2) {
   margin-bottom: 18rem;
+}
+
+.unico-margin__section {
+  margin-bottom: 16rem;
 }
 
 .unico-text__bold {
@@ -93,6 +98,18 @@ section:nth-child(2) {
 
 .unico-text__red {
   color: var(--unico-red);
+}
+
+@media (max-width: 768px) {
+  section {
+    margin-bottom: 5rem !important;
+  }
+  section:nth-child(2) {
+    margin-bottom: 7rem !important;
+  }
+  .unico-margin__section {
+    margin-bottom: 7rem !important;
+  }
 }
 
 .countdown {
@@ -1031,7 +1048,7 @@ section:nth-child(2) {
           align-items: flex-start;
 }
 
-.comment__item .comment__avatar {
+.comment__item .comment__avatar, .comment__item .comment__avatar--mobile {
   width: 10rem;
   height: 10rem;
   border-radius: var(--radius-circle);
@@ -1041,9 +1058,24 @@ section:nth-child(2) {
   margin-right: 2rem;
 }
 
-.comment__item .comment__avatar img {
+.comment__item .comment__avatar img, .comment__item .comment__avatar--mobile img {
   width: 100%;
   height: 100%;
+}
+
+.comment__item .comment__avatar--mobile {
+  width: 7rem;
+  height: 7rem;
+}
+
+.comment__item .avatar__name {
+  font-size: var(--font-md);
+  margin-bottom: .8rem;
+}
+
+.comment__item .avatar__date {
+  font-size: var(--font-sm);
+  color: var(--unico-gray);
 }
 
 .comment__item .comment__body {
@@ -1078,16 +1110,6 @@ section:nth-child(2) {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-}
-
-.comment__item .comment__body .comment__body--about .avatar__name {
-  font-size: var(--font-md);
-  margin-bottom: .8rem;
-}
-
-.comment__item .comment__body .comment__body--about .avatar__date {
-  font-size: var(--font-sm);
-  color: var(--unico-gray);
 }
 
 .comment__item .comment__body .comment__body--text {
@@ -1141,6 +1163,10 @@ section:nth-child(2) {
   background: #fff;
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
+}
+
+.unico-slider__products .product-article {
+  margin-right: 2rem;
 }
 
 .unico-slider__products .product-article .img__container {
@@ -1378,6 +1404,17 @@ footer {
   }
   .unico-attributes__container {
     padding: 4rem !important;
+  }
+  .comment__container {
+    width: 100%;
+    padding: 4rem !important;
+  }
+  .comment__title {
+    width: 100% !important;
+    font-size: var(--font-md) !important;
+  }
+  .comment__item {
+    width: 100% !important;
   }
 }
 

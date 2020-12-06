@@ -88,11 +88,16 @@ body {
 }
 
 section {
-  margin : 0 0 16rem 0;
+  margin : 0 !important;
+  margin-bottom : 16rem !important;
 
   &:nth-child(2) {
     margin-bottom : 18rem;
   }
+}
+
+.unico-margin__section {
+  margin-bottom : 16rem;
 }
 
 .unico-text__bold {
@@ -101,4 +106,18 @@ section {
 
 .unico-text__red {
   color : var(--unico-red);
+}
+
+@media (max-width : 768px) {
+  section {
+    margin-bottom : 5rem !important;
+
+    &:nth-child(2) {
+      margin-bottom : 7rem !important;
+    }
+  }
+
+  .unico-margin__section {
+    margin-bottom : 7rem !important;
+  }
 }

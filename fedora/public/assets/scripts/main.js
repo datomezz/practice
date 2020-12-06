@@ -26,7 +26,7 @@ $(".unico-slider__description").slick({
 });
 
 $(".unico-slider__products").slick({
-  slidesToShow : 5,
+  variableWidth : true,
   slidesToScroll: 2,
   arrows : false
 })
