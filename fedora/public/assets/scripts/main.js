@@ -23,4 +23,10 @@ $(".unico-slider__description").slick({
   arrows : false,
   dots : true,
   dotsClass : "slider-description__dots"
+});
+
+$(".unico-slider__products").slick({
+  slidesToShow : 5,
+  slidesToScroll: 2,
+  arrows : false
 })

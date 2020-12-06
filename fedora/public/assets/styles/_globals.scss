@@ -43,6 +43,19 @@
 * {
   outline : none !important;
   list-style : none !important;
+
+  a {
+    color : #000;
+
+    &:hover {
+      text-decoration : none;
+      color : #000;
+    }
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -74,6 +87,18 @@ body {
   z-index : 10;
 }
 
-#section-head, #section-description, #section-comments {
+section {
   margin : 0 0 16rem 0;
+
+  &:nth-child(2) {
+    margin-bottom : 18rem;
+  }
+}
+
+.unico-text__bold {
+  font-weight : bold;
+}
+
+.unico-text__red {
+  color : var(--unico-red);
 }
