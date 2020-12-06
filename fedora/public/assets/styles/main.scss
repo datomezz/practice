@@ -110,6 +110,49 @@
   }
 }
 
+
+.unico-attributes__container {
+  @extend .unico-description__container;
+  background : #fff;
+  padding-right : 8rem;
+
+  .unico-description__title {
+    color : var(--unico-black);
+  }
+
+  .unico-description__paragraph {
+    color : var(--unico-black);
+  }
+
+  .attributes-toggle {
+    color : var(--unico-blue);
+    cursor : pointer;
+  }
+}
+
+.attributes__container {
+  padding : 0;
+  width :100%;
+
+  @include flex(column, flex-start, flex-start);
+
+  .attribute__item {
+    width : 100%;
+    padding : 1.2rem 0;
+    border-bottom : 1px solid #eeedf0;
+
+    &:last-child {
+      border-bottom : none;
+    }
+
+    @include flex(row, space-between, center);
+
+    .attribute__key {
+      color : var(--unico-black);
+    }
+  }
+}
+
 @media (max-width : 1440px) {
   :root {
     font-size : 7px;
