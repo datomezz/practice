@@ -16,3 +16,11 @@ function changeTopSlider(e) {
   allSliderNavImgs[elementNumber].classList.add("slider__active");  
   allSliderForImgs[elementNumber].classList.add("slider__active");  
 }
+
+$(".unico-slider__description").slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows : false,
+  dots : true,
+  dotsClass : "slider-description__dots"
+})

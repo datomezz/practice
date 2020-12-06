@@ -4,7 +4,6 @@
 @import "./body";
 
 .unico-description__container {
-  height : 54rem;
   background : var(--unico-blue);
   border-radius : var(--radius-lg);
   padding : 4rem;
@@ -15,10 +14,99 @@
   .unico-description__title {
     color : #fff;
     font-size : var(--font-xl);
+    margin-bottom : 3.5rem;
   }
 
   .unico-description__paragraph {
     color : #fff;
+  }
+
+  .unico-hurryup {
+    @include flex(column, space-between, center);
+
+    .unico-hurryup__title {
+      font-size : var(--font-lg);
+      color : #fff;
+    }
+
+    .unico-hurryup__text {
+      font-size : var(--font-md);
+      color : #fff;
+      margin : 1.6rem 0;
+    }
+
+    .unico-hurryup__text--subtext {
+      @extend .unico-hurryup__text;
+      font-size : var(--font-sm);
+      font-weight : bold;
+    }
+  }
+}
+
+.unico-description__footer {
+  width : 100%;
+  margin-top : 6rem;
+}
+
+.unico-slider__description--container {
+  width : 40rem;
+  height : 40rem;
+  border-radius : var(--radius-circle);
+  background : #fff;
+  position : absolute;
+  left : -10rem;
+  top : -5rem;
+
+  @include flex(row, center, center);
+
+  .unico-slider__description {
+    overflow : hidden;
+    @include flex(row, center, center);
+    height : 100%;
+
+    
+    .img__container {
+      @include flex(row, center, center);
+      height : 26rem;
+
+      img {
+        height : 100%;
+      }
+
+    }
+  }
+
+  .slider-description__dots {
+    width : auto;
+    @include flex(row, flex-start, flex-start);
+    padding : 0;
+    margin : 0;
+
+    position : absolute;
+    top : 0;
+    right : 0;
+
+    li {
+      width : 1.1rem;
+      height : 1.1rem;
+      background : #fff;
+      border-radius : var(--radius-circle);
+      border-color : transparent;
+      flex-shrink : 0;
+      margin-right : .5rem;
+
+      cursor : pointer;
+
+
+      button {
+        display : none;
+        border-radius : var(--radius-circle);
+      }
+    }
+
+    .slick-active {
+      background : var(--unico-yellow);
+    }
   }
 }
 
