@@ -405,6 +405,12 @@ footer {
   }
 }
 
+@media (max-width : 992px) {
+  :root {
+    font-size : 5px;
+  }
+}
+
 @media (max-width : 768px) {
   :root {
     font-size : 10px;
@@ -531,6 +537,39 @@ footer {
   .comment__item {
     width : 100% !important;
   }
+
+  // PRODUCTS ALL
+  .products__container {
+    flex-direction : column;
+    padding : 2rem !important;
+  }
+
+  .products__title {
+    width : auto !important;
+    margin-right : 0 !important;
+    text-align : center;
+    margin-bottom : 3rem;
+  }
+
+  .slider-products__container {
+    border-radius : 2rem !important;
+  }
+
+  // SERVICES
+  .services__intro {
+    align-items : center !important;
+  }
+
+  .services {
+    justify-content : center !important;
+  }
+
+  // FOOTER
+  .footer-menu {
+    flex-direction : column;
+    margin-bottom : 2rem;
+  }
+
 }
 
 @media (max-width : 374px) {
