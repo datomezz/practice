@@ -49,22 +49,24 @@
 }
 
 .unico-slider__description--container {
-  width : 40rem;
-  height : 40rem;
-  border-radius : var(--radius-circle);
-  background : #fff;
-  position : absolute;
-  left : -10rem;
-  top : -5rem;
+  .description__circle {
+    width: 40rem;
+    height: 40rem;
+    background: #fff;
+    display: block;
+    border-radius: 50%;
 
-  @include flex(row, center, center);
+    position: absolute;
+    left: -10rem;
+    top: -12rem;
+  }
 
   .unico-slider__description {
-    overflow : hidden;
-    @include flex(row, center, center);
-    height : 100%;
+    width : 30rem;
+    position: absolute;
+    left: -4rem;
+    top: -6rem;
 
-    
     .img__container {
       @include flex(row, center, center);
       height : 26rem;
@@ -83,13 +85,14 @@
     margin : 0;
 
     position : absolute;
-    top : 0;
-    right : 0;
+    bottom : 4rem;
+    right : -15rem;
 
     li {
       width : 1.1rem;
       height : 1.1rem;
-      background : #fff;
+      background : var(--unico-blue);
+      opacity : .3;
       border-radius : var(--radius-circle);
       border-color : transparent;
       flex-shrink : 0;
@@ -105,11 +108,10 @@
     }
 
     .slick-active {
-      background : var(--unico-yellow);
+      opacity : 1;
     }
   }
 }
-
 
 .unico-attributes__container {
   @extend .unico-description__container;
@@ -147,11 +149,120 @@
 
     @include flex(row, space-between, center);
 
-    .attribute__key {
+    .attribute__key, .attribute__value {
       color : var(--unico-black);
+      overflow : hidden;
+      text-overflow : ellipsis;
     }
   }
 }
+
+// COMMENTS
+
+
+.comment__button {
+  padding : 2rem 4rem;
+  background : #fff;
+  color : var(--unico-blue);
+  border : 1px solid var(--unico-blue);
+  border-radius : var(--radius-md);
+  transition : .3s ease;
+
+  &:hover {
+    background : var(--unico-blue);
+    color : #fff;
+  }
+}
+
+
+.comment__container {
+  width : 100%;
+  background : #fff;
+  border-radius : var(--radius-lg);
+  padding : 8rem;
+  
+  
+  .comment__title--container {
+    @include flex(row, center, center);
+  }
+
+  .comment__title {
+    width : 50%;
+    text-align : center;
+    font-size : var(--font-lg);
+    margin-bottom : 5rem;
+
+    .comment__title--text {
+      margin-right : 1rem;
+    }
+
+    .comment__title--bold {
+      font-weight : bold;
+    }
+
+    .comment__title--blue {
+      color : var(--unico-blue);
+    }
+  }
+
+  .comments__container {
+    @include flex(column, flex-start, center);
+  }
+}
+
+.comment__item {
+  width : 80%;
+  margin-bottom : 5rem;
+
+  @include flex(row, space-between, flex-start);
+
+  .comment__avatar {
+    width : 10rem;
+    height : 10rem;
+    border-radius : var(--radius-circle);
+    overflow : hidden;
+    flex-shrink : 0;
+    margin-right : 2rem;
+
+    img {
+      width : 100%;
+      height : 100%;
+    }
+  }
+
+  .comment__body {
+    @include flex(column, flex-start, flex-start);
+
+    .comment__body--about {
+      width : 100%;
+      margin-bottom : 1.6rem;
+
+      @include flex(row, space-between, flex-start);
+
+      .avatar__name {
+        font-size : var(--font-md);
+        margin-bottom : .8rem;
+      }
+
+      .avatar__date {
+        font-size : var(--font-sm);
+        color : var(--unico-gray);
+      }
+
+    }
+
+    .comment__body--text {
+      margin-bottom : 1.6rem;
+    }
+
+    .comment__answer {
+      color : var(--unico-blue);
+      font-weight : bold;
+      cursor : pointer;
+    }
+  }
+}
+
 
 @media (max-width : 1440px) {
   :root {
@@ -163,6 +274,11 @@
   :root {
     font-size : 10px;
   }
+
+  #section-head {
+    margin-bottom : 3rem;
+  }
+
 
   .unico-info__title {
     font-size : var(--font-xl) !important;
@@ -210,6 +326,60 @@
 
   .unico-proposition__title {
     font-size : 1.2rem;
+  }
+
+  // DESCRIPTION
+  .unico-description__title {
+    font-size : var(--font-md) !important;
+  }
+  
+  .unico-description__paragraph {
+    font-size : var(--font-sm) !important;
+  }
+
+  .unico-description__container {
+    padding-bottom : 7rem !important;
+  }
+
+  .unico-slider__description--container {
+
+    .description__circle {
+      width : 22rem;
+      height : 22rem;
+      border : 1.5rem solid #2767f0;
+      top : 50%;
+      left : 50%;
+
+      transform : translate(-50%, -50%);
+    }
+
+    .unico-slider__description {
+      position : relative !important;
+      top : auto !important;
+      left : auto !important;
+
+      .img__container {
+        height : 20rem !important;
+      }
+    }
+  }
+
+  .slider-description__dots {
+    top : auto !important;
+    right : auto !important;
+    left : 50%;
+    bottom: -4rem !important;
+
+    transform : translate(-50%, 0);
+
+    li {
+      background : #fff !important;
+
+    }
+  }
+
+  .unico-attributes__container {
+    padding: 4rem !important;
   }
 }
 

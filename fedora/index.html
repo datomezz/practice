@@ -51,7 +51,7 @@
 </header>
 <!-- MAIN -->
 <main class="container unico-container mt-5 px-md-0 px-4">
-  <div class="row m-0">
+  <section id="section-head" class="row">
     <div class="col-md-3 col-12 d-md-block d-none order-md-0 order-3 p-0">
   
       <div class="unico-special">
@@ -213,10 +213,10 @@
         </form>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="row mb-5">
-    <div class="col-6 p-0">
+  <section id="section-description" class="row px-4">
+    <div class="col-md-6 col-12 p-0">
       <div class="unico-description__container">
         <h2 class="unico-description__title">პროდუქტის აღწერა</h2>
         <p class="unico-description__paragraph">
@@ -233,10 +233,11 @@
           გამოჩნდა, ზოგი შემთხვევით დაშვებული შეცდომის გამო, ზოგი კი — 
           განზრახ, ხუმრობით.
         </p>
-        <div class="unico-description__footer d-flex justify-content-between position-relative">
+        <div class="unico-description__footer d-flex flex-md-row flex-column justify-content-between align-items-center position-relative">
 
-          <div class="col-6 p-0">
+          <div class="col-md-6 col-12 d-flex justify-content-center p-0">
             <div class="unico-slider__description--container">
+              <span class="description__circle"></span>
               <div class="unico-slider__description">
                 <div class="img__container">
                   <img src="./public/assets/img/1.png" alt="slider-img" />
@@ -251,10 +252,11 @@
                   <img src="./public/assets/img/3.png" alt="slider-img" />
                 </div>
               </div>
+
             </div>
           </div>
 
-          <div class="col-6 p-0">
+          <div class="col-md-6 col-12 p-0 d-md-block d-none">
             <div class="unico-hurryup">
               <h3 class="unico-hurryup__title">იჩქარე!</h3>
               <span class="unico-hurryup__text">დარჩენილია მხოლოდ 11</span>
@@ -266,32 +268,168 @@
       </div>
     </div>
 
-    <div class="col-6 p-0 pl-5">
+    <div class="col-md-6 col-12 p-0 pl-md-5 pl-0 mt-md-0 mt-5">
       <div class="unico-attributes__container">
         <h2 class="unico-description__title">მახასიათებლები</h2>
         <ul class="attributes__container">
           <li class="attribute__item">
             <span class="attribute__key">ბრენდი:</span>
-            <span class="attribute__key">SAMSUNG</span>
+            <span class="attribute__value">SAMSUNG</span>
           </li>
           <li class="attribute__item">
             <span class="attribute__key">ბრენდი:</span>
-            <span class="attribute__key">SAMSUNG</span>
+            <span class="attribute__value">SAMSUNG</span>
           </li>
           <li class="attribute__item">
             <span class="attribute__key">ბრენდი:</span>
-            <span class="attribute__key">SAMSUNG</span>
+            <span class="attribute__value">SAMSUNG</span>
           </li>
           <li class="attribute__item">
             <span class="attribute__key">ბრენდი:</span>
-            <span class="attribute__key">SAMSUNG</span>
+            <span class="attribute__value">SAMSUNG</span>
           </li>
         </ul>
         <span class="attributes-toggle">ყველა მახასიათებლის ნახვა</span>
       </div>
     </div>
-  </div>
+  </section>
 
+  <section id="section-comments" class="row">
+    <div class="comment__container">
+      <div class="comment__title--container">
+        <h2 class="comment__title">
+          <span class="comment__title--text comment__title--bold">რეკომენდირებულია</span>
+          <span class="comment__title--text comment__title--regular">გამოკითხული მომხმარებელთა </span>
+          <span class="comment__title--text comment__title--blue">99.9%</span>
+          <span class="comment__title--text comment__title--regular">-ის მიერ</span>
+        </h2>
+      </div>
+
+      <div class="comments__container">
+        <!-- COMMENT ITEM -->
+        <div class="comment__item">
+
+          <div class="comment__avatar">
+            <img src="./public/assets/img/gucci.jpg" alt="avatar" />
+          </div>
+          <!-- ITEM BODY -->
+          <div class="comment__body">
+            <div class="comment__body--about">
+              <div class="avatar__info">
+                <h4 class="avatar__name">გუჩი მეინი</h4>
+                <i class="avatar__date">20.10.2020</i>
+              </div>
+
+              <div class="unico-info__rating">
+                <div class="stars">
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                </div>
+              </div>
+
+            </div>
+            <div class="comment__body--text">
+              ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და 
+              დიზაინის აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად
+              სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი
+              ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია. დღეს უამრავი პერსონალური 
+              საგამომცემლო პროგრამა და ვებგვერდი იყენებს Lorem Ipsum-ს, როგორც დროებით ტექსტს წყობის 
+              შესავსებად; Lorem Ipsum-ის მოძებნისას კი საძიებო სისტემები ბევრ დაუსრულებელ გვერდს 
+              გვიჩვენებენ. წლების მანძილზე ამ ტექსტის უამრავი ვერსია გამოჩნდა, ზოგი შემთხვევით დაშვებული
+              შეცდომის გამო, ზოგი კი — განზრახ, ხუმრობით.
+            </div>
+            <span class="comment__answer">პასუხის გაცემა</span>
+          </div>
+
+        </div>
+        <!-- COMMENT ITEM -->
+        <div class="comment__item">
+
+          <div class="comment__avatar">
+            <img src="./public/assets/img/gucci.jpg" alt="avatar" />
+          </div>
+          <!-- ITEM BODY -->
+          <div class="comment__body">
+            <div class="comment__body--about">
+              <div class="avatar__info">
+                <h4 class="avatar__name">გუჩი მეინი</h4>
+                <i class="avatar__date">20.10.2020</i>
+              </div>
+
+              <div class="unico-info__rating">
+                <div class="stars">
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                </div>
+              </div>
+
+            </div>
+            <div class="comment__body--text">
+              ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და 
+              დიზაინის აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად
+              სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი
+              ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია. დღეს უამრავი პერსონალური 
+              საგამომცემლო პროგრამა და ვებგვერდი იყენებს Lorem Ipsum-ს, როგორც დროებით ტექსტს წყობის 
+              შესავსებად; Lorem Ipsum-ის მოძებნისას კი საძიებო სისტემები ბევრ დაუსრულებელ გვერდს 
+              გვიჩვენებენ. წლების მანძილზე ამ ტექსტის უამრავი ვერსია გამოჩნდა, ზოგი შემთხვევით დაშვებული
+              შეცდომის გამო, ზოგი კი — განზრახ, ხუმრობით.
+            </div>
+            <span class="comment__answer">პასუხის გაცემა</span>
+          </div>
+
+        </div>
+          <!-- COMMENT ITEM -->
+        <div class="comment__item">
+
+          <div class="comment__avatar">
+            <img src="./public/assets/img/gucci.jpg" alt="avatar" />
+          </div>
+          <!-- ITEM BODY -->
+          <div class="comment__body">
+            <div class="comment__body--about">
+              <div class="avatar__info">
+                <h4 class="avatar__name">გუჩი მეინი</h4>
+                <i class="avatar__date">20.10.2020</i>
+              </div>
+
+              <div class="unico-info__rating">
+                <div class="stars">
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                  <i class="uil uil-star"></i>
+                </div>
+              </div>
+
+            </div>
+            <div class="comment__body--text">
+              ცნობილი ფაქტია, რომ გვერდის წაკითხვად შიგთავსს შეუძლია მკითხველის ყურადღება მიიზიდოს და 
+              დიზაინის აღქმაში ხელი შეუშალოს. Lorem Ipsum-ის გამოყენებით ვღებულობთ იმაზე მეტ-ნაკლებად
+              სწორი გადანაწილების ტექსტს, ვიდრე ერთიდაიგივე გამეორებადი სიტყვებია ხოლმე. შედეგად, ტექსტი
+              ჩვეულებრივ ინგლისურს გავს, მისი წაითხვა კი შეუძლებელია. დღეს უამრავი პერსონალური 
+              საგამომცემლო პროგრამა და ვებგვერდი იყენებს Lorem Ipsum-ს, როგორც დროებით ტექსტს წყობის 
+              შესავსებად; Lorem Ipsum-ის მოძებნისას კი საძიებო სისტემები ბევრ დაუსრულებელ გვერდს 
+              გვიჩვენებენ. წლების მანძილზე ამ ტექსტის უამრავი ვერსია გამოჩნდა, ზოგი შემთხვევით დაშვებული
+              შეცდომის გამო, ზოგი კი — განზრახ, ხუმრობით.
+            </div>
+            <span class="comment__answer">პასუხის გაცემა</span>
+          </div>
+
+        </div>
+      </div>
+      <div class="w-100 d-flex justify-content-center">
+        <button class="comment__button">კომენტარი დამატება</button>
+      </div>
+
+    </div>
+  </section>
 
 </main>
   
