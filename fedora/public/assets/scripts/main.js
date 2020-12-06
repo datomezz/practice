@@ -29,4 +29,31 @@ $(".unico-slider__products").slick({
   variableWidth : true,
   slidesToScroll: 2,
   arrows : false
-})
+});
+
+$(".slider-modal").slick({
+  slidesToShow : 1,
+  slidesToScroll : 1,
+  arrows : false,
+  dots : false
+});
+
+// MODAL
+$("body").on("shown.bs.modal", function() {
+  $(".slider-modal").slick("setPosition");
+});
+
+
+// CALCULATORS
+function calculate(e) {
+  const quantity = Number(e.dataset.count);
+  const resultDOM = document.querySelectorAll(".calculate__result");
+
+
+  resultDOM.forEach(item => {
+    const currentValue = Number(item.innerText);
+    const newValue = currentValue + quantity;
+    item.innerText = newValue < 1 ? 1 : newValue;
+  });
+
+}

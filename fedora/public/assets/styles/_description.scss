@@ -1,0 +1,154 @@
+.unico-description__container {
+  background : var(--unico-blue);
+  border-radius : var(--radius-lg);
+  padding : 4rem;
+
+
+  @include flex(column, flex-start, flex-start);
+
+  .unico-description__title {
+    color : #fff;
+    font-size : var(--font-xl);
+    margin-bottom : 3.5rem;
+  }
+
+  .unico-description__paragraph {
+    color : #fff;
+  }
+
+  .unico-hurryup {
+    @include flex(column, space-between, center);
+
+    .unico-hurryup__title {
+      font-size : var(--font-lg);
+      color : #fff;
+    }
+
+    .unico-hurryup__text {
+      font-size : var(--font-md);
+      color : #fff;
+      margin : 1.6rem 0;
+    }
+
+    .unico-hurryup__text--subtext {
+      @extend .unico-hurryup__text;
+      font-size : var(--font-sm);
+      font-weight : bold;
+    }
+  }
+}
+
+.unico-description__footer {
+  width : 100%;
+  margin-top : 6rem;
+}
+
+.unico-slider__description--container {
+  .description__circle {
+    width: 40rem;
+    height: 40rem;
+    background: #fff;
+    display: block;
+    border-radius: 50%;
+
+    position: absolute;
+    left: -10rem;
+    top: -12rem;
+  }
+
+  .unico-slider__description {
+    width : 30rem;
+    position: absolute;
+    left: -4rem;
+    top: -6rem;
+
+    .img__container {
+      @include flex(row, center, center);
+      height : 26rem;
+
+      img {
+        height : 100%;
+      }
+
+    }
+  }
+
+  .slider-description__dots {
+    width : auto;
+    @include flex(row, flex-start, flex-start);
+    padding : 0;
+    margin : 0;
+
+    position : absolute;
+    bottom : 4rem;
+    right : -15rem;
+
+    li {
+      width : 1.1rem;
+      height : 1.1rem;
+      background : var(--unico-blue);
+      opacity : .3;
+      border-radius : var(--radius-circle);
+      border-color : transparent;
+      flex-shrink : 0;
+      margin-right : .5rem;
+
+      cursor : pointer;
+
+
+      button {
+        display : none;
+        border-radius : var(--radius-circle);
+      }
+    }
+
+    .slick-active {
+      opacity : 1;
+    }
+  }
+}
+
+// ATTRIBUTES
+.unico-attributes__container {
+  @extend .unico-description__container;
+  background : #fff;
+  padding-right : 8rem;
+
+  .unico-description__title {
+    color : var(--unico-black);
+  }
+
+  .unico-description__paragraph {
+    color : var(--unico-black);
+  }
+
+  .attributes-toggle {
+    color : var(--unico-blue);
+    cursor : pointer;
+  }
+}
+
+.attributes__container {
+  padding : 0;
+  width :100%;
+
+  @include flex(column, flex-start, flex-start);
+
+  .attribute__item {
+    width : 100%;
+    padding : 1.2rem 0;
+    border-bottom : 1px solid #eeedf0;
+
+    &:last-child {
+      border-bottom : none;
+    }
+
+    @include flex(row, space-between, center);
+
+    .attribute__key, .attribute__value {
+      color : var(--unico-black);
+      overflow : hidden;
+      text-overflow : ellipsis;
+    }
+  }
+}

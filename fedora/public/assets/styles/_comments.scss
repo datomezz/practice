@@ -1,0 +1,110 @@
+// COMMENTS
+.comment__button {
+  padding : 2rem 4rem;
+  background : #fff;
+  color : var(--unico-blue);
+  border : 1px solid var(--unico-blue);
+  border-radius : var(--radius-md);
+  transition : .3s ease;
+
+  &:hover {
+    background : var(--unico-blue);
+    color : #fff;
+  }
+}
+
+
+.comment__container {
+  width : 90%;
+  background : #fff;
+  border-radius : var(--radius-lg);
+  padding : 8rem;
+  
+  
+  .comment__title--container {
+    @include flex(row, center, center);
+  }
+
+  .comment__title {
+    width : 50%;
+    text-align : center;
+    font-size : var(--font-lg);
+    margin-bottom : 5rem;
+
+    .comment__title--text {
+      margin-right : 1rem;
+    }
+
+    .comment__title--bold {
+      font-weight : bold;
+    }
+
+    .comment__title--blue {
+      color : var(--unico-blue);
+    }
+  }
+
+  .comments__container {
+    @include flex(column, flex-start, center);
+  }
+}
+
+.comment__item {
+  width : 80%;
+  margin-bottom : 5rem;
+
+  @include flex(row, space-between, flex-start);
+
+  .comment__avatar {
+    width : 10rem;
+    height : 10rem;
+    border-radius : var(--radius-circle);
+    overflow : hidden;
+    flex-shrink : 0;
+    margin-right : 2rem;
+
+    img {
+      width : 100%;
+      height : 100%;
+    }
+  }
+
+  .comment__avatar--mobile {
+    @extend .comment__avatar;
+    
+    width : 7rem;
+    height : 7rem;
+  }
+
+  .avatar__name {
+    font-size : var(--font-md);
+    margin-bottom : .8rem;
+  }
+
+  .avatar__date {
+    font-size : var(--font-sm);
+    color : var(--unico-gray);
+  }
+
+  .comment__body {
+    @include flex(column, flex-start, flex-start);
+
+    .comment__body--about {
+      width : 100%;
+      margin-bottom : 1.6rem;
+
+      @include flex(row, space-between, flex-start);
+
+    }
+
+    .comment__body--text {
+      margin-bottom : 1.6rem;
+    }
+
+    .comment__answer {
+      color : var(--unico-blue);
+      font-weight : bold;
+      cursor : pointer;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// FOOTER
+footer {
+  background : #fff;
+}
+.footer-menu {
+  padding : 0;
+  margin : 0;
+
+  @include flex(row, flex-start, center);
+
+  .footer-menu__item {
+    margin-right : 1.6rem;
+  }
+}

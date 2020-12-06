@@ -1,0 +1,48 @@
+// SERVICES
+.services__container {
+
+  .services__intro {
+    @include flex(column, flex-start, flex-start);
+    margin-bottom : 5rem;
+
+    .services__title {
+      font-size : var(--font-lg);
+      margin-bottom : 2rem;
+    }
+
+    .services__title--subtitle {
+      font-size : var(--font-sm);
+      color : var(--unico-gray);
+    }
+  }
+
+  .services {
+    @include flex(row, space-between, flex-start);
+    flex-wrap : wrap;
+  }
+  
+}
+
+.service__item {
+  width : 34rem;
+  height : 21rem;
+  border-radius : var(--radius-md);
+  background : #fff;
+  padding : 4rem;
+  margin-bottom : 1rem;
+
+  @include flex(column, space-between, flex-start);
+
+  .service__logo {
+    font-size : 3rem;
+  }
+
+  .service__title {
+    color : var(--unico-black);
+  }
+
+  .logo__yellow {color : var(--unico-yellow)}
+  .logo__red {color : var(--unico-red)}
+  .logo__blue {color : var(--unico-blue)}
+  .logo__purple {color : var(--unico-purple)}
+}

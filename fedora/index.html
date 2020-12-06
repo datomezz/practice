@@ -11,6 +11,42 @@
   <title>FEDORA</title>
 </head>
 <body>
+<!-- MODAL -->
+
+<!-- Modal -->
+<div class="modal fade" id="imgModal" tabindex="-1" aria-labelledby="imgModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="d-flex justify-content-center align-items-center position-relative">
+          <button class="modal__close" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <div class="slider-modal">
+
+            <div class="img__container">
+              <img src="./public/assets/img/1.png" alt="slider-img" />
+            </div>
+
+            <div class="img__container">
+              <img src="./public/assets/img/2.png" alt="slider-img" />
+            </div>
+            
+            <div class="img__container">
+              <img src="./public/assets/img/3.png" alt="slider-img" />
+            </div>
+
+            <div class="img__container">
+              <img src="./public/assets/img/4.png" alt="slider-img" />
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
 <!-- STICKY COUNTDOWN -->
 <aside class="container-fluid unico-sticky unico-prioritet-hight">
   <div class="container unico-container unico-sale__container">
@@ -84,10 +120,10 @@
     <div class="col-md-5 col-12 d-flex flex-column order-md-1 order-2 p-0">
       <div class="d-flex justify-content-between align-items-center ">
         <div class="slider-top__for">
-          <img src="./public/assets/img/1.png" alt="slider-img" class="slider__active" />
-          <img src="./public/assets/img/2.png" alt="slider-img" />
-          <img src="./public/assets/img/3.png" alt="slider-img" />
-          <img src="./public/assets/img/4.png" alt="slider-img" />
+          <img src="./public/assets/img/1.png" data-toggle="modal" data-target="#imgModal" alt="slider-img" class="slider__active" />
+          <img src="./public/assets/img/2.png" data-toggle="modal" data-target="#imgModal" alt="slider-img" />
+          <img src="./public/assets/img/3.png" data-toggle="modal" data-target="#imgModal" alt="slider-img" />
+          <img src="./public/assets/img/4.png" data-toggle="modal" data-target="#imgModal" alt="slider-img" />
         </div>
   
         <div class="slider-top__nav d-md-none d-block">
@@ -114,9 +150,9 @@
      
           <div class="unico-form__body">
             <div class="unico-calculator">
-              <span class="calculate"><i class="uil uil-minus-square"></i></span>
-              <span class="calculate__result">99</span>
-              <span class="calculate"><i class="uil uil-plus-square"></i></span>
+              <span class="calculate" data-count="-1" onclick="calculate(this)"><i class="uil uil-minus-square"></i></span>
+              <span class="calculate__result">1</span>
+              <span class="calculate" data-count="1" onclick="calculate(this)"><i class="uil uil-plus-square"></i></span>
             </div>
             <button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
           </div>
@@ -180,9 +216,9 @@
      
           <div class="unico-form__body">
             <div class="unico-calculator">
-              <span class="calculate"><i class="uil uil-minus-square"></i></span>
-              <span class="calculate__result">99</span>
-              <span class="calculate"><i class="uil uil-plus-square"></i></span>
+              <span class="calculate" data-count="-1" onclick="calculate(this)"><i class="uil uil-minus-square"></i></span>
+              <span class="calculate__result">1</span>
+              <span class="calculate" data-count="1" onclick="calculate(this)"><i class="uil uil-plus-square"></i></span>
             </div>
             <button type="submit" class="unico-form__button"><i class="uil uil-shopping-cart"></i>შეძენა</button>
           </div>
