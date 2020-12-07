@@ -7,6 +7,7 @@
   <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.3/css/line.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="./public/assets/styles/main.css" />
   <title>FEDORA</title>
 </head>
@@ -91,7 +92,7 @@
   <section class="row">
     <div class="col-md-3 col-12 d-md-block d-none order-md-0 order-3 p-0">
   
-      <div class="unico-special">
+      <div class="unico-special" data-aos="fade-right" data-aos-delay="500">
         <span class="absolute__circle"></span>
         <h2 class="unico-special__title">კვირის სპეციალური შემოთავაზება</h2>
         <div class="unico-special__circle">
@@ -118,7 +119,7 @@
     </div>
   
     <div class="col-md-5 col-12 d-flex flex-column order-md-1 order-2 p-0">
-      <div class="d-flex justify-content-between align-items-center ">
+      <div class="d-flex justify-content-between align-items-center" data-aos="zoom-in" data-aos-duration="2000">
         <div class="slider-top__for">
           <img src="./public/assets/img/1.png" data-toggle="modal" data-target="#imgModal" alt="slider-img" class="slider__active" />
           <img src="./public/assets/img/2.png" data-toggle="modal" data-target="#imgModal" alt="slider-img" />
@@ -142,7 +143,7 @@
         </div>
       </div>
 
-      <div class="unico-form__container d-md-none d-block">
+      <div class="unico-form__container d-md-none d-block animate__animated animate__bounce">
         <h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
         <form class="unico-form" method="POST" action="/">
           <input type="text" name="unico-name" class="unico-input" placeholder="სახელი, გვარი" required />
@@ -187,8 +188,8 @@
   
     <div class="col-md-4 col-12 order-md-2 order-1 p-0">
       <div class="unico-info">
-        <h1 class="unico-info__title">Apple iPhone 11 Pro 256GB 4GB Midnight Green</h1>
-        <div class="unico-info__attributes">
+        <h1 class="unico-info__title" data-aos="fade-left" data-aos-duration="1000">Apple iPhone 11 Pro 256GB 4GB Midnight Green</h1>
+        <div class="unico-info__attributes animate__animated animate__fadeInLeft">
           <div class="unico-info__price">
             <span class="price price__sale">1,275 ₾</span>
             <span class="price price__old">1,599 ₾</span>
@@ -208,7 +209,7 @@
         </div>
       </div>
   
-      <div class="unico-form__container d-md-block d-none">
+      <div class="unico-form__container d-md-block d-none animate__animated animate__fadeInRight">
         <h2 class="unico-form__title">შეუკვეთე ახლავე</h2>
         <form class="unico-form" method="POST" action="/">
           <input type="text" name="unico-name" class="unico-input" placeholder="სახელი, გვარი" required />
@@ -253,7 +254,7 @@
   </section>
   <!-- DESCRIPTION -->
   <section class="row">
-    <div class="col-md-6 col-12 p-0">
+    <div class="col-md-6 col-12 p-0" data-aos="flip-right" data-aos-duration="1000">
       <div class="unico-description__container">
         <h2 class="unico-description__title">პროდუქტის აღწერა</h2>
         <p class="unico-description__paragraph">
@@ -305,7 +306,7 @@
       </div>
     </div>
 
-    <div class="col-md-6 col-12 p-0 pl-md-5 pl-0 mt-md-0 mt-5">
+    <div class="col-md-6 col-12 p-0 pl-md-5 pl-0 mt-md-0 mt-5" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="delay">
       <div class="unico-attributes__container">
         <h2 class="unico-description__title">მახასიათებლები</h2>
         <ul class="attributes__container">
@@ -334,7 +335,7 @@
   <section class="row d-flex justify-content-center">
     <div class="comment__container">
       <div class="comment__title--container">
-        <h2 class="comment__title">
+        <h2 class="comment__title animate__animated animate__fadeInRight">
           <span class="comment__title--text comment__title--bold">რეკომენდირებულია</span>
           <span class="comment__title--text comment__title--regular">გამოკითხული მომხმარებელთა </span>
           <span class="comment__title--text comment__title--blue">99.9%</span>
@@ -344,7 +345,7 @@
 
       <div class="comments__container">
         <!-- COMMENT ITEM -->
-        <div class="comment__item">
+        <div class="comment__item" data-aos="fade-left" data-aos-duration="500">
 
           <div class="comment__avatar d-md-flex d-none">
             <img src="./public/assets/img/gucci.jpg" alt="avatar" />
@@ -406,7 +407,7 @@
 
         </div>
         <!-- COMMENT ITEM -->
-        <div class="comment__item">
+        <div class="comment__item" data-aos="fade-left" data-aos-duration="500">
 
           <div class="comment__avatar d-md-flex d-none">
             <img src="./public/assets/img/gucci.jpg" alt="avatar" />
@@ -468,7 +469,7 @@
 
         </div>
         <!-- COMMENT ITEM -->
-        <div class="comment__item">
+        <div class="comment__item" data-aos="fade-left" data-aos-duration="500">
 
           <div class="comment__avatar d-md-flex d-none">
             <img src="./public/assets/img/gucci.jpg" alt="avatar" />
@@ -530,7 +531,7 @@
 
         </div>
       </div>
-      <div class="w-100 d-flex justify-content-center">
+      <div class="w-100 d-flex justify-content-center" data-aos="flip-up" data-aos-duration="1000">
         <button class="comment__button">კომენტარი დამატება</button>
       </div>
 
@@ -540,8 +541,8 @@
 <!-- ALL PRODUCTS -->
 <section class="container-fluid unico-gradient__purple p-0">
   <div class="products__container">
-    <span class="products__title">მსგავსი <span class="products__title--bold">შეთავაზებები</span></span>
-    <div class="slider-products__container">
+    <span class="products__title" data-aos="fade-right" data-aos-duration="1000">მსგავსი <span class="products__title--bold">შეთავაზებები</span></span>
+    <div class="slider-products__container" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="500">
       <!-- SLIDER -->
       <div class="unico-slider__products">
 
@@ -615,28 +616,28 @@
 
     <div class="services">
 
-      <div class="service__item">
+      <div class="service__item" data-aos="flip-up" data-aos-duration="1000" data-aos-delay="500">
         <div class="service__logo logo__yellow">
           <i class="uil uil-shield-check"></i>
         </div>
         <p class="service__title">გარანტია თითოეულ პროდუქტზე</p>
       </div>
 
-      <div class="service__item">
+      <div class="service__item" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="600">
         <div class="service__logo logo__red">
           <i class="uil uil-box"></i>
         </div>
         <p class="service__title">გარანტია თითოეულ პროდუქტზე</p>
       </div>
 
-      <div class="service__item">
+      <div class="service__item" data-aos="flip-right" data-aos-duration="1000" data-aos-delay="700">
         <div class="service__logo logo__blue">
           <i class="uil uil-laptop-connection"></i>
         </div>
         <p class="service__title">გარანტია თითოეულ პროდუქტზე</p>
       </div>
       
-      <div class="service__item">
+      <div class="service__item" data-aos="flip-down" data-aos-duration="1000" data-aos-delay="800">
         <div class="service__logo logo__purple">
           <i class="uil uil-globe"></i>
         </div>
@@ -666,6 +667,8 @@
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 <script src="./public/assets/scripts/main.js"></script>
 </body>
 </html>
