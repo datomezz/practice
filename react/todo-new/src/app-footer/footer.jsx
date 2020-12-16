@@ -14,7 +14,7 @@ export default class Footer extends Component {
 
   submitingForm = (e) =>{
     e.preventDefault();
-    this.props.addNewTodo(this.state.value);
+    if(this.state.value.length !== 0) {this.props.addNewTodo(this.state.value)};
   }
 
   render() {

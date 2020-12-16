@@ -1,33 +1,20 @@
+import React from "react";
+import ReactDOM from "react-dom";
 import {createStore} from "redux"; 
+import {Provider} from "react-redux";
 
-import {inc, dec, rnd} from "./actions";
+// REDUX
 import {reducer} from "./reducer"; 
 
+// COMPONENTS
+import App from "./components/App";
+
 const store = createStore(reducer);
-const {dispatch} = store;
-store.subscribe(update);
+console.log(store);
 
-document
-  .querySelector("#inc")
-  .addEventListener("click", () => {
-    dispatch(inc())
-  });
-
-document
-  .querySelector("#dec")
-  .addEventListener("click", () => {
-    dispatch(dec())
-  });
-
-document
-  .querySelector("#random")
-  .addEventListener("click", () => {
-    const payload = Math.floor(Math.random() * 10);
-    dispatch(rnd(payload));
-  });
-
-function update() {
-  document
-    .querySelector("#counter")
-    .innerHTML = store.getState();
-}
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.querySelector("#root")
+);

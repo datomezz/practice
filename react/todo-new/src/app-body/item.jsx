@@ -34,6 +34,11 @@ export default class Item extends Component {
     ? activeClass += ` todo-list__title--important` 
     : activeClass = activeClass;
 
+    const {isDone} = this.props;
+
+    let isDoneClass = "";
+    isDone ? isDoneClass = "btn-success text-light" : isDoneClass = "";
+
     return (
       <li 
         className={`list-group-item todo-list__container d-flex flex-row justify-content-between`}>
@@ -41,7 +46,7 @@ export default class Item extends Component {
           {this.props.value}
         </span>
         <div className={"todo-button__container"}>
-          <button className={"btn btn-outline-success"} onClick={this.changeImportantStatus}>!</button>
+          <button className={`btn btn-outline-success ${isDoneClass}`} onClick={this.props.changeImportantStatus}>!</button>
           <button className={"btn btn-outline-primary ml-2"} onClick={this.props.removeItem}>X</button>
         </div>
       </li>
