@@ -5,16 +5,7 @@ import "./item.scss";
 
 export default class Item extends Component {
   state = {
-    done : false,
     important : false
-  }
-
-  changeDoneStatus = () => {
-    this.setState((state) => {
-      return {
-        done : !state.done
-      }
-    });
   }
   
   changeImportantStatus = () => {
