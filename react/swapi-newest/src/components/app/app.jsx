@@ -66,7 +66,7 @@ export default class App extends Component {
                   return <PeopleDetails itemId={id} />
                 }
               } />
-              <Route path="/planets" component={PlanetPage} />
+              <Route path="/planets/:id?" component={PlanetPage} />
               <Route path="/starships" component={StarshipPage} />
             </div>
           </Router>

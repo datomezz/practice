@@ -10,7 +10,7 @@ export default class Header extends Component {
         <div className={"d-flex justify-content-between m-0"}>
           <ul className={"d-flex p-0"}>
             {menu.map(item => {
-              return <Link to={item.label} key={item.label} className={"mr-5"}>{item.name}</Link>
+              return <Link to={`/${item.label}/`} key={item.label} className={"mr-5"}>{item.name}</Link>
             })}
           </ul>
           <button className="btn btn-lg btn-warning" onClick={this.props.showRandomPlanet}>PlanetToggle</button>

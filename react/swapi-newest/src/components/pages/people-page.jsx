@@ -8,10 +8,7 @@ const PeoplePage = ({history}) => {
 
   return (
     <React.Fragment>
-      <PeopleList onItemSelected={(itemId) => {
-        console.log(itemId);
-        history.push(`/people/${itemId}`);
-      }} />
+      <PeopleList onItemSelected={id=> history.push(id)} />
       <button className={"btn btn-danger"} onClick={() => {
         history.push("/planets/5");
       }}>click</button>
