@@ -43,7 +43,7 @@ export default class RandomPlanet extends Component {
 
   _onError(err) {
     this.setState({error : true})
-  }
+  }q
 
   updatePlanet() {
     const rand = ~~(Math.random() * 9) + 2;
@@ -54,7 +54,8 @@ export default class RandomPlanet extends Component {
   }
 
   render() {
-    const {planet, loader, error} = this.state;
+    const {planet, loader, error
+    } = this.state;
 
     const spinner = loader && !error? <Spinner /> : null;
     const content = !loader ? <Planet planet={planet} /> : null;
