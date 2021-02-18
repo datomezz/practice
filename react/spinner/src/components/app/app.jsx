@@ -1,16 +1,19 @@
 import React, {Component} from "react";
 
+// CSS
+import "./app.scss";
+
+// HOC
+import {withSpinnerService} from "../hoc";
+
 // COMPONENTS
 import Loader from "../loader";
 import ErrorIndicator from "../error-indicator";
 import List from "../app-list";
+import {SpinnerWrapper} from "../app-containers";
 
-// SERVICES
-import SpinnerService from "../../services/SpinnerService.js";
+class App extends Component {
 
-export default class App extends Component {
-  spinnerService = new SpinnerService();
-  
   state = {
     loader : true,
     hasError : false,
@@ -18,12 +21,14 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    this.spinnerService.getNonce()
+    const {spinnerService} = this.props;
+
+    spinnerService.getNonce()
     .then(nonce => {
       const obj = {
         nonce
       }
-      this.spinnerService.getResources(obj)
+      spinnerService.getResources(obj)
       .then(list => {
         this.setState(state => {
           return {
@@ -51,6 +56,7 @@ export default class App extends Component {
 
   render() {
     const {hasError, loader, list} = this.state;
+
     if(hasError) {
       return <ErrorIndicator />
     }
@@ -62,11 +68,9 @@ export default class App extends Component {
     console.log(this.state);
 
     return(
-      <div className={"container"}>
-        <div className={"row"}>
-          <List list={list} />
-        </div>
-      </div>
+      <SpinnerWrapper SpinnerList={List} list={list} />
     )
   }
 }
+
+export default withSpinnerService(App);
