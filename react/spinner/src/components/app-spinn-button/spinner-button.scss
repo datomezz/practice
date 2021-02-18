@@ -1,0 +1,16 @@
+.spinner-button {
+  width : 27rem;
+  height : 5.5rem;
+
+  color : #fff;
+  background-color : var(--spinnerBlue);
+  border : 2px solid transparent;
+  border-radius : 5rem;
+  transition : .3s ease;
+
+  &:hover {
+    background-color : #fff;
+    border-color : var(--spinnerBlue);
+    color : var(--spinnerBlue);
+  }
+}

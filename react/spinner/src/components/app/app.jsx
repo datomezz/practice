@@ -1,4 +1,4 @@
-import React, {Component} from "react";
+import React, {Component, Fragment} from "react";
 
 // CSS
 import "./app.scss";
@@ -10,14 +10,16 @@ import {withSpinnerService} from "../hoc";
 import Loader from "../loader";
 import ErrorIndicator from "../error-indicator";
 import List from "../app-list";
-import {SpinnerWrapper} from "../app-containers";
+import {SpinnerWrapper, SpinnerWrapperButton} from "../app-containers";
+import SpinnerButton from "../app-spinn-button";
 
 class App extends Component {
 
   state = {
     loader : true,
     hasError : false,
-    list : []
+    list : [],
+    winnerGiftId : null
   }
 
   componentDidMount() {
@@ -54,6 +56,12 @@ class App extends Component {
     })
   }
 
+  onSpinnerClick = (winnerGiftId) => {
+    console.log("Click");
+
+    this.setState(() => {return {winnerGiftId}})
+  }
+
   render() {
     const {hasError, loader, list} = this.state;
 
@@ -68,7 +76,10 @@ class App extends Component {
     console.log(this.state);
 
     return(
-      <SpinnerWrapper SpinnerList={List} list={list} />
+      <Fragment>
+        <SpinnerWrapper giftId={this.state.winnerGiftId} SpinnerList={List} list={list} />
+        <SpinnerWrapperButton onSpinnerClick={this.onSpinnerClick} Button={SpinnerButton} />
+      </Fragment>
     )
   }
 }

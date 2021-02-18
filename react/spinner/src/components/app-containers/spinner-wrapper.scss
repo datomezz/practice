@@ -2,3 +2,12 @@
   width : 100%;
   overflow : hidden;
 }
+
+.spinner-wrapper__button {
+  width : 100%;
+  margin : 5rem 0;
+
+  display : flex;
+  justify-content : center;
+  align-items : center;
+}
