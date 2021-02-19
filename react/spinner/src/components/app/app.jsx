@@ -32,14 +32,10 @@ class App extends Component {
     const {spinnerService} = this.props;
 
     spinnerService.getNonce()
-    .then(nonce => {
-      const obj = {
-        nonce
-      }
-      spinnerService.getResources(obj)
+    .then((info) => {
+      spinnerService.getResources(info)
       .then(data => {
         this.setState(state => {
-          console.log(data);
           return {
             loader : false,
             list : data.data,
@@ -66,8 +62,6 @@ class App extends Component {
   }
 
   onSpinnerClick = (winnerGiftId) => {
-    console.log("Click");
-
     this.setState(() => {return {winnerGiftId}})
 
     setTimeout(() => {
@@ -77,7 +71,7 @@ class App extends Component {
           giftInfo : list[winnerGiftId]
         }
       })
-    }, 12000)
+    }, 11000)
   }
 
   closeModal = () => {
@@ -94,8 +88,6 @@ class App extends Component {
     if(loader) {
       return <Loader />
     }
-
-    console.log(this.state);
 
     return(
       <Fragment>

@@ -5,7 +5,7 @@ import "./list-item.scss";
 
 const ListItem = (props) => {
   const {item} = props;
-  const {id, img, label, title, product_id} = item;
+  const {img, label} = item;
   return (
     <div className="list-item">
       <div className={"list-item__img--wrapper"}>

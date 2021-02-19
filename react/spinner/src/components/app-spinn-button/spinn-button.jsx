@@ -15,11 +15,9 @@ class SpinnButton extends Component {
   state = {
     loader : true,
     isClicked : false,
-    ref : React.createRef()
   }
 
   componentDidMount() {
-    console.log(this.state.ref);
     setTimeout(() => {
       this.setState(state=> {
         return {
@@ -30,20 +28,26 @@ class SpinnButton extends Component {
   }
 
   getWinnerGiftId = () => {
-    this.props.spinnerService
-    .getWinnerGiftId()
-    .then(id => {
-      this.props.onSpinnerClick(id);
-      this.setState({loader : false});
+    const {spinnerService, onSpinnerClick} = this.props;
+
+    spinnerService
+    .getNonce()
+    .then(info => {
+      spinnerService
+      .getWinnerGiftId(info)
+      .then(id => {
+        onSpinnerClick(id);
+        this.setState({loader : false});
+      })
+      .catch(err => console.log(err))
     })
-    .catch(err => console.log(err))
+    .catch(err => console.err(err))
   }
 
   onButtonClick = () => {
     if(!this.state.isClciked && this.props.spinsCount > 0) {
       this.setState({loader : true, isClciked : true});
       this.getWinnerGiftId();
-      console.log(this.props);
     }
   }
 

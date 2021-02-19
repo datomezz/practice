@@ -11,7 +11,7 @@ const ModalInfo = ({modalInfo}) => {
   )
 }
 
-const Modal = ({giftInfo, closeModal, redirectToCart}) => {
+const Modal = ({giftInfo, closeModal}) => {
 
   if(giftInfo === null) {
     return <span></span>

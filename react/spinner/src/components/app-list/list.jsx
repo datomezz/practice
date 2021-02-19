@@ -12,7 +12,7 @@ import {useWindowDimensions} from "../../utils";
 
 const List = (props) => {
   const {list, giftId} = props;
-  const {width, height} = useWindowDimensions();
+  const {width} = useWindowDimensions();
 
   const center = (giftId * 200) + ((giftId - 1) * 10) - (width / 2) + 110;
 
