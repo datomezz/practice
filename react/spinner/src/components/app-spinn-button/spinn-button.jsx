@@ -13,10 +13,13 @@ import { withSpinnerService } from "../hoc";
 class SpinnButton extends Component {
   
   state = {
-    loader : true
+    loader : true,
+    isClicked : false,
+    ref : React.createRef()
   }
 
   componentDidMount() {
+    console.log(this.state.ref);
     setTimeout(() => {
       this.setState(state=> {
         return {
@@ -37,9 +40,11 @@ class SpinnButton extends Component {
   }
 
   onButtonClick = () => {
-    this.setState({loader : true});
-    this.getWinnerGiftId();
-    console.log(this.props);
+    if(!this.state.isClciked) {
+      this.setState({loader : true, isClciked : true});
+      this.getWinnerGiftId();
+      console.log(this.props);
+    }
   }
 
   render() {
@@ -47,7 +52,9 @@ class SpinnButton extends Component {
       return <Loader />
     }
 
-    return <button onClick={this.onButtonClick} className="spinner-button">დაატრიალე</button>
+    const clickedClass = this.state.isClicked ? "inActive" : null;
+
+    return <button onClick={this.onButtonClick} className={`spinner-button ${clickedClass}`}>დაატრიალე</button>
 
   }
 }

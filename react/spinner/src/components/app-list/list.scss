@@ -1,11 +1,13 @@
 .spinner-wrapper {
   width : 100%;
+  position : relative;
 
   display : flex;
   flex-direction : row;
 
   padding : 0;
-  transition : 3s ease;
+  margin : 0;
+  transition : 10s ease;
 
   .spinner-wrapper__item {
     list-style : none;

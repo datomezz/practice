@@ -13,13 +13,14 @@ import List from "../app-list";
 import {SpinnerWrapper, SpinnerWrapperButton} from "../app-containers";
 import SpinnerButton from "../app-spinn-button";
 
+
 class App extends Component {
 
   state = {
     loader : true,
     hasError : false,
     list : [],
-    winnerGiftId : null
+    winnerGiftId : null,
   }
 
   componentDidMount() {
@@ -77,7 +78,7 @@ class App extends Component {
 
     return(
       <Fragment>
-        <SpinnerWrapper giftId={this.state.winnerGiftId} SpinnerList={List} list={list} />
+        <SpinnerWrapper ref={this.state.myRef} giftId={this.state.winnerGiftId} SpinnerList={List} list={list} />
         <SpinnerWrapperButton onSpinnerClick={this.onSpinnerClick} Button={SpinnerButton} />
       </Fragment>
     )

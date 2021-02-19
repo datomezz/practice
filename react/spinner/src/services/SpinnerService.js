@@ -86,8 +86,16 @@ export default class SpinnerService {
   getWinnerGiftId = () => {
     const data = this._data;
     return new Promise((resolve) => {
-      const randId = ~~((Math.random() * data.length) + 20);
+
+      const randInt = (min, max) => {
+        return Math.floor(Math.random() * (max - min) ) + min;
+      }
+
+      const randId = randInt(20, data.length);
+
       let timeout;
+      console.log("RAND ID", randId);
+      console.log("DAta Length", data.length);
 
       if(timeout !== undefined) {
         clearTimeout(timeout);
