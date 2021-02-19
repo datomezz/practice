@@ -1,5 +1,5 @@
 export default class SpinnerService {
-  _url = "https://unico.ge/wp-admin/admin-ajax.php?action=";
+  _url = "https://unico.local/wp-admin/admin-ajax.php?action=";
 
   getResources = async (args) => {
     const {nonce, user_id} = args;
@@ -34,6 +34,6 @@ export default class SpinnerService {
       credentials: 'same-origin',
       body : `user_id=${user_id}&nonce=${nonce}&req_type=spin`
     });
-    return await res;
+    return await res.json();
   }
 }

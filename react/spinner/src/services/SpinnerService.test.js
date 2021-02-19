@@ -51,8 +51,7 @@ export default class SpinnerService {
 
   _nonce = "123123123";
   
-  getResources = (args) => {
-    const {nonce} = args;
+  getResources = (nonce) => {
     if(nonce === "123123123") {
       return new Promise((resolve, reject) => {
         let timeout;
@@ -86,7 +85,8 @@ export default class SpinnerService {
     })
   }
 
-  getWinnerGiftId = () => {
+  getWinnerGiftId = (args) => {
+    const {nonce, user_id} = args;
     const data = this._data.data;
     return new Promise((resolve) => {
 

@@ -80,7 +80,7 @@ class App extends Component {
 
   render() {
     const {hasError, loader, list} = this.state;
-
+    console.log(this.state);
     if(hasError) {
       return <ErrorIndicator />
     }
