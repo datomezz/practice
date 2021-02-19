@@ -40,7 +40,7 @@ class SpinnButton extends Component {
   }
 
   onButtonClick = () => {
-    if(!this.state.isClciked) {
+    if(!this.state.isClciked && this.props.spinsCount > 0) {
       this.setState({loader : true, isClciked : true});
       this.getWinnerGiftId();
       console.log(this.props);

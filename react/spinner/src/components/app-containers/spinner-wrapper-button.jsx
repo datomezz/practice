@@ -3,10 +3,10 @@ import React from "react";
 // CSS
 import "./spinner-wrapper.scss";
 
-const SpinnerWrapperButton = ({Button, onSpinnerClick}) => {
+const SpinnerWrapperButton = ({Button, onSpinnerClick, spinsCount}) => {
   return (
     <div className={"spinner-wrapper__button"}>
-      <Button onSpinnerClick={onSpinnerClick} />
+      <Button spinsCount={spinsCount} onSpinnerClick={onSpinnerClick} />
     </div>
   )
 }

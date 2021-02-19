@@ -1,0 +1,22 @@
+.spinner-header__container {
+  margin : 8rem 0 7rem 0;
+}
+
+.spinner-header__result {
+  padding : 0;
+
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+
+  .spinner-header__title {
+    text-align : center;
+    font-size : 2.4rem;
+  }
+
+  .spinner-header__again {
+    cursor : pointer;
+    color : var(--spinnerBlue);
+  }
+}
